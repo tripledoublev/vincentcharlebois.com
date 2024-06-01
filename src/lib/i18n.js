@@ -4,8 +4,8 @@ register('en', () => import('./locales/en.json'));
 register('fr', () => import('./locales/fr.json'));
 
 export function initializeI18n() {
-    init({
-      fallbackLocale: 'en',
-      initialLocale: getLocaleFromNavigator()
-    });
-  }
+	init({
+		fallbackLocale: 'en',
+		initialLocale: getLocaleFromNavigator()
+	});
+}

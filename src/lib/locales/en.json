@@ -1,17 +1,16 @@
 {
-    "linkabout": "About",
-    "linkprojects": "Projects",
-    "linkcontact": "Contact",
-    "other_language": "fr",
-    "basic": "environmental data perceptualization and regenerative interactions",
-    "basic_title": "Ecologies, technologies;",
-    "about": "I am an intermedia artist and creative technologist born in Montreal, QC Canada. Following my BFA in Intermedia/Cyberarts at Concordia University, I built digital projects and physical forests for over a decade. After planting over a million trees and showing my work on 3 continents, I furthered my education by joining the first cohort of the Master in Advanced Ecological Buildings and Biocities at Valldaura labs, Iaac’s sustainability campus in Barcelona’s Collserola park. During the first year of COVID, I managed the local production of thousands of 3d printed medical protective shields from global open source designs. Since November 2022, I have been working as a front end developer with ",
-    "projects_A": "Since 2007, I have contributed to a wide variety of projects in the field of art, ecology and technology. From climate sensing to ecological interactions, exploring relationships between natural and technological processes consists of my primary field of research.",
-    "projects_B": "One of these outputs, ",
-    "projects_ext": ", was born as documentation of clear-cutting practices witnessed through my exposure to the forest industry’s as part of my work as a Canadian tree planter. Since then, the resulting photographic dataset was used to train a machine learning model to generate further future forest imagery — machine-made images of machine-destroyed landscapes.",
-    "projects_ext1": "Since 2016, I have been developing ", 
-    "projects_ext2": ", a project on environmental data perceptualization. As part of this research, I have been recording climate conditions at multiple locations, archiving the environmental data as a portrait of a place in time. The resulting weather archive becomes material for subsequent intermedia experiences.",
-    "projects_now": "In addition to pursuing these artistic endeavours, I currently work as a front-end developer at HYPHA, a worker cooperative that collaborates with communities to build better relationships with technology.",
-    "links": "Links "
-  }
-  
+	"linkabout": "About",
+	"linkprojects": "Projects",
+	"linkcontact": "Contact",
+	"other_language": "fr",
+	"basic": "environmental data perceptualization and regenerative interactions",
+	"basic_title": "Ecologies, technologies;",
+	"about": "I am an intermedia artist and creative technologist born in Montreal, QC Canada. Following my BFA in Intermedia/Cyberarts at Concordia University, I built digital projects and physical forests for over a decade. After planting over a million trees and showing my work on 3 continents, I furthered my education by joining the first cohort of the Master in Advanced Ecological Buildings and Biocities at Valldaura labs, Iaac’s sustainability campus in Barcelona’s Collserola park. During the first year of COVID, I managed the local production of thousands of 3d printed medical protective shields from global open source designs. Since November 2022, I have been working as a front end developer with ",
+	"projects_A": "Since 2007, I have contributed to a wide variety of projects in the field of art, ecology and technology. From climate sensing to ecological interactions, exploring relationships between natural and technological processes consists of my primary field of research.",
+	"projects_B": "One of these outputs, ",
+	"projects_ext": ", was born as documentation of clear-cutting practices witnessed through my exposure to the forest industry’s as part of my work as a Canadian tree planter. Since then, the resulting photographic dataset was used to train a machine learning model to generate further future forest imagery — machine-made images of machine-destroyed landscapes.",
+	"projects_ext1": "Since 2016, I have been developing ",
+	"projects_ext2": ", a project on environmental data perceptualization. As part of this research, I have been recording climate conditions at multiple locations, archiving the environmental data as a portrait of a place in time. The resulting weather archive becomes material for subsequent intermedia experiences.",
+	"projects_now": "In addition to pursuing these artistic endeavours, I currently work as a front-end developer at HYPHA, a worker cooperative that collaborates with communities to build better relationships with technology.",
+	"links": "Links "
+}

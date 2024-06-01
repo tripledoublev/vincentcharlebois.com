@@ -1,75 +1,46 @@
 <script>
-    import { t } from 'svelte-i18n';
+	import { t } from 'svelte-i18n';
 </script>
 
-
 <main>
-	
 	<p class="text-2xl text-left px-5 pt-7 pb-7 mb-1 w-80">
-        {$t('links')}
-        :</p>
+		{$t('links')}
+		:
+	</p>
 	<div class="px-5 text-center">
-		<ul class='flex flex-row flex-wrap'>
-			<a
-					class=" font-medium contact-links"
-					href="https://tripledoublev.github.io/CV/">
-            <li class="py-2">
-				CV
-			</li>
-            </a>
-            <a class=" font-medium contact-links" href="mailto:vincent@charlebois.info"
-					>
-			<li class="py-2">
-				email
-			</li>
-            </a
-				>
-            <a class=" font-medium contact-links" href="https://github.com/tripledoublev"
-					>
-			<li class="py-2">
-				github
-			</li>
-            </a>
-            <a
-					class=" font-medium contact-links"
-					href="https://twitter.com/vincencharleboi">
-			<li class="py-2">
-				twitter
-			</li>
-            </a
-				>
-            <a class=" font-medium contact-links" href="https://instagram.com/ffforests"
-					>
-			<li class="py-2">
-				instagram
-			</li>
-            </a
-				>
-            <a
-            class=" font-medium contact-links"
-            href="https://www.vincentcharlebois.net/">
-			<li class="py-2">
-			portfolio
-			</li>
-            </a>
-            <a
-            class=" font-medium contact-links"
-            href="https://www.warpcast.com/xxc">
-            <li class="py-2">
-                farcaster
-            </li>
-            </a>
+		<ul class="flex flex-row flex-wrap">
+			<a class=" font-medium contact-links" href="https://tripledoublev.github.io/CV/">
+				<li class="py-2">CV</li>
+			</a>
+			<a class=" font-medium contact-links" href="mailto:vincent@charlebois.info">
+				<li class="py-2">email</li>
+			</a>
+			<a class=" font-medium contact-links" href="https://github.com/tripledoublev">
+				<li class="py-2">github</li>
+			</a>
+			<a class=" font-medium contact-links" href="https://twitter.com/vincencharleboi">
+				<li class="py-2">twitter</li>
+			</a>
+			<a class=" font-medium contact-links" href="https://instagram.com/ffforests">
+				<li class="py-2">instagram</li>
+			</a>
+			<a class=" font-medium contact-links" href="https://www.vincentcharlebois.net/">
+				<li class="py-2">portfolio</li>
+			</a>
+			<a class=" font-medium contact-links" href="https://www.warpcast.com/xxc">
+				<li class="py-2">farcaster</li>
+			</a>
 		</ul>
 	</div>
 </main>
 
 <style>
-li:not(:first-child) {
-    margin-left: 1rem;
-}
-li {
-    border: 2px solid var(--text-color);
-    padding: 2rem;
-    margin: 0.5rem;
-}
+	li:not(:first-child) {
+		margin-left: 1rem;
+	}
+	li {
+		border: 2px solid var(--text-color);
+		padding: 2rem;
+		margin: 0.5rem;
+	}
 </style>
