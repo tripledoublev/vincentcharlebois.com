@@ -1,2 +1,14 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+        import { t } from 'svelte-i18n';
+
+</script>
+
+<main class="flex flex-col place-items-center">
+	<h2 class="italic">           
+         {$t('basic_title')}
+    </h2>
+	<p>
+        {$t('basic')}
+    </p>
+</main>
+
