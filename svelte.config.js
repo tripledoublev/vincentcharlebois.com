@@ -9,7 +9,7 @@ const config = {
 			$stores: 'src/stores',
 			$utils: 'src/utils'
 		},
-		adapter: adapter(),
+		adapter: adapter()
 	}
 };
 
