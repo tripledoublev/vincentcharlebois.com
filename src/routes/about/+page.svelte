@@ -2,6 +2,12 @@
 	import { t } from 'svelte-i18n';
 </script>
 
+<svelte:head>
+	<title>
+		{$t('linkabout')} \Vincent Charlebois
+	</title>
+</svelte:head>
+
 <main>
 	<p class="m-2 px-4 md:m-6 md:px-8 text-left">
 		{$t('about')}
