@@ -16,8 +16,8 @@ body {
 	background-color: var(--background-color);
 	color: var(--text-color);
 	transition:
-		background-color 1.5s,
-		color 1s;
+		background-color 0.5s,
+		color 0.25s;
 	font-family: monospace, sans-serif, serif;
 }
 main {
