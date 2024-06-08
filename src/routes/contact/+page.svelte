@@ -15,28 +15,60 @@
 			<a class=" text-sm font-medium contact-links" target="_blank" href="https://hypha.coop/">
 				<li class="py-2">hypha</li>
 			</a>
-			<a class=" text-sm font-medium contact-links" target="_blank" href="https://tripledoublev.github.io/CV/">
+			<a
+				class=" text-sm font-medium contact-links"
+				target="_blank"
+				href="https://tripledoublev.github.io/CV/"
+			>
 				<li class="py-2">CV</li>
 			</a>
-			<a class=" text-sm font-medium contact-links" target="_blank" href="mailto:vincent@charlebois.info">
+			<a
+				class=" text-sm font-medium contact-links"
+				target="_blank"
+				href="mailto:vincent@charlebois.info"
+			>
 				<li class="py-2">email</li>
 			</a>
-			<a class=" text-sm font-medium contact-links" target="_blank" href="https://github.com/tripledoublev">
+			<a
+				class=" text-sm font-medium contact-links"
+				target="_blank"
+				href="https://github.com/tripledoublev"
+			>
 				<li class="py-2">github</li>
 			</a>
-			<a class=" text-sm font-medium contact-links" target="_blank" href="https://twitter.com/vincencharleboi">
+			<a
+				class=" text-sm font-medium contact-links"
+				target="_blank"
+				href="https://twitter.com/vincencharleboi"
+			>
 				<li class="py-2">twitter</li>
 			</a>
-			<a class=" text-sm font-medium contact-links" target="_blank" href="https://instagram.com/ffforests">
+			<a
+				class=" text-sm font-medium contact-links"
+				target="_blank"
+				href="https://instagram.com/ffforests"
+			>
 				<li class="py-2">instagram</li>
 			</a>
-			<a class=" text-sm font-medium contact-links" target="_blank" href="https://www.vincentcharlebois.net/">
+			<a
+				class=" text-sm font-medium contact-links"
+				target="_blank"
+				href="https://www.vincentcharlebois.net/"
+			>
 				<li class="py-2">portfolio</li>
 			</a>
-			<a class=" text-sm font-medium contact-links" target="_blank" href="https://www.warpcast.com/xxc">
+			<a
+				class=" text-sm font-medium contact-links"
+				target="_blank"
+				href="https://www.warpcast.com/xxc"
+			>
 				<li class="py-2">farcaster</li>
 			</a>
-			<a class=" text-sm font-medium contact-links" target="_blank" href="https://vincent.charlebois.info">
+			<a
+				class=" text-sm font-medium contact-links"
+				target="_blank"
+				href="https://vincent.charlebois.info"
+			>
 				<li class="py-2">.info</li>
 			</a>
 		</ul>

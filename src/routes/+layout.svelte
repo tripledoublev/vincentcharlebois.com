@@ -8,21 +8,20 @@
 
 	let loading = true;
 
-	
 	initializeI18n();
-  console.log('Initializing i18n...');
+	console.log('Initializing i18n...');
 
-  onMount(async () => {
-	
-    await loadTranslations();
-    loading = false;
-  });
+	onMount(async () => {
+		await loadTranslations();
+		loading = false;
+	});
 
 	$: locale.set($locale || 'en');
 </script>
+
 {#if !loading}
-<div transition:fade={{ delay: 250, duration: 250 }}>
-<Nav />
-<slot />
-</div>
+	<div transition:fade={{ delay: 250, duration: 250 }}>
+		<Nav />
+		<slot />
+	</div>
 {/if}

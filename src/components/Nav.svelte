@@ -23,9 +23,9 @@
 		<div
 			class="order-2 lg:order-5 lg:mx-[5vw] lg:ml-12 relative flex lg:w-auto lg:static lg:block lg:justify-start justify-center"
 		>
-			<h1>
-				<a href="/" class:active={$page.url.pathname === '/'}> vincent charlebois </a>
-			</h1>
+			<a href="/" class:active={$page.url.pathname === '/'}>
+				<h1>vincent charlebois</h1>
+			</a>
 		</div>
 	</div>
 </nav>
