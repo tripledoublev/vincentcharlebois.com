@@ -12,4 +12,4 @@ export function initializeI18n() {
 
 export async function loadTranslations() {
 	await waitLocale();
-  }
+}
