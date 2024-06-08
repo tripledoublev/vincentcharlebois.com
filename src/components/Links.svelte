@@ -8,7 +8,7 @@
 		<ul class="flex md:flex-row list-none">
 			<a
 				href="/about"
-				class="px-1 flex flex-grow items-center text-xl lowercase font-bold leading-snug hover:font-black"
+				class="px-1 flex flex-grow items-center text-lg md:text-xl lowercase font-bold leading-snug hover:font-black"
 				class:active={$page.url.pathname === '/about'}
 			>
 				<li class="nav-item flex-auto">
@@ -18,7 +18,7 @@
 
 			<a
 				href="/projects"
-				class="px-1 flex items-center text-xl lowercase font-bold leading-snug hover:font-black"
+				class="px-1 flex items-center text-lg md:text-xl lowercase font-bold leading-snug hover:font-black"
 				class:active={$page.url.pathname === '/projects'}
 			>
 				<li class="nav-item flex-auto">
@@ -28,7 +28,7 @@
 
 			<a
 				href="/contact"
-				class="px-1 flex items-center text-xl lowercase font-bold leading-snug hover:font-black"
+				class="px-1 flex items-center text-lg md:text-xl lowercase font-bold leading-snug hover:font-black"
 				class:active={$page.url.pathname === '/contact'}
 			>
 				<li class="nav-item flex-auto">Contact</li>
