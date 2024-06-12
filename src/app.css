@@ -28,6 +28,7 @@ main {
 li,
 h1 {
 	border-radius: 0.15rem;
+	font-size: 1.25rem;
 }
 li:hover:not(.active),
 h1:hover {
