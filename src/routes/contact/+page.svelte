@@ -11,7 +11,7 @@
 	</title>
 </svelte:head>
 
-<main>
+<main class="flex flex-col place-items-center justify-center min-h-[75vh]">
 	<p class="text-2xl text-left px-5 pt-7 pb-7 mb-1 w-80">
 		{$t('links')}
 		:
