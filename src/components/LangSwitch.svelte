@@ -7,7 +7,11 @@
 	}
 </script>
 
-<button class="text-2xl font-bold hover:font-black" type="button" on:click={switchLanguage}>
+<button
+	class="text-lg lg:text-2xl font-bold hover:font-black"
+	type="button"
+	on:click={switchLanguage}
+>
 	{$t('other_language')}
 </button>
 
