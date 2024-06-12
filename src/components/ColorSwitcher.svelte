@@ -37,7 +37,7 @@
 <DarkModeSwitch
 	bind:checked={$darkMode}
 	on:click={toggleDarkMode}
-	size={26}
+	size={22}
 	darkMode={$darkMode}
-	class="pt-3"
+	class="pt-2"
 />
