@@ -1,5 +1,7 @@
 <script>
 	import { t } from 'svelte-i18n';
+
+	import Waves from '../components/Waves.svelte';
 </script>
 
 <svelte:head>
@@ -12,7 +14,6 @@
 	<h2 class="italic">
 		{$t('basic_title')}
 	</h2>
-	<p>
-		{$t('basic')}
-	</p>
+
+	<Waves />
 </main>
