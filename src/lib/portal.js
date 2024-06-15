@@ -117,6 +117,7 @@ export function initializePortal() {
 	close.style.top = `${vertical - 7}px`;
 	close.style.left = `${horizontal + 132}px`;
 	close.style.zIndex = '110';
+	close.style.cursor = 'pointer';
 	close.addEventListener('click', () => {
 		div.remove();
 	});
