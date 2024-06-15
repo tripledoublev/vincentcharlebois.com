@@ -1,5 +1,4 @@
 export function initializePortal() {
-	console.log('help me please');
 	const sites = [
 		{ url: 'https://aos.arebyte.com/contents/hervisions-the-art-of-no-likes/', https: true },
 		{ url: 'https://lattice.tools/MemStackShapeTracer', https: true },
@@ -66,7 +65,6 @@ export function initializePortal() {
 		{ url: 'https://acclivities.eth.limo', https: true },
 		{ url: 'https://vncnt.xyz/horloge', https: true }
 	];
-	console.log('aaaaaaaaaaaaaaaaaaaa');
 	const div = document.createElement('div');
 	const getRandInRange = (min, max) => {
 		return Math.floor(Math.random() * (max - min) + min);
@@ -152,5 +150,3 @@ export function initializePortal() {
 	div.appendChild(close);
 	document.body.appendChild(div);
 }
-
-console.log('Hello hello heloofrom src/lib/index.js!');
