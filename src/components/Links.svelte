@@ -9,7 +9,7 @@
 			<a
 				href="/about"
 				class="px-1 flex flex-grow items-center text-lg md:text-xl lowercase font-bold leading-snug hover:font-black"
-				class:active={$page.url.pathname === '/about'}
+				class:active={$page.url.pathname === '/about/'}
 			>
 				<li class="nav-item flex-auto">
 					{$t('linkabout')}
@@ -19,7 +19,7 @@
 			<a
 				href="/projects"
 				class="px-1 flex items-center text-lg md:text-xl lowercase font-bold leading-snug hover:font-black"
-				class:active={$page.url.pathname === '/projects'}
+				class:active={$page.url.pathname === '/projects/'}
 			>
 				<li class="nav-item flex-auto">
 					{$t('linkprojects')}
@@ -29,7 +29,7 @@
 			<a
 				href="/contact"
 				class="px-1 flex items-center text-lg md:text-xl lowercase font-bold leading-snug hover:font-black"
-				class:active={$page.url.pathname === '/contact'}
+				class:active={$page.url.pathname === '/contact/'}
 			>
 				<li class="nav-item flex-auto">Contact</li>
 			</a>
