@@ -9,15 +9,13 @@ Welcome to my personal website! Here, you can find information about my projects
 I use vite to build my sveltekit personal website
 
 ## To run locally
-- Clone this repository 
+
+- Clone this repository
 - Install dependencies
-`npm install`
+  `npm install`
 - Start `dev` server
-`npm run dev`
+  `npm run dev`
 
 ## Portal Webring
 
-The portal that appears on the contact page is from *[portal constellation](https://isthisa.com/webring)* (reviving the webring) by sarah friend
-
-
-
+The portal that appears on the contact page is from _[portal constellation](https://isthisa.com/webring)_ (reviving the webring) by sarah friend
