@@ -12,11 +12,11 @@
 </svelte:head>
 
 <main class="flex flex-col place-items-center justify-center min-h-[75vh]">
-	<p class="text-2xl text-left px-5 pt-7 pb-7 mb-1 w-80">
-		{$t('links')}
-		:
-	</p>
 	<div class="px-5 text-center">
+		<p class="text-2xl text-left px-5 pt-7 pb-7 mb-1 w-80">
+			{$t('links')}
+			:
+		</p>
 		<ul class="flex flex-row flex-wrap">
 			<a class=" text-sm font-medium contact-links" target="_blank" href="https://hypha.coop/">
 				<li class="py-2">hypha</li>
@@ -76,6 +76,60 @@
 				href="https://vincent.charlebois.info"
 			>
 				<li class="py-2">.info</li>
+			</a>
+		</ul>
+		<p class="text-2xl text-left px-5 pt-7 pb-7 mb-1 w-80">
+			{$t('websites')}
+			:
+		</p>
+		<ul class="flex flex-row flex-wrap">
+			<a
+				href="https://tripledoublev.com/couleur"
+				class="text-sm font-medium contact-links"
+				target="_blank"
+			>
+				<li class="py-2">2024 Couleur de Montréal</li>
+			</a>
+			<a
+				href="https://vincent.charlebois.info/consecutive-days/"
+				class="text-sm font-medium contact-links"
+				target="_blank"
+			>
+				<li class="py-2">2023 Consecutive days at the studio</li>
+			</a>
+			<a href="https://postvis.io" class="text-sm font-medium contact-links" target="_blank">
+				<li class="py-2">2022 postvisions</li>
+			</a>
+			<a
+				href="https://www.couvre-feu.quebec/"
+				class="text-sm font-medium contact-links"
+				target="_blank"
+			>
+				<li class="py-2">2021 Je me souviens</li>
+			</a>
+			<a
+				href="https://vincentcharlebois.net//nodes.html"
+				class="text-sm font-medium contact-links"
+				target="_blank"
+			>
+				<li class="py-2">2018 nodes</li>
+			</a>
+			<a href="https://tripledoublev.net" class="text-sm font-medium contact-links" target="_blank">
+				<li class="py-2">2017 MCCM;nodes</li>
+			</a>
+			<a
+				href="https://tripledoublev.net/rhytidome"
+				class="text-sm font-medium contact-links"
+				target="_blank"
+			>
+				<li class="py-2">2016 Rhytidome</li>
+			</a>
+			<a
+				href="https://tripledoublev.com/scroll"
+				class="text-sm font-medium contact-links"
+				target="_blank"
+			>
+				<li class="py-2">2015 if 2 words</li>
 			</a>
 		</ul>
 	</div>
