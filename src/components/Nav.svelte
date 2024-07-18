@@ -7,9 +7,9 @@
 
 <nav class="w-full px-2 py-3">
 	<div
-		class="container mx-auto flex flex-wrap items-center justify-around md:justify-between px-2 relative"
+		class="container mx-auto flex flex-wrap flex-col sm:flex-row items-center justify-around md:justify-between px-2 relative"
 	>
-		<div class="order-1 flex items-center lg:ml-12 z-20">
+		<div class="hidden md:flex order-1 items-center lg:ml-12 z-20">
 			<a href="/" class:active={$page.url.pathname === '/'}>
 				<h1>vincent charlebois</h1>
 			</a>
@@ -22,7 +22,7 @@
 				<ColorSwitcher />
 			</div>
 		</div>
-		<div class="relative lg:absolute order-3 inset-0 flex justify-center items-center">
+		<div class="relative lg:absolute order-2 md-order-4 inset-0 flex flex-wrap justify-center items-center">
 			<Links />
 		</div>
 	</div>

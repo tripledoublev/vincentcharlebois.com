@@ -65,8 +65,25 @@
 	});
 </script>
 
-<p id="sea" class="whitespace-pre">{sea}</p>
+<p id="sea" class="whitespace-pre toptop">{sea}</p>
+
 
 <p bind:this={datP} class="text-justify [text-align-last:justify]">
 	{$t('basic')}
 </p>
+
+<style>
+	.toptop {
+		margin-top: 15rem;
+	}
+	@media (min-width: 768px) {
+		.toptop {
+			margin-top: 20rem;
+		}
+	}
+	@media (min-width: 1024px) {
+		.toptop {
+			margin-top: 25rem;
+		}
+	}
+</style>
