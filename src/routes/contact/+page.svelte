@@ -78,7 +78,7 @@
 				<li class="py-2">.info</li>
 			</a>
 		</ul>
-		<p class="text-2xl text-left px-5 pt-7 pb-7 mb-1 w-80">
+		<p class="text-2xl text-left px-5 pt-7 pb-7 mt-12 mb-1 w-80">
 			{$t('websites')}
 			:
 		</p>
