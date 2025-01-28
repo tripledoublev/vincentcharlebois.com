@@ -21,12 +21,8 @@
 			<a class=" text-sm font-medium contact-links" target="_blank" href="https://hypha.coop/">
 				<li class="py-2">hypha</li>
 			</a>
-			<a
-				class=" text-sm font-medium contact-links"
-				target="_blank"
-				href="https://tripledoublev.github.io/CV/"
-			>
-				<li class="py-2">CV</li>
+			<a class=" text-sm font-medium contact-links" target="_blank" href="https://chateau.social/@v">
+				<li class="py-2">mastodon</li>
 			</a>
 			<a
 				class=" text-sm font-medium contact-links"
@@ -76,6 +72,13 @@
 				href="https://vincent.charlebois.info"
 			>
 				<li class="py-2">.info</li>
+			</a>
+			<a
+				class=" text-sm font-medium contact-links"
+				target="_blank"
+				href="https://tripledoublev.github.io/CV/"
+			>
+				<li class="py-2">CV</li>
 			</a>
 		</ul>
 		<p class="text-2xl text-left px-5 pt-7 pb-7 mt-12 mb-1 w-80">
