@@ -63,7 +63,12 @@ export function initializePortal() {
 		{ url: 'https://vincent.charlebois.info/consecutive-days/00_All_Days.html', https: true },
 		{ url: 'https://vincent.charlebois.info/consecutive-days/64_Feb28.html', https: true },
 		{ url: 'https://acclivities.eth.limo', https: true },
-		{ url: 'https://vncnt.xyz/horloge', https: true }
+		{ url: 'https://vncnt.xyz/horloge', https: true },
+		{ url: 'https://vincent.charlebois.com/en/couleur', https: true },
+		{ url: 'https://www.ffforests.xyz/v/', https: true },
+		{ url: 'https://www.charlebois.solutions/ascii/', https: true },
+		{ url: 'https://www.charlebois.solutions/cam/', https: true },
+		{ url: 'https://www.charlebois.solutions/v/', https: true }
 	];
 	const div = document.createElement('div');
 	const getRandInRange = (min, max) => {
