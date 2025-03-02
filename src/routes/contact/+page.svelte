@@ -18,11 +18,8 @@
 			:
 		</p>
 		<ul class="flex flex-row flex-wrap">
-			<a class=" text-sm font-medium contact-links" target="_blank" href="https://hypha.coop/">
+			<a class="text-sm font-medium contact-links" target="_blank" href="https://hypha.coop/">
 				<li class="py-2">hypha</li>
-			</a>
-			<a class=" text-sm font-medium contact-links" target="_blank" href="https://chateau.social/@v">
-				<li class="py-2">mastodon</li>
 			</a>
 			<a
 				class=" text-sm font-medium contact-links"
@@ -33,10 +30,51 @@
 			</a>
 			<a
 				class=" text-sm font-medium contact-links"
+				href="/publickey"
+			>
+				<li class="py-2">pgp</li>
+			</a>
+			<a
+				class=" text-sm font-medium contact-links"
 				target="_blank"
 				href="https://github.com/tripledoublev"
 			>
 				<li class="py-2">github</li>
+			</a>
+			<a
+				class=" text-sm font-medium contact-links"
+				target="_blank"
+				href="https://www.linkedin.com/in/vincent-charlebois/"
+			>
+				<li class="py-2">linkedin</li>
+			</a>
+			<a 
+				class=" text-sm font-medium contact-links" 
+				target="_blank" 
+				href="https://chateau.social/@v"
+			>
+				<li class="py-2">mastodon</li>
+			</a>
+			<a 
+				class=" text-sm font-medium contact-links"
+				target="_blank"
+				href="https://bsky.app/profile/charlebois.info"
+			>
+				<li class="py-2">bluesky</li>
+			</a>
+			<a
+				class=" text-sm font-medium contact-links"
+				target="_blank"
+				href="https://www.are.na/vincent-charlebois"
+			>
+				<li class="py-2">are.na</li>
+			</a>
+			<a
+				class=" text-sm font-medium contact-links"
+				target="_blank"
+				href="https://pinksky.app/profile/couleurs.bsky.social"
+			>
+				<li class="py-2">pinksky</li>
 			</a>
 			<a
 				class=" text-sm font-medium contact-links"
@@ -64,7 +102,7 @@
 				target="_blank"
 				href="https://www.warpcast.com/xxc"
 			>
-				<li class="py-2">farcaster</li>
+				<li class="py-2">warpcast</li>
 			</a>
 			<a
 				class=" text-sm font-medium contact-links"
@@ -73,6 +111,13 @@
 			>
 				<li class="py-2">.info</li>
 			</a>
+			<a
+			class=" text-sm font-medium contact-links"
+			target="_blank"
+			href="https://vncnt.xyz"
+		>
+			<li class="py-2">.xyz</li>
+		</a>
 			<a
 				class=" text-sm font-medium contact-links"
 				target="_blank"
