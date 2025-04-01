@@ -52,7 +52,9 @@ export function initializePortal() {
 		{ url: 'https://vncnt.xyz/', https: true },
 		{ url: 'https://www.vincentcharlebois.net/', https: true },
 		{ url: 'https://ffforests.xyz/', https: true },
+		{ url: 'https://ffforests.xyz/v', https: true },
 		{ url: 'https://hypha.coop/', https: true },
+		{ url: 'https://handbook.hypha.coop/', https: true },
 		{ url: 'https://vincent.charlebois.info/consecutive-days/', https: true },
 		{ url: 'https://vincent.charlebois.info/consecutive-days/29_Oct16-Oct19.html', https: true },
 		{ url: 'https://vincent.charlebois.info/consecutive-days/30_Oct24-Oct25.html', https: true },
@@ -69,6 +71,7 @@ export function initializePortal() {
 		{ url: 'https://www.charlebois.solutions/ascii/', https: true },
 		{ url: 'https://www.charlebois.solutions/cam/', https: true },
 		{ url: 'https://www.charlebois.solutions/v/', https: true }
+		
 	];
 	const div = document.createElement('div');
 	const getRandInRange = (min, max) => {
@@ -77,9 +80,8 @@ export function initializePortal() {
 
 	const site = sites[getRandInRange(0, sites.length - 1)];
 
-	const horizontal = getRandInRange(0, window.innerWidth / 2);
-	const vertical = getRandInRange(100, window.innerHeight - 100);
-
+	const horizontal = getRandInRange(0, window.innerWidth * 0.9);
+	const vertical = getRandInRange(window.innerHeight * 0.7, window.innerHeight * 0.86);
 	let inner;
 
 	if (site.https) {
@@ -99,7 +101,7 @@ export function initializePortal() {
 
 	const arrow = document.createElement('img');
 	arrow.setAttribute('src', 'https://possible.social/arrow.png');
-	arrow.style.position = 'fixed';
+	arrow.style.position = 'absolute';
 	arrow.style.width = '30px';
 	arrow.style.top = `${vertical - 7}px`;
 	arrow.style.left = `${horizontal - 18}px`;
@@ -107,7 +109,7 @@ export function initializePortal() {
 
 	const question = document.createElement('img');
 	question.setAttribute('src', 'https://possible.social/question.png');
-	question.style.position = 'fixed';
+	question.style.position = 'absolute';
 	question.style.width = '25px';
 	question.style.top = `${vertical + 130}px`;
 	question.style.left = `${horizontal + 132}px`;
@@ -115,7 +117,7 @@ export function initializePortal() {
 
 	const close = document.createElement('img');
 	close.setAttribute('src', 'https://possible.social/static/media/close.c060470e.png');
-	close.style.position = 'fixed';
+	close.style.position = 'absolute';
 	close.style.width = '25px';
 	close.style.top = `${vertical - 7}px`;
 	close.style.left = `${horizontal + 132}px`;
@@ -142,7 +144,7 @@ export function initializePortal() {
 	portal.style.borderStyle = 'solid';
 	portal.style.borderWidth = '10px';
 	portal.style.overflow = 'auto';
-	portal.style.position = 'fixed';
+	portal.style.position = 'absolute';
 	portal.style.webkitOverflowScrolling = 'touch';
 	portal.style.top = `${vertical}px`;
 	portal.style.left = `${horizontal}px`;
