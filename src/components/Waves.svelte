@@ -1,7 +1,8 @@
 <script>
-	import { t } from 'svelte-i18n';
 	import { onMount, afterUpdate } from 'svelte';
 
+	export let basicText = "environmental data perceptualization and regenerative interactions";
+	
 	let sea = '';
 	let seaWidth;
 	let seaHeight;
@@ -67,9 +68,8 @@
 
 <p id="sea" class="whitespace-pre toptop">{sea}</p>
 
-
 <p bind:this={datP} class="text-justify [text-align-last:justify]">
-	{$t('basic')}
+	{basicText}
 </p>
 
 <style>
