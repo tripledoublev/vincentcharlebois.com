@@ -174,7 +174,7 @@
 				<li class="py-2">2016 Rhytidome</li>
 			</a>
 			<a
-				href="https://tripledoublev.com/scroll"
+				href="https://tripledoublev.net/scroll"
 				class="text-sm font-medium contact-links"
 				target="_blank"
 			>

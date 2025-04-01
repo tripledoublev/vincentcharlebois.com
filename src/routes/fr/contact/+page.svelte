@@ -88,7 +88,7 @@
       <a href="https://tripledoublev.net/rhytidome" class="text-sm font-medium contact-links" target="_blank">
         <li class="py-2">2016 Rhytidome</li>
       </a>
-      <a href="https://tripledoublev.com/scroll" class="text-sm font-medium contact-links" target="_blank">
+      <a href="https://tripledoublev.net/scroll" class="text-sm font-medium contact-links" target="_blank">
         <li class="py-2">2015 if 2 words</li>
       </a>
     </ul>
