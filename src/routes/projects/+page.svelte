@@ -1,12 +1,12 @@
 <script>
 	import { t } from 'svelte-i18n';
+	import SEO from '$components/SEO.svelte';
+	$: description = $t('projects.description');
+	$: title = `{$t('linkprojects')} \Vincent Charlebois`
 </script>
 
-<svelte:head>
-	<title>
-		{$t('linkprojects')} \Vincent Charlebois
-	</title>
-</svelte:head>
+<SEO title={title} description={description} />
+
 
 <main class="flex flex-col place-items-center justify-center min-h-[75vh]">
 	<p class="m-1 my-2 px-4 md:m-6 md:px-8 text-left">

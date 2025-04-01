@@ -1,15 +1,13 @@
 <script>
 	import { t } from 'svelte-i18n';
-
+	import SEO from '$components/SEO.svelte';
 	import Waves from '../components/Waves.svelte';
+
+	$: title = `\Vincent Charlebois — ${$t('basic_title')}`;
+	$: description = $t('meta.description');
 </script>
 
-<svelte:head>
-	<title>
-		Vincent Charlebois - {$t('basic_title')}
-	</title>
-</svelte:head>
-
+<SEO title={title} description={description} />
 <main class="flex flex-col place-items-center justify-center overflow-hidden w-full min-h-[75vh] mt-12 md:mt-24"> 
 	<div class="flex md:hidden items-center lg:ml-12 z-20 mb-32">
 			<h1 class="text-center">vincent charlebois</h1>
