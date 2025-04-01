@@ -2,14 +2,15 @@
 	import { t } from 'svelte-i18n';
 	import { initializePortal } from '$lib/portal.js';
 
+	import SEO from '$components/SEO.svelte';
+
 	initializePortal();
+
+	$: description = $t('contact.description');
+	$: title = `{$t('linkcontact')} \Vincent Charlebois`
 </script>
 
-<svelte:head>
-	<title>
-		{$t('linkcontact')} \Vincent Charlebois
-	</title>
-</svelte:head>
+<SEO title={title} description={description} />
 
 <main class="flex flex-col place-items-center justify-center min-h-[75vh]">
 	<div class="px-5 text-center">
