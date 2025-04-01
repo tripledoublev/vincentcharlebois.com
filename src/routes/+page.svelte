@@ -1,22 +1,34 @@
 <script>
-	import { t } from 'svelte-i18n';
+	import { browser } from '$app/environment';
+	import { goto } from '$app/navigation';
+	import { onMount } from 'svelte';
 	import SEO from '$components/SEO.svelte';
 	import Waves from '../components/Waves.svelte';
 
-	$: title = `\Vincent Charlebois — ${$t('basic_title')}`;
-	$: description = $t('meta.description');
+	export let data;
+
+	onMount(() => {
+		if (browser) {
+			const userLang = navigator.language || navigator.userLanguage;
+			if (userLang.startsWith('fr')) {
+				goto('/fr');
+			} else {
+				goto('/en');
+			}
+		}
+	});
 </script>
 
-<SEO title={title} description={description} />
+<SEO 
+	title="Vincent Charlebois"
+	description="Vincent Charlebois; intermedia artist, software developer and member of Hypha Worker Co-operative."
+	currentUrl={data.url}
+/>
+
 <main class="flex flex-col place-items-center justify-center overflow-hidden w-full min-h-[75vh] mt-12 md:mt-24"> 
 	<div class="flex md:hidden items-center lg:ml-12 z-20 mb-32">
 			<h1 class="text-center">vincent charlebois</h1>
 	</div>
-
-	
-	<h2 class="italic">
-		{$t('basic_title')}
-	</h2>
 
 	<Waves />
 </main>
