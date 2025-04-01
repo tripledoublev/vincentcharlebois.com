@@ -17,5 +17,10 @@
 	"meta.description": "Vincent Charlebois; intermedia artist, software developer and member of Hypha Worker Co-operative.",
 	"contact.description": "Get in touch with Vincent Charlebois. Find links to social media profiles, his CV and portfolio.",
 	"about.description": "About Vincent Charlebois - Artist, creative technologist, and member of Hypha Worker Co-operative.",
-	"projects.description": "Explore Vincent Charlebois's projects and his work at Hypha Worker Co-operative."
+	"projects.description": "Explore Vincent Charlebois's projects and his work at Hypha Worker Co-operative.",
+	"url_slugs": {
+		"about": "about",
+		"projects": "projects",
+		"contact": "contact"
+	  }
 }
