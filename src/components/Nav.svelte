@@ -1,8 +1,12 @@
 <script>
 	import { page } from '$app/stores';
+	import { locale } from 'svelte-i18n';
 	import ColorSwitcher from './ColorSwitcher.svelte';
 	import Switch from './LangSwitch.svelte';
 	import Links from './Links.svelte';
+
+	// Determine the language prefix for links
+	$: langPrefix = $locale === 'fr' ? '/fr' : '/en';
 </script>
 
 <nav class="w-full px-2 py-3">
@@ -10,7 +14,7 @@
 		class="container mx-auto flex flex-wrap flex-col sm:flex-row items-center justify-around md:justify-between px-2 relative"
 	>
 		<div class="hidden md:flex order-1 items-center lg:ml-12 z-20">
-			<a href="/" class:active={$page.url.pathname === '/'}>
+			<a href={langPrefix} class:active={$page.url.pathname === langPrefix || $page.url.pathname === `${langPrefix}/`}>
 				<h1>vincent charlebois</h1>
 			</a>
 		</div>
@@ -23,7 +27,7 @@
 			</div>
 		</div>
 		<div class="relative lg:absolute order-2 md-order-4 inset-0 flex flex-wrap justify-center items-center">
-			<Links />
+			<Links {langPrefix} />
 		</div>
 	</div>
 </nav>
