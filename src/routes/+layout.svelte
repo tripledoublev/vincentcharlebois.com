@@ -5,11 +5,16 @@
 	import { locale } from 'svelte-i18n';
 	import '../app.css';
 	import { initializeI18n, loadTranslations } from '$lib/i18n.js';
+	import { page } from '$app/stores';
 
 	let loading = true;
 
 	initializeI18n();
-	console.log('Initializing i18n...');
+
+	// When locale changes, update the html lang attribute
+	$: if (typeof document !== 'undefined' && $locale) {
+		document.documentElement.setAttribute('lang', $locale);
+	}
 
 	onMount(async () => {
 		await loadTranslations();

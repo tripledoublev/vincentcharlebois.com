@@ -1,7 +1,9 @@
 <script>
-	import { t } from 'svelte-i18n';
-    import { onMount } from 'svelte';
+	import { onMount } from 'svelte';
     import { tick } from 'svelte';
+    import SEO from '$components/SEO.svelte';
+
+    export let data;
 
     let publicKey = `
 -----BEGIN PGP PUBLIC KEY BLOCK-----
@@ -86,11 +88,7 @@ kJ6UNvOeaLglww0AZQ/ZQGjO3IS0pgmDkkGrKBMyst3tGz0=
     }
 </script>
 
-<svelte:head>
-	<title>
-		PGP Public Key \Vincent Charlebois
-	</title>
-</svelte:head>
+<SEO {...data.seo} />
 
 <main class="flex flex-col place-items-center justify-center min-h-[75vh]">
     
