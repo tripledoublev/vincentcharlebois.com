@@ -19,15 +19,17 @@
 	});
 </script>
 
-<SEO 
+<SEO
 	title="Vincent Charlebois"
 	description="Vincent Charlebois; intermedia artist, software developer and member of Hypha Worker Co-operative."
 	currentUrl={data.url}
 />
 
-<main class="flex flex-col place-items-center justify-center overflow-hidden w-full min-h-[75vh] mt-12 md:mt-24"> 
+<main
+	class="flex flex-col place-items-center justify-center overflow-hidden w-full min-h-[75vh] mt-12 md:mt-24"
+>
 	<div class="flex md:hidden items-center lg:ml-12 z-20 mb-32">
-			<h1 class="text-center">vincent charlebois</h1>
+		<h1 class="text-center">vincent charlebois</h1>
 	</div>
 
 	<Waves />
