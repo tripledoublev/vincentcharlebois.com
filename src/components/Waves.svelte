@@ -1,8 +1,8 @@
 <script>
 	import { onMount, afterUpdate } from 'svelte';
 
-	export let basicText = "environmental data perceptualization and regenerative interactions";
-	
+	export let basicText = 'environmental data perceptualization and regenerative interactions';
+
 	let sea = '';
 	let seaWidth;
 	let seaHeight;

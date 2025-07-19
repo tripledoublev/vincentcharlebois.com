@@ -1,15 +1,15 @@
 <script>
 	import { t } from 'svelte-i18n';
 	import { page } from '$app/stores';
-	
+
 	// Accept the language prefix from the parent component
 	export let langPrefix = '/en';
-	
+
 	// Get localized URL slugs
 	$: aboutSlug = $t('url_slugs.about');
 	$: projectsSlug = $t('url_slugs.projects');
 	$: contactSlug = $t('url_slugs.contact');
-	
+
 	// Construct full paths
 	$: aboutPath = `${langPrefix}/${aboutSlug}`;
 	$: projectsPath = `${langPrefix}/${projectsSlug}`;
