@@ -1,55 +1,51 @@
 /** @type {import('@sveltejs/kit').Handle} */
 export async function handle({ event, resolve }) {
-    // Determine the language from the URL path
-    const path = event.url.pathname;
-    let lang = 'en'; // Default language
-    
-    // Check for language in path or use a heuristic based on known paths
-    if (path.includes('/fr/') || path.startsWith('/fr')) {
-      lang = 'fr';
-    }
-    
-    // Default metadata (fallback)
-    let title = 'Vincent Charlebois';
-    let description = lang === 'fr' 
-      ? 'Vincent Charlebois; artiste intermédia, développeur logiciel et membre de la coopérative de travailleurs Hypha.'
-      : 'Vincent Charlebois; intermedia artist, software developer and member of Hypha Worker Co-operative.';
-    let imageUrl = 'https://vincentcharlebois.com/vincentcharlebois-com.png';
-    let currentUrl = `https://vincentcharlebois.com${event.url.pathname}`;
-    
-    // Route-specific metadata based on language and path
-    if (path === '/' || path === '' || path === '/fr/' || path === '/fr') {
-      title = lang === 'fr' 
-        ? 'Vincent Charlebois — Écologies, technologies;'
-        : 'Vincent Charlebois — Ecologies, technologies;';
-    } 
-    else if (path.includes('/about') || path.includes('/a-propos')) {
-      title = lang === 'fr' 
-        ? 'À propos de Vincent Charlebois'
-        : 'About Vincent Charlebois';
-      description = lang === 'fr'
-        ? 'À propos de Vincent Charlebois - Artiste, technologue créatif et membre de la coopérative de travailleurs Hypha.'
-        : 'About Vincent Charlebois - Artist, creative technologist, and member of Hypha Worker Co-operative.';
-    }
-    else if (path.includes('/projects') || path.includes('/projets')) {
-      title = lang === 'fr' 
-        ? 'Projets de Vincent Charlebois'
-        : 'Projects by Vincent Charlebois';
-      description = lang === 'fr'
-        ? 'Explorez les projets de Vincent Charlebois et son travail au sein de la coopérative de travailleurs Hypha.'
-        : 'Explore Vincent Charlebois\'s projects and his work at Hypha Worker Co-operative.';
-    }
-    else if (path.includes('/contact')) {
-      title = lang === 'fr' 
-        ? 'Contactez Vincent Charlebois'
-        : 'Contact Vincent Charlebois';
-      description = lang === 'fr'
-        ? 'Contactez Vincent Charlebois. Trouvez des liens vers ses réseaux sociaux, son CV et son portfolio.'
-        : 'Get in touch with Vincent Charlebois. Find links to social media profiles, his CV and portfolio.';
-    }
-    
-    // Generate meta tags with appropriate language
-    const metaTags = `
+	// Determine the language from the URL path
+	const path = event.url.pathname;
+	let lang = 'en'; // Default language
+
+	// Check for language in path or use a heuristic based on known paths
+	if (path.includes('/fr/') || path.startsWith('/fr')) {
+		lang = 'fr';
+	}
+
+	// Default metadata (fallback)
+	let title = 'Vincent Charlebois';
+	let description =
+		lang === 'fr'
+			? 'Vincent Charlebois; artiste intermédia, développeur logiciel et membre de la coopérative de travailleurs Hypha.'
+			: 'Vincent Charlebois; intermedia artist, software developer and member of Hypha Worker Co-operative.';
+	let imageUrl = 'https://vincentcharlebois.com/vincentcharlebois-com.png';
+	let currentUrl = `https://vincentcharlebois.com${event.url.pathname}`;
+
+	// Route-specific metadata based on language and path
+	if (path === '/' || path === '' || path === '/fr/' || path === '/fr') {
+		title =
+			lang === 'fr'
+				? 'Vincent Charlebois — Écologies, technologies;'
+				: 'Vincent Charlebois — Ecologies, technologies;';
+	} else if (path.includes('/about') || path.includes('/a-propos')) {
+		title = lang === 'fr' ? 'À propos de Vincent Charlebois' : 'About Vincent Charlebois';
+		description =
+			lang === 'fr'
+				? 'À propos de Vincent Charlebois - Artiste, technologue créatif et membre de la coopérative de travailleurs Hypha.'
+				: 'About Vincent Charlebois - Artist, creative technologist, and member of Hypha Worker Co-operative.';
+	} else if (path.includes('/projects') || path.includes('/projets')) {
+		title = lang === 'fr' ? 'Projets de Vincent Charlebois' : 'Projects by Vincent Charlebois';
+		description =
+			lang === 'fr'
+				? 'Explorez les projets de Vincent Charlebois et son travail au sein de la coopérative de travailleurs Hypha.'
+				: "Explore Vincent Charlebois's projects and his work at Hypha Worker Co-operative.";
+	} else if (path.includes('/contact')) {
+		title = lang === 'fr' ? 'Contactez Vincent Charlebois' : 'Contact Vincent Charlebois';
+		description =
+			lang === 'fr'
+				? 'Contactez Vincent Charlebois. Trouvez des liens vers ses réseaux sociaux, son CV et son portfolio.'
+				: 'Get in touch with Vincent Charlebois. Find links to social media profiles, his CV and portfolio.';
+	}
+
+	// Generate meta tags with appropriate language
+	const metaTags = `
     <title>${title}</title>
     <meta name="description" content="${description}" />
     <meta property="og:title" content="${title}" />
@@ -66,9 +62,9 @@ export async function handle({ event, resolve }) {
     <link rel="canonical" href="${currentUrl}" />
     <meta name="language" content="${lang}" />
     `;
-    
-    // Common CSS for all no-JS fallbacks
-    const fallbackCSS = `
+
+	// Common CSS for all no-JS fallbacks
+	const fallbackCSS = `
       <style>
         .no-js-fallback {
           display: block;
@@ -122,13 +118,13 @@ export async function handle({ event, resolve }) {
         }
       </style>
     `;
-    
-    // Generate no-JS fallback content based on path
-    let noJsContent = '';
-    
-    // Root path (language selection)
-    if (path === '/' || path === '') {
-      noJsContent = `
+
+	// Generate no-JS fallback content based on path
+	let noJsContent = '';
+
+	// Root path (language selection)
+	if (path === '/' || path === '') {
+		noJsContent = `
       ${fallbackCSS}
       <div class="no-js-fallback">
         <h1>vincent charlebois</h1>
@@ -144,10 +140,10 @@ export async function handle({ event, resolve }) {
        
       </div>
       `;
-    }
-    // English home page
-    else if (path === '/en' || path === '/en/') {
-      noJsContent = `
+	}
+	// English home page
+	else if (path === '/en' || path === '/en/') {
+		noJsContent = `
       ${fallbackCSS}
       <div class="no-js-fallback">
         <div class="language-toggle"><a href="/fr">fr</a></div>
@@ -161,10 +157,10 @@ export async function handle({ event, resolve }) {
         </div>
       </div>
       `;
-    }
-    // French home page
-    else if (path === '/fr' || path === '/fr/') {
-      noJsContent = `
+	}
+	// French home page
+	else if (path === '/fr' || path === '/fr/') {
+		noJsContent = `
       ${fallbackCSS}
       <div class="no-js-fallback">
         <div class="language-toggle"><a href="/en">en</a></div>
@@ -178,10 +174,10 @@ export async function handle({ event, resolve }) {
         </div>
       </div>
       `;
-    }
-    // About page (English)
-    else if (path.includes('/en/about')) {
-      noJsContent = `
+	}
+	// About page (English)
+	else if (path.includes('/en/about')) {
+		noJsContent = `
       ${fallbackCSS}
       <div class="no-js-fallback">
         <div class="language-toggle"><a href="/fr/a-propos">fr</a></div>
@@ -192,10 +188,10 @@ export async function handle({ event, resolve }) {
         </div>
       </div>
       `;
-    }
-    // About page (French)
-    else if (path.includes('/fr/a-propos')) {
-      noJsContent = `
+	}
+	// About page (French)
+	else if (path.includes('/fr/a-propos')) {
+		noJsContent = `
       ${fallbackCSS}
       <div class="no-js-fallback">
         <div class="language-toggle"><a href="/en/about">en</a></div>
@@ -206,10 +202,10 @@ export async function handle({ event, resolve }) {
         </div>
       </div>
       `;
-    }
-    // Projects page (English)
-    else if (path.includes('/en/projects')) {
-      noJsContent = `
+	}
+	// Projects page (English)
+	else if (path.includes('/en/projects')) {
+		noJsContent = `
       ${fallbackCSS}
       <div class="no-js-fallback">
         <div class="language-toggle"><a href="/fr/projets">fr</a></div>
@@ -221,10 +217,10 @@ export async function handle({ event, resolve }) {
         </div>
       </div>
       `;
-    }
-    // Projects page (French)
-    else if (path.includes('/fr/projets')) {
-      noJsContent = `
+	}
+	// Projects page (French)
+	else if (path.includes('/fr/projets')) {
+		noJsContent = `
       ${fallbackCSS}
       <div class="no-js-fallback">
         <div class="language-toggle"><a href="/en/projects">en</a></div>
@@ -237,10 +233,10 @@ export async function handle({ event, resolve }) {
         </div>
       </div>
       `;
-    }
-    // Contact page (English)
-    else if (path.includes('/en/contact')) {
-      noJsContent = `
+	}
+	// Contact page (English)
+	else if (path.includes('/en/contact')) {
+		noJsContent = `
       ${fallbackCSS}
       <div class="no-js-fallback">
         <div class="language-toggle"><a href="/fr/contact">fr</a></div>
@@ -261,10 +257,10 @@ export async function handle({ event, resolve }) {
         </div>
       </div>
       `;
-    }
-    // Contact page (French)
-    else if (path.includes('/fr/contact')) {
-      noJsContent = `
+	}
+	// Contact page (French)
+	else if (path.includes('/fr/contact')) {
+		noJsContent = `
       ${fallbackCSS}
       <div class="no-js-fallback">
         <div class="language-toggle"><a href="/en/contact">en</a></div>
@@ -285,13 +281,13 @@ export async function handle({ event, resolve }) {
         </div>
       </div>
       `;
-    }
-    // Fallback for any other pages
-    else if (noJsContent === '') {
-      const homePath = lang === 'fr' ? '/fr' : '/en';
-      const homeText = lang === 'fr' ? 'Retour à l\'accueil' : 'Back to home';
-      
-      noJsContent = `
+	}
+	// Fallback for any other pages
+	else if (noJsContent === '') {
+		const homePath = lang === 'fr' ? '/fr' : '/en';
+		const homeText = lang === 'fr' ? "Retour à l'accueil" : 'Back to home';
+
+		noJsContent = `
       ${fallbackCSS}
       <div class="no-js-fallback">
         <h1>Vincent Charlebois</h1>
@@ -301,20 +297,22 @@ export async function handle({ event, resolve }) {
         </div>
       </div>
       `;
-    }
-    
-    // Get the page response using transformPageChunk
-    return resolve(event, {
-      transformPageChunk: ({ html }) => {
-        // Replace the language attribute
-        let modifiedHtml = html.replace(/<html lang="[^"]*">/, `<html lang="${lang}">`);
-        
-        // Insert meta tags after head opening tag if it's the initial chunk
-        if (modifiedHtml.includes('<head>')) {
-          modifiedHtml = modifiedHtml.replace('<head>', '<head>' + metaTags);
-          
-          // Add special style to fix content visibility
-          modifiedHtml = modifiedHtml.replace('</head>', `
+	}
+
+	// Get the page response using transformPageChunk
+	return resolve(event, {
+		transformPageChunk: ({ html }) => {
+			// Replace the language attribute
+			let modifiedHtml = html.replace(/<html lang="[^"]*">/, `<html lang="${lang}">`);
+
+			// Insert meta tags after head opening tag if it's the initial chunk
+			if (modifiedHtml.includes('<head>')) {
+				modifiedHtml = modifiedHtml.replace('<head>', '<head>' + metaTags);
+
+				// Add special style to fix content visibility
+				modifiedHtml = modifiedHtml.replace(
+					'</head>',
+					`
           <style>
             /* Fix for content visibility without JavaScript */
             html:not(:has(script[data-sveltekit-hydrate])) body > div[style*="display: contents"] {
@@ -324,15 +322,18 @@ export async function handle({ event, resolve }) {
               display: block !important;
             }
           </style>
-          </head>`);
-        }
-        
-        // Insert no-JS fallback content for all paths
-        modifiedHtml = modifiedHtml.replace('<div style="display: contents">', 
-          `<div style="display: contents">
-          <noscript>${noJsContent}</noscript>`);
-        
-        return modifiedHtml;
-      }
-    });
+          </head>`
+				);
+			}
+
+			// Insert no-JS fallback content for all paths
+			modifiedHtml = modifiedHtml.replace(
+				'<div style="display: contents">',
+				`<div style="display: contents">
+          <noscript>${noJsContent}</noscript>`
+			);
+
+			return modifiedHtml;
+		}
+	});
 }

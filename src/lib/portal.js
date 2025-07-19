@@ -5,10 +5,9 @@ export function initializePortal() {
 		{ url: 'https://possible.social/', https: true },
 		{
 			url: 'http://sandracrispart.com/index.php/art-of-no-likes-launch/',
-			https: false,
-			img: 'sandracrispart.jpg'
+			https: false
 		},
-		{ url: 'http://julietagil.com/Nuestra-Victoria', https: false, img: 'julietagil.jpg' },
+		{ url: 'http://julietagil.com/Nuestra-Victoria', https: false },
 		{ url: 'https://www.ourmachine.net/', https: true },
 		{ url: 'https://barrythrew.com/', https: true },
 		{ url: 'https://www.badalmer.com/', https: true },
@@ -16,7 +15,7 @@ export function initializePortal() {
 		{ url: 'https://towhomthismayconcern.org/', https: true },
 		{ url: 'https://anti-materia.org/', https: true },
 		{ url: 'https://a.pureapparat.us/', https: true },
-		{ url: 'http://www.isladen.world/', https: false, img: 'isladen.jpg' },
+		{ url: 'http://www.isladen.world/', https: false },
 		{ url: 'https://michaelreale.format.com/', https: true },
 		{ url: 'https://www.carsonteal.com/', https: true },
 		{ url: 'https://boringmommyblogblog.wordpress.com/', https: true },
@@ -29,18 +28,18 @@ export function initializePortal() {
 		{ url: 'https://www.hemligaskolan.se/', https: true },
 		{ url: 'https://yletalgnimlab.me/', https: true },
 		{ url: 'https://eviau.github.io/thiswebsite/index.html', https: true },
-		{ url: 'http://dagmarschuerrer.com/', https: false, img: 'dagmarschuerrer.jpg' },
+		{ url: 'http://dagmarschuerrer.com/', https: false },
 		{ url: 'https://rozina.neocities.org/', https: true },
 		{ url: 'https://www.francescoimola.com/', https: true },
 		{ url: 'https://lattice.tools/', https: true },
 		{ url: 'https://preppers.gallery/', https: true },
 		{ url: 'https://www.hervisions.world/', https: true },
-		{ url: 'http://lovelanguages.melaniehoff.com/', https: false, img: 'digitallovelanguages.png' },
-		{ url: 'http://www.srswthi.com/', https: false, img: 'saraswathisubbaraman.png' },
+		{ url: 'http://lovelanguages.melaniehoff.com/', https: false },
+		{ url: 'http://www.srswthi.com/', https: false },
 		{ url: 'https://kevinclancy.studio/', https: true },
-		{ url: 'http://www.offsiteproject.org/', https: false, img: 'offsiteproject.png' },
+		{ url: 'http://www.offsiteproject.org/', https: false },
 		{ url: 'https://www.tuckernickman.com/beginning.html', https: true },
-		{ url: 'http://joemygan.com/', https: false, img: 'joemygan.jpg' },
+		{ url: 'http://joemygan.com/', https: false },
 		{ url: 'https://kaleyflowers.com/', https: true },
 		{ url: 'https://www.charlebois.solutions/', https: true },
 		{ url: 'https://vincent.charlebois.info/', https: true },
@@ -70,8 +69,8 @@ export function initializePortal() {
 		{ url: 'https://www.ffforests.xyz/v/', https: true },
 		{ url: 'https://www.charlebois.solutions/ascii/', https: true },
 		{ url: 'https://www.charlebois.solutions/cam/', https: true },
-		{ url: 'https://www.charlebois.solutions/v/', https: true }
-		
+		{ url: 'https://www.charlebois.solutions/v/', https: true },
+		{ url: 'https://vincent.charlebois.info/en/couleur/', https: true }
 	];
 	const div = document.createElement('div');
 	const getRandInRange = (min, max) => {
@@ -94,13 +93,13 @@ export function initializePortal() {
 		inner.style.overflow = 'hidden';
 	} else {
 		inner = document.createElement('img');
-		inner.setAttribute('src', `https://possible.social/${site.img}`);
+		inner.setAttribute('src', `https://www.vincentcharlebois.com/${site.img}`);
 		inner.setAttribute('scrolling', 'no');
 		inner.style.overflow = 'hidden';
 	}
 
 	const arrow = document.createElement('img');
-	arrow.setAttribute('src', 'https://possible.social/arrow.png');
+	arrow.setAttribute('src', 'https://www.vincentcharlebois.com/arrow.png');
 	arrow.style.position = 'absolute';
 	arrow.style.width = '30px';
 	arrow.style.top = `${vertical - 7}px`;
@@ -108,7 +107,7 @@ export function initializePortal() {
 	arrow.style.zIndex = '110';
 
 	const question = document.createElement('img');
-	question.setAttribute('src', 'https://possible.social/question.png');
+	question.setAttribute('src', 'https://www.vincentcharlebois.com/question.png');
 	question.style.position = 'absolute';
 	question.style.width = '25px';
 	question.style.top = `${vertical + 130}px`;
@@ -116,7 +115,7 @@ export function initializePortal() {
 	question.style.zIndex = '110';
 
 	const close = document.createElement('img');
-	close.setAttribute('src', 'https://possible.social/static/media/close.c060470e.png');
+	close.setAttribute('src', 'https://www.vincentcharlebois.com/close.c060470e.png');
 	close.style.position = 'absolute';
 	close.style.width = '25px';
 	close.style.top = `${vertical - 7}px`;
@@ -133,7 +132,10 @@ export function initializePortal() {
 	a.appendChild(arrow);
 
 	const a2 = document.createElement('a');
-	a2.setAttribute('href', 'https://possible.social/join');
+	a2.setAttribute(
+		'href',
+		'https://web.archive.org/web/20240412123630/https://possible.social/join'
+	);
 	a2.setAttribute('target', '_blank');
 	a2.appendChild(question);
 
