@@ -7,10 +7,10 @@
 	initializePortal();
 
 	$: description = $t('contact.description');
-	$: title = `{$t('linkcontact')} \Vincent Charlebois`
+	$: title = `{$t('linkcontact')} Vincent Charlebois`;
 </script>
 
-<SEO title={title} description={description} />
+<SEO {title} {description} />
 
 <main class="flex flex-col place-items-center justify-center min-h-[75vh]">
 	<div class="px-5 text-center">
@@ -29,10 +29,7 @@
 			>
 				<li class="py-2">email</li>
 			</a>
-			<a
-				class=" text-sm font-medium contact-links"
-				href="/publickey"
-			>
+			<a class=" text-sm font-medium contact-links" href="/publickey">
 				<li class="py-2">pgp</li>
 			</a>
 			<a
@@ -49,14 +46,14 @@
 			>
 				<li class="py-2">linkedin</li>
 			</a>
-			<a 
-				class=" text-sm font-medium contact-links" 
-				target="_blank" 
+			<a
+				class=" text-sm font-medium contact-links"
+				target="_blank"
 				href="https://chateau.social/@v"
 			>
 				<li class="py-2">mastodon</li>
 			</a>
-			<a 
+			<a
 				class=" text-sm font-medium contact-links"
 				target="_blank"
 				href="https://bsky.app/profile/charlebois.info"
@@ -112,13 +109,9 @@
 			>
 				<li class="py-2">.info</li>
 			</a>
-			<a
-			class=" text-sm font-medium contact-links"
-			target="_blank"
-			href="https://vncnt.xyz"
-		>
-			<li class="py-2">.xyz</li>
-		</a>
+			<a class=" text-sm font-medium contact-links" target="_blank" href="https://vncnt.xyz">
+				<li class="py-2">.xyz</li>
+			</a>
 			<a
 				class=" text-sm font-medium contact-links"
 				target="_blank"

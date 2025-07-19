@@ -5,7 +5,6 @@
 	import { locale } from 'svelte-i18n';
 	import '../app.css';
 	import { initializeI18n, loadTranslations } from '$lib/i18n.js';
-	import { page } from '$app/stores';
 
 	let loading = true;
 
