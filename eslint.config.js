@@ -19,5 +19,11 @@ export default [
 	},
 	{
 		ignores: ['build/', '.svelte-kit/', 'dist/']
+	},
+	{
+		files: ['src/components/Markdown.svelte'],
+		rules: {
+			'svelte/no-at-html-tags': 'off'
+		}
 	}
 ];

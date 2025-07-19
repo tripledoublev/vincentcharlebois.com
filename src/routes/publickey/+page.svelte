@@ -1,11 +1,10 @@
 <script>
-	import { onMount } from 'svelte';
-    import { tick } from 'svelte';
-    import SEO from '$components/SEO.svelte';
+	import { tick } from 'svelte';
+	import SEO from '$components/SEO.svelte';
 
-    export let data;
+	export let data;
 
-    let publicKey = `
+	let publicKey = `
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 
 mQINBGfD0WkBEADIzAp1FuL3PdsdQbefTVWThCu7F/z/9jisIqW4f9HS08eVY+Ui
@@ -60,66 +59,63 @@ kJ6UNvOeaLglww0AZQ/ZQGjO3IS0pgmDkkGrKBMyst3tGz0=
 -----END PGP PUBLIC KEY BLOCK-----
     `;
 
-    let showCopyMessage = false;
+	let showCopyMessage = false;
 
-    async function copyToClipboard() {
-        try {
-            await navigator.clipboard.writeText(publicKey);
-            showCopyMessage = true;
-            await tick();
-            setTimeout(() => {
-                showCopyMessage = false;
-            }, 2000);
-        } catch (err) {
-            console.error('Could not copy text: ', err);
-        }
-    }
+	async function copyToClipboard() {
+		try {
+			await navigator.clipboard.writeText(publicKey);
+			showCopyMessage = true;
+			await tick();
+			setTimeout(() => {
+				showCopyMessage = false;
+			}, 2000);
+		} catch (err) {
+			console.error('Could not copy text: ', err);
+		}
+	}
 
-    function saveAsFile() {
-        const blob = new Blob([publicKey], { type: 'text/plain' });
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = 'vincent_charlebois_public_key.asc';
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-        URL.revokeObjectURL(url);
-    }
+	function saveAsFile() {
+		const blob = new Blob([publicKey], { type: 'text/plain' });
+		const url = URL.createObjectURL(blob);
+		const a = document.createElement('a');
+		a.href = url;
+		a.download = 'vincent_charlebois_public_key.asc';
+		document.body.appendChild(a);
+		a.click();
+		document.body.removeChild(a);
+		URL.revokeObjectURL(url);
+	}
 </script>
 
 <SEO {...data.seo} />
 
 <main class="flex flex-col place-items-center justify-center min-h-[75vh]">
-    
-    <div class="flex flex-col flex-wrap md:flex-row mt-2 md:mt-12">
-        <button on:click={saveAsFile} class="text-sm font-medium download">Save as .asc file</button>
-        
-        <button 
-            on:click={copyToClipboard}
-            class="text-sm font-medium download"
-        >
-            {#if showCopyMessage}
-                Copied to clipboard!
-            {:else}
-                Copy to clipboard
-            {/if}
-        </button>
-    </div>
-    <button on:click={copyToClipboard} class="text-sm font-medium mt-12">
-        <pre>
+	<div class="flex flex-col flex-wrap md:flex-row mt-2 md:mt-12">
+		<button on:click={saveAsFile} class="text-sm font-medium download">Save as .asc file</button>
+
+		<button on:click={copyToClipboard} class="text-sm font-medium download">
+			{#if showCopyMessage}
+				Copied to clipboard!
+			{:else}
+				Copy to clipboard
+			{/if}
+		</button>
+	</div>
+	<button on:click={copyToClipboard} class="text-sm font-medium mt-12">
+		<pre>
             {publicKey}
         </pre>
-    </button>
+	</button>
 </main>
+
 <style>
-button.download {
-    border: 2px solid var(--text-color);
-    padding: 1.75rem;
-    margin: 0.45rem;
-}
-button.download:hover {
-    background-color: var(--text-color);
-    color: var(--background-color);
-}
+	button.download {
+		border: 2px solid var(--text-color);
+		padding: 1.75rem;
+		margin: 0.45rem;
+	}
+	button.download:hover {
+		background-color: var(--text-color);
+		color: var(--background-color);
+	}
 </style>
