@@ -14,7 +14,10 @@
 		class="container mx-auto flex flex-wrap flex-col sm:flex-row items-center justify-around md:justify-between px-2 relative"
 	>
 		<div class="hidden md:flex order-1 items-center lg:ml-12 z-20">
-			<a href={langPrefix} class:active={$page.url.pathname === langPrefix || $page.url.pathname === `${langPrefix}/`}>
+			<a
+				href={langPrefix}
+				class:active={$page.url.pathname === langPrefix || $page.url.pathname === `${langPrefix}/`}
+			>
 				<h1>vincent charlebois</h1>
 			</a>
 		</div>
@@ -26,7 +29,9 @@
 				<ColorSwitcher />
 			</div>
 		</div>
-		<div class="relative lg:absolute order-2 md-order-4 inset-0 flex flex-wrap justify-center items-center">
+		<div
+			class="relative lg:absolute order-2 md-order-4 inset-0 flex flex-wrap justify-center items-center"
+		>
 			<Links {langPrefix} />
 		</div>
 	</div>
