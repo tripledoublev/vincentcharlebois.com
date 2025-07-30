@@ -1,4 +1,18 @@
 export function initializePortal() {
+	// Add global error handler to prevent iframe errors from bubbling up
+	const originalErrorHandler = window.onerror;
+	window.onerror = function(message, source, lineno, colno, error) {
+		// Check if the error is coming from an iframe
+		if (source && source.includes('iframe') || message.includes('media devices') || message.includes('user agent')) {
+			return true; // Prevent the error from being logged
+		}
+		// Call original error handler for other errors
+		if (originalErrorHandler) {
+			return originalErrorHandler(message, source, lineno, colno, error);
+		}
+		return false;
+	};
+
 	const sites = [
 		{ url: 'https://aos.arebyte.com/contents/hervisions-the-art-of-no-likes/', https: true },
 		{ url: 'https://lattice.tools/MemStackShapeTracer', https: true },
@@ -65,7 +79,7 @@ export function initializePortal() {
 		{ url: 'https://vincent.charlebois.info/consecutive-days/64_Feb28.html', https: true },
 		{ url: 'https://acclivities.eth.limo', https: true },
 		{ url: 'https://vncnt.xyz/horloge', https: true },
-		{ url: 'https://vincent.charlebois.com/en/couleur', https: true },
+		{ url: 'https://vincent.charlebois.info/en/couleur', https: true },
 		{ url: 'https://www.ffforests.xyz/v/', https: true },
 		{ url: 'https://www.charlebois.solutions/ascii/', https: true },
 		{ url: 'https://www.charlebois.solutions/cam/', https: true },
@@ -88,9 +102,42 @@ export function initializePortal() {
 		inner.setAttribute('src', site.url);
 		inner.setAttribute('scrolling', 'no');
 		inner.setAttribute('title', 'Art of No Likes');
+		// Add sandbox attributes to restrict iframe permissions and prevent media access
+		inner.setAttribute('sandbox', 'allow-scripts allow-same-origin allow-forms allow-popups');
 		inner.style.width = '1000px';
 		inner.style.height = '500px';
 		inner.style.overflow = 'hidden';
+		
+		// Add error handling to prevent alerts from bubbling up
+		inner.addEventListener('load', () => {
+			try {
+				// Override alert, confirm, and prompt in the iframe context
+				const iframeWindow = inner.contentWindow;
+				if (iframeWindow) {
+					iframeWindow.alert = () => {}; // Silently ignore alerts
+					iframeWindow.confirm = () => false; // Always return false for confirms
+					iframeWindow.prompt = () => null; // Always return null for prompts
+					
+					// Override console methods to prevent error logging
+					iframeWindow.console = {
+						log: () => {},
+						warn: () => {},
+						error: () => {},
+						info: () => {},
+						debug: () => {}
+					};
+				}
+			} catch (e) {
+				// Ignore cross-origin errors
+			}
+		});
+		
+		// Handle iframe errors
+		inner.addEventListener('error', (e) => {
+			e.preventDefault();
+			e.stopPropagation();
+		});
+		
 	} else {
 		inner = document.createElement('img');
 		inner.setAttribute('src', `https://www.vincentcharlebois.com/${site.img}`);
