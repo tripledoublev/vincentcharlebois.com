@@ -12,8 +12,15 @@
 	<div class="px-5 text-center">
 		<p class="text-2xl text-left px-5 pt-7 pb-7 mb-1 w-80">Links:</p>
 		<ul class="flex flex-row flex-wrap">
+			<a
+				class="text-sm font-medium contact-links"
+				target="_blank"
+				href="https://vincent.charlebois.info/en/"
+			>
+				<li class="py-2">.info</li>
+			</a>
 			<a class="text-sm font-medium contact-links" target="_blank" href="https://hypha.coop/">
-				<li class="py-2">hypha</li>
+				<li class="py-2">hypha.coop</li>
 			</a>
 			<a
 				class="text-sm font-medium contact-links"
@@ -87,17 +94,11 @@
 			<a
 				class="text-sm font-medium contact-links"
 				target="_blank"
-				href="https://www.warpcast.com/xxc"
+				href="https://www.farcaster.xyz/xxc"
 			>
-				<li class="py-2">warpcast</li>
+				<li class="py-2">farcaster</li>
 			</a>
-			<a
-				class="text-sm font-medium contact-links"
-				target="_blank"
-				href="https://vincent.charlebois.info"
-			>
-				<li class="py-2">.info</li>
-			</a>
+
 			<a class="text-sm font-medium contact-links" target="_blank" href="https://vncnt.xyz">
 				<li class="py-2">.xyz</li>
 			</a>
