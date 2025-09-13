@@ -20,7 +20,7 @@
 		</p>
 		<ul class="flex flex-row flex-wrap">
 			<a class="text-sm font-medium contact-links" target="_blank" href="https://hypha.coop/">
-				<li class="py-2">hypha</li>
+				<li class="py-2">hypha.coop</li>
 			</a>
 			<a
 				class=" text-sm font-medium contact-links"
@@ -98,9 +98,9 @@
 			<a
 				class=" text-sm font-medium contact-links"
 				target="_blank"
-				href="https://www.warpcast.com/xxc"
+				href="https://www.farcaster.xyz/xxc"
 			>
-				<li class="py-2">warpcast</li>
+				<li class="py-2">farcaster</li>
 			</a>
 			<a
 				class=" text-sm font-medium contact-links"
