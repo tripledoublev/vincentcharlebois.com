@@ -24,8 +24,14 @@
 			// Convert markdown to HTML and sanitize it
 			const rawHtml = marked(content);
 			// Post-process to add target="_blank" to all links and class for vincentcharlebois.net
-			let processedHtml = rawHtml.replace(/<a href="([^"]*)"([^>]*)>/g, '<a href="$1"$2 target="_blank" rel="noopener noreferrer">');
-			processedHtml = processedHtml.replace(/<a href="https:\/\/vincentcharlebois\.net"([^>]*)>/g, '<a href="https://vincentcharlebois.net"$1 class="green-link">');
+			let processedHtml = rawHtml.replace(
+				/<a href="([^"]*)"([^>]*)>/g,
+				'<a href="$1"$2 target="_blank" rel="noopener noreferrer">'
+			);
+			processedHtml = processedHtml.replace(
+				/<a href="https:\/\/vincentcharlebois\.net"([^>]*)>/g,
+				'<a href="https://vincentcharlebois.net"$1 class="green-link">'
+			);
 			htmlContent = DOMPurify.sanitize(processedHtml, { ADD_ATTR: ['target', 'class'] });
 			console.log('Rendered HTML:', htmlContent); // Debug log
 		} catch (error) {
@@ -48,8 +54,14 @@
 
 			const rawHtml = marked(content);
 			// Post-process to add target="_blank" to all links and class for vincentcharlebois.net
-			let processedHtml = rawHtml.replace(/<a href="([^"]*)"([^>]*)>/g, '<a href="$1"$2 target="_blank" rel="noopener noreferrer">');
-			processedHtml = processedHtml.replace(/<a href="https:\/\/vincentcharlebois\.net"([^>]*)>/g, '<a href="https://vincentcharlebois.net"$1 class="green-link">');
+			let processedHtml = rawHtml.replace(
+				/<a href="([^"]*)"([^>]*)>/g,
+				'<a href="$1"$2 target="_blank" rel="noopener noreferrer">'
+			);
+			processedHtml = processedHtml.replace(
+				/<a href="https:\/\/vincentcharlebois\.net"([^>]*)>/g,
+				'<a href="https://vincentcharlebois.net"$1 class="green-link">'
+			);
 			htmlContent = DOMPurify.sanitize(processedHtml, { ADD_ATTR: ['target', 'class'] });
 		} catch (error) {
 			console.error('Error rendering markdown:', error);
@@ -70,7 +82,7 @@
 		text-decoration-line: underline;
 		text-decoration-style: dashed;
 		text-decoration-thickness: 2px;
-		text-decoration-color: #9900FC;
+		text-decoration-color: #9900fc;
 		color: inherit;
 		font-weight: bold;
 	}
