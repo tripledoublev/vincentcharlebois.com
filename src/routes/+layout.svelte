@@ -29,3 +29,34 @@
 		<slot />
 	</div>
 {/if}
+
+<style>
+	.skip-to-main {
+		position: fixed;
+		left: -9999px;
+		z-index: 9999;
+		padding: 0.5em 1em;
+		background-color: var(--bg-color);
+		color: var(--text-color);
+		text-decoration: none;
+		font-weight: bold;
+		border: 2px solid var(--text-color);
+		transition: left 0.3s ease-in-out;
+	}
+
+	.skip-to-main:focus {
+		left: 1em;
+		top: 0.5em;
+		outline: 2px dotted var(--text-color);
+		outline-offset: 2px;
+	}
+
+	.nav-wrapper {
+		margin-top: 0;
+		transition: margin-top 0.3s ease-in-out;
+	}
+
+	.skip-to-main:focus ~ .nav-wrapper {
+		margin-top: 3em;
+	}
+</style>
