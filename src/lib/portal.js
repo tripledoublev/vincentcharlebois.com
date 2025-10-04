@@ -52,7 +52,6 @@ export function initializePortal() {
 		{ url: 'http://www.srswthi.com/', https: false },
 		{ url: 'https://kevinclancy.studio/', https: true },
 		{ url: 'http://www.offsiteproject.org/', https: false },
-		{ url: 'https://www.tuckernickman.com/beginning.html', https: true },
 		{ url: 'http://joemygan.com/', https: false },
 		{ url: 'https://kaleyflowers.com/', https: true },
 		{ url: 'https://www.charlebois.solutions/', https: true },
@@ -84,7 +83,9 @@ export function initializePortal() {
 		{ url: 'https://www.charlebois.solutions/ascii/', https: true },
 		{ url: 'https://www.charlebois.solutions/cam/', https: true },
 		{ url: 'https://www.charlebois.solutions/v/', https: true },
-		{ url: 'https://vincent.charlebois.info/en/couleur/', https: true }
+		{ url: 'https://vincent.charlebois.info/en/couleur/', https: true },
+		{ url: 'https://isthisa.com/', https: true },
+		{ url: 'https://xx-c.art', https: true }
 	];
 	const div = document.createElement('div');
 	const getRandInRange = (min, max) => {
@@ -93,8 +94,37 @@ export function initializePortal() {
 
 	const site = sites[getRandInRange(0, sites.length - 1)];
 
-	const horizontal = getRandInRange(0, window.innerWidth * 0.9);
-	const vertical = getRandInRange(window.innerHeight * 0.7, window.innerHeight * 0.86);
+	// Get nav height (approximate) and ensure portal doesn't appear in top nav area or bottom button area
+	const navHeight = 100; // approximate nav height
+	const buttonHeight = 200; // approximate bottom button area height
+	const maxWidth = window.innerWidth - 180; // leave space for portal window width (150px + border)
+	const minVertical = navHeight + 20; // start below nav
+	const maxVertical = window.innerHeight - buttonHeight - 180; // end above button area (150px + border + spacing)
+
+	// Define deadzone in the middle (center 40% of width and 30% of height)
+	const centerX = window.innerWidth / 2;
+	const centerY = window.innerHeight / 2;
+	const deadzoneWidth = window.innerWidth * 0.4;
+	const deadzoneHeight = window.innerHeight * 0.3;
+	const deadzoneLeft = centerX - deadzoneWidth / 2;
+	const deadzoneRight = centerX + deadzoneWidth / 2;
+	const deadzoneTop = centerY - deadzoneHeight / 2;
+	const deadzoneBottom = centerY + deadzoneHeight / 2;
+
+	let horizontal, vertical;
+	let attempts = 0;
+	const maxAttempts = 50;
+
+	// Generate position outside deadzone
+	do {
+		horizontal = getRandInRange(0, Math.max(0, maxWidth));
+		vertical = getRandInRange(Math.max(minVertical, 0), Math.max(maxVertical, minVertical + 100));
+		attempts++;
+	} while (
+		attempts < maxAttempts &&
+		horizontal >= deadzoneLeft && horizontal <= deadzoneRight &&
+		vertical >= deadzoneTop && vertical <= deadzoneBottom
+	);
 	let inner;
 
 	if (site.https) {

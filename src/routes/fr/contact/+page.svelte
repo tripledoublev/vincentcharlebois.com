@@ -1,14 +1,12 @@
 <script>
-	import { initializePortal } from '$lib/portal.js';
 	import SEO from '$components/SEO.svelte';
 
 	export let data;
-	initializePortal();
 </script>
 
 <SEO {...data.seo} />
 
-<main class="flex flex-col place-items-center justify-center min-h-[75vh]">
+<main id="main-content" class="flex flex-col place-items-center justify-center min-h-[75vh]">
 	<div class="px-5 text-center">
 		<p class="text-2xl text-left px-5 pt-7 pb-7 mb-1 w-80">Liens:</p>
 		<ul class="flex flex-row flex-wrap">
@@ -110,9 +108,19 @@
 			>
 				<li class="py-2">CV</li>
 			</a>
+			<a class="text-sm font-medium contact-links" href="/fr/portail">
+				<li class="py-2">portail</li>
+			</a>
 		</ul>
 		<p class="text-2xl text-left px-5 pt-7 pb-7 mt-12 mb-1 w-80">Sites web:</p>
 		<ul class="flex flex-row flex-wrap">
+			<a
+				href="http://couleurs.tripledoublev.com"
+				class="text-sm font-medium contact-links"
+				target="_blank"
+			>
+				<li class="py-2">2025 Pbhyrhef</li>
+			</a>
 			<a
 				href="https://tripledoublev.com/couleur"
 				class="text-sm font-medium contact-links"
@@ -171,7 +179,7 @@
 	}
 	li {
 		border: 2px solid var(--text-color);
-		padding: 1.75rem;
-		margin: 0.45rem;
+		padding: 0.75rem 1rem;
+		margin: 0.35rem;
 	}
 </style>
