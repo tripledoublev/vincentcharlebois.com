@@ -2,10 +2,7 @@
 	import SEO from '$components/SEO.svelte';
 	import { onMount } from 'svelte';
 
-	const seo = {
-		title: 'Vincent Charlebois',
-		description: 'Vincent Charlebois; intermedia artist, software developer and member of Hypha Worker Co-operative.'
-	};
+	export let data;
 
 	let currentRole = '';
 	let roleIndex = 0;
@@ -170,7 +167,7 @@
 	}
 </script>
 
-<SEO {...seo} />
+<SEO {...data.seo} />
 
 <main class="flex flex-col place-items-start justify-center overflow-hidden w-full min-h-[75vh]">
 	<div class="typewriter-container text-left px-2 w-full">
