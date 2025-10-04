@@ -9,13 +9,15 @@
 		en_to_fr: {
 			about: 'a-propos',
 			projects: 'projets',
-			contact: 'contact'
+			contact: 'contact',
+			portal: 'portail'
 		},
 		// When switching from French to English
 		fr_to_en: {
 			'a-propos': 'about',
 			projets: 'projects',
-			contact: 'contact'
+			contact: 'contact',
+			portail: 'portal'
 		}
 	};
 
