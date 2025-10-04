@@ -157,10 +157,17 @@
 		display: none;
 	}
 
-	/* Hide on desktop */
+	/* Hide on desktop, show on mobile */
 	@media (min-width: 768px) {
 		.mobile-home-link {
-			display: none;
+			display: none !important;
+		}
+	}
+	
+	/* Show on mobile, hide on desktop */
+	@media (max-width: 767px) {
+		.mobile-home-link {
+			display: flex !important;
 		}
 	}
 </style>
