@@ -11,12 +11,12 @@
 		<p class="text-2xl text-left px-5 pt-7 pb-7 mb-1 w-80">Liens:</p>
 		<ul class="flex flex-row flex-wrap">
 			<a
-			class="text-sm font-medium contact-links"
-			target="_blank"
-			href="https://vincent.charlebois.info/fr/"
-		>
-			<li class="py-2">.info</li>
-		</a>
+				class="text-sm font-medium contact-links"
+				target="_blank"
+				href="https://vincent.charlebois.info/fr/"
+			>
+				<li class="py-2">.info</li>
+			</a>
 			<a class="text-sm font-medium contact-links" target="_blank" href="https://hypha.coop/">
 				<li class="py-2">hypha.coop</li>
 			</a>

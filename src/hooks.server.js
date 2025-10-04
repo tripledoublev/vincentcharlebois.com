@@ -149,7 +149,7 @@ export async function handle({ event, resolve }) {
         <div class="language-toggle"><a href="/fr">fr</a></div>
         <h1>vincent charlebois</h1>
         <h2>Ecologies, technologies;</h2>
-        <p>Environmental data perceptualization and regenerative interactions</p>
+        <p>Distributed infrastructures, protocol interfaces, and governance systems through collaborative practice</p>
         <div>
           <a href="/en/about">About</a>
           <a href="/en/projects">Projects</a>
@@ -166,7 +166,7 @@ export async function handle({ event, resolve }) {
         <div class="language-toggle"><a href="/en">en</a></div>
         <h1>vincent charlebois</h1>
         <h2>Écologies, technologies;</h2>
-        <p>Perceptualisations environnementales et interactions régénératives</p>
+        <p>Infrastructures distribuées, interfaces de protocole et systèmes de gouvernance à travers une pratique collaborative</p>
         <div>
           <a href="/fr/a-propos">À propos</a>
           <a href="/fr/projets">Projets</a>
@@ -210,7 +210,7 @@ export async function handle({ event, resolve }) {
       <div class="no-js-fallback">
         <div class="language-toggle"><a href="/fr/projets">fr</a></div>
         <h1>projects by vincent charlebois</h1>
-        <p>Explore Vincent's work on environmental data perceptualization and regenerative interactions.</p>
+        <p>Explore Vincent's work on distributed infrastructures, protocol interfaces, and governance systems through collaborative practice.</p>
          <a href="https://vincent.charlebois.info/en">dot info</a>
         <div class="back-link">
           <a href="/en">Back to home</a>
@@ -225,7 +225,7 @@ export async function handle({ event, resolve }) {
       <div class="no-js-fallback">
         <div class="language-toggle"><a href="/en/projects">en</a></div>
         <h1>projets de vincent charlebois</h1>
-        <p>Explorez le travail de Vincent sur les perceptualisations de données environnementales et les interactions régénératives.</p>
+        <p>Explorez le travail de Vincent sur les infrastructures distribuées, interfaces de protocole et systèmes de gouvernance à travers une pratique collaborative.</p>
         <a href="https://vincent.charlebois.info/fr">point info</a>
 
         <div class="back-link">

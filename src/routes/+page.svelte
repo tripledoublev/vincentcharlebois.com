@@ -3,7 +3,6 @@
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
 	import SEO from '$components/SEO.svelte';
-	import Waves from '../components/Waves.svelte';
 
 	export let data;
 
@@ -31,8 +30,6 @@
 	<div class="flex md:hidden items-center lg:ml-12 z-20 mb-32">
 		<h1 class="text-center">vincent charlebois</h1>
 	</div>
-
-	<Waves />
 </main>
 
 <style>
