@@ -11,9 +11,11 @@
 	function clearAllPortals() {
 		// Remove all portal elements from the page
 		const portals = document.querySelectorAll('body > div:not([style*="display: contents"])');
-		portals.forEach(portal => {
+		portals.forEach((portal) => {
 			// Check if this div contains portal elements (iframe, img with arrow/question/close icons)
-			if (portal.querySelector('iframe, img[src*="arrow"], img[src*="question"], img[src*="close"]')) {
+			if (
+				portal.querySelector('iframe, img[src*="arrow"], img[src*="question"], img[src*="close"]')
+			) {
 				portal.remove();
 			}
 		});
