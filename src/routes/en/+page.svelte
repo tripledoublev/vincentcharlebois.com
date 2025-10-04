@@ -139,9 +139,7 @@
 
 <SEO {...data.seo} />
 
-<main
-	class="flex flex-col place-items-start justify-center overflow-hidden w-full min-h-[75vh]"
->
+<main class="flex flex-col place-items-start justify-center overflow-hidden w-full min-h-[75vh]">
 	<div class="typewriter-container text-left px-2 w-full">
 		{#if isExpanded || isExpanding}
 			<h2 class="text-xl md:text-4xl leading-relaxed">
@@ -149,27 +147,39 @@
 			</h2>
 		{:else}
 			<h2 class="text-xl md:text-4xl leading-relaxed">
-				vincent charlebois is <span class="role-text">{currentRole}</span><span class="cursor">|</span>
+				vincent charlebois is <span class="role-text">{currentRole}</span><span class="cursor"
+					>|</span
+				>
 			</h2>
 		{/if}
 	</div>
 
-	<button class="expand-toggle px-2" on:click={toggleExpand} aria-label={isExpanded ? 'Collapse' : 'Expand'}>
-		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="expand-icon" class:rotated={isExpanded}>
-			<path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+	<button
+		class="expand-toggle px-2"
+		on:click={toggleExpand}
+		aria-label={isExpanded ? 'Collapse' : 'Expand'}
+	>
+		<svg
+			width="24"
+			height="24"
+			viewBox="0 0 24 24"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
+			class="expand-icon"
+			class:rotated={isExpanded}
+		>
+			<path
+				d="M7 10L12 15L17 10"
+				stroke="currentColor"
+				stroke-width="2"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+			/>
 		</svg>
 	</button>
 </main>
 
 <style>
-	h1 {
-		font-size: 1.75rem;
-	}
-	@media (min-width: 568px) {
-		h1 {
-			font-size: 2.5rem;
-		}
-	}
 	main {
 		height: 80vh;
 	}
@@ -197,10 +207,12 @@
 	}
 
 	@keyframes blink {
-		0%, 50% {
+		0%,
+		50% {
 			opacity: 1;
 		}
-		51%, 100% {
+		51%,
+		100% {
 			opacity: 0;
 		}
 	}
