@@ -79,7 +79,7 @@
 </script>
 
 <button
-	class="text-lg lg:text-2xl font-bold hover:font-black"
+	class="text-lg lg:text-2xl font-bold"
 	type="button"
 	on:click={switchLanguage}
 >
