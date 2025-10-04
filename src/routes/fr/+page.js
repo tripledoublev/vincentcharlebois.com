@@ -1,7 +1,7 @@
 export function load({ url }) {
 	const title = 'Vincent Charlebois — Écologies, technologies;';
 	const description =
-		'Vincent Charlebois; artiste intermédia, développeur logiciel, technologue créatif et membre de la coopérative de travailleurs Hypha.';
+		'Infrastructures distribuées, interfaces de protocole et systèmes de gouvernance à travers une pratique collaborative';
 
 	return {
 		seo: {
