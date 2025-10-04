@@ -21,7 +21,7 @@
 		<ul class="flex md:flex-row list-none">
 			<a
 				href={aboutPath}
-				class="px-1 flex flex-grow items-center text-lg md:text-xl lowercase font-bold leading-snug"
+				class="link-first px-1 flex flex-grow items-center text-lg md:text-xl lowercase font-bold leading-snug"
 				class:active={$page.url.pathname.includes(aboutSlug)}
 			>
 				<li class="nav-item flex-auto">
@@ -31,7 +31,7 @@
 
 			<a
 				href={projectsPath}
-				class="px-1 flex items-center text-lg md:text-xl lowercase font-bold leading-snug"
+				class="link-middle px-1 flex items-center text-lg md:text-xl lowercase font-bold leading-snug"
 				class:active={$page.url.pathname.includes(projectsSlug)}
 			>
 				<li class="nav-item flex-auto">
@@ -41,7 +41,7 @@
 
 			<a
 				href={contactPath}
-				class="px-1 flex items-center text-lg md:text-xl lowercase font-bold leading-snug"
+				class="link-last px-1 flex items-center text-lg md:text-xl lowercase font-bold leading-snug"
 				class:active={$page.url.pathname.includes(contactSlug)}
 			>
 				<li class="nav-item flex-auto">
@@ -54,9 +54,25 @@
 
 <style>
 	li {
-		padding: 0.25rem 0.99rem;
+		padding: 0.25rem 0.7rem;
 		padding-bottom: 0.35rem;
 	}
+
+	/* Equal width for mobile alignment */
+	@media (max-width: 767px) {
+		a {
+			flex: 1;
+			justify-content: center;
+			min-width: 0;
+		}
+		li {
+			text-align: center;
+			padding-left: 0.75rem;
+			padding-right: 0.75rem;
+			white-space: nowrap;
+		}
+	}
+
 	.active {
 		text-decoration-line: underline;
 		text-decoration-thickness: 2px;
