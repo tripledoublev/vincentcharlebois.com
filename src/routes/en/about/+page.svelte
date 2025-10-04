@@ -9,7 +9,6 @@
 
 	onMount(() => {
 		aboutText = $t('about');
-		console.log('English about text:', aboutText); // Debug log
 	});
 
 	$: if ($t('about')) {

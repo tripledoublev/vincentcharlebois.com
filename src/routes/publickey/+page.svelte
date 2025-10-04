@@ -70,7 +70,7 @@ kJ6UNvOeaLglww0AZQ/ZQGjO3IS0pgmDkkGrKBMyst3tGz0=
 				showCopyMessage = false;
 			}, 2000);
 		} catch (err) {
-			console.error('Could not copy text: ', err);
+			// Could not copy text
 		}
 	}
 
