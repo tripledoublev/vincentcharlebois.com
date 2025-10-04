@@ -233,6 +233,9 @@ export async function handle({ event, resolve }) {
 	else if (noJsContent === '') {
 		const homePath = lang === 'fr' ? '/fr' : '/en';
 		const homeText = lang === 'fr' ? "Retour à l'accueil" : 'Back to home';
+		const description = lang === 'fr'
+			? 'Infrastructures distribuées, interfaces de protocole et systèmes de gouvernance à travers une pratique collaborative'
+			: 'Distributed infrastructures, protocol interfaces, and governance systems through collaborative practice';
 
 		noJsContent = `
       ${fallbackCSS}
