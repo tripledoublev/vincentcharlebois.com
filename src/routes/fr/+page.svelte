@@ -17,6 +17,9 @@
 	let expandedText = '';
 	let expandIndex = 0;
 	let remainingRoles = [];
+	let nameText = '';
+	let nameIndex = 0;
+	let isTypingName = true;
 
 	const roles = [
 		'un artiste intermédiatique',
@@ -42,7 +45,7 @@
 	onMount(() => {
 		remainingRoles = shuffleArray(roles);
 		roleIndex = 0;
-		typeWriter();
+		typeName();
 
 		// Shadow content
 		console.log('%c━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━', 'color: #9900fc; font-weight: bold;');
@@ -85,6 +88,19 @@ Depuis novembre 2023, Vincent Charlebois est membre-travailleur de la Hypha Work
 
 Au sein de cette structure, Charlebois détient le titre d'« artiste-chercheur et technologue créatif ». Cette position n'est pas accessoire à sa pratique artistique mais semble être une partie intégrante de sa manifestation actuelle. Son travail chez Hypha, en particulier au sein de son « Laboratoire de co-création » qui collabore avec des organisations artistiques, culturelles et militantes, permet une synthèse directe de sa recherche artistique avec la technologie appliquée. Le modèle coopératif, qui est non hiérarchique et dirigé par les employés, s'aligne parfaitement avec les thèmes de la décentralisation et de l'autonomisation communautaire évidents dans ses projets personnels et ses actions civiques. Cette affiliation fournit un cadre professionnel qui valorise la collaboration, le partage des connaissances et le développement technologique éthique, ce qui en fait une extension logique et cohérente de son éthos artistique et personnel.`);
 	});
+
+	function typeName() {
+		const name = 'vincent charlebois est ';
+		
+		if (nameIndex < name.length) {
+			nameText = name.substring(0, nameIndex + 1);
+			nameIndex++;
+			typingInterval = setTimeout(typeName, 80);
+		} else {
+			isTypingName = false;
+			typingInterval = setTimeout(typeWriter, 500);
+		}
+	}
 
 	function typeWriter() {
 		if (isExpanded) return;
@@ -187,11 +203,11 @@ Au sein de cette structure, Charlebois détient le titre d'« artiste-chercheur 
 	<div class="typewriter-container text-left px-2 w-full">
 		{#if isExpanded || isExpanding}
 			<h2 class="text-xl md:text-4xl leading-relaxed">
-				vincent charlebois est <span class="role-text">{expandedText}</span>
+				<span class="role-text">{nameText}</span><span class="role-text">{expandedText}</span>
 			</h2>
 		{:else}
 			<h2 class="text-xl md:text-4xl leading-relaxed">
-				vincent charlebois est <span class="role-text">{currentRole}</span><span class="cursor"
+				<span class="role-text">{nameText}</span><span class="role-text">{currentRole}</span><span class="cursor"
 					>|</span
 				>
 			</h2>

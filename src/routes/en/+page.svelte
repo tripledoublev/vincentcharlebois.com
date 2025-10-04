@@ -17,6 +17,9 @@
 	let expandedText = '';
 	let expandIndex = 0;
 	let remainingRoles = [];
+	let nameText = '';
+	let nameIndex = 0;
+	let isTypingName = true;
 
 	const roles = [
 		'an intermedia artist',
@@ -42,7 +45,7 @@
 	onMount(() => {
 		remainingRoles = shuffleArray(roles);
 		roleIndex = 0;
-		typeWriter();
+		typeName();
 
 		// Shadow content
 		console.log('%c━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━', 'color: #9900fc; font-weight: bold;');
@@ -58,6 +61,19 @@
 		console.log('%c\nSince November 2023, Vincent Charlebois has been a member-worker at Hypha Worker Co-operative, a role that represents a significant formalization of the ethical and philosophical threads running through his career. Hypha is a worker-owned cooperative and technical consultancy based in Toronto, specializing in cryptography, decentralized governance, and web protocols. The co-op\'s mission is to "co-creat[e] rich futures with holistic tech" by helping communities leverage technologies like blockchain, peer-to-peer networks, and open-source software in accessible and sustainable ways.\n\nWithin this structure, Charlebois holds the title of "artist-researcher and creative technologist". This position is not ancillary to his artistic practice but appears to be an integral part of its current manifestation. His work at Hypha, particularly within its "Co-Creation Lab" which partners with arts, culture, and activist organizations, allows for a direct synthesis of his artistic research with applied technology. The cooperative model, which is non-hierarchical and employee-led, aligns perfectly with the themes of decentralization and community empowerment evident in his personal projects and civic actions. This affiliation provides a professional framework that values collaboration, shared knowledge, and ethical technological development, making it a logical and coherent extension of his artistic and personal ethos.\n', 'color: #ffffff; line-height: 1.6;');
 		console.log('%c━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━', 'color: #9900fc; font-weight: bold;');
 	});
+
+	function typeName() {
+		const name = 'vincent charlebois is ';
+		
+		if (nameIndex < name.length) {
+			nameText = name.substring(0, nameIndex + 1);
+			nameIndex++;
+			typingInterval = setTimeout(typeName, 80);
+		} else {
+			isTypingName = false;
+			typingInterval = setTimeout(typeWriter, 500);
+		}
+	}
 
 	function typeWriter() {
 		if (isExpanded) return;
@@ -160,11 +176,11 @@
 	<div class="typewriter-container text-left px-2 w-full">
 		{#if isExpanded || isExpanding}
 			<h2 class="text-xl md:text-4xl leading-relaxed">
-				vincent charlebois is <span class="role-text">{expandedText}</span>
+				<span class="role-text">{nameText}</span><span class="role-text">{expandedText}</span>
 			</h2>
 		{:else}
 			<h2 class="text-xl md:text-4xl leading-relaxed">
-				vincent charlebois is <span class="role-text">{currentRole}</span><span class="cursor"
+				<span class="role-text">{nameText}</span><span class="role-text">{currentRole}</span><span class="cursor"
 					>|</span
 				>
 			</h2>
