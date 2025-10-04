@@ -18,7 +18,15 @@ body {
 	transition:
 		background-color 0.5s,
 		color 0.25s;
-	font-family: monospace, sans-serif, serif;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+	overflow: clip;
+	overflow-x: clip;
+	overflow-y: clip;
+}
+html {
+	overflow: clip;
+	overflow-x: clip;
+	overflow-y: auto;
 }
 main {
 	margin: 0 auto;
