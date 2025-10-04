@@ -2,12 +2,23 @@
 	// Import page store for current URL
 	import { page } from '$app/stores';
 
-	export let image = 'https://vincentcharlebois.com/vincentcharlebois-com.png';
+	export let image = '';
 	export let title = '';
 	export let description = '';
 
-	// Determine the current URL if not provided
+	// Determine the current URL and appropriate image based on language
 	$: currentUrl = `https://vincentcharlebois.com${$page.url.pathname}`;
+	$: {
+		if (!image) {
+			if ($page.url.pathname.startsWith('/en/')) {
+				image = 'https://vincentcharlebois.com/vincent-charlebois-point-com-en.png';
+			} else if ($page.url.pathname.startsWith('/fr/')) {
+				image = 'https://vincentcharlebois.com/vincent-charlebois-point-com-fr.png';
+			} else {
+				image = 'https://vincentcharlebois.com/vincent-charlebois-point-com.jpg';
+			}
+		}
+	}
 </script>
 
 <svelte:head>
