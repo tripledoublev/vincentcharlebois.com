@@ -9,8 +9,6 @@
 	let htmlContent = '';
 
 	onMount(() => {
-		console.log('Markdown content:', content); // Debug log
-
 		// Configure marked options
 		marked.setOptions({
 			breaks: true, // Convert line breaks to <br>
@@ -33,9 +31,8 @@
 				'<a href="https://vincentcharlebois.net"$1 class="green-link">'
 			);
 			htmlContent = DOMPurify.sanitize(processedHtml, { ADD_ATTR: ['target', 'class'] });
-			console.log('Rendered HTML:', htmlContent); // Debug log
 		} catch (error) {
-			console.error('Error rendering markdown:', error);
+			// Error rendering markdown
 			htmlContent = content; // Fallback to raw content
 		}
 	});
@@ -64,7 +61,7 @@
 			);
 			htmlContent = DOMPurify.sanitize(processedHtml, { ADD_ATTR: ['target', 'class'] });
 		} catch (error) {
-			console.error('Error rendering markdown:', error);
+			// Error rendering markdown
 			htmlContent = content;
 		}
 	}
