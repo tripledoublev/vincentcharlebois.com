@@ -53,11 +53,20 @@
 			<Links {langPrefix} />
 		</div>
 		<div class="order-3 flex items-center z-10 lg:mr-12">
-			<div class="my-1 mx-3">
-				<Switch />
-			</div>
+			<!-- Mobile home link -->
+			<button
+				class="mobile-home-link my-1 mr-1"
+				class:hidden={isHomepage}
+				on:click={handleH1Click}
+				aria-label="Go to homepage"
+			>
+				V
+			</button>
 			<div class="my-1 mx-3">
 				<ColorSwitcher />
+			</div>
+			<div class="my-1 mx-3">
+				<Switch />
 			</div>
 		</div>
 	</div>
@@ -112,6 +121,46 @@
 		}
 		to {
 			opacity: 0;
+		}
+	}
+
+	.mobile-home-link {
+		width: 2rem;
+		height: 2rem;
+		border-radius: 50%;
+		background-color: var(--background-color);
+		color: var(--text-color);
+		border: 2px solid var(--background-color);
+		font-size: 1rem;
+		font-weight: bold;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		line-height: 1;
+		transition: all 0.3s ease;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	}
+
+	.mobile-home-link:hover {
+		background-color: var(--text-color);
+		color: black;
+		transform: scale(1.1);
+	}
+
+	.mobile-home-link:focus-visible {
+		outline: 2px dotted var(--text-color);
+		outline-offset: 2px;
+	}
+
+	.hidden {
+		display: none;
+	}
+
+	/* Hide on desktop */
+	@media (min-width: 768px) {
+		.mobile-home-link {
+			display: none;
 		}
 	}
 </style>

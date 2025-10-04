@@ -26,13 +26,6 @@
 
 	// Determine the language prefix for links
 	$: langPrefix = $locale === 'fr' ? '/fr' : '/en';
-	
-	// Check if we're on the homepage
-	$: isHomepage = $page.url.pathname === langPrefix || $page.url.pathname === `${langPrefix}/`;
-
-	function handleHomeClick() {
-		goto(langPrefix);
-	}
 </script>
 
 {#if !loading}
@@ -42,16 +35,6 @@
 			<Nav />
 		</div>
 		<slot />
-		
-		<!-- Mobile home link - bottom left -->
-		<button
-			class="mobile-home-link"
-			class:hidden={isHomepage}
-			on:click={handleHomeClick}
-			aria-label="Go to homepage"
-		>
-			v
-		</button>
 	</div>
 {/if}
 
@@ -83,49 +66,5 @@
 
 	.skip-to-main:focus ~ .nav-wrapper {
 		margin-top: 3em;
-	}
-
-	.mobile-home-link {
-		position: fixed;
-		bottom: 1rem;
-		left: 1rem;
-		z-index: 50;
-		width: 2.5rem;
-		height: 2.5rem;
-		border-radius: 50%;
-		background-color: var(--background-color);
-		color: var(--text-color);
-		border: 2px solid var(--text-color);
-		font-size: 1.25rem;
-		font-weight: bold;
-		cursor: pointer;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		line-height: 1;
-		transition: all 0.3s ease;
-		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-	}
-
-	.mobile-home-link:hover {
-		background-color: var(--text-color);
-		color: black;
-		transform: scale(1.1);
-	}
-
-	.mobile-home-link:focus-visible {
-		outline: 2px dotted var(--text-color);
-		outline-offset: 2px;
-	}
-
-	.hidden {
-		display: none;
-	}
-
-	/* Hide on desktop */
-	@media (min-width: 768px) {
-		.mobile-home-link {
-			display: none;
-		}
 	}
 </style>
