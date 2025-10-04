@@ -89,7 +89,8 @@ export function initializePortal() {
 		{ url: 'https://www.charlebois.solutions/v/', https: true },
 		{ url: 'https://vincent.charlebois.info/en/couleur/', https: true },
 		{ url: 'https://isthisa.com/', https: true },
-		{ url: 'https://xx-c.art', https: true }
+		{ url: 'https://xx-c.art', https: true },
+		{ url: 'https://charlebois.solutions/small/', https: true }
 	];
 	const div = document.createElement('div');
 	const getRandInRange = (min, max) => {
