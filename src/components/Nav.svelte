@@ -9,11 +9,12 @@
 	// Determine the language prefix for links
 	$: langPrefix = $locale === 'fr' ? '/fr' : '/en';
 
+	// Check if we're on the homepage
+	$: isHomepage = $page.url.pathname === langPrefix || $page.url.pathname === `${langPrefix}/`;
+
 	let isFadingOut = false;
 
-	function handleH1Click(event) {
-		const isHomepage = $page.url.pathname === langPrefix || $page.url.pathname === `${langPrefix}/`;
-
+	function handleHomeClick(event) {
 		// Only intercept if we're NOT on the homepage (i.e., we need to fade out)
 		if (!isHomepage) {
 			event.preventDefault();
@@ -23,25 +24,23 @@
 			setTimeout(() => {
 				isFadingOut = false;
 				goto(langPrefix);
-			}, 500);
+			}, 100);
 		}
 	}
 
-	// Reset when we arrive at homepage
-	$: isHomepage = $page.url.pathname === langPrefix || $page.url.pathname === `${langPrefix}/`;
 </script>
 
 <nav class="w-full px-2 py-3">
 	<div
 		class="container mx-auto flex flex-wrap flex-col sm:flex-row items-center justify-around md:justify-between px-2 relative"
 	>
-		<div class="hidden md:flex order-1 items-center lg:ml-12 z-20">
+		<!-- Desktop name link - always visible, underlined on homepage -->
+		<div class="h1-container order-1 items-center lg:ml-12 z-20">
 			<a
 				href={langPrefix}
-				on:click={handleH1Click}
+				on:click={handleHomeClick}
+				class="home-link"
 				class:active={isHomepage}
-				class:visible={!isHomepage && !isFadingOut}
-				class:invisible={isHomepage}
 				class:fade-out={isFadingOut}
 			>
 				<h1>vincent charlebois</h1>
@@ -53,11 +52,11 @@
 			<Links {langPrefix} />
 		</div>
 		<div class="order-3 flex items-center z-10 lg:mr-12">
-			<!-- Mobile home link -->
+			<!-- Mobile V button - always visible, underlined on homepage -->
 			<button
 				class="mobile-home-link my-1 mr-1"
-				class:hidden={isHomepage}
-				on:click={handleH1Click}
+				class:active={isHomepage}
+				on:click={handleHomeClick}
 				aria-label="Go to homepage"
 			>
 				V
@@ -73,17 +72,25 @@
 </nav>
 
 <style>
-	.active {
+	/* Home link styles */
+	.home-link {
+		text-decoration: none;
+		color: inherit;
+	}
+
+	.home-link.active {
 		text-decoration-line: underline;
-		text-decoration-thickness: 11.9px;
+		text-decoration-thickness: 2px;
 		text-decoration-color: white;
 		text-decoration-skip-ink: none;
 	}
-	.active:hover {
+
+	.home-link.active:hover {
 		text-decoration-thickness: 3px;
 		text-decoration-color: var(--text-color);
 	}
-	a:focus-visible {
+
+	.home-link:focus-visible {
 		outline: 2px dotted var(--text-color);
 		outline-offset: 2px;
 	}
@@ -92,15 +99,7 @@
 		padding-bottom: 0.35rem;
 	}
 
-	.visible {
-		opacity: 1;
-		animation: fadeIn 0.5s ease-in;
-	}
 
-	.invisible {
-		opacity: 0;
-		pointer-events: none;
-	}
 
 	.fade-out {
 		animation: fadeOut 0.5s ease-out forwards;
@@ -142,19 +141,17 @@
 		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 	}
 
+	.mobile-home-link.active {
+		text-decoration: underline;
+	}
+
 	.mobile-home-link:hover {
-		background-color: var(--text-color);
-		color: black;
-		transform: scale(1.1);
+		text-decoration: underline;
 	}
 
 	.mobile-home-link:focus-visible {
 		outline: 2px dotted var(--text-color);
 		outline-offset: 2px;
-	}
-
-	.hidden {
-		display: none;
 	}
 
 	/* Hide on desktop, show on mobile */
@@ -168,6 +165,14 @@
 	@media (max-width: 767px) {
 		.mobile-home-link {
 			display: flex !important;
+		}
+	}
+	.h1-container {
+		display: flex;
+	}
+	@media (max-width: 767px) {
+		.h1-container {
+			display: none;
 		}
 	}
 </style>
