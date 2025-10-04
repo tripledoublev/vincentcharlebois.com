@@ -4,7 +4,7 @@
 	import SEO from '$components/SEO.svelte';
 	import Markdown from '$components/Markdown.svelte';
 	$: description = $t('projects.description');
-	$: title = `{$t('linkprojects')} Vincent Charlebois`;
+	$: title = `${$t('linkprojects')} | Vincent Charlebois`;
 
 	onMount(() => {
 		// Shadow content
