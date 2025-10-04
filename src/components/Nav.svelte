@@ -30,7 +30,7 @@
 
 </script>
 
-<nav class="w-full px-2 py-3">
+<nav class="w-full py-3">
 	<div
 		class="container mx-auto flex flex-wrap flex-col sm:flex-row items-center justify-around md:justify-between px-2 relative"
 	>
@@ -51,20 +51,20 @@
 		>
 			<Links {langPrefix} />
 		</div>
-		<div class="order-3 flex items-center z-10 lg:mr-12">
+		<div class="order-3 flex items-center justify-center z-10 lg:mr-12" style="gap: 0.75rem;">
 			<!-- Mobile V button - always visible, underlined on homepage -->
 			<button
-				class="mobile-home-link my-1 mr-1 text-lg lg:text-2xl font-bold"
+				class="mobile-home-link my-1 text-lg lg:text-2xl font-bold"
 				class:active={isHomepage}
 				on:click={handleHomeClick}
 				aria-label="Go to homepage"
 			>
 				v?
 			</button>
-			<div class="my-1 mx-3">
+			<div class="my-1">
 				<ColorSwitcher />
 			</div>
-			<div class="my-1 mx-3">
+			<div class="my-1">
 				<Switch />
 			</div>
 		</div>
@@ -124,7 +124,6 @@
 	}
 
 	.mobile-home-link {
-		width: 2rem;
 		height: 2rem;
 		border-radius: 50%;
 		background-color: var(--background-color);
