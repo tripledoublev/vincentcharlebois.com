@@ -9,59 +9,8 @@ export async function handle({ event, resolve }) {
 		lang = 'fr';
 	}
 
-	// Default metadata (fallback)
-	let title = 'Vincent Charlebois';
-	let description =
-		lang === 'fr'
-			? 'Vincent Charlebois; artiste intermédia, développeur logiciel et membre de la coopérative de travailleurs Hypha.'
-			: 'Vincent Charlebois; intermedia artist, software developer and member of Hypha Worker Co-operative.';
-	let imageUrl = 'https://vincentcharlebois.com/vincentcharlebois-com.png';
-	let currentUrl = `https://vincentcharlebois.com${event.url.pathname}`;
-
-	// Route-specific metadata based on language and path
-	if (path === '/' || path === '' || path === '/fr/' || path === '/fr') {
-		title =
-			lang === 'fr'
-				? 'Vincent Charlebois — Écologies, technologies;'
-				: 'Vincent Charlebois — Ecologies, technologies;';
-	} else if (path.includes('/about') || path.includes('/a-propos')) {
-		title = lang === 'fr' ? 'À propos de Vincent Charlebois' : 'About Vincent Charlebois';
-		description =
-			lang === 'fr'
-				? 'À propos de Vincent Charlebois - Artiste, technologue créatif et membre de la coopérative de travail Hypha.'
-				: 'About Vincent Charlebois - Artist, creative technologist, and member of Hypha Worker Co-operative.';
-	} else if (path.includes('/projects') || path.includes('/projets')) {
-		title = lang === 'fr' ? 'Projets de Vincent Charlebois' : 'Projects by Vincent Charlebois';
-		description =
-			lang === 'fr'
-				? 'Explorez les projets de Vincent Charlebois et son travail au sein de la coopérative de travailleurs Hypha.'
-				: "Explore Vincent Charlebois's projects and his work at Hypha Worker Co-operative.";
-	} else if (path.includes('/contact')) {
-		title = lang === 'fr' ? 'Contactez Vincent Charlebois' : 'Contact Vincent Charlebois';
-		description =
-			lang === 'fr'
-				? 'Contactez Vincent Charlebois. Trouvez des liens vers ses réseaux sociaux, son CV et son portfolio.'
-				: 'Get in touch with Vincent Charlebois. Find links to social media profiles, his CV and portfolio.';
-	}
-
-	// Generate meta tags with appropriate language
-	const metaTags = `
-    <title>${title}</title>
-    <meta name="description" content="${description}" />
-    <meta property="og:title" content="${title}" />
-    <meta property="og:description" content="${description}" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="${currentUrl}" />
-    <meta property="og:image" content="${imageUrl}" />
-    <meta property="og:locale" content="${lang === 'fr' ? 'fr_CA' : 'en_US'}" />
-    <meta property="twitter:title" content="${title}" />
-    <meta property="twitter:description" content="${description}" />
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="${currentUrl}" />
-    <meta property="twitter:image" content="${imageUrl}" />
-    <link rel="canonical" href="${currentUrl}" />
-    <meta name="language" content="${lang}" />
-    `;
+	// Meta tags are now handled by SEO component in +page.svelte files
+	// This hook only handles language and no-JS fallback
 
 	// Common CSS for all no-JS fallbacks
 	const fallbackCSS = `
@@ -148,7 +97,6 @@ export async function handle({ event, resolve }) {
       <div class="no-js-fallback">
         <div class="language-toggle"><a href="/fr">fr</a></div>
         <h1>vincent charlebois</h1>
-        <h2>Ecologies, technologies;</h2>
         <p>Distributed infrastructures, protocol interfaces, and governance systems through collaborative practice</p>
         <div>
           <a href="/en/about">About</a>
@@ -165,7 +113,6 @@ export async function handle({ event, resolve }) {
       <div class="no-js-fallback">
         <div class="language-toggle"><a href="/en">en</a></div>
         <h1>vincent charlebois</h1>
-        <h2>Écologies, technologies;</h2>
         <p>Infrastructures distribuées, interfaces de protocole et systèmes de gouvernance à travers une pratique collaborative</p>
         <div>
           <a href="/fr/a-propos">À propos</a>
@@ -305,11 +252,8 @@ export async function handle({ event, resolve }) {
 			// Replace the language attribute
 			let modifiedHtml = html.replace(/<html lang="[^"]*">/, `<html lang="${lang}">`);
 
-			// Insert meta tags after head opening tag if it's the initial chunk
+			// Add special style to fix content visibility without JavaScript
 			if (modifiedHtml.includes('<head>')) {
-				modifiedHtml = modifiedHtml.replace('<head>', '<head>' + metaTags);
-
-				// Add special style to fix content visibility
 				modifiedHtml = modifiedHtml.replace(
 					'</head>',
 					`
