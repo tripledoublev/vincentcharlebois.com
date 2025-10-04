@@ -28,7 +28,7 @@ export async function handle({ event, resolve }) {
 		title = lang === 'fr' ? 'À propos de Vincent Charlebois' : 'About Vincent Charlebois';
 		description =
 			lang === 'fr'
-				? 'À propos de Vincent Charlebois - Artiste, technologue créatif et membre de la coopérative de travailleurs Hypha.'
+				? 'À propos de Vincent Charlebois - Artiste, technologue créatif et membre de la coopérative de travail Hypha.'
 				: 'About Vincent Charlebois - Artist, creative technologist, and member of Hypha Worker Co-operative.';
 	} else if (path.includes('/projects') || path.includes('/projets')) {
 		title = lang === 'fr' ? 'Projets de Vincent Charlebois' : 'Projects by Vincent Charlebois';
