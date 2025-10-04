@@ -2,7 +2,10 @@
 	import { tick } from 'svelte';
 	import SEO from '$components/SEO.svelte';
 
-	export let data;
+	const seo = {
+		title: 'PGP Public Key | Vincent Charlebois',
+		description: 'Vincent Charlebois PGP public key for secure communication.'
+	};
 
 	let publicKey = `
 -----BEGIN PGP PUBLIC KEY BLOCK-----
@@ -70,7 +73,7 @@ kJ6UNvOeaLglww0AZQ/ZQGjO3IS0pgmDkkGrKBMyst3tGz0=
 				showCopyMessage = false;
 			}, 2000);
 		} catch (err) {
-			console.error('Could not copy text: ', err);
+			// Could not copy text
 		}
 	}
 
@@ -87,7 +90,7 @@ kJ6UNvOeaLglww0AZQ/ZQGjO3IS0pgmDkkGrKBMyst3tGz0=
 	}
 </script>
 
-<SEO {...data.seo} />
+<SEO {...seo} />
 
 <main class="flex flex-col place-items-center justify-center min-h-[75vh]">
 	<div class="flex flex-col flex-wrap md:flex-row mt-2 md:mt-12">

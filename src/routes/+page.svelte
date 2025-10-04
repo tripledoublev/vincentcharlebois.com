@@ -4,8 +4,6 @@
 	import { onMount } from 'svelte';
 	import SEO from '$components/SEO.svelte';
 
-	export let data;
-
 	onMount(() => {
 		if (browser) {
 			const userLang = navigator.language || navigator.userLanguage;
@@ -21,7 +19,6 @@
 <SEO
 	title="Vincent Charlebois"
 	description="Vincent Charlebois; intermedia artist, software developer and member of Hypha Worker Co-operative."
-	currentUrl={data.url}
 />
 
 <main
