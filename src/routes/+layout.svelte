@@ -25,7 +25,10 @@
 
 {#if !loading}
 	<div transition:fade={{ delay: 250, duration: 250 }}>
-		<Nav />
+		<a href="#main-content" class="skip-to-main">Skip to main content</a>
+		<div class="nav-wrapper">
+			<Nav />
+		</div>
 		<slot />
 	</div>
 {/if}

@@ -23,7 +23,10 @@
 		try {
 			// Convert markdown to HTML and sanitize it
 			const rawHtml = marked(content);
-			htmlContent = DOMPurify.sanitize(rawHtml);
+			// Post-process to add target="_blank" to all links and class for vincentcharlebois.net
+			let processedHtml = rawHtml.replace(/<a href="([^"]*)"([^>]*)>/g, '<a href="$1"$2 target="_blank" rel="noopener noreferrer">');
+			processedHtml = processedHtml.replace(/<a href="https:\/\/vincentcharlebois\.net"([^>]*)>/g, '<a href="https://vincentcharlebois.net"$1 class="green-link">');
+			htmlContent = DOMPurify.sanitize(processedHtml, { ADD_ATTR: ['target', 'class'] });
 			console.log('Rendered HTML:', htmlContent); // Debug log
 		} catch (error) {
 			console.error('Error rendering markdown:', error);
@@ -34,8 +37,20 @@
 	// Update content when it changes
 	$: if (content) {
 		try {
+			// Configure marked options
+			marked.setOptions({
+				breaks: true,
+				gfm: true,
+				headerIds: false,
+				mangle: false,
+				sanitize: false
+			});
+
 			const rawHtml = marked(content);
-			htmlContent = DOMPurify.sanitize(rawHtml);
+			// Post-process to add target="_blank" to all links and class for vincentcharlebois.net
+			let processedHtml = rawHtml.replace(/<a href="([^"]*)"([^>]*)>/g, '<a href="$1"$2 target="_blank" rel="noopener noreferrer">');
+			processedHtml = processedHtml.replace(/<a href="https:\/\/vincentcharlebois\.net"([^>]*)>/g, '<a href="https://vincentcharlebois.net"$1 class="green-link">');
+			htmlContent = DOMPurify.sanitize(processedHtml, { ADD_ATTR: ['target', 'class'] });
 		} catch (error) {
 			console.error('Error rendering markdown:', error);
 			htmlContent = content;
