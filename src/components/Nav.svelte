@@ -54,12 +54,12 @@
 		<div class="order-3 flex items-center z-10 lg:mr-12">
 			<!-- Mobile V button - always visible, underlined on homepage -->
 			<button
-				class="mobile-home-link my-1 mr-1"
+				class="mobile-home-link my-1 mr-1 text-lg lg:text-2xl font-bold"
 				class:active={isHomepage}
 				on:click={handleHomeClick}
 				aria-label="Go to homepage"
 			>
-				V
+				v?
 			</button>
 			<div class="my-1 mx-3">
 				<ColorSwitcher />
@@ -130,8 +130,6 @@
 		background-color: var(--background-color);
 		color: var(--text-color);
 		border: 2px solid var(--background-color);
-		font-size: 1rem;
-		font-weight: bold;
 		cursor: pointer;
 		display: flex;
 		align-items: center;
