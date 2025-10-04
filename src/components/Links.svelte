@@ -61,7 +61,7 @@
 		text-decoration-line: underline;
 		text-decoration-thickness: 2px;
 		text-decoration-color: white;
-		text-underline-offset:0.3rem;
+		text-underline-offset: 0.3rem;
 		text-decoration-skip-ink: none;
 	}
 	.active:hover {
