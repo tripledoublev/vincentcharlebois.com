@@ -132,7 +132,6 @@
 		justify-content: center;
 		line-height: 1;
 		transition: all 0.3s ease;
-		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 	}
 
 	.mobile-home-link.active {
