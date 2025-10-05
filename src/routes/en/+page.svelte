@@ -16,7 +16,6 @@
 	let remainingRoles = [];
 	let nameText = '';
 	let nameIndex = 0;
-	let isTypingName = true;
 
 	const roles = [
 		'an intermedia artist',
@@ -103,7 +102,6 @@
 			nameIndex++;
 			typingInterval = setTimeout(typeName, 80);
 		} else {
-			isTypingName = false;
 			typingInterval = setTimeout(typeWriter, 500);
 		}
 	}

@@ -72,7 +72,7 @@ kJ6UNvOeaLglww0AZQ/ZQGjO3IS0pgmDkkGrKBMyst3tGz0=
 			setTimeout(() => {
 				showCopyMessage = false;
 			}, 2000);
-		} catch (err) {
+		} catch {
 			// Could not copy text
 		}
 	}

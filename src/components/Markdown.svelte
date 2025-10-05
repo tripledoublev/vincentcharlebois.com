@@ -31,7 +31,7 @@
 				'<a href="https://vincentcharlebois.net"$1 class="green-link">'
 			);
 			htmlContent = DOMPurify.sanitize(processedHtml, { ADD_ATTR: ['target', 'class'] });
-		} catch (error) {
+		} catch {
 			// Error rendering markdown
 			htmlContent = content; // Fallback to raw content
 		}
@@ -60,7 +60,7 @@
 				'<a href="https://vincentcharlebois.net"$1 class="green-link">'
 			);
 			htmlContent = DOMPurify.sanitize(processedHtml, { ADD_ATTR: ['target', 'class'] });
-		} catch (error) {
+		} catch {
 			// Error rendering markdown
 			htmlContent = content;
 		}

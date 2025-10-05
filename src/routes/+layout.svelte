@@ -3,8 +3,6 @@
 	import { fade } from 'svelte/transition';
 	import Nav from '$components/Nav.svelte';
 	import { locale } from 'svelte-i18n';
-	import { goto } from '$app/navigation';
-	import { page } from '$app/stores';
 	import '../app.css';
 	import { initializeI18n, loadTranslations } from '$lib/i18n.js';
 
@@ -23,9 +21,6 @@
 	});
 
 	$: locale.set($locale || 'en');
-
-	// Determine the language prefix for links
-	$: langPrefix = $locale === 'fr' ? '/fr' : '/en';
 </script>
 
 {#if !loading}

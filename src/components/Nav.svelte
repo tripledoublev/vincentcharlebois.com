@@ -120,23 +120,7 @@
 		}
 	}
 
-	.mobile-home-link {
-		height: 2rem;
-		border-radius: 50%;
-		background-color: var(--background-color);
-		color: var(--text-color);
-		border: 2px solid var(--background-color);
-		cursor: pointer;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		line-height: 1;
-	}
-
-	.mobile-home-link.active {
-		text-decoration: underline;
-	}
-
+	.mobile-home-link.active,
 	.mobile-home-link:hover {
 		text-decoration: underline;
 	}
