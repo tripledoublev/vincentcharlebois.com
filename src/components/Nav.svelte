@@ -131,7 +131,6 @@
 		align-items: center;
 		justify-content: center;
 		line-height: 1;
-		transition: all 0.3s ease;
 	}
 
 	.mobile-home-link.active {
