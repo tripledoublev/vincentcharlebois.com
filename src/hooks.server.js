@@ -9,8 +9,72 @@ export async function handle({ event, resolve }) {
 		lang = 'fr';
 	}
 
-	// Meta tags are now handled by SEO component in +page.svelte files
-	// This hook only handles language and no-JS fallback
+	// Define meta tags for each page (server-side for social media crawlers)
+	let metaTags = '';
+	const currentUrl = `https://vincentcharlebois.com${path}`;
+
+	// Page-specific meta tags
+	if (path === '/en' || path === '/en/') {
+		const title = 'Vincent Charlebois — Ecologies, technologies;';
+		const description = 'Distributed infrastructures, protocol interfaces, and governance systems through collaborative practice';
+		const image = 'https://vincentcharlebois.com/vincent-charlebois-point-com-en.png';
+		metaTags = `
+			<title>${title}</title>
+			<meta name="description" content="${description}" />
+			<meta property="og:title" content="${title}" />
+			<meta property="og:description" content="${description}" />
+			<meta property="og:type" content="website" />
+			<meta property="og:url" content="${currentUrl}" />
+			<meta property="og:image" content="${image}" />
+			<meta property="twitter:title" content="${title}" />
+			<meta property="twitter:description" content="${description}" />
+			<meta property="twitter:card" content="summary_large_image" />
+			<meta property="twitter:url" content="${currentUrl}" />
+			<meta property="twitter:image" content="${image}" />
+			<link rel="canonical" href="${currentUrl}" />
+		`;
+	} else if (path === '/fr' || path === '/fr/') {
+		const title = 'Vincent Charlebois — Écologies, technologies;';
+		const description = 'Infrastructures distribuées, interfaces de protocole et systèmes de gouvernance à travers une pratique collaborative';
+		const image = 'https://vincentcharlebois.com/vincent-charlebois-point-com-fr.png';
+		metaTags = `
+			<title>${title}</title>
+			<meta name="description" content="${description}" />
+			<meta property="og:title" content="${title}" />
+			<meta property="og:description" content="${description}" />
+			<meta property="og:type" content="website" />
+			<meta property="og:url" content="${currentUrl}" />
+			<meta property="og:image" content="${image}" />
+			<meta property="twitter:title" content="${title}" />
+			<meta property="twitter:description" content="${description}" />
+			<meta property="twitter:card" content="summary_large_image" />
+			<meta property="twitter:url" content="${currentUrl}" />
+			<meta property="twitter:image" content="${image}" />
+			<link rel="canonical" href="${currentUrl}" />
+		`;
+	} else {
+		// Default meta tags for other pages
+		const title = 'Vincent Charlebois';
+		const description = lang === 'fr'
+			? 'Infrastructures distribuées, interfaces de protocole et systèmes de gouvernance à travers une pratique collaborative'
+			: 'Distributed infrastructures, protocol interfaces, and governance systems through collaborative practice';
+		const image = 'https://vincentcharlebois.com/vincent-charlebois-point-com.jpg';
+		metaTags = `
+			<title>${title}</title>
+			<meta name="description" content="${description}" />
+			<meta property="og:title" content="${title}" />
+			<meta property="og:description" content="${description}" />
+			<meta property="og:type" content="website" />
+			<meta property="og:url" content="${currentUrl}" />
+			<meta property="og:image" content="${image}" />
+			<meta property="twitter:title" content="${title}" />
+			<meta property="twitter:description" content="${description}" />
+			<meta property="twitter:card" content="summary_large_image" />
+			<meta property="twitter:url" content="${currentUrl}" />
+			<meta property="twitter:image" content="${image}" />
+			<link rel="canonical" href="${currentUrl}" />
+		`;
+	}
 
 	// Common CSS for all no-JS fallbacks
 	const fallbackCSS = `
@@ -255,11 +319,12 @@ export async function handle({ event, resolve }) {
 			// Replace the language attribute
 			let modifiedHtml = html.replace(/<html lang="[^"]*">/, `<html lang="${lang}">`);
 
-			// Add special style to fix content visibility without JavaScript
+			// Inject meta tags and styles into head
 			if (modifiedHtml.includes('<head>')) {
 				modifiedHtml = modifiedHtml.replace(
 					'</head>',
 					`
+          ${metaTags}
           <style>
             /* Fix for content visibility without JavaScript */
             html:not(:has(script[data-sveltekit-hydrate])) body > div[style*="display: contents"] {
