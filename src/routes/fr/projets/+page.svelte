@@ -25,7 +25,7 @@
 			'color: #ffffff; font-weight: bold;'
 		);
 		console.log(
-			"%c\nUne analyse des projets clés de Vincent Charlebois révèle une trajectoire artistique claire et évolutive. Son travail passe d'explorations précoces du corps, du travail et du lieu à des installations sophistiquées basées sur les données et, plus récemment, à une synthèse de toute sa pratique par l'utilisation de l'intelligence artificielle. Ce portfolio démontre une pratique en maturation qui s'appuie continuellement sur ses préoccupations thématiques fondamentales. Il est important de noter que le CV formel de l'artiste était inaccessible lors de la recherche pour ce rapport ; par conséquent, cette analyse est basée sur les projets détaillés dans les documents publics disponibles.\n",
+			"%c\nUne analyse des projets clés de Vincent Charlebois révèle une trajectoire artistique claire et évolutive. Son travail passe d'explorations précoces du corps, du travail et du lieu à des installations sophistiquées basées sur les données et, plus récemment, à une synthèse de toute sa pratique par l'utilisation de l'intelligence artificielle. Ce portfolio démontre une pratique en maturation qui s'appuie continuellement sur ses préoccupations thématiques fondamentales.\n",
 			'color: #ffffff; line-height: 1.6;'
 		);
 		console.log(
