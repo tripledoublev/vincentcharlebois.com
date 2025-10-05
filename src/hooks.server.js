@@ -16,7 +16,8 @@ export async function handle({ event, resolve }) {
 	// Page-specific meta tags
 	if (path === '/en' || path === '/en/') {
 		const title = 'Vincent Charlebois — Ecologies, technologies;';
-		const description = 'Distributed infrastructures, protocol interfaces, and governance systems through collaborative practice';
+		const description =
+			'Distributed infrastructures, protocol interfaces, and governance systems through collaborative practice';
 		const image = 'https://vincentcharlebois.com/vincent-charlebois-point-com-en.png';
 		metaTags = `
 			<title>${title}</title>
@@ -35,7 +36,8 @@ export async function handle({ event, resolve }) {
 		`;
 	} else if (path === '/fr' || path === '/fr/') {
 		const title = 'Vincent Charlebois — Écologies, technologies;';
-		const description = 'Infrastructures distribuées, interfaces de protocole et systèmes de gouvernance à travers une pratique collaborative';
+		const description =
+			'Infrastructures distribuées, interfaces de protocole et systèmes de gouvernance à travers une pratique collaborative';
 		const image = 'https://vincentcharlebois.com/vincent-charlebois-point-com-fr.png';
 		metaTags = `
 			<title>${title}</title>
@@ -55,9 +57,10 @@ export async function handle({ event, resolve }) {
 	} else {
 		// Default meta tags for other pages
 		const title = 'Vincent Charlebois';
-		const description = lang === 'fr'
-			? 'Infrastructures distribuées, interfaces de protocole et systèmes de gouvernance à travers une pratique collaborative'
-			: 'Distributed infrastructures, protocol interfaces, and governance systems through collaborative practice';
+		const description =
+			lang === 'fr'
+				? 'Infrastructures distribuées, interfaces de protocole et systèmes de gouvernance à travers une pratique collaborative'
+				: 'Distributed infrastructures, protocol interfaces, and governance systems through collaborative practice';
 		const image = 'https://vincentcharlebois.com/vincent-charlebois-point-com.jpg';
 		metaTags = `
 			<title>${title}</title>
@@ -297,9 +300,10 @@ export async function handle({ event, resolve }) {
 	else if (noJsContent === '') {
 		const homePath = lang === 'fr' ? '/fr' : '/en';
 		const homeText = lang === 'fr' ? "Retour à l'accueil" : 'Back to home';
-		const description = lang === 'fr'
-			? 'Infrastructures distribuées, interfaces de protocole et systèmes de gouvernance à travers une pratique collaborative'
-			: 'Distributed infrastructures, protocol interfaces, and governance systems through collaborative practice';
+		const description =
+			lang === 'fr'
+				? 'Infrastructures distribuées, interfaces de protocole et systèmes de gouvernance à travers une pratique collaborative'
+				: 'Distributed infrastructures, protocol interfaces, and governance systems through collaborative practice';
 
 		noJsContent = `
       ${fallbackCSS}

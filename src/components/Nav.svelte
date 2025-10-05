@@ -27,7 +27,6 @@
 			}, 100);
 		}
 	}
-
 </script>
 
 <nav class="w-full py-3">
@@ -99,8 +98,6 @@
 		padding-bottom: 0.35rem;
 	}
 
-
-
 	.fade-out {
 		animation: fadeOut 0.5s ease-out forwards;
 	}
@@ -157,7 +154,7 @@
 			display: none !important;
 		}
 	}
-	
+
 	/* Show on mobile, hide on desktop */
 	@media (max-width: 767px) {
 		.mobile-home-link {

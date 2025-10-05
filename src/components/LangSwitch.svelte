@@ -78,11 +78,7 @@
 	}
 </script>
 
-<button
-	class="text-lg lg:text-2xl font-bold"
-	type="button"
-	on:click={switchLanguage}
->
+<button class="text-lg lg:text-2xl font-bold" type="button" on:click={switchLanguage}>
 	{currentPathLang === 'fr' ? 'en' : 'fr'}
 </button>
 
