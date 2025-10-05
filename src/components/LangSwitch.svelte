@@ -86,4 +86,9 @@
 	button:hover {
 		text-decoration: underline;
 	}
+
+	button:focus-visible {
+		outline: 2px dotted var(--text-color);
+		outline-offset: 2px;
+	}
 </style>

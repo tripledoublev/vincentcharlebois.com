@@ -39,5 +39,12 @@
 	on:click={toggleDarkMode}
 	size={22}
 	darkMode={$darkMode}
-	class="pt-2"
+	class="pt-2 color-switcher"
 />
+
+<style>
+	:global(.color-switcher:focus-visible) {
+		outline: 2px dotted var(--text-color);
+		outline-offset: 2px;
+	}
+</style>

@@ -16,7 +16,6 @@
 	let remainingRoles = [];
 	let nameText = '';
 	let nameIndex = 0;
-	let isTypingName = true;
 
 	const roles = [
 		'un artiste intermédiatique',
@@ -130,7 +129,6 @@ Au sein de cette structure, Charlebois détient le titre d'« artiste-chercheur 
 			nameIndex++;
 			typingInterval = setTimeout(typeName, 80);
 		} else {
-			isTypingName = false;
 			typingInterval = setTimeout(typeWriter, 500);
 		}
 	}
