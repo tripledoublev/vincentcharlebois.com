@@ -45,23 +45,59 @@
 		typeName();
 
 		// Shadow content
-		console.log('%c━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━', 'color: #ffffff; font-weight: bold;');
-		console.log('%cPart 1: General Picture', 'color: #ffffff; font-size: 18px; font-weight: bold; text-transform: uppercase; letter-spacing: 2px;');
-		console.log('%cAn Overview of an Intermedia Artist', 'color: #ffffff; font-size: 14px; font-style: italic; margin-bottom: 10px;');
-		console.log('%c━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━', 'color: #ffffff; font-weight: bold;');
-		console.log('%c\nThis report provides a comprehensive analysis of the artist Vincent Charlebois, drawing upon available biographical information, project descriptions, and his extensive digital presence. The examination reveals a practitioner whose work is situated at the critical intersection of ecological systems, computational technology, and cooperative social structures. Through a multifaceted practice that spans performance, media art, and creative technology, Charlebois has developed a coherent and compelling artistic language to investigate some of the most pressing issues of the contemporary era.\n', 'color: #ffffff; line-height: 1.6;');
-		console.log('%c1.1 Defining the Practice: The Artist as Assemblage', 'color: #ffffff; font-size: 16px; font-weight: bold; margin-top: 15px;');
-		console.log('%c\nVincent Charlebois\'s professional identity resists categorization under a single title. Across various platforms and biographical statements, he is described as an "intermedia artist," "creative technologist," "interdisciplinary artist," "artist-researcher," and "writer". This collection of descriptors is not merely a list of competencies but rather a reflection of a deliberate artistic methodology. His creative work is explicitly defined as an "assemblage of disciplines such as performance, text, and media art". This approach suggests that his professional identity is a direct mirror of his artistic process; just as his artworks synthesize physical performance, environmental data, and generative code, his identity assembles the distinct yet interrelated roles of artist, technologist, researcher, and author.\n\nBorn in Montreal, Quebec, Canada, Charlebois\'s practice is fundamentally interdisciplinary. This resistance to the traditional silos of the art world and the technology sector positions him as a crucial translator and connector between these domains. His entire creative output can be understood through the concise yet powerful thesis statement found on his personal website: "Ecologies, technologies;". This phrase serves as the central axis around which his diverse projects and intellectual inquiries revolve, signaling a career dedicated to exploring the profound and often fraught relationship between the natural world and the digital systems that increasingly mediate it.\n', 'color: #ffffff; line-height: 1.6;');
-		console.log('%c1.2 Thematic Constellations: Core Conceptual Pillars', 'color: #ffffff; font-size: 16px; font-weight: bold; margin-top: 15px;');
-		console.log('%c\nA consistent set of conceptual pillars emerges from the descriptions of Charlebois\'s work, forming a robust philosophical framework that underpins his entire practice. These recurring themes demonstrate a sustained and focused research-creation agenda.\n\nFirst and foremost is an investigation of technological interfaces with nature. His work consistently explores how digital tools, from environmental sensors to artificial intelligence, can be designed and deployed not to dominate or extract from the natural world, but to create new pathways for understanding and interaction. This is not a technologically determinist view, but rather a critical inquiry into the potential for technology to augment human perception of ecological processes.\n\nThis leads directly to his exploration of human-machine relationships, specifically within what he terms a "context of dematerialization of exchanges". His practice grapples with how our interactions—with each other, with institutions, and with the environment—are increasingly mediated by abstract, digital systems. He examines the constraints and possibilities that arise when tangible experiences are translated into intangible data streams.\n\nA key concept, and a significant terminological choice, in his work is ecosystem perceptualization. The use of "perceptualization" over more common terms like "visualization" or "sonification" is intentional and meaningful. While the latter terms imply a translation of data into a single sensory modality (sight or sound), "perceptualization" suggests a more ambitious, holistic goal: to make complex, abstract environmental data tangible and perceivable to the full human sensorium. His pedagogical work, for instance, explicitly aims to make climate data "visible, audible and tangible" through the creation of images, sounds, and even physical 3D objects. This term is central to his artistic mission of bridging the cognitive and sensory gap between direct human experience and the vast, often imperceptible scale of environmental systems.\n\nFinally, Charlebois treats the archive as a poetic and political material. In his practice, an archive—whether it is a collection of weather data or a personal photographic record—is not a static repository of the past. Instead, it is a generative engine for future creation. Data is collected not as an end in itself, but as the "notation for future intermedia experiences," a raw material to be reinterpreted, re-performed, and reimagined. This approach imbues the act of archiving with both creative potential and political weight, questioning who creates archives, what they contain, and how they can be activated to tell new stories.\n', 'color: #ffffff; line-height: 1.6;');
-		console.log('%c1.3 The Cooperative Context: Art, Labor, and Hypha', 'color: #ffffff; font-size: 16px; font-weight: bold; margin-top: 15px;');
-		console.log('%c\nSince November 2023, Vincent Charlebois has been a member-worker at Hypha Worker Co-operative, a role that represents a significant formalization of the ethical and philosophical threads running through his career. Hypha is a worker-owned cooperative and technical consultancy based in Toronto, specializing in cryptography, decentralized governance, and web protocols. The co-op\'s mission is to "co-creat[e] rich futures with holistic tech" by helping communities leverage technologies like blockchain, peer-to-peer networks, and open-source software in accessible and sustainable ways.\n\nWithin this structure, Charlebois holds the title of "artist-researcher and creative technologist". This position is not ancillary to his artistic practice but appears to be an integral part of its current manifestation. His work at Hypha, particularly within its "Co-Creation Lab" which partners with arts, culture, and activist organizations, allows for a direct synthesis of his artistic research with applied technology. The cooperative model, which is non-hierarchical and employee-led, aligns perfectly with the themes of decentralization and community empowerment evident in his personal projects and civic actions. This affiliation provides a professional framework that values collaboration, shared knowledge, and ethical technological development, making it a logical and coherent extension of his artistic and personal ethos.\n', 'color: #ffffff; line-height: 1.6;');
-		console.log('%c━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━', 'color: #ffffff; font-weight: bold;');
+		console.log(
+			'%c━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━',
+			'color: #ffffff; font-weight: bold;'
+		);
+		console.log(
+			'%cPart 1: General Picture',
+			'color: #ffffff; font-size: 18px; font-weight: bold; text-transform: uppercase; letter-spacing: 2px;'
+		);
+		console.log(
+			'%cAn Overview of an Intermedia Artist',
+			'color: #ffffff; font-size: 14px; font-style: italic; margin-bottom: 10px;'
+		);
+		console.log(
+			'%c━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━',
+			'color: #ffffff; font-weight: bold;'
+		);
+		console.log(
+			'%c\nThis report provides a comprehensive analysis of the artist Vincent Charlebois, drawing upon available biographical information, project descriptions, and his extensive digital presence. The examination reveals a practitioner whose work is situated at the critical intersection of ecological systems, computational technology, and cooperative social structures. Through a multifaceted practice that spans performance, media art, and creative technology, Charlebois has developed a coherent and compelling artistic language to investigate some of the most pressing issues of the contemporary era.\n',
+			'color: #ffffff; line-height: 1.6;'
+		);
+		console.log(
+			'%c1.1 Defining the Practice: The Artist as Assemblage',
+			'color: #ffffff; font-size: 16px; font-weight: bold; margin-top: 15px;'
+		);
+		console.log(
+			'%c\nVincent Charlebois\'s professional identity resists categorization under a single title. Across various platforms and biographical statements, he is described as an "intermedia artist," "creative technologist," "interdisciplinary artist," "artist-researcher," and "writer". This collection of descriptors is not merely a list of competencies but rather a reflection of a deliberate artistic methodology. His creative work is explicitly defined as an "assemblage of disciplines such as performance, text, and media art". This approach suggests that his professional identity is a direct mirror of his artistic process; just as his artworks synthesize physical performance, environmental data, and generative code, his identity assembles the distinct yet interrelated roles of artist, technologist, researcher, and author.\n\nBorn in Montreal, Quebec, Canada, Charlebois\'s practice is fundamentally interdisciplinary. This resistance to the traditional silos of the art world and the technology sector positions him as a crucial translator and connector between these domains. His entire creative output can be understood through the concise yet powerful thesis statement found on his personal website: "Ecologies, technologies;". This phrase serves as the central axis around which his diverse projects and intellectual inquiries revolve, signaling a career dedicated to exploring the profound and often fraught relationship between the natural world and the digital systems that increasingly mediate it.\n',
+			'color: #ffffff; line-height: 1.6;'
+		);
+		console.log(
+			'%c1.2 Thematic Constellations: Core Conceptual Pillars',
+			'color: #ffffff; font-size: 16px; font-weight: bold; margin-top: 15px;'
+		);
+		console.log(
+			'%c\nA consistent set of conceptual pillars emerges from the descriptions of Charlebois\'s work, forming a robust philosophical framework that underpins his entire practice. These recurring themes demonstrate a sustained and focused research-creation agenda.\n\nFirst and foremost is an investigation of technological interfaces with nature. His work consistently explores how digital tools, from environmental sensors to artificial intelligence, can be designed and deployed not to dominate or extract from the natural world, but to create new pathways for understanding and interaction. This is not a technologically determinist view, but rather a critical inquiry into the potential for technology to augment human perception of ecological processes.\n\nThis leads directly to his exploration of human-machine relationships, specifically within what he terms a "context of dematerialization of exchanges". His practice grapples with how our interactions—with each other, with institutions, and with the environment—are increasingly mediated by abstract, digital systems. He examines the constraints and possibilities that arise when tangible experiences are translated into intangible data streams.\n\nA key concept, and a significant terminological choice, in his work is ecosystem perceptualization. The use of "perceptualization" over more common terms like "visualization" or "sonification" is intentional and meaningful. While the latter terms imply a translation of data into a single sensory modality (sight or sound), "perceptualization" suggests a more ambitious, holistic goal: to make complex, abstract environmental data tangible and perceivable to the full human sensorium. His pedagogical work, for instance, explicitly aims to make climate data "visible, audible and tangible" through the creation of images, sounds, and even physical 3D objects. This term is central to his artistic mission of bridging the cognitive and sensory gap between direct human experience and the vast, often imperceptible scale of environmental systems.\n\nFinally, Charlebois treats the archive as a poetic and political material. In his practice, an archive—whether it is a collection of weather data or a personal photographic record—is not a static repository of the past. Instead, it is a generative engine for future creation. Data is collected not as an end in itself, but as the "notation for future intermedia experiences," a raw material to be reinterpreted, re-performed, and reimagined. This approach imbues the act of archiving with both creative potential and political weight, questioning who creates archives, what they contain, and how they can be activated to tell new stories.\n',
+			'color: #ffffff; line-height: 1.6;'
+		);
+		console.log(
+			'%c1.3 The Cooperative Context: Art, Labor, and Hypha',
+			'color: #ffffff; font-size: 16px; font-weight: bold; margin-top: 15px;'
+		);
+		console.log(
+			'%c\nSince November 2023, Vincent Charlebois has been a member-worker at Hypha Worker Co-operative, a role that represents a significant formalization of the ethical and philosophical threads running through his career. Hypha is a worker-owned cooperative and technical consultancy based in Toronto, specializing in cryptography, decentralized governance, and web protocols. The co-op\'s mission is to "co-creat[e] rich futures with holistic tech" by helping communities leverage technologies like blockchain, peer-to-peer networks, and open-source software in accessible and sustainable ways.\n\nWithin this structure, Charlebois holds the title of "artist-researcher and creative technologist". This position is not ancillary to his artistic practice but appears to be an integral part of its current manifestation. His work at Hypha, particularly within its "Co-Creation Lab" which partners with arts, culture, and activist organizations, allows for a direct synthesis of his artistic research with applied technology. The cooperative model, which is non-hierarchical and employee-led, aligns perfectly with the themes of decentralization and community empowerment evident in his personal projects and civic actions. This affiliation provides a professional framework that values collaboration, shared knowledge, and ethical technological development, making it a logical and coherent extension of his artistic and personal ethos.\n',
+			'color: #ffffff; line-height: 1.6;'
+		);
+		console.log(
+			'%c━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━',
+			'color: #ffffff; font-weight: bold;'
+		);
 	});
 
 	function typeName() {
 		const name = 'vincent charlebois is ';
-		
+
 		if (nameIndex < name.length) {
 			nameText = name.substring(0, nameIndex + 1);
 			nameIndex++;
@@ -177,8 +213,8 @@
 			</h2>
 		{:else}
 			<h2 class="text-xl md:text-4xl leading-relaxed">
-				<span class="role-text">{nameText}</span><span class="role-text">{currentRole}</span><span class="cursor"
-					>|</span
+				<span class="role-text">{nameText}</span><span class="role-text">{currentRole}</span><span
+					class="cursor">|</span
 				>
 			</h2>
 		{/if}
