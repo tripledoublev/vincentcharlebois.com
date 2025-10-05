@@ -50,7 +50,7 @@
 		>
 			<Links {langPrefix} />
 		</div>
-		<div class="order-3 flex items-center justify-center z-10 lg:mr-12" style="gap: 0.75rem;">
+		<div class="order-3 flex items-center justify-center z-10 lg:mr-12" style="gap: 2.25rem;">
 			<!-- Mobile V button - always visible, underlined on homepage -->
 			<button
 				class="mobile-home-link my-1 text-lg lg:text-2xl font-bold"
