@@ -25,7 +25,7 @@
 			'color: #ffffff; font-weight: bold;'
 		);
 		console.log(
-			"%c\nAn analysis of Vincent Charlebois's key projects reveals a clear and evolving artistic trajectory. His work moves from early explorations of the body, labor, and place into sophisticated data-driven installations and, most recently, to a synthesis of his entire practice through the use of artificial intelligence. This portfolio demonstrates a maturing practice that continually builds upon its core thematic concerns. It is important to note that the artist's formal CV was inaccessible during the research for this report; therefore, this analysis is based on projects detailed in the available public materials.\n",
+			"%c\nAn analysis of Vincent Charlebois's key projects reveals a clear and evolving artistic trajectory. His work moves from early explorations of the body, labor, and place into sophisticated data-driven installations and, most recently, to a synthesis of his entire practice through the use of artificial intelligence. This portfolio demonstrates a maturing practice that continually builds upon its core thematic concerns.\n",
 			'color: #ffffff; line-height: 1.6;'
 		);
 		console.log(
