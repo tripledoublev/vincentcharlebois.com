@@ -1,4 +1,4 @@
-name: Deploy SvelteKit to FTP
+name: Deploy to Production (FTP + Distributed Press)
 
 on:
   push:
@@ -31,3 +31,14 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./build/
+
+      - name: Deploy to Distributed Press
+        uses: hyphacoop/actions-distributed-press@v1.3.0
+        with:
+          publish_dir: build
+          dp_url: https://api.distributed.press
+          refresh_token: ${{ secrets.DISTRIBUTED_PRESS_TOKEN_PROD }}
+          site_url: vincentcharlebois.com
+          deploy_http: false
+          deploy_hyper: true
+          deploy_ipfs: true
