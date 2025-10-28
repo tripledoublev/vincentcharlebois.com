@@ -29,7 +29,7 @@ jobs:
         uses: hyphacoop/actions-distributed-press@v1.3.0
         with:
           publish_dir: build
-          dp_url: https://dp.chanterelle.xyz/v1
+          dp_url: https://dp.chanterelle.xyz
           refresh_token: ${{ secrets.DISTRIBUTED_PRESS_TOKEN }}
           site_url: vincentcharlebois.com
           deploy_http: true
