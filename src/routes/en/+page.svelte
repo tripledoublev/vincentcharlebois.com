@@ -1,6 +1,8 @@
 <script>
 	import SEO from '$components/SEO.svelte';
+	import Footnotes from '$components/Footnotes.svelte';
 	import { onMount } from 'svelte';
+	import { getFootnoteForRole, getAllFootnotes } from '$lib/footnoteData.js';
 
 	export let data;
 
@@ -16,6 +18,8 @@
 	let remainingRoles = [];
 	let nameText = '';
 	let nameIndex = 0;
+	let currentFootnote = null;
+	let allFootnotes = {};
 
 	const roles = [
 		'an intermedia artist',
@@ -42,6 +46,9 @@
 		remainingRoles = shuffleArray(roles);
 		roleIndex = 0;
 		typeName();
+
+		// Initialize footnotes
+		allFootnotes = getAllFootnotes('en');
 
 		// Shadow content
 		console.log(
@@ -199,6 +206,22 @@
 			typeCollapse();
 		}
 	}
+
+	function showFootnote(role) {
+		const footnote = getFootnoteForRole(role, 'en');
+		if (footnote) {
+			currentFootnote = footnote.number;
+		}
+	}
+
+	function hideFootnote() {
+		currentFootnote = null;
+	}
+
+	function getFootnoteNumber(role) {
+		const footnote = getFootnoteForRole(role, 'en');
+		return footnote ? footnote.number : null;
+	}
 </script>
 
 <SEO {...data.seo} />
@@ -207,13 +230,38 @@
 	<div class="typewriter-container text-left px-2 w-full">
 		{#if isExpanded || isExpanding}
 			<h2 class="text-xl md:text-4xl leading-relaxed">
-				<span class="role-text">{nameText}</span><span class="role-text">{expandedText}</span>
+				<span class="role-text">{nameText}</span>
+				{#each remainingRoles as role, i}
+					{#if i > 0}, {/if}
+					{#if i === remainingRoles.length - 1 && i > 0}and {/if}
+					<span
+						class="role-text role-link"
+						on:mouseenter={() => showFootnote(role)}
+						on:mouseleave={hideFootnote}
+						on:focus={() => showFootnote(role)}
+						on:blur={hideFootnote}
+						role="button"
+						tabindex="0"
+					>
+						{role}<sup class="footnote-ref">[{getFootnoteNumber(role)}]</sup>
+					</span>
+				{/each}.
 			</h2>
 		{:else}
 			<h2 class="text-xl md:text-4xl leading-relaxed">
-				<span class="role-text">{nameText}</span><span class="role-text">{currentRole}</span><span
-					class="cursor">|</span
+				<span class="role-text">{nameText}</span>
+				<span
+					class="role-text role-link"
+					on:mouseenter={() => showFootnote(remainingRoles[roleIndex])}
+					on:mouseleave={hideFootnote}
+					on:focus={() => showFootnote(remainingRoles[roleIndex])}
+					on:blur={hideFootnote}
+					role="button"
+					tabindex="0"
 				>
+					{currentRole}{#if currentRole}<sup class="footnote-ref">[{getFootnoteNumber(remainingRoles[roleIndex])}]</sup>{/if}
+				</span>
+				<span class="cursor">|</span>
 			</h2>
 		{/if}
 	</div>
@@ -242,6 +290,8 @@
 		</svg>
 	</button>
 </main>
+
+<Footnotes {currentFootnote} footnotes={allFootnotes} />
 
 <style>
 	main {
@@ -300,5 +350,23 @@
 
 	.expand-icon.rotated {
 		transform: rotate(180deg);
+	}
+
+	.role-link {
+		cursor: pointer;
+		position: relative;
+		transition: opacity 0.2s ease;
+	}
+
+	.role-link:hover {
+		opacity: 0.7;
+	}
+
+	.footnote-ref {
+		font-size: 0.6em;
+		vertical-align: super;
+		margin-left: 0.1em;
+		color: var(--text-color);
+		font-weight: normal;
 	}
 </style>
