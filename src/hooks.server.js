@@ -15,9 +15,9 @@ export async function handle({ event, resolve }) {
 
 	// Page-specific meta tags
 	if (path === '/en' || path === '/en/') {
-		const title = 'Vincent Charlebois — Ecologies, technologies;';
+		const title = 'Vincent Charlebois — Research → Product;';
 		const description =
-			'Distributed infrastructures, protocol interfaces, and governance systems through collaborative practice';
+			'Vincent Charlebois works at the boundary between research and deployment, building production-grade AI systems from complex technical research.';
 		const image = 'https://vincentcharlebois.com/vincent-charlebois-point-com-en.png';
 		metaTags = `
 			<title>${title}</title>
@@ -35,9 +35,9 @@ export async function handle({ event, resolve }) {
 			<link rel="canonical" href="${currentUrl}" />
 		`;
 	} else if (path === '/fr' || path === '/fr/') {
-		const title = 'Vincent Charlebois — Écologies, technologies;';
+		const title = 'Vincent Charlebois — Recherche → Produit;';
 		const description =
-			'Infrastructures distribuées, interfaces de protocole et systèmes de gouvernance à travers une pratique collaborative';
+			'Vincent Charlebois travaille à la frontière entre recherche et déploiement, et construit des systèmes d\'IA de niveau production à partir de recherche technique complexe.';
 		const image = 'https://vincentcharlebois.com/vincent-charlebois-point-com-fr.png';
 		metaTags = `
 			<title>${title}</title>
@@ -59,8 +59,8 @@ export async function handle({ event, resolve }) {
 		const title = 'Vincent Charlebois';
 		const description =
 			lang === 'fr'
-				? 'Infrastructures distribuées, interfaces de protocole et systèmes de gouvernance à travers une pratique collaborative'
-				: 'Distributed infrastructures, protocol interfaces, and governance systems through collaborative practice';
+				? 'Systèmes IA agentiques, architectures distribuées et exécution technique orientée produit pour systèmes complexes et à grande échelle'
+				: 'Agentic AI systems, distributed architectures, and product-driven technical execution for complex and large-scale systems';
 		const image = 'https://vincentcharlebois.com/vincent-charlebois-point-com.jpg';
 		metaTags = `
 			<title>${title}</title>
@@ -164,7 +164,7 @@ export async function handle({ event, resolve }) {
       <div class="no-js-fallback">
         <div class="language-toggle"><a href="/fr">fr</a></div>
         <h1>vincent charlebois</h1>
-        <p>Distributed infrastructures, protocol interfaces, and governance systems through collaborative practice</p>
+        <p>Agentic AI systems, distributed architectures, and product-driven technical execution for complex and large-scale systems</p>
         <div>
           <a href="/en/about">About</a>
           <a href="/en/projects">Projects</a>
@@ -180,7 +180,7 @@ export async function handle({ event, resolve }) {
       <div class="no-js-fallback">
         <div class="language-toggle"><a href="/en">en</a></div>
         <h1>vincent charlebois</h1>
-        <p>Infrastructures distribuées, interfaces de protocole et systèmes de gouvernance à travers une pratique collaborative</p>
+        <p>Systèmes IA agentiques, architectures distribuées et exécution technique orientée produit pour systèmes complexes et à grande échelle</p>
         <div>
           <a href="/fr/a-propos">À propos</a>
           <a href="/fr/projets">Projets</a>
@@ -302,8 +302,8 @@ export async function handle({ event, resolve }) {
 		const homeText = lang === 'fr' ? "Retour à l'accueil" : 'Back to home';
 		const description =
 			lang === 'fr'
-				? 'Infrastructures distribuées, interfaces de protocole et systèmes de gouvernance à travers une pratique collaborative'
-				: 'Distributed infrastructures, protocol interfaces, and governance systems through collaborative practice';
+				? 'Systèmes IA agentiques, architectures distribuées et exécution technique orientée produit pour systèmes complexes et à grande échelle'
+				: 'Agentic AI systems, distributed architectures, and product-driven technical execution for complex and large-scale systems';
 
 		noJsContent = `
       ${fallbackCSS}
