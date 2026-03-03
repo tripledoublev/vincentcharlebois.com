@@ -57,14 +57,14 @@
 			"%c\nLa carrière de Charlebois démontre un éthos constant qui s'étend au-delà de la galerie et dans l'action civique directe. Pendant la première année de la pandémie de COVID-19, il a appliqué ses compétences techniques et organisationnelles à un besoin communautaire critique, en gérant la production locale de milliers d'écrans de protection médicale imprimés en 3D. Fait crucial, cet effort était basé sur des conceptions open-source, soulignant un engagement envers des solutions collaboratives et non propriétaires à des problèmes sociaux urgents.\n",
 			'color: #ffffff; line-height: 1.6;'
 		);
-		console.log(
-			'%c2.4 Engagement mondial : Réseaux et résidences',
-			'color: #ffffff; font-size: 16px; font-weight: bold; margin-top: 15px;'
-		);
-		console.log(
-			"%c\nLa pratique de Charlebois, bien qu'enracinée dans ses origines montréalaises et ses expériences dans le paysage canadien, est de portée internationale. Son travail a été exposé sur trois continents, avec des présentations dans des villes comme Montréal, Berlin et Milan, ce qui indique sa participation à une conversation mondiale sur l'art contemporain. Un aspect important de son engagement mondial est sa participation aux résidences internationales de The Eternal Internet Brotherhood.\n",
-			'color: #ffffff; line-height: 1.6;'
-		);
+		// console.log(
+		// 	'%c2.4 Engagement mondial : Réseaux et résidences',
+		// 	'color: #ffffff; font-size: 16px; font-weight: bold; margin-top: 15px;'
+		// );
+		// console.log(
+		// 	"%c\nLa pratique de Charlebois, bien qu'enracinée dans ses origines montréalaises et ses expériences dans le paysage canadien, est de portée internationale. Son travail a été exposé sur trois continents, avec des présentations dans des villes comme Montréal, Berlin et Milan, ce qui indique sa participation à une conversation mondiale sur l'art contemporain. Un aspect important de son engagement mondial est sa participation aux résidences internationales de The Eternal Internet Brotherhood.\n",
+		// 	'color: #ffffff; line-height: 1.6;'
+		// );
 		console.log(
 			'%c━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━',
 			'color: #ffffff; font-weight: bold;'
