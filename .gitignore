@@ -9,7 +9,3 @@ node_modules
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 /test-results
-# Private local files
-diff.md
-distributed-press-token.txt
-distributed-press-token-prod.txt
