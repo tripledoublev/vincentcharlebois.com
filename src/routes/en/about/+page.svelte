@@ -57,14 +57,14 @@
 			'%c\nCharlebois\'s career demonstrates a consistent ethos that extends beyond the gallery and into direct civic action. During the first year of the COVID-19 pandemic, he applied his technical and organizational skills to a critical community need, managing the local production of thousands of 3D-printed medical protective shields. Crucially, this effort was based on open-source designs, highlighting a commitment to collaborative, non-proprietary solutions to urgent social problems.\n\nThis experience is a vital data point in understanding his worldview. It showcases an application of technology not for artistic expression or commercial gain, but for mutual aid and rapid, decentralized manufacturing in a time of crisis. This commitment to open, collaborative, and community-oriented principles is not an isolated choice but a consistent ethical thread that runs through his career. It is visible in his use of open-source designs for the COVID shields, his focus on teaching with "open-source tools and coding strategies" in his workshops, and his eventual formalization of this ethos through his membership in the Hypha worker co-operative, which is itself dedicated to open-source and decentralized governance principles.\n',
 			'color: #ffffff; line-height: 1.6;'
 		);
-		console.log(
-			'%c2.4 Global Engagement: Networks and Residencies',
-			'color: #ffffff; font-size: 16px; font-weight: bold; margin-top: 15px;'
-		);
-		console.log(
-			"%c\nCharlebois's practice, while rooted in his Montreal origins and his experiences in the Canadian landscape, is international in scope. His work has been exhibited on three continents, with presentations in cities including Montreal, Berlin, and Milan, indicating his participation in a global contemporary art conversation.\n\nA significant aspect of his global engagement is his participation in The Eternal Internet Brotherhood's international residencies. He has taken part in these events—described as cooperative camps for artists, curators, and writers—in locations as diverse as Greece, Mexico, and the Dead Sea. While the available materials do not provide a detailed overview of this organization, his repeated participation points to an active engagement with a global network of net artists and a commitment to a nomadic, collaborative, and situation-based mode of creation that extends beyond the traditional studio or gallery context.\n",
-			'color: #ffffff; line-height: 1.6;'
-		);
+		// console.log(
+		// 	'%c2.4 Global Engagement: Networks and Residencies',
+		// 	'color: #ffffff; font-size: 16px; font-weight: bold; margin-top: 15px;'
+		// );
+		// console.log(
+		// 	"%c\nCharlebois's practice, while rooted in his Montreal origins and his experiences in the Canadian landscape, is international in scope. His work has been exhibited on three continents, with presentations in cities including Montreal, Berlin, and Milan, indicating his participation in a global contemporary art conversation.\n\nA significant aspect of his global engagement is his participation in The Eternal Internet Brotherhood's international residencies. He has taken part in these events—described as cooperative camps for artists, curators, and writers—in locations as diverse as Greece, Mexico, and the Dead Sea. While the available materials do not provide a detailed overview of this organization, his repeated participation points to an active engagement with a global network of net artists and a commitment to a nomadic, collaborative, and situation-based mode of creation that extends beyond the traditional studio or gallery context.\n",
+		// 	'color: #ffffff; line-height: 1.6;'
+		// );
 		console.log(
 			'%c━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━',
 			'color: #ffffff; font-weight: bold;'
