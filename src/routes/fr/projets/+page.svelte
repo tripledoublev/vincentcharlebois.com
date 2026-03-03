@@ -17,7 +17,7 @@
 			'color: #ffffff; font-size: 18px; font-weight: bold; text-transform: uppercase; letter-spacing: 2px;'
 		);
 		console.log(
-			'%cAnalyse du portfolio',
+			'%cProjets techniques et preuves de concept',
 			'color: #ffffff; font-size: 14px; font-style: italic; margin-bottom: 10px;'
 		);
 		console.log(
