@@ -18,15 +18,14 @@
 	let nameIndex = 0;
 
 	const roles = [
-		'un artiste intermédiatique',
-		'un développeur logiciel',
-		"un planteur d'arbres",
-		"un explorateur de l'internet",
-		'un développeur full-stack',
-		'un artiste performatif',
-		'un membre de hypha worker co-op',
-		'un technologue coopératif',
-		'un artiste-chercheur'
+		'un traducteur recherche-produit',
+		'un architecte de systèmes IA',
+		'un bâtisseur qui livre',
+		'un concepteur de systèmes distribués',
+		'un développeur orienté produit',
+		'un penseur de systèmes à grande échelle',
+		'un collaborateur en formation de ventures',
+		'un cofondateur technique'
 	];
 
 	function shuffleArray(array) {
@@ -53,7 +52,7 @@
 			'color: #ffffff; font-size: 18px; font-weight: bold; text-transform: uppercase; letter-spacing: 2px;'
 		);
 		console.log(
-			"%cVue d'ensemble d'un artiste intermédiatique",
+			'%cVue technique : Recherche → Produit & Architecture IA',
 			'color: #ffffff; font-size: 14px; font-style: italic; margin-bottom: 10px;'
 		);
 		console.log(
