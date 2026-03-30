@@ -1,4 +1,4 @@
-const siteUrl = 'https://vincentcharlebois.com';
+export const siteUrl = 'https://vincentcharlebois.com';
 
 export const personSchema = {
 	'@context': 'https://schema.org',
@@ -37,15 +37,18 @@ export const personSchema = {
 	}
 };
 
-export function buildBreadcrumbSchema(items) {
+export function buildBreadcrumbSchema(items = []) {
+	const base = siteUrl.replace(/\/$/, '');
 	return {
 		'@context': 'https://schema.org',
 		'@type': 'BreadcrumbList',
-		itemListElement: items.map((item, index) => ({
-			'@type': 'ListItem',
-			position: index + 1,
-			name: item.name,
-			item: `${siteUrl}${item.path}`
-		}))
+		itemListElement: items
+			.filter((item) => item?.name && item?.path)
+			.map((item, index) => ({
+				'@type': 'ListItem',
+				position: index + 1,
+				name: item.name,
+				item: `${base}/${item.path.replace(/^\/+/, '').replace(/\/+$/, '')}`
+			}))
 	};
 }
