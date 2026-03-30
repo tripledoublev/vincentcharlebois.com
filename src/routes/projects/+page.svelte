@@ -4,7 +4,7 @@
 	import Markdown from '$components/Markdown.svelte';
 	import { buildBreadcrumbSchema } from '$lib/seo.js';
 	$: description = $t('projects.description');
-	$: title = `{$t('linkprojects')} Vincent Charlebois`;
+	$: title = `${$t('linkprojects')} — Vincent Charlebois`;
 	const schema = buildBreadcrumbSchema([
 		{ name: 'Home', path: '/' },
 		{ name: 'Projects', path: '/projects' }

@@ -144,16 +144,12 @@ export async function handle({ event, resolve }) {
       ${fallbackCSS}
       <div class="no-js-fallback">
         <h1>vincent charlebois</h1>
-
-         <p>Please select your language / Veuillez choisir votre langue</p>
+        <p>Montreal-based AI systems engineer, software developer, and artist. Builds production-grade agentic AI systems, distributed architectures, and cooperative digital infrastructure. Member of Hypha Worker Co-operative.</p>
+        <p>Please select your language / Veuillez choisir votre langue</p>
         <div>
           <a href="/en">English</a>
           <a href="/fr">Français</a>
         </div>
-
-        <h2>This is a minimal website without JavaScript. <br>To see the full version, please enable JavaScript.</h2>
-        <h2>Ceci est un site web minimaliste sans JavaScript. <br>Pour voir la version complète, veuillez activer JavaScript.</h2>
-       
       </div>
       `;
 	}
@@ -196,7 +192,8 @@ export async function handle({ event, resolve }) {
       <div class="no-js-fallback">
         <div class="language-toggle"><a href="/fr/a-propos">fr</a></div>
         <h1>about vincent charlebois</h1>
-        <p>Vincent Charlebois is an intermedia artist, software developer and member of Hypha Worker Co-operative.</p>
+        <p>I'm a research-to-product translator and AI systems architect based in Montreal. I work at the boundary between research and deployment, building production-grade systems from complex technical ideas.</p>
+        <p>As a member of <a href="https://hypha.coop">Hypha Worker Co-operative</a>, I contribute to digital infrastructures that support coordination, autonomy, and collective ownership.</p>
         <div class="back-link">
           <a href="/en">Back to home</a>
         </div>
@@ -210,7 +207,8 @@ export async function handle({ event, resolve }) {
       <div class="no-js-fallback">
         <div class="language-toggle"><a href="/en/about">en</a></div>
         <h1>à propos de vincent charlebois</h1>
-        <p>Vincent Charlebois est un artiste intermédia, développeur logiciel et membre de la coopérative de travailleurs Hypha.</p>
+        <p>Je suis un traducteur recherche-produit et architecte de systèmes IA basé à Montréal. Je travaille à la frontière entre la recherche et le déploiement, en construisant des systèmes de production à partir d'idées techniques complexes.</p>
+        <p>En tant que membre de la <a href="https://hypha.coop">coopérative de travailleurs Hypha</a>, je contribue à des infrastructures numériques qui soutiennent la coordination, l'autonomie et la propriété collective.</p>
         <div class="back-link">
           <a href="/fr">Retour à l'accueil</a>
         </div>
@@ -224,8 +222,8 @@ export async function handle({ event, resolve }) {
       <div class="no-js-fallback">
         <div class="language-toggle"><a href="/fr/projets">fr</a></div>
         <h1>projects by vincent charlebois</h1>
-        <p>Explore Vincent's work on distributed infrastructures, protocol interfaces, and governance systems through collaborative practice.</p>
-         <a href="https://vincent.charlebois.info/en">dot info</a>
+        <p>I design and implement AI systems and distributed infrastructures that move from concept to real-world use.</p>
+        <p>See <a href="https://hypha.coop/work">hypha.coop/work</a> for cooperative projects and <a href="https://vincentcharlebois.net">vincentcharlebois.net</a> for earlier research-driven work.</p>
         <div class="back-link">
           <a href="/en">Back to home</a>
         </div>
@@ -239,9 +237,8 @@ export async function handle({ event, resolve }) {
       <div class="no-js-fallback">
         <div class="language-toggle"><a href="/en/projects">en</a></div>
         <h1>projets de vincent charlebois</h1>
-        <p>Explorez le travail de Vincent sur les infrastructures distribuées, interfaces de protocole et systèmes de gouvernance à travers une pratique collaborative.</p>
-        <a href="https://vincent.charlebois.info/fr">point info</a>
-
+        <p>Je conçois et implémente des systèmes IA et des infrastructures distribuées qui passent du concept à l'usage réel.</p>
+        <p>Voir <a href="https://hypha.coop/work">hypha.coop/work</a> pour les projets coopératifs et <a href="https://vincentcharlebois.net">vincentcharlebois.net</a> pour les travaux antérieurs de recherche.</p>
         <div class="back-link">
           <a href="/fr">Retour à l'accueil</a>
         </div>

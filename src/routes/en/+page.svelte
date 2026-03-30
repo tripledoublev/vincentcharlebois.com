@@ -202,48 +202,125 @@
 
 <SEO {...data.seo} />
 
-<main class="flex flex-col place-items-start justify-center overflow-hidden w-full min-h-[75vh]">
-	<div class="typewriter-container text-left px-2 w-full">
-		{#if isExpanded || isExpanding}
-			<h2 class="text-xl md:text-4xl leading-relaxed">
-				<span class="role-text">{nameText}</span><span class="role-text">{expandedText}</span>
-			</h2>
-		{:else}
-			<h2 class="text-xl md:text-4xl leading-relaxed">
-				<span class="role-text">{nameText}</span><span class="role-text">{currentRole}</span><span
-					class="cursor">|</span
-				>
-			</h2>
-		{/if}
-	</div>
+<main id="main-content" class="w-full">
+	<section class="hero flex flex-col place-items-start justify-center overflow-hidden w-full min-h-[75vh]">
+		<div class="typewriter-container text-left px-2 w-full">
+			{#if isExpanded || isExpanding}
+				<h1 class="text-xl md:text-4xl leading-relaxed">
+					<span class="role-text">{nameText}</span><span class="role-text">{expandedText}</span>
+				</h1>
+			{:else}
+				<h1 class="text-xl md:text-4xl leading-relaxed">
+					<span class="role-text">{nameText}</span><span class="role-text">{currentRole}</span><span
+						class="cursor">|</span
+					>
+				</h1>
+			{/if}
+		</div>
 
-	<button
-		class="expand-toggle px-2"
-		on:click={toggleExpand}
-		aria-label={isExpanded ? 'Collapse' : 'Expand'}
-	>
-		<svg
-			width="24"
-			height="24"
-			viewBox="0 0 24 24"
-			fill="none"
-			xmlns="http://www.w3.org/2000/svg"
-			class="expand-icon"
-			class:rotated={isExpanded}
+		<button
+			class="expand-toggle px-2"
+			on:click={toggleExpand}
+			aria-label={isExpanded ? 'Collapse' : 'Expand'}
 		>
-			<path
-				d="M7 10L12 15L17 10"
-				stroke="currentColor"
-				stroke-width="2"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-			/>
-		</svg>
-	</button>
+			<svg
+				width="24"
+				height="24"
+				viewBox="0 0 24 24"
+				fill="none"
+				xmlns="http://www.w3.org/2000/svg"
+				class="expand-icon"
+				class:rotated={isExpanded}
+			>
+				<path
+					d="M7 10L12 15L17 10"
+					stroke="currentColor"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+				/>
+			</svg>
+		</button>
+	</section>
+
+	<section class="homepage-context px-3 pb-20 md:px-6">
+		<div class="context-inner">
+			<p class="eyebrow">Overview</p>
+			<p>
+				Vincent Charlebois works across product strategy, software engineering, and research-led
+				system design. The focus is agentic AI, distributed architectures, and technical execution
+				for projects that need clarity under uncertainty rather than generic implementation capacity.
+			</p>
+			<p>
+				The work typically sits where product requirements, operational constraints, and complex
+				technical systems meet: orchestration layers, human-in-the-loop workflows, resilient service
+				boundaries, and infrastructure that can evolve without turning into accidental complexity.
+			</p>
+
+			<h2>Focus areas</h2>
+			<p>
+				Agentic AI systems are treated as software systems first. That means explicit task models,
+				state transitions, observability, fallback behavior, evaluation loops, and interfaces for
+				human review. Instead of presenting “AI” as a black box, the work emphasizes reliable agent
+				coordination, bounded autonomy, retrieval quality, tool use, and production ergonomics.
+			</p>
+			<p>
+				Distributed architectures are approached with the same bias toward operational clarity:
+				clear ownership boundaries, event-driven patterns where they help, pragmatic consensus
+				mechanisms where they are actually needed, and service designs that remain understandable to
+				the teams maintaining them. The objective is not maximal abstraction. It is systems that can
+				ship, scale, and be debugged.
+			</p>
+
+			<h2>How the work is done</h2>
+			<p>
+				The typical engagement starts by translating ambiguous goals into a concrete technical shape:
+				what the product must do, where failure is expensive, what needs to be measured, and which
+				parts deserve architectural investment. From there, the work moves through prototyping,
+				system design, implementation, and the less glamorous but more important steps around testing,
+				operability, and iteration.
+			</p>
+			<p>
+				This approach is deliberately product-driven. The point is not to accumulate infrastructure
+				or fashionable terminology. The point is to create technical leverage: better delivery
+				decisions, clearer system boundaries, faster learning cycles, and software that remains
+				useful after the first demo.
+			</p>
+
+			<h2>Questions people usually ask</h2>
+			<details>
+				<summary>What kinds of systems are a good fit?</summary>
+				<p>
+					Projects involving multi-step AI workflows, orchestration across tools or services,
+					productization of research ideas, or platform work that needs to balance speed with
+					reliability.
+				</p>
+			</details>
+			<details>
+				<summary>Do you work only on AI?</summary>
+				<p>
+					No. AI is one part of the work. Core software engineering, distributed systems design,
+					product architecture, and technical leadership are equally central.
+				</p>
+			</details>
+			<details>
+				<summary>What matters most in system design?</summary>
+				<p>
+					Correctness, maintainability, observability, and the ability for a team to understand what
+					the system is doing when it fails.
+				</p>
+			</details>
+
+			<p class="context-links">
+				Read more <a href="/en/about">about the approach</a>, browse <a href="/en/projects">selected
+					projects</a>, or <a href="/en/contact">get in touch</a>.
+			</p>
+		</div>
+	</section>
 </main>
 
 <style>
-	main {
+	.hero {
 		height: 80vh;
 	}
 
@@ -254,7 +331,7 @@
 		width: 100%;
 	}
 
-	h2 {
+	h1 {
 		word-wrap: break-word;
 		overflow-wrap: break-word;
 		hyphens: none;
@@ -299,5 +376,68 @@
 
 	.expand-icon.rotated {
 		transform: rotate(180deg);
+	}
+
+	.homepage-context {
+		color: color-mix(in srgb, var(--text-color) 82%, transparent);
+		padding-top: 3.5rem;
+	}
+
+	.hero h1:hover {
+		background-color: transparent;
+		color: inherit;
+	}
+
+	.context-inner {
+		max-width: 42rem;
+		margin: 0 auto;
+		font-size: 0.98rem;
+		line-height: 1.7;
+	}
+
+	.eyebrow {
+		text-transform: uppercase;
+		letter-spacing: 0.12em;
+		font-size: 0.72rem;
+		margin-bottom: 1rem;
+		opacity: 0.75;
+	}
+
+	.context-inner h2 {
+		font-size: 1rem;
+		margin: 2.5rem 0 0.75rem;
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+	}
+
+	.context-inner p {
+		margin: 0.9rem 0;
+	}
+
+	details {
+		border-top: 1px solid color-mix(in srgb, var(--text-color) 14%, transparent);
+		padding: 0.85rem 0;
+	}
+
+	details:last-of-type {
+		border-bottom: 1px solid color-mix(in srgb, var(--text-color) 14%, transparent);
+	}
+
+	summary {
+		cursor: pointer;
+		list-style: none;
+	}
+
+	summary::-webkit-details-marker {
+		display: none;
+	}
+
+	.context-links {
+		margin-top: 2rem;
+	}
+
+	.context-links a {
+		text-decoration: underline;
+		text-underline-offset: 0.2em;
 	}
 </style>

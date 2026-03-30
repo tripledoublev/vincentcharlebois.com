@@ -42,7 +42,7 @@
 				class:active={isHomepage}
 				class:fade-out={isFadingOut}
 			>
-				<h1>vincent charlebois</h1>
+				<span class="site-title">vincent charlebois</span>
 			</a>
 		</div>
 		<div
@@ -93,7 +93,8 @@
 		outline: 2px dotted var(--text-color);
 		outline-offset: 2px;
 	}
-	h1 {
+	.site-title {
+		display: block;
 		padding: 0.25rem 0.86rem;
 		padding-bottom: 0.35rem;
 	}
