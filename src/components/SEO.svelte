@@ -5,9 +5,11 @@
 	export let image = '';
 	export let title = '';
 	export let description = '';
+	export let currentUrl = '';
+	export let schema = [];
 
 	// Determine the current URL and appropriate image based on language
-	$: currentUrl = `https://vincentcharlebois.com${$page.url.pathname}`;
+	$: currentUrl = currentUrl || `https://vincentcharlebois.com${$page.url.pathname}`;
 	$: {
 		if (!image) {
 			if ($page.url.pathname.startsWith('/en/')) {
@@ -19,6 +21,22 @@
 			}
 		}
 	}
+	$: schemas = Array.isArray(schema) ? schema : schema ? [schema] : [];
+
+	const langMap = {
+		'/en/': '/fr/',
+		'/en/about/': '/fr/a-propos/',
+		'/en/projects/': '/fr/projets/',
+		'/en/contact/': '/fr/contact/',
+		'/fr/': '/en/',
+		'/fr/a-propos/': '/en/about/',
+		'/fr/projets/': '/en/projects/',
+		'/fr/contact/': '/en/contact/'
+	};
+	const base = 'https://vincentcharlebois.com';
+	$: altLang = langMap[$page.url.pathname] ?? null;
+	$: isEn = $page.url.pathname.startsWith('/en/');
+	$: isFr = $page.url.pathname.startsWith('/fr/');
 </script>
 
 <svelte:head>
@@ -42,4 +60,21 @@
 
 	<!-- Canonical URL -->
 	<link rel="canonical" href={currentUrl} />
+
+	<!-- hreflang for bilingual structure -->
+	{#if isEn}
+		<link rel="alternate" hreflang="en" href={currentUrl} />
+		{#if altLang}<link rel="alternate" hreflang="fr" href="{base}{altLang}" />{/if}
+		<link rel="alternate" hreflang="x-default" href={currentUrl} />
+	{:else if isFr}
+		<link rel="alternate" hreflang="fr" href={currentUrl} />
+		{#if altLang}<link rel="alternate" hreflang="en" href="{base}{altLang}" />{/if}
+		<link rel="alternate" hreflang="x-default" href="{base}{altLang ?? '/en/'}" />
+	{/if}
+
+	{#each schemas as schemaEntry}
+		<script type="application/ld+json">
+			{JSON.stringify(schemaEntry)}
+		</script>
+	{/each}
 </svelte:head>

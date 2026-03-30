@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vincentcharlebois.com/sitemap.xml
