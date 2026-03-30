@@ -229,48 +229,130 @@ Au sein de cette structure, Charlebois détient le titre d'« artiste-chercheur 
 
 <SEO {...data.seo} />
 
-<main class="flex flex-col place-items-start justify-center overflow-hidden w-full min-h-[75vh]">
-	<div class="typewriter-container text-left px-2 w-full">
-		{#if isExpanded || isExpanding}
-			<h2 class="text-xl md:text-4xl leading-relaxed">
-				<span class="role-text">{nameText}</span><span class="role-text">{expandedText}</span>
-			</h2>
-		{:else}
-			<h2 class="text-xl md:text-4xl leading-relaxed">
-				<span class="role-text">{nameText}</span><span class="role-text">{currentRole}</span><span
-					class="cursor">|</span
-				>
-			</h2>
-		{/if}
-	</div>
+<main id="main-content" class="w-full">
+	<section class="hero flex flex-col place-items-start justify-center overflow-hidden w-full min-h-[75vh]">
+		<div class="typewriter-container text-left px-2 w-full">
+			{#if isExpanded || isExpanding}
+				<h1 class="text-xl md:text-4xl leading-relaxed">
+					<span class="role-text">{nameText}</span><span class="role-text">{expandedText}</span>
+				</h1>
+			{:else}
+				<h1 class="text-xl md:text-4xl leading-relaxed">
+					<span class="role-text">{nameText}</span><span class="role-text">{currentRole}</span><span
+						class="cursor">|</span
+					>
+				</h1>
+			{/if}
+		</div>
 
-	<button
-		class="expand-toggle px-2"
-		on:click={toggleExpand}
-		aria-label={isExpanded ? 'Réduire' : 'Développer'}
-	>
-		<svg
-			width="24"
-			height="24"
-			viewBox="0 0 24 24"
-			fill="none"
-			xmlns="http://www.w3.org/2000/svg"
-			class="expand-icon"
-			class:rotated={isExpanded}
+		<button
+			class="expand-toggle px-2"
+			on:click={toggleExpand}
+			aria-label={isExpanded ? 'Réduire' : 'Développer'}
 		>
-			<path
-				d="M7 10L12 15L17 10"
-				stroke="currentColor"
-				stroke-width="2"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-			/>
-		</svg>
-	</button>
+			<svg
+				width="24"
+				height="24"
+				viewBox="0 0 24 24"
+				fill="none"
+				xmlns="http://www.w3.org/2000/svg"
+				class="expand-icon"
+				class:rotated={isExpanded}
+			>
+				<path
+					d="M7 10L12 15L17 10"
+					stroke="currentColor"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+				/>
+			</svg>
+		</button>
+	</section>
+
+	<section class="homepage-context px-3 pb-20 md:px-6">
+		<div class="context-inner">
+			<p class="eyebrow">Aperçu</p>
+			<p>
+				Vincent Charlebois travaille à l’intersection de la stratégie produit, du génie logiciel et
+				de la conception de systèmes issue de la recherche. L’accent est mis sur les systèmes IA
+				agentiques, les architectures distribuées et l’exécution technique pour des projets où la
+				clarté compte davantage qu’une simple capacité de livraison.
+			</p>
+			<p>
+				Le travail se situe généralement là où les exigences produit, les contraintes
+				opérationnelles et les systèmes techniques complexes se rencontrent : couches
+				d’orchestration, boucles humain-dans-la-boucle, frontières de services résilientes et
+				infrastructures capables d’évoluer sans devenir opaques.
+			</p>
+
+			<h2>Domaines d’expertise</h2>
+			<p>
+				Les systèmes IA agentiques sont abordés d’abord comme des systèmes logiciels. Cela implique
+				des modèles de tâches explicites, des transitions d’état, de l’observabilité, des
+				comportements de repli, des boucles d’évaluation et des interfaces de révision humaine. Au
+				lieu de présenter l’IA comme une boîte noire, le travail privilégie la coordination
+				d’agents, l’autonomie bornée, la qualité de la récupération d’information, l’usage d’outils
+				et l’ergonomie de production.
+			</p>
+			<p>
+				Les architectures distribuées suivent la même logique de clarté opérationnelle : frontières
+				de responsabilité nettes, patrons événementiels lorsqu’ils sont utiles, mécanismes de
+				consensus pragmatiques lorsqu’ils sont réellement nécessaires, et designs de services qui
+				restent compréhensibles pour les équipes qui les maintiennent. L’objectif n’est pas
+				l’abstraction maximale, mais des systèmes qui se livrent, montent en charge et se
+				déboguent.
+			</p>
+
+			<h2>Approche de travail</h2>
+			<p>
+				Le travail commence généralement par la traduction d’objectifs ambigus en une forme
+				technique concrète : ce que le produit doit accomplir, où l’échec coûte cher, ce qui doit
+				être mesuré et quelles parties méritent un véritable investissement architectural. Ensuite
+				viennent le prototypage, la conception système, l’implémentation et les étapes moins visibles
+				mais essentielles autour des tests, de l’exploitation et de l’itération.
+			</p>
+			<p>
+				Cette approche est volontairement orientée produit. Il ne s’agit pas d’accumuler de
+				l’infrastructure ou du vocabulaire à la mode. Il s’agit de créer un levier technique : de
+				meilleures décisions de livraison, des frontières système plus claires, des cycles
+				d’apprentissage plus rapides et des logiciels qui demeurent utiles après la première démo.
+			</p>
+
+			<h2>Questions fréquentes</h2>
+			<details>
+				<summary>Quels types de projets conviennent le mieux?</summary>
+				<p>
+					Les projets impliquant des workflows IA en plusieurs étapes, de l’orchestration entre
+					outils ou services, la mise en produit d’idées de recherche, ou du travail de plateforme qui
+					doit concilier vitesse et fiabilité.
+				</p>
+			</details>
+			<details>
+				<summary>Le travail porte-t-il uniquement sur l’IA?</summary>
+				<p>
+					Non. L’IA n’est qu’une partie du champ. Le génie logiciel, la conception de systèmes
+					distribués, l’architecture produit et le leadership technique en font aussi partie.
+				</p>
+			</details>
+			<details>
+				<summary>Qu’est-ce qui compte le plus dans une architecture?</summary>
+				<p>
+					La correction, la maintenabilité, l’observabilité et la capacité d’une équipe à comprendre
+					ce que le système fait lorsqu’il échoue.
+				</p>
+			</details>
+
+			<p class="context-links">
+				En savoir plus <a href="/fr/a-propos">sur l’approche</a>, voir <a href="/fr/projets">une
+					sélection de projets</a>, ou <a href="/fr/contact">prendre contact</a>.
+			</p>
+		</div>
+	</section>
 </main>
 
 <style>
-	main {
+	.hero {
 		height: 80vh;
 	}
 
@@ -281,7 +363,7 @@ Au sein de cette structure, Charlebois détient le titre d'« artiste-chercheur 
 		width: 100%;
 	}
 
-	h2 {
+	h1 {
 		word-wrap: break-word;
 		overflow-wrap: break-word;
 		hyphens: none;
@@ -326,5 +408,68 @@ Au sein de cette structure, Charlebois détient le titre d'« artiste-chercheur 
 
 	.expand-icon.rotated {
 		transform: rotate(180deg);
+	}
+
+	.homepage-context {
+		color: color-mix(in srgb, var(--text-color) 82%, transparent);
+		padding-top: 3.5rem;
+	}
+
+	.hero h1:hover {
+		background-color: transparent;
+		color: inherit;
+	}
+
+	.context-inner {
+		max-width: 42rem;
+		margin: 0 auto;
+		font-size: 0.98rem;
+		line-height: 1.7;
+	}
+
+	.eyebrow {
+		text-transform: uppercase;
+		letter-spacing: 0.12em;
+		font-size: 0.72rem;
+		margin-bottom: 1rem;
+		opacity: 0.75;
+	}
+
+	.context-inner h2 {
+		font-size: 1rem;
+		margin: 2.5rem 0 0.75rem;
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+	}
+
+	.context-inner p {
+		margin: 0.9rem 0;
+	}
+
+	details {
+		border-top: 1px solid color-mix(in srgb, var(--text-color) 14%, transparent);
+		padding: 0.85rem 0;
+	}
+
+	details:last-of-type {
+		border-bottom: 1px solid color-mix(in srgb, var(--text-color) 14%, transparent);
+	}
+
+	summary {
+		cursor: pointer;
+		list-style: none;
+	}
+
+	summary::-webkit-details-marker {
+		display: none;
+	}
+
+	.context-links {
+		margin-top: 2rem;
+	}
+
+	.context-links a {
+		text-decoration: underline;
+		text-underline-offset: 0.2em;
 	}
 </style>
