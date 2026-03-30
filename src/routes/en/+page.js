@@ -1,3 +1,5 @@
+import { personSchema } from '$lib/seo.js';
+
 export function load({ url }) {
 	const title = 'Vincent Charlebois — Ecologies, technologies;';
 	const description =
@@ -7,7 +9,8 @@ export function load({ url }) {
 		seo: {
 			title,
 			description,
-			currentUrl: `https://vincentcharlebois.com${url.pathname}`
+			currentUrl: `https://vincentcharlebois.com${url.pathname}`,
+			schema: [personSchema]
 		}
 	};
 }
