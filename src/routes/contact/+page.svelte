@@ -1,12 +1,17 @@
 <script>
 	import { t } from 'svelte-i18n';
 	import SEO from '$components/SEO.svelte';
+	import { buildBreadcrumbSchema } from '$lib/seo.js';
 
 	$: description = $t('contact.description');
 	$: title = `{$t('linkcontact')} Vincent Charlebois`;
+	const schema = buildBreadcrumbSchema([
+		{ name: 'Home', path: '/' },
+		{ name: 'Contact', path: '/contact' }
+	]);
 </script>
 
-<SEO {title} {description} />
+<SEO {title} {description} {schema} />
 
 <main id="main-content" class="flex flex-col place-items-center justify-center min-h-[75vh]">
 	<div class="px-5 text-center">

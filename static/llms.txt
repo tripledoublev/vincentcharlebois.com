@@ -1,0 +1,29 @@
+# Vincent Charlebois
+
+> AI Systems Engineer and intermedia artist based in Montreal. Works at the intersection of agentic AI systems, distributed architectures, and ecological/cooperative technology.
+
+## Pages
+
+- [Home (EN)](https://vincentcharlebois.com/en/): Overview of focus areas — agentic AI, distributed systems, product-driven engineering
+- [About (EN)](https://vincentcharlebois.com/en/about/): Background, practice, and approach
+- [Projects (EN)](https://vincentcharlebois.com/en/projects/): Selected work including Hypha Worker Co-operative and vincentcharlebois.net
+- [Contact (EN)](https://vincentcharlebois.com/en/contact/): GitHub, LinkedIn, Bluesky, email
+
+## Key facts
+
+- Name: Vincent Charlebois
+- Role: AI Systems Engineer / artist-researcher / creative technologist
+- Location: Montreal, Quebec, Canada
+- Affiliation: Hypha Worker Co-operative (member-worker since November 2023)
+- Focus: Agentic AI systems, distributed architectures, research-to-product translation
+- GitHub: https://github.com/tripledoublev
+- LinkedIn: https://www.linkedin.com/in/vincent-charlebois/
+- Bluesky: https://bsky.app/profile/charlebois.info
+- X/Twitter: https://x.com/vincencharleboi
+
+## French version
+
+- [Accueil (FR)](https://vincentcharlebois.com/fr/)
+- [À propos (FR)](https://vincentcharlebois.com/fr/a-propos/)
+- [Projets (FR)](https://vincentcharlebois.com/fr/projets/)
+- [Contact (FR)](https://vincentcharlebois.com/fr/contact/)

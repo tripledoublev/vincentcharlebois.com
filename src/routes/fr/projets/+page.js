@@ -1,3 +1,5 @@
+import { buildBreadcrumbSchema } from '$lib/seo.js';
+
 export function load({ url }) {
 	const title = 'Projets Vincent Charlebois';
 	const description =
@@ -7,7 +9,13 @@ export function load({ url }) {
 		seo: {
 			title,
 			description,
-			currentUrl: `https://vincentcharlebois.com${url.pathname}`
+			currentUrl: `https://vincentcharlebois.com${url.pathname}`,
+			schema: [
+				buildBreadcrumbSchema([
+					{ name: 'Accueil', path: '/fr' },
+					{ name: 'Projets', path: '/fr/projets' }
+				])
+			]
 		}
 	};
 }

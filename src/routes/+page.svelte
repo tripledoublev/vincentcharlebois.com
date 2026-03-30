@@ -3,6 +3,7 @@
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
 	import SEO from '$components/SEO.svelte';
+	import { personSchema } from '$lib/seo.js';
 
 	onMount(() => {
 		if (browser) {
@@ -19,6 +20,8 @@
 <SEO
 	title="Vincent Charlebois"
 	description="Vincent Charlebois; intermedia artist, software developer and member of Hypha Worker Co-operative."
+	currentUrl="https://vincentcharlebois.com/"
+	schema={personSchema}
 />
 
 <main
