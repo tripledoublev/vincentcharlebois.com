@@ -37,6 +37,11 @@ export const personSchema = {
 	}
 };
 
+/**
+ * Builds a schema.org BreadcrumbList JSON-LD object for a given page path.
+ * @param {Array<{name: string, path: string}>} items - Ordered list of breadcrumb entries.
+ * @returns {object} JSON-LD BreadcrumbList schema object.
+ */
 export function buildBreadcrumbSchema(items = []) {
 	const base = siteUrl.replace(/\/$/, '');
 	return {
