@@ -54,6 +54,63 @@ export async function handle({ event, resolve }) {
 			<meta property="twitter:image" content="${image}" />
 			<link rel="canonical" href="${currentUrl}" />
 		`;
+	} else if (path === '/about' || path === '/about/') {
+		const title = 'About — Vincent Charlebois';
+		const description = 'About Vincent Charlebois — research-to-product translator and AI systems architect focused on shipping deployable systems.';
+		const image = 'https://vincentcharlebois.com/vincent-charlebois-point-com-en.png';
+		metaTags = `
+			<title>${title}</title>
+			<meta name="description" content="${description}" />
+			<meta property="og:title" content="${title}" />
+			<meta property="og:description" content="${description}" />
+			<meta property="og:type" content="website" />
+			<meta property="og:url" content="${currentUrl}" />
+			<meta property="og:image" content="${image}" />
+			<meta property="twitter:title" content="${title}" />
+			<meta property="twitter:description" content="${description}" />
+			<meta property="twitter:card" content="summary_large_image" />
+			<meta property="twitter:url" content="${currentUrl}" />
+			<meta property="twitter:image" content="${image}" />
+			<link rel="canonical" href="${currentUrl}" />
+		`;
+	} else if (path === '/projects' || path === '/projects/') {
+		const title = 'Projects — Vincent Charlebois';
+		const description = 'Technical projects spanning agentic AI systems, distributed infrastructure, and experimental orchestration architectures.';
+		const image = 'https://vincentcharlebois.com/vincent-charlebois-point-com-en.png';
+		metaTags = `
+			<title>${title}</title>
+			<meta name="description" content="${description}" />
+			<meta property="og:title" content="${title}" />
+			<meta property="og:description" content="${description}" />
+			<meta property="og:type" content="website" />
+			<meta property="og:url" content="${currentUrl}" />
+			<meta property="og:image" content="${image}" />
+			<meta property="twitter:title" content="${title}" />
+			<meta property="twitter:description" content="${description}" />
+			<meta property="twitter:card" content="summary_large_image" />
+			<meta property="twitter:url" content="${currentUrl}" />
+			<meta property="twitter:image" content="${image}" />
+			<link rel="canonical" href="${currentUrl}" />
+		`;
+	} else if (path === '/contact' || path === '/contact/') {
+		const title = 'Contact — Vincent Charlebois';
+		const description = 'Get in touch with Vincent Charlebois — AI systems architect and research-to-product translator. Find links to GitHub, LinkedIn, CV and more.';
+		const image = 'https://vincentcharlebois.com/vincent-charlebois-point-com-en.png';
+		metaTags = `
+			<title>${title}</title>
+			<meta name="description" content="${description}" />
+			<meta property="og:title" content="${title}" />
+			<meta property="og:description" content="${description}" />
+			<meta property="og:type" content="website" />
+			<meta property="og:url" content="${currentUrl}" />
+			<meta property="og:image" content="${image}" />
+			<meta property="twitter:title" content="${title}" />
+			<meta property="twitter:description" content="${description}" />
+			<meta property="twitter:card" content="summary_large_image" />
+			<meta property="twitter:url" content="${currentUrl}" />
+			<meta property="twitter:image" content="${image}" />
+			<link rel="canonical" href="${currentUrl}" />
+		`;
 	} else {
 		// Default meta tags for other pages
 		const title = 'Vincent Charlebois';
@@ -289,6 +346,54 @@ export async function handle({ event, resolve }) {
         </div>
         <div class="back-link">
           <a href="/fr">Retour à l'accueil</a>
+        </div>
+      </div>
+      `;
+	}
+	// Root about page (no language prefix)
+	else if (path === '/about' || path === '/about/') {
+		noJsContent = `
+      ${fallbackCSS}
+      <div class="no-js-fallback">
+        <h1>about vincent charlebois</h1>
+        <p>I'm a research-to-product translator and AI systems architect based in Montreal. I work at the boundary between research and deployment, building production-grade systems from complex technical ideas.</p>
+        <p>As a member of <a href="https://hypha.coop">Hypha Worker Co-operative</a>, I contribute to digital infrastructures that support coordination, autonomy, and collective ownership.</p>
+        <div class="back-link">
+          <a href="/en/about">Full page</a>
+        </div>
+      </div>
+      `;
+	}
+	// Root projects page (no language prefix)
+	else if (path === '/projects' || path === '/projects/') {
+		noJsContent = `
+      ${fallbackCSS}
+      <div class="no-js-fallback">
+        <h1>projects by vincent charlebois</h1>
+        <p>I design and implement AI systems and distributed infrastructures that move from concept to real-world use.</p>
+        <p>See <a href="https://hypha.coop/work">hypha.coop/work</a> for cooperative projects and <a href="https://vincentcharlebois.net">vincentcharlebois.net</a> for earlier research-driven work.</p>
+        <div class="back-link">
+          <a href="/en/projects">Full page</a>
+        </div>
+      </div>
+      `;
+	}
+	// Root contact page (no language prefix)
+	else if (path === '/contact' || path === '/contact/') {
+		noJsContent = `
+      ${fallbackCSS}
+      <div class="no-js-fallback">
+        <h1>contact vincent charlebois</h1>
+        <p>Get in touch:</p>
+        <div class="contact-links">
+          <a href="https://hypha.coop/" target="_blank">hypha</a>
+          <a href="mailto:vincent@charlebois.info">email</a>
+          <a href="https://github.com/tripledoublev" target="_blank">github</a>
+          <a href="https://www.linkedin.com/in/vincent-charlebois/" target="_blank">linkedin</a>
+          <a href="https://bsky.app/profile/charlebois.info" target="_blank">bluesky</a>
+        </div>
+        <div class="back-link">
+          <a href="/en/contact">Full page</a>
         </div>
       </div>
       `;
