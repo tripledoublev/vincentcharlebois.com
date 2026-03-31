@@ -4,7 +4,7 @@
 	import { buildBreadcrumbSchema } from '$lib/seo.js';
 
 	$: description = $t('contact.description');
-	$: title = `${$t('linkcontact')} — Vincent Charlebois`;
+	const title = 'Contact — Vincent Charlebois';
 	const schema = buildBreadcrumbSchema([
 		{ name: 'Home', path: '/' },
 		{ name: 'Contact', path: '/contact' }
