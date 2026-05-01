@@ -80,6 +80,7 @@
 	}
 	:global(.markdown a.purple-link) {
 		text-decoration-color: #9900fc;
+		text-decoration-skip-ink: none;
 	}
 	:global(.markdown em) {
 		font-style: italic;
