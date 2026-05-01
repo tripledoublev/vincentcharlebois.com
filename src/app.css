@@ -18,27 +18,36 @@ body {
 	transition:
 		background-color 0.5s,
 		color 0.25s;
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
-		'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-	font-size: 1.25rem;
-	overflow: clip;
+	font-family:
+		'Inter',
+		-apple-system,
+		BlinkMacSystemFont,
+		'Segoe UI',
+		'Roboto',
+		'Oxygen',
+		'Ubuntu',
+		'Cantarell',
+		'Fira Sans',
+		'Droid Sans',
+		'Helvetica Neue',
+		sans-serif;
+	font-size: 1.15rem;
+	line-height: 1.6;
+	letter-spacing: -0.011em;
 	overflow-x: clip;
-	overflow-y: clip;
 }
 html {
-	overflow: clip;
 	overflow-x: clip;
 	overflow-y: auto;
 }
 main {
 	margin: 0 auto;
-	max-width: 800px;
-	padding: 1rem;
+	max-width: 900px;
+	padding: 2rem 1.5rem;
 }
 li,
 h1 {
 	border-radius: 0.15rem;
-	font-size: 1.25rem;
 }
 li:hover:not(.active),
 h1:hover {

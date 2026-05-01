@@ -39,7 +39,7 @@
 	on:click={toggleDarkMode}
 	size={22}
 	darkMode={$darkMode}
-	class="pt-2 color-switcher"
+	class="color-switcher"
 />
 
 <style>
