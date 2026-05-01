@@ -37,7 +37,7 @@ export async function handle({ event, resolve }) {
 	} else if (path === '/fr' || path === '/fr/') {
 		const title = 'Vincent Charlebois — Recherche → Produit;';
 		const description =
-			'Vincent Charlebois travaille à la frontière entre recherche et déploiement, et construit des systèmes d\'IA de niveau production à partir de recherche technique complexe.';
+			"Vincent Charlebois travaille à la frontière entre recherche et déploiement, et construit des systèmes d'IA de niveau production à partir de recherche technique complexe.";
 		const image = 'https://vincentcharlebois.com/vincent-charlebois-point-com-fr.png';
 		metaTags = `
 			<title>${title}</title>
@@ -56,7 +56,8 @@ export async function handle({ event, resolve }) {
 		`;
 	} else if (path === '/about' || path === '/about/') {
 		const title = 'About — Vincent Charlebois';
-		const description = 'About Vincent Charlebois — research-to-product translator and AI systems architect focused on shipping deployable systems.';
+		const description =
+			'About Vincent Charlebois — research-to-product translator and AI systems architect focused on shipping deployable systems.';
 		const image = 'https://vincentcharlebois.com/vincent-charlebois-point-com-en.png';
 		metaTags = `
 			<title>${title}</title>
@@ -75,7 +76,8 @@ export async function handle({ event, resolve }) {
 		`;
 	} else if (path === '/projects' || path === '/projects/') {
 		const title = 'Projects — Vincent Charlebois';
-		const description = 'Technical projects spanning agentic AI systems, distributed infrastructure, and experimental orchestration architectures.';
+		const description =
+			'Technical projects spanning agentic AI systems, distributed infrastructure, and experimental orchestration architectures.';
 		const image = 'https://vincentcharlebois.com/vincent-charlebois-point-com-en.png';
 		metaTags = `
 			<title>${title}</title>
@@ -94,7 +96,8 @@ export async function handle({ event, resolve }) {
 		`;
 	} else if (path === '/contact' || path === '/contact/') {
 		const title = 'Contact — Vincent Charlebois';
-		const description = 'Get in touch with Vincent Charlebois — AI systems architect and research-to-product translator. Find links to GitHub, LinkedIn, CV and more.';
+		const description =
+			'Get in touch with Vincent Charlebois — AI systems architect and research-to-product translator. Find links to GitHub, LinkedIn, CV and more.';
 		const image = 'https://vincentcharlebois.com/vincent-charlebois-point-com-en.png';
 		metaTags = `
 			<title>${title}</title>

@@ -29,12 +29,12 @@
 	}
 </script>
 
-<nav class="w-full py-3">
+<nav class="w-full py-6 md:py-10">
 	<div
-		class="container mx-auto flex flex-wrap flex-col sm:flex-row items-center justify-around md:justify-between px-2 relative"
+		class="container mx-auto flex flex-wrap flex-col sm:flex-row items-center justify-around md:justify-between px-6 relative"
 	>
 		<!-- Desktop name link - always visible, underlined on homepage -->
-		<div class="h1-container order-1 items-center lg:ml-12 z-20">
+		<div class="h1-container order-1 items-center z-20">
 			<a
 				href={langPrefix}
 				on:click={handleHomeClick}
@@ -46,11 +46,11 @@
 			</a>
 		</div>
 		<div
-			class="relative lg:absolute order-2 md-order-4 inset-0 flex flex-wrap justify-center items-center"
+			class="relative lg:absolute order-2 md-order-4 inset-0 flex flex-wrap justify-center items-baseline"
 		>
 			<Links {langPrefix} />
 		</div>
-		<div class="order-3 flex items-center justify-center z-10 lg:mr-12" style="gap: 2.25rem;">
+		<div class="order-3 flex items-center justify-center z-10" style="gap: 1.5rem;">
 			<!-- Mobile V button - always visible, underlined on homepage -->
 			<button
 				class="mobile-home-link my-1 text-lg lg:text-2xl font-bold"
@@ -60,10 +60,8 @@
 			>
 				v?
 			</button>
-			<div class="my-1">
+			<div class="my-1 flex items-center gap-6">
 				<ColorSwitcher />
-			</div>
-			<div class="my-1">
 				<Switch />
 			</div>
 		</div>
@@ -75,18 +73,19 @@
 	.home-link {
 		text-decoration: none;
 		color: inherit;
+		transition: opacity 0.2s ease;
 	}
 
 	.home-link.active {
 		text-decoration-line: underline;
-		text-decoration-thickness: 2px;
-		text-decoration-color: white;
+		text-decoration-thickness: 1px;
+		text-decoration-color: var(--text-color);
+		text-underline-offset: 0.4rem;
 		text-decoration-skip-ink: none;
 	}
 
 	.home-link.active:hover {
-		text-decoration-thickness: 3px;
-		text-decoration-color: var(--text-color);
+		text-decoration-thickness: 2px;
 	}
 
 	.home-link:focus-visible {
@@ -95,8 +94,11 @@
 	}
 	.site-title {
 		display: block;
-		padding: 0.25rem 0.86rem;
-		padding-bottom: 0.35rem;
+		padding: 0.35rem 0.5rem;
+		padding-bottom: 0.45rem;
+		font-weight: 700;
+		font-size: 1.15rem;
+		letter-spacing: -0.02em;
 	}
 
 	.fade-out {
