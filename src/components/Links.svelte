@@ -18,10 +18,10 @@
 
 <div class="flex justify-end">
 	<div class="md:flex flex-grow items-center justify-center lg:justify-end z-50">
-		<ul class="flex md:flex-row list-none">
+		<ul class="flex md:flex-row list-none gap-2 md:gap-6">
 			<a
 				href={aboutPath}
-				class="link-first px-1 flex flex-grow items-center text-lg md:text-xl lowercase font-bold leading-snug"
+				class="link-first flex items-center text-lg md:text-xl lowercase font-bold leading-snug"
 				class:active={$page.url.pathname.includes(aboutSlug)}
 			>
 				<li class="nav-item flex-auto">
@@ -31,7 +31,7 @@
 
 			<a
 				href={projectsPath}
-				class="link-middle px-1 flex items-center text-lg md:text-xl lowercase font-bold leading-snug"
+				class="link-middle flex items-center text-lg md:text-xl lowercase font-bold leading-snug"
 				class:active={$page.url.pathname.includes(projectsSlug)}
 			>
 				<li class="nav-item flex-auto">
@@ -41,7 +41,7 @@
 
 			<a
 				href={contactPath}
-				class="link-last px-1 flex items-center text-lg md:text-xl lowercase font-bold leading-snug"
+				class="link-last flex items-center text-lg md:text-xl lowercase font-bold leading-snug"
 				class:active={$page.url.pathname.includes(contactSlug)}
 			>
 				<li class="nav-item flex-auto">
@@ -54,8 +54,9 @@
 
 <style>
 	li {
-		padding: 0.25rem 0.7rem;
-		padding-bottom: 0.35rem;
+		padding: 0.35rem 0.8rem;
+		padding-bottom: 0.45rem;
+		transition: all 0.2s ease;
 	}
 
 	/* Equal width for mobile alignment */
@@ -67,22 +68,21 @@
 		}
 		li {
 			text-align: center;
-			padding-left: 0.75rem;
-			padding-right: 0.75rem;
+			padding-left: 0.5rem;
+			padding-right: 0.5rem;
 			white-space: nowrap;
 		}
 	}
 
 	.active {
 		text-decoration-line: underline;
-		text-decoration-thickness: 2px;
-		text-decoration-color: white;
-		text-underline-offset: 0.3rem;
+		text-decoration-thickness: 1px;
+		text-decoration-color: var(--text-color);
+		text-underline-offset: 0.4rem;
 		text-decoration-skip-ink: none;
 	}
 	.active:hover {
-		text-decoration-thickness: 3px;
-		text-decoration-color: var(--text-color);
+		text-decoration-thickness: 2px;
 	}
 	a:focus-visible {
 		outline: 2px dotted var(--text-color);
