@@ -203,14 +203,16 @@
 <SEO {...data.seo} />
 
 <main id="main-content" class="w-full">
-	<section class="hero flex flex-col place-items-start justify-center overflow-hidden w-full min-h-[75vh]">
-		<div class="typewriter-container text-left px-2 w-full">
+	<section
+		class="hero flex flex-col place-items-start justify-center overflow-hidden w-full min-h-[70vh]"
+	>
+		<div class="typewriter-container text-left px-6 w-full">
 			{#if isExpanded || isExpanding}
-				<h1 class="text-xl md:text-4xl leading-relaxed">
+				<h1 class="text-2xl md:text-5xl leading-tight tracking-tight">
 					<span class="role-text">{nameText}</span><span class="role-text">{expandedText}</span>
 				</h1>
 			{:else}
-				<h1 class="text-xl md:text-4xl leading-relaxed">
+				<h1 class="text-2xl md:text-5xl leading-tight tracking-tight">
 					<span class="role-text">{nameText}</span><span class="role-text">{currentRole}</span><span
 						class="cursor">|</span
 					>
@@ -219,7 +221,7 @@
 		</div>
 
 		<button
-			class="expand-toggle px-2"
+			class="expand-toggle px-6 mt-8"
 			on:click={toggleExpand}
 			aria-label={isExpanded ? 'Collapse' : 'Expand'}
 		>
@@ -243,19 +245,23 @@
 		</button>
 	</section>
 
-	<section class="homepage-context px-3 pb-20 md:px-6">
+	<section class="homepage-context px-6 pb-32">
 		<div class="context-inner">
 			<p class="eyebrow">Overview</p>
-			<p>
-				Vincent Charlebois works across product strategy, software engineering, and research-led
-				system design. The focus is agentic AI, distributed architectures, and technical execution
-				for projects that need clarity under uncertainty rather than generic implementation capacity.
-			</p>
-			<p>
-				The work typically sits where product requirements, operational constraints, and complex
-				technical systems meet: orchestration layers, human-in-the-loop workflows, resilient service
-				boundaries, and infrastructure that can evolve without turning into accidental complexity.
-			</p>
+			<div class="intro-text">
+				<p>
+					Vincent Charlebois works across product strategy, software engineering, and research-led
+					system design. The focus is agentic AI, distributed architectures, and technical execution
+					for projects that need clarity under uncertainty rather than generic implementation
+					capacity.
+				</p>
+				<p>
+					The work typically sits where product requirements, operational constraints, and complex
+					technical systems meet: orchestration layers, human-in-the-loop workflows, resilient
+					service boundaries, and infrastructure that can evolve without turning into accidental
+					complexity.
+				</p>
+			</div>
 
 			<h2>Focus areas</h2>
 			<p>
@@ -274,11 +280,11 @@
 
 			<h2>How the work is done</h2>
 			<p>
-				The typical engagement starts by translating ambiguous goals into a concrete technical shape:
-				what the product must do, where failure is expensive, what needs to be measured, and which
-				parts deserve architectural investment. From there, the work moves through prototyping,
-				system design, implementation, and the less glamorous but more important steps around testing,
-				operability, and iteration.
+				The typical engagement starts by translating ambiguous goals into a concrete technical
+				shape: what the product must do, where failure is expensive, what needs to be measured, and
+				which parts deserve architectural investment. From there, the work moves through
+				prototyping, system design, implementation, and the less glamorous but more important steps
+				around testing, operability, and iteration.
 			</p>
 			<p>
 				This approach is deliberately product-driven. The point is not to accumulate infrastructure
@@ -312,8 +318,8 @@
 			</details>
 
 			<p class="context-links">
-				Read more <a href="/en/about">about the approach</a>, browse <a href="/en/projects">selected
-					projects</a>, or <a href="/en/contact">get in touch</a>.
+				Read more <a href="/en/about">about the approach</a>, browse
+				<a href="/en/projects">selected projects</a>, or <a href="/en/contact">get in touch</a>.
 			</p>
 		</div>
 	</section>
@@ -322,6 +328,8 @@
 <style>
 	.hero {
 		height: 80vh;
+		max-width: 1000px;
+		margin: 0 auto;
 	}
 
 	.typewriter-container {
@@ -335,10 +343,11 @@
 		word-wrap: break-word;
 		overflow-wrap: break-word;
 		hyphens: none;
+		font-weight: 700;
 	}
 
 	.role-text {
-		font-weight: normal;
+		font-weight: 700;
 	}
 
 	.cursor {
@@ -361,13 +370,14 @@
 		background: none;
 		border: none;
 		cursor: pointer;
-		padding: 0.5rem;
 		transition: transform 0.3s ease;
 		color: var(--text-color);
+		opacity: 0.5;
 	}
 
 	.expand-toggle:hover {
-		transform: scale(1.2);
+		transform: scale(1.1);
+		opacity: 1;
 	}
 
 	.expand-icon {
@@ -379,8 +389,8 @@
 	}
 
 	.homepage-context {
-		color: color-mix(in srgb, var(--text-color) 82%, transparent);
-		padding-top: 3.5rem;
+		color: color-mix(in srgb, var(--text-color) 85%, transparent);
+		padding-top: 4rem;
 	}
 
 	.hero h1:hover {
@@ -389,43 +399,52 @@
 	}
 
 	.context-inner {
-		max-width: 42rem;
+		max-width: 44rem;
 		margin: 0 auto;
-		font-size: 0.98rem;
-		line-height: 1.7;
+		font-size: 1.05rem;
+		line-height: 1.75;
 	}
 
 	.eyebrow {
 		text-transform: uppercase;
-		letter-spacing: 0.12em;
-		font-size: 0.72rem;
-		margin-bottom: 1rem;
-		opacity: 0.75;
+		letter-spacing: 0.15em;
+		font-size: 0.75rem;
+		margin-bottom: 1.5rem;
+		font-weight: 700;
+		opacity: 0.6;
+	}
+
+	.intro-text {
+		font-size: 1.15rem;
+		margin-bottom: 3rem;
 	}
 
 	.context-inner h2 {
-		font-size: 1rem;
-		margin: 2.5rem 0 0.75rem;
+		font-size: 0.85rem;
+		margin: 4rem 0 1.25rem;
 		text-transform: uppercase;
-		letter-spacing: 0.08em;
+		letter-spacing: 0.12em;
+		font-weight: 800;
+		opacity: 0.8;
 	}
 
 	.context-inner p {
-		margin: 0.9rem 0;
+		margin: 1.25rem 0;
 	}
 
 	details {
-		border-top: 1px solid color-mix(in srgb, var(--text-color) 14%, transparent);
-		padding: 0.85rem 0;
+		border-top: 1px solid color-mix(in srgb, var(--text-color) 10%, transparent);
+		padding: 1.25rem 0;
 	}
 
 	details:last-of-type {
-		border-bottom: 1px solid color-mix(in srgb, var(--text-color) 14%, transparent);
+		border-bottom: 1px solid color-mix(in srgb, var(--text-color) 10%, transparent);
 	}
 
 	summary {
 		cursor: pointer;
 		list-style: none;
+		font-weight: 600;
 	}
 
 	summary::-webkit-details-marker {
@@ -433,11 +452,18 @@
 	}
 
 	.context-links {
-		margin-top: 2rem;
+		margin-top: 4rem;
+		font-weight: 600;
 	}
 
 	.context-links a {
 		text-decoration: underline;
-		text-underline-offset: 0.2em;
+		text-underline-offset: 0.3em;
+		text-decoration-thickness: 1px;
+		transition: text-decoration-thickness 0.2s ease;
+	}
+
+	.context-links a:hover {
+		text-decoration-thickness: 2px;
 	}
 </style>

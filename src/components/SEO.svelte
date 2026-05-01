@@ -10,11 +10,13 @@
 	export let schema = [];
 
 	$: derivedUrl = currentUrl || `${siteUrl}${$page.url.pathname}`;
-	$: derivedImage = image || (
-		$page.url.pathname.startsWith('/en/') ? `${siteUrl}/vincent-charlebois-point-com-en.png` :
-		$page.url.pathname.startsWith('/fr/') ? `${siteUrl}/vincent-charlebois-point-com-fr.png` :
-		`${siteUrl}/vincent-charlebois-point-com.jpg`
-	);
+	$: derivedImage =
+		image ||
+		($page.url.pathname.startsWith('/en/')
+			? `${siteUrl}/vincent-charlebois-point-com-en.png`
+			: $page.url.pathname.startsWith('/fr/')
+				? `${siteUrl}/vincent-charlebois-point-com-fr.png`
+				: `${siteUrl}/vincent-charlebois-point-com.jpg`);
 	$: schemas = Array.isArray(schema) ? schema : schema ? [schema] : [];
 
 	const langMap = {
@@ -66,8 +68,7 @@
 	{/if}
 
 	{#each schemas as schemaEntry}
-		<script type="application/ld+json">
-			{JSON.stringify(schemaEntry)}
-		</script>
+		<!-- eslint-disable-next-line svelte/no-at-html-tags -->
+		{@html '<script type="application/ld+json">' + JSON.stringify(schemaEntry) + '<' + '/script>'}
 	{/each}
 </svelte:head>

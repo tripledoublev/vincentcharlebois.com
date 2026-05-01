@@ -230,14 +230,16 @@ Au sein de cette structure, Charlebois détient le titre d'« artiste-chercheur 
 <SEO {...data.seo} />
 
 <main id="main-content" class="w-full">
-	<section class="hero flex flex-col place-items-start justify-center overflow-hidden w-full min-h-[75vh]">
-		<div class="typewriter-container text-left px-2 w-full">
+	<section
+		class="hero flex flex-col place-items-start justify-center overflow-hidden w-full min-h-[70vh]"
+	>
+		<div class="typewriter-container text-left px-6 w-full">
 			{#if isExpanded || isExpanding}
-				<h1 class="text-xl md:text-4xl leading-relaxed">
+				<h1 class="text-2xl md:text-5xl leading-tight tracking-tight">
 					<span class="role-text">{nameText}</span><span class="role-text">{expandedText}</span>
 				</h1>
 			{:else}
-				<h1 class="text-xl md:text-4xl leading-relaxed">
+				<h1 class="text-2xl md:text-5xl leading-tight tracking-tight">
 					<span class="role-text">{nameText}</span><span class="role-text">{currentRole}</span><span
 						class="cursor">|</span
 					>
@@ -246,7 +248,7 @@ Au sein de cette structure, Charlebois détient le titre d'« artiste-chercheur 
 		</div>
 
 		<button
-			class="expand-toggle px-2"
+			class="expand-toggle px-6 mt-8"
 			on:click={toggleExpand}
 			aria-label={isExpanded ? 'Réduire' : 'Développer'}
 		>
@@ -270,21 +272,23 @@ Au sein de cette structure, Charlebois détient le titre d'« artiste-chercheur 
 		</button>
 	</section>
 
-	<section class="homepage-context px-3 pb-20 md:px-6">
+	<section class="homepage-context px-6 pb-32">
 		<div class="context-inner">
 			<p class="eyebrow">Aperçu</p>
-			<p>
-				Vincent Charlebois travaille à l’intersection de la stratégie produit, du génie logiciel et
-				de la conception de systèmes issue de la recherche. L’accent est mis sur les systèmes IA
-				agentiques, les architectures distribuées et l’exécution technique pour des projets où la
-				clarté compte davantage qu’une simple capacité de livraison.
-			</p>
-			<p>
-				Le travail se situe généralement là où les exigences produit, les contraintes
-				opérationnelles et les systèmes techniques complexes se rencontrent : couches
-				d’orchestration, boucles humain-dans-la-boucle, frontières de services résilientes et
-				infrastructures capables d’évoluer sans devenir opaques.
-			</p>
+			<div class="intro-text">
+				<p>
+					Vincent Charlebois travaille à l’intersection de la stratégie produit, du génie logiciel
+					et de la conception de systèmes issue de la recherche. L’accent est mis sur les systèmes
+					IA agentiques, les architectures distribuées et l’exécution technique pour des projets où
+					la clarté compte davantage qu’une simple capacité de livraison.
+				</p>
+				<p>
+					Le travail se situe généralement là où les exigences produit, les contraintes
+					opérationnelles et les systèmes techniques complexes se rencontrent : couches
+					d’orchestration, boucles humain-dans-la-boucle, frontières de services résilientes et
+					infrastructures capables d’évoluer sans devenir opaques.
+				</p>
+			</div>
 
 			<h2>Domaines d’expertise</h2>
 			<p>
@@ -300,8 +304,7 @@ Au sein de cette structure, Charlebois détient le titre d'« artiste-chercheur 
 				de responsabilité nettes, patrons événementiels lorsqu’ils sont utiles, mécanismes de
 				consensus pragmatiques lorsqu’ils sont réellement nécessaires, et designs de services qui
 				restent compréhensibles pour les équipes qui les maintiennent. L’objectif n’est pas
-				l’abstraction maximale, mais des systèmes qui se livrent, montent en charge et se
-				déboguent.
+				l’abstraction maximale, mais des systèmes qui se livrent, montent en charge et se déboguent.
 			</p>
 
 			<h2>Approche de travail</h2>
@@ -309,8 +312,8 @@ Au sein de cette structure, Charlebois détient le titre d'« artiste-chercheur 
 				Le travail commence généralement par la traduction d’objectifs ambigus en une forme
 				technique concrète : ce que le produit doit accomplir, où l’échec coûte cher, ce qui doit
 				être mesuré et quelles parties méritent un véritable investissement architectural. Ensuite
-				viennent le prototypage, la conception système, l’implémentation et les étapes moins visibles
-				mais essentielles autour des tests, de l’exploitation et de l’itération.
+				viennent le prototypage, la conception système, l’implémentation et les étapes moins
+				visibles mais essentielles autour des tests, de l’exploitation et de l’itération.
 			</p>
 			<p>
 				Cette approche est volontairement orientée produit. Il ne s’agit pas d’accumuler de
@@ -324,8 +327,8 @@ Au sein de cette structure, Charlebois détient le titre d'« artiste-chercheur 
 				<summary>Quels types de projets conviennent le mieux?</summary>
 				<p>
 					Les projets impliquant des workflows IA en plusieurs étapes, de l’orchestration entre
-					outils ou services, la mise en produit d’idées de recherche, ou du travail de plateforme qui
-					doit concilier vitesse et fiabilité.
+					outils ou services, la mise en produit d’idées de recherche, ou du travail de plateforme
+					qui doit concilier vitesse et fiabilité.
 				</p>
 			</details>
 			<details>
@@ -344,8 +347,9 @@ Au sein de cette structure, Charlebois détient le titre d'« artiste-chercheur 
 			</details>
 
 			<p class="context-links">
-				En savoir plus <a href="/fr/a-propos">sur l’approche</a>, voir <a href="/fr/projets">une
-					sélection de projets</a>, ou <a href="/fr/contact">prendre contact</a>.
+				En savoir plus <a href="/fr/a-propos">sur l’approche</a>, voir
+				<a href="/fr/projets">une sélection de projets</a>, ou
+				<a href="/fr/contact">prendre contact</a>.
 			</p>
 		</div>
 	</section>
@@ -354,6 +358,8 @@ Au sein de cette structure, Charlebois détient le titre d'« artiste-chercheur 
 <style>
 	.hero {
 		height: 80vh;
+		max-width: 1000px;
+		margin: 0 auto;
 	}
 
 	.typewriter-container {
@@ -367,10 +373,11 @@ Au sein de cette structure, Charlebois détient le titre d'« artiste-chercheur 
 		word-wrap: break-word;
 		overflow-wrap: break-word;
 		hyphens: none;
+		font-weight: 700;
 	}
 
 	.role-text {
-		font-weight: normal;
+		font-weight: 700;
 	}
 
 	.cursor {
@@ -393,13 +400,14 @@ Au sein de cette structure, Charlebois détient le titre d'« artiste-chercheur 
 		background: none;
 		border: none;
 		cursor: pointer;
-		padding: 0.5rem;
 		transition: transform 0.3s ease;
 		color: var(--text-color);
+		opacity: 0.5;
 	}
 
 	.expand-toggle:hover {
-		transform: scale(1.2);
+		transform: scale(1.1);
+		opacity: 1;
 	}
 
 	.expand-icon {
@@ -411,8 +419,8 @@ Au sein de cette structure, Charlebois détient le titre d'« artiste-chercheur 
 	}
 
 	.homepage-context {
-		color: color-mix(in srgb, var(--text-color) 82%, transparent);
-		padding-top: 3.5rem;
+		color: color-mix(in srgb, var(--text-color) 85%, transparent);
+		padding-top: 4rem;
 	}
 
 	.hero h1:hover {
@@ -421,43 +429,52 @@ Au sein de cette structure, Charlebois détient le titre d'« artiste-chercheur 
 	}
 
 	.context-inner {
-		max-width: 42rem;
+		max-width: 44rem;
 		margin: 0 auto;
-		font-size: 0.98rem;
-		line-height: 1.7;
+		font-size: 1.05rem;
+		line-height: 1.75;
 	}
 
 	.eyebrow {
 		text-transform: uppercase;
-		letter-spacing: 0.12em;
-		font-size: 0.72rem;
-		margin-bottom: 1rem;
-		opacity: 0.75;
+		letter-spacing: 0.15em;
+		font-size: 0.75rem;
+		margin-bottom: 1.5rem;
+		font-weight: 700;
+		opacity: 0.6;
+	}
+
+	.intro-text {
+		font-size: 1.15rem;
+		margin-bottom: 3rem;
 	}
 
 	.context-inner h2 {
-		font-size: 1rem;
-		margin: 2.5rem 0 0.75rem;
+		font-size: 0.85rem;
+		margin: 4rem 0 1.25rem;
 		text-transform: uppercase;
-		letter-spacing: 0.08em;
+		letter-spacing: 0.12em;
+		font-weight: 800;
+		opacity: 0.8;
 	}
 
 	.context-inner p {
-		margin: 0.9rem 0;
+		margin: 1.25rem 0;
 	}
 
 	details {
-		border-top: 1px solid color-mix(in srgb, var(--text-color) 14%, transparent);
-		padding: 0.85rem 0;
+		border-top: 1px solid color-mix(in srgb, var(--text-color) 10%, transparent);
+		padding: 1.25rem 0;
 	}
 
 	details:last-of-type {
-		border-bottom: 1px solid color-mix(in srgb, var(--text-color) 14%, transparent);
+		border-bottom: 1px solid color-mix(in srgb, var(--text-color) 10%, transparent);
 	}
 
 	summary {
 		cursor: pointer;
 		list-style: none;
+		font-weight: 600;
 	}
 
 	summary::-webkit-details-marker {
@@ -465,11 +482,18 @@ Au sein de cette structure, Charlebois détient le titre d'« artiste-chercheur 
 	}
 
 	.context-links {
-		margin-top: 2rem;
+		margin-top: 4rem;
+		font-weight: 600;
 	}
 
 	.context-links a {
 		text-decoration: underline;
-		text-underline-offset: 0.2em;
+		text-underline-offset: 0.3em;
+		text-decoration-thickness: 1px;
+		transition: text-decoration-thickness 0.2s ease;
+	}
+
+	.context-links a:hover {
+		text-decoration-thickness: 2px;
 	}
 </style>
