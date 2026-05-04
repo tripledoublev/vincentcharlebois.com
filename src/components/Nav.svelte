@@ -42,7 +42,7 @@
 				class:active={isHomepage}
 				class:fade-out={isFadingOut}
 			>
-				<span class="site-title">vincent charlebois</span>
+				<h1 class="site-title">vincent charlebois</h1>
 			</a>
 		</div>
 		<div
