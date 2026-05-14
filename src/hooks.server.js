@@ -1,3 +1,14 @@
+import portfolioMarkdown from '$lib/content/portfolio.md?raw';
+import { marked } from 'marked';
+
+const portfolioBody = portfolioMarkdown.replace(/^---[\s\S]*?---\s*/, '');
+const portfolioNoJsHtml = marked.parse(portfolioBody, {
+	breaks: true,
+	gfm: true,
+	headerIds: false,
+	mangle: false
+});
+
 /** @type {import('@sveltejs/kit').Handle} */
 export async function handle({ event, resolve }) {
 	// Determine the language from the URL path
@@ -78,6 +89,26 @@ export async function handle({ event, resolve }) {
 		const title = 'Projects — Vincent Charlebois';
 		const description =
 			'Technical projects spanning agentic AI systems, distributed infrastructure, and experimental orchestration architectures.';
+		const image = 'https://vincentcharlebois.com/vincent-charlebois-point-com-en.png';
+		metaTags = `
+			<title>${title}</title>
+			<meta name="description" content="${description}" />
+			<meta property="og:title" content="${title}" />
+			<meta property="og:description" content="${description}" />
+			<meta property="og:type" content="website" />
+			<meta property="og:url" content="${currentUrl}" />
+			<meta property="og:image" content="${image}" />
+			<meta property="twitter:title" content="${title}" />
+			<meta property="twitter:description" content="${description}" />
+			<meta property="twitter:card" content="summary_large_image" />
+			<meta property="twitter:url" content="${currentUrl}" />
+			<meta property="twitter:image" content="${image}" />
+			<link rel="canonical" href="${currentUrl}" />
+		`;
+	} else if (path === '/portfolio' || path === '/portfolio/') {
+		const title = 'Portfolio — Vincent Charlebois';
+		const description =
+			'Selected work by Vincent Charlebois across web art, UX, and agentic interaction design.';
 		const image = 'https://vincentcharlebois.com/vincent-charlebois-point-com-en.png';
 		metaTags = `
 			<title>${title}</title>
@@ -191,6 +222,27 @@ export async function handle({ event, resolve }) {
           position: absolute;
           top: 1rem;
           right: 1rem;
+        }
+        .no-js-portfolio {
+          text-align: left;
+          font-family: monospace, sans-serif;
+        }
+        .no-js-portfolio h1,
+        .no-js-portfolio h2,
+        .no-js-portfolio h3 {
+          text-align: left;
+          margin: 2.5rem 0 1rem;
+        }
+        .no-js-portfolio p {
+          text-align: left;
+          margin: 0 0 1.5rem;
+        }
+        .no-js-portfolio ul {
+          margin: 0 0 1.5rem 1.5rem;
+        }
+        .no-js-portfolio .back-link {
+          text-align: right;
+          margin-bottom: 2rem;
         }
       </style>
     `;
@@ -378,6 +430,18 @@ export async function handle({ event, resolve }) {
         <div class="back-link">
           <a href="/en/projects">Full page</a>
         </div>
+      </div>
+      `;
+	}
+	// Root portfolio page
+	else if (path === '/portfolio' || path === '/portfolio/') {
+		noJsContent = `
+      ${fallbackCSS}
+      <div class="no-js-fallback no-js-portfolio">
+        <div class="back-link">
+          <a href="/portfolio.md">Machine-readable markdown</a>
+        </div>
+        ${portfolioNoJsHtml}
       </div>
       `;
 	}
