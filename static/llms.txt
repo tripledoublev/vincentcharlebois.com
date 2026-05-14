@@ -1,29 +1,22 @@
 # Vincent Charlebois
 
-> AI Systems Engineer and intermedia artist based in Montreal. Works at the intersection of agentic AI systems, distributed architectures, and ecological/cooperative technology.
+> Software engineer, artist, and agentic interaction designer working across web art, UX for complex systems, and autonomous AI interactions.
 
-## Pages
+## Portfolio
 
-- [Home (EN)](https://vincentcharlebois.com/en/): Overview of focus areas — agentic AI, distributed systems, product-driven engineering
-- [About (EN)](https://vincentcharlebois.com/en/about/): Background, practice, and approach
-- [Projects (EN)](https://vincentcharlebois.com/en/projects/): Selected work including Hypha Worker Co-operative and vincentcharlebois.net
-- [Contact (EN)](https://vincentcharlebois.com/en/contact/): GitHub, LinkedIn, Bluesky, email
+- [Rendered portfolio](https://vincentcharlebois.com/portfolio/): Selected works for human readers.
+- [Portfolio markdown](https://vincentcharlebois.com/portfolio.md): Machine-readable selected portfolio with YAML metadata and project links.
 
-## Key facts
+## Primary profiles
 
-- Name: Vincent Charlebois
-- Role: AI Systems Engineer / artist-researcher / creative technologist
-- Location: Montreal, Quebec, Canada
-- Affiliation: Hypha Worker Co-operative (member-worker since November 2023)
-- Focus: Agentic AI systems, distributed architectures, research-to-product translation
-- GitHub: https://github.com/tripledoublev
-- LinkedIn: https://www.linkedin.com/in/vincent-charlebois/
-- Bluesky: https://bsky.app/profile/charlebois.info
-- X/Twitter: https://x.com/vincencharleboi
+- [Main website](https://vincentcharlebois.com): Current professional site.
+- [Profile](https://vincent.charlebois.info): Artistic and research profile.
+- [GitHub](https://github.com/tripledoublev): Open-source code and technical projects.
 
-## French version
+## Selected work
 
-- [Accueil (FR)](https://vincentcharlebois.com/fr/)
-- [À propos (FR)](https://vincentcharlebois.com/fr/a-propos/)
-- [Projets (FR)](https://vincentcharlebois.com/fr/projets/)
-- [Contact (FR)](https://vincentcharlebois.com/fr/contact/)
+- [XX C](https://xx-c.art/a-z): AI-centered web art and browser-native interaction experiments.
+- [Doxa](https://doxa.xx-c.art): Autonomous AI artwork that makes agent state browsable.
+- [Nego](https://nego.xx-c.art): Multi-agent negotiation artwork with machine-readable participation.
+- [v100](https://github.com/tripledoublev/v100): Experimental coding-agent runtime focused on traces, control, and long-running task UX.
+- [RooLLM](https://github.com/hyphacoop/RooLLM): Open-source organizational AI assistant.
