@@ -9,7 +9,7 @@ export function load({ url }) {
 		seo: {
 			title,
 			description,
-			currentUrl: `https://vincentcharlebois.com${url.pathname}`,
+			currentUrl: `https://www.vincentcharlebois.com${url.pathname}`,
 			schema: [
 				buildBreadcrumbSchema([
 					{ name: 'Accueil', path: '/fr' },

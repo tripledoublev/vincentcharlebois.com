@@ -3,7 +3,7 @@ import { buildWebPageSchema, personSchema, websiteSchema } from '$lib/seo.js';
 
 describe('structured data', () => {
 	it('anchors the website schema to the canonical person entity', () => {
-		expect(personSchema['@id']).toBe('https://vincentcharlebois.com/#vincent-charlebois');
+		expect(personSchema['@id']).toBe('https://www.vincentcharlebois.com/#vincent-charlebois');
 		expect(websiteSchema.author['@id']).toBe(personSchema['@id']);
 	});
 
@@ -17,7 +17,7 @@ describe('structured data', () => {
 		});
 
 		expect(schema['@type']).toBe('CollectionPage');
-		expect(schema.url).toBe('https://vincentcharlebois.com/portfolio/');
+		expect(schema.url).toBe('https://www.vincentcharlebois.com/portfolio/');
 		expect(schema.about['@id']).toBe(personSchema['@id']);
 	});
 });

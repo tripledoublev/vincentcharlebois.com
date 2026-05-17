@@ -314,7 +314,7 @@ export async function handle({ event, resolve }) {
 		lang = 'fr';
 	}
 
-	const currentUrl = `https://vincentcharlebois.com${path}`;
+	const currentUrl = `${siteUrl}${path}`;
 	const metaTags = buildMetaTags(detailsForPath(path, lang), currentUrl);
 	const commonHeadTags = buildCommonHeadTags(path, lang);
 

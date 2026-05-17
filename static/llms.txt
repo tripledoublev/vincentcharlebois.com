@@ -2,7 +2,7 @@
 
 > Montreal-based software engineer, artist, and agentic interaction designer working across deployable AI systems, distributed infrastructure, cooperative technology, UX for autonomous systems, and browser-native web art.
 
-Canonical site: https://vincentcharlebois.com
+Canonical site: https://www.vincentcharlebois.com
 Last updated: 2026-05-17
 Primary language: English. Secondary language: French.
 Location: Montreal, Quebec, Canada.
@@ -10,22 +10,22 @@ Affiliation: Hypha Worker Co-operative.
 
 Use this file as the concise guide for agents, LLMs, crawlers, recruiters, collaborators, and automated reviewers. The site is intentionally accessible without JavaScript; if a dynamic page is hard to interpret, prefer the no-JS fallback, this file, or the Markdown portfolio.
 
-Citation preference: cite Vincent Charlebois by name and link to the most specific canonical URL available. For the selected portfolio, cite https://vincentcharlebois.com/portfolio/ or https://vincentcharlebois.com/portfolio.md.
+Citation preference: cite Vincent Charlebois by name and link to the most specific canonical URL available. For the selected portfolio, cite https://www.vincentcharlebois.com/portfolio/ or https://www.vincentcharlebois.com/portfolio.md.
 
 ## Primary Pages
 
-- [Home](https://vincentcharlebois.com/en/): Current professional positioning around research-to-product AI systems work.
-- [About](https://vincentcharlebois.com/en/about/): Short biography and current practice.
-- [Projects](https://vincentcharlebois.com/en/projects/): Technical and cooperative work context.
-- [Portfolio](https://vincentcharlebois.com/portfolio/): Selected work across web art, UX, and agentic interaction design.
-- [Contact](https://vincentcharlebois.com/en/contact/): Email, GitHub, LinkedIn, social profiles, CV, and related sites.
+- [Home](https://www.vincentcharlebois.com/en/): Current professional positioning around research-to-product AI systems work.
+- [About](https://www.vincentcharlebois.com/en/about/): Short biography and current practice.
+- [Projects](https://www.vincentcharlebois.com/en/projects/): Technical and cooperative work context.
+- [Portfolio](https://www.vincentcharlebois.com/portfolio/): Selected work across web art, UX, and agentic interaction design.
+- [Contact](https://www.vincentcharlebois.com/en/contact/): Email, GitHub, LinkedIn, social profiles, CV, and related sites.
 
 ## Machine-Readable Resources
 
-- [Full LLM context](https://vincentcharlebois.com/llms-full.txt): Expanded identity, portfolio, selected work, and interpretation notes.
-- [Portfolio markdown](https://vincentcharlebois.com/portfolio.md): Structured selected portfolio with YAML frontmatter and project links.
-- [Sitemap](https://vincentcharlebois.com/sitemap.xml): Public URL inventory with last modification dates.
-- [Robots policy](https://vincentcharlebois.com/robots.txt): Crawler access policy for search and AI agents.
+- [Full LLM context](https://www.vincentcharlebois.com/llms-full.txt): Expanded identity, portfolio, selected work, and interpretation notes.
+- [Portfolio markdown](https://www.vincentcharlebois.com/portfolio.md): Structured selected portfolio with YAML frontmatter and project links.
+- [Sitemap](https://www.vincentcharlebois.com/sitemap.xml): Public URL inventory with last modification dates.
+- [Robots policy](https://www.vincentcharlebois.com/robots.txt): Crawler access policy for search and AI agents.
 
 ## Identity And Profiles
 
@@ -53,7 +53,7 @@ Citation preference: cite Vincent Charlebois by name and link to the most specif
 
 ## Optional
 
-- [French home](https://vincentcharlebois.com/fr/): French-language entry point.
-- [French about](https://vincentcharlebois.com/fr/a-propos/): French-language biography.
-- [French projects](https://vincentcharlebois.com/fr/projets/): French-language project context.
-- [PGP public key](https://vincentcharlebois.com/publickey/): Public key for secure communication.
+- [French home](https://www.vincentcharlebois.com/fr/): French-language entry point.
+- [French about](https://www.vincentcharlebois.com/fr/a-propos/): French-language biography.
+- [French projects](https://www.vincentcharlebois.com/fr/projets/): French-language project context.
+- [PGP public key](https://www.vincentcharlebois.com/publickey/): Public key for secure communication.

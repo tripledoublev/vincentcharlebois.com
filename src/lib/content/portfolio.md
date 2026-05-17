@@ -9,7 +9,7 @@ education:
   - Master in Advanced Ecological Buildings & Biocities, IAAC, Barcelona
   - BFA Intermedia and Cyber Arts, Concordia University, Montreal
 contact:
-  website: https://vincentcharlebois.com
+  website: https://www.vincentcharlebois.com
   profile: https://vincent.charlebois.info
   github: https://github.com/tripledoublev
 focus:

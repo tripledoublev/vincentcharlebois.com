@@ -20,7 +20,7 @@
 <SEO
 	title="Vincent Charlebois"
 	description="Vincent Charlebois; intermedia artist, software developer and member of Hypha Worker Co-operative."
-	currentUrl="https://vincentcharlebois.com/"
+	currentUrl="https://www.vincentcharlebois.com/"
 	schema={personSchema}
 />
 

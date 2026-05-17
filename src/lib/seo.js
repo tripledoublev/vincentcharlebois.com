@@ -1,4 +1,4 @@
-export const siteUrl = 'https://vincentcharlebois.com';
+export const siteUrl = 'https://www.vincentcharlebois.com';
 
 export const personSchema = {
 	'@context': 'https://schema.org',
