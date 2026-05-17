@@ -1,4 +1,11 @@
 import portfolioMarkdown from '$lib/content/portfolio.md?raw';
+import {
+	buildBreadcrumbSchema,
+	buildWebPageSchema,
+	personSchema,
+	siteUrl,
+	websiteSchema
+} from '$lib/seo.js';
 import { marked } from 'marked';
 
 const portfolioBody = portfolioMarkdown.replace(/^---[\s\S]*?---\s*/, '');
@@ -8,6 +15,293 @@ const portfolioNoJsHtml = marked.parse(portfolioBody, {
 	headerIds: false,
 	mangle: false
 });
+
+const defaultImage = `${siteUrl}/vincent-charlebois-point-com.jpg`;
+const englishImage = `${siteUrl}/vincent-charlebois-point-com-en.png`;
+const frenchImage = `${siteUrl}/vincent-charlebois-point-com-fr.png`;
+
+const routeDetails = {
+	'/': {
+		lang: 'en',
+		title: 'Vincent Charlebois',
+		description:
+			'Montreal-based software engineer, artist, and agentic interaction designer building deployable AI systems, cooperative digital infrastructure, and browser-native artworks.',
+		image: defaultImage,
+		type: 'ProfilePage'
+	},
+	'/en': {
+		lang: 'en',
+		title: 'Vincent Charlebois - Research to Product',
+		description:
+			'Research-to-product translator and AI systems architect building deployable software and infrastructure from complex technical research.',
+		image: englishImage,
+		type: 'ProfilePage'
+	},
+	'/fr': {
+		lang: 'fr',
+		title: 'Vincent Charlebois - Recherche vers produit',
+		description:
+			'Traducteur recherche-produit et architecte de systèmes IA construisant des logiciels et infrastructures déployables à partir de recherche technique complexe.',
+		image: frenchImage,
+		type: 'ProfilePage'
+	},
+	'/about': {
+		lang: 'en',
+		title: 'About - Vincent Charlebois',
+		description:
+			'About Vincent Charlebois - research-to-product translator and AI systems architect focused on shipping deployable systems.',
+		image: englishImage,
+		breadcrumbs: [
+			{ name: 'Home', path: '/' },
+			{ name: 'About', path: '/about' }
+		]
+	},
+	'/en/about': {
+		lang: 'en',
+		title: 'About - Vincent Charlebois',
+		description:
+			'About Vincent Charlebois - research-to-product translator and AI systems architect focused on shipping deployable systems.',
+		image: englishImage,
+		breadcrumbs: [
+			{ name: 'Home', path: '/en' },
+			{ name: 'About', path: '/en/about' }
+		]
+	},
+	'/fr/a-propos': {
+		lang: 'fr',
+		title: 'A propos - Vincent Charlebois',
+		description:
+			'A propos de Vincent Charlebois - traducteur recherche-produit et architecte de systèmes IA.',
+		image: frenchImage,
+		breadcrumbs: [
+			{ name: 'Accueil', path: '/fr' },
+			{ name: 'A propos', path: '/fr/a-propos' }
+		]
+	},
+	'/projects': {
+		lang: 'en',
+		title: 'Projects - Vincent Charlebois',
+		description:
+			'Technical projects spanning agentic AI systems, distributed infrastructure, and experimental orchestration architectures.',
+		image: englishImage,
+		type: 'CollectionPage',
+		breadcrumbs: [
+			{ name: 'Home', path: '/' },
+			{ name: 'Projects', path: '/projects' }
+		]
+	},
+	'/en/projects': {
+		lang: 'en',
+		title: 'Projects - Vincent Charlebois',
+		description:
+			'Technical projects spanning agentic AI systems, distributed infrastructure, and experimental orchestration architectures.',
+		image: englishImage,
+		type: 'CollectionPage',
+		breadcrumbs: [
+			{ name: 'Home', path: '/en' },
+			{ name: 'Projects', path: '/en/projects' }
+		]
+	},
+	'/fr/projets': {
+		lang: 'fr',
+		title: 'Projets - Vincent Charlebois',
+		description:
+			"Projets techniques couvrant les systèmes IA agentiques, l'infrastructure distribuée et les architectures d'orchestration expérimentales.",
+		image: frenchImage,
+		type: 'CollectionPage',
+		breadcrumbs: [
+			{ name: 'Accueil', path: '/fr' },
+			{ name: 'Projets', path: '/fr/projets' }
+		]
+	},
+	'/portfolio': {
+		lang: 'en',
+		title: 'Portfolio - Vincent Charlebois',
+		description:
+			'Selected work by Vincent Charlebois across web art, UX, and agentic interaction design.',
+		image: englishImage,
+		type: 'CollectionPage',
+		breadcrumbs: [
+			{ name: 'Home', path: '/' },
+			{ name: 'Portfolio', path: '/portfolio' }
+		]
+	},
+	'/contact': {
+		lang: 'en',
+		title: 'Contact - Vincent Charlebois',
+		description:
+			'Get in touch with Vincent Charlebois - AI systems architect and research-to-product translator.',
+		image: englishImage,
+		type: 'ContactPage',
+		breadcrumbs: [
+			{ name: 'Home', path: '/' },
+			{ name: 'Contact', path: '/contact' }
+		]
+	},
+	'/en/contact': {
+		lang: 'en',
+		title: 'Contact - Vincent Charlebois',
+		description:
+			'Get in touch with Vincent Charlebois - AI systems architect and research-to-product translator.',
+		image: englishImage,
+		type: 'ContactPage',
+		breadcrumbs: [
+			{ name: 'Home', path: '/en' },
+			{ name: 'Contact', path: '/en/contact' }
+		]
+	},
+	'/fr/contact': {
+		lang: 'fr',
+		title: 'Contact - Vincent Charlebois',
+		description:
+			'Contacter Vincent Charlebois - architecte de systèmes IA et traducteur recherche-produit.',
+		image: frenchImage,
+		type: 'ContactPage',
+		breadcrumbs: [
+			{ name: 'Accueil', path: '/fr' },
+			{ name: 'Contact', path: '/fr/contact' }
+		]
+	},
+	'/portal': {
+		lang: 'en',
+		title: 'Portal - Vincent Charlebois',
+		description: 'Art of No Likes web portal by Vincent Charlebois.',
+		image: defaultImage,
+		type: 'WebPage'
+	},
+	'/en/portal': {
+		lang: 'en',
+		title: 'Portal - Vincent Charlebois',
+		description: 'Art of No Likes web portal by Vincent Charlebois.',
+		image: englishImage,
+		type: 'WebPage'
+	},
+	'/fr/portail': {
+		lang: 'fr',
+		title: 'Portail - Vincent Charlebois',
+		description: 'Portail web Art of No Likes par Vincent Charlebois.',
+		image: frenchImage,
+		type: 'WebPage'
+	},
+	'/publickey': {
+		lang: 'en',
+		title: 'PGP Public Key - Vincent Charlebois',
+		description: 'Vincent Charlebois PGP public key for secure communication.',
+		image: defaultImage,
+		type: 'WebPage'
+	}
+};
+
+const selectedWorksSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'ItemList',
+	'@id': `${siteUrl}/portfolio/#selected-work`,
+	name: 'Selected work by Vincent Charlebois',
+	itemListElement: [
+		['XX C', 'https://xx-c.art/a-z'],
+		['Doxa', 'https://doxa.xx-c.art'],
+		['Nego', 'https://nego.xx-c.art'],
+		['v100', 'https://github.com/tripledoublev/v100'],
+		['RooLLM', 'https://github.com/hyphacoop/RooLLM']
+	].map(([name, url], index) => ({
+		'@type': 'ListItem',
+		position: index + 1,
+		item: {
+			'@type': 'CreativeWork',
+			name,
+			url,
+			creator: {
+				'@id': `${siteUrl}/#vincent-charlebois`
+			}
+		}
+	}))
+};
+
+function normalizePath(path) {
+	if (path === '/') return '/';
+	return path.replace(/\/+$/, '');
+}
+
+function detailsForPath(path, lang) {
+	const normalizedPath = normalizePath(path);
+	return (
+		routeDetails[normalizedPath] ?? {
+			lang,
+			title: 'Vincent Charlebois',
+			description:
+				lang === 'fr'
+					? 'Systèmes IA agentiques, architectures distribuées et exécution technique orientée produit pour systèmes complexes et à grande échelle'
+					: 'Agentic AI systems, distributed architectures, and product-driven technical execution for complex and large-scale systems',
+			image: lang === 'fr' ? frenchImage : defaultImage,
+			type: 'WebPage'
+		}
+	);
+}
+
+function jsonLd(schema) {
+	return `<script type="application/ld+json">${JSON.stringify(schema)}</script>`;
+}
+
+function buildMetaTags(details, currentUrl) {
+	return `
+		<title>${details.title}</title>
+		<meta name="description" content="${details.description}" />
+		<meta property="og:title" content="${details.title}" />
+		<meta property="og:description" content="${details.description}" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="${currentUrl}" />
+		<meta property="og:image" content="${details.image}" />
+		<meta property="twitter:title" content="${details.title}" />
+		<meta property="twitter:description" content="${details.description}" />
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content="${currentUrl}" />
+		<meta property="twitter:image" content="${details.image}" />
+		<link rel="canonical" href="${currentUrl}" />
+	`;
+}
+
+function buildCommonHeadTags(path, lang) {
+	const details = detailsForPath(path, lang);
+	const normalizedPath = normalizePath(path);
+	const schemas = [
+		websiteSchema,
+		personSchema,
+		buildWebPageSchema({
+			title: details.title,
+			description: details.description,
+			path: normalizedPath,
+			lang: details.lang,
+			type: details.type ?? 'WebPage'
+		})
+	];
+
+	if (details.breadcrumbs) {
+		schemas.push(buildBreadcrumbSchema(details.breadcrumbs));
+	}
+
+	if (
+		normalizedPath === '/portfolio' ||
+		normalizedPath.endsWith('/projects') ||
+		normalizedPath.endsWith('/projets')
+	) {
+		schemas.push(selectedWorksSchema);
+	}
+
+	return `
+		<meta name="author" content="Vincent Charlebois" />
+		<meta name="robots" content="index, follow" />
+		<meta property="profile:first_name" content="Vincent" />
+		<meta property="profile:last_name" content="Charlebois" />
+		<link rel="alternate" type="text/plain" href="${siteUrl}/llms.txt" title="LLM-readable site guide" />
+		<link rel="alternate" type="text/plain" href="${siteUrl}/llms-full.txt" title="Full LLM context" />
+		<link rel="alternate" type="text/markdown" href="${siteUrl}/portfolio.md" title="Machine-readable portfolio" />
+		<link rel="me" href="https://github.com/tripledoublev" />
+		<link rel="me" href="https://bsky.app/profile/charlebois.info" />
+		<link rel="me" href="https://chateau.social/@v" />
+		${schemas.map(jsonLd).join('\n')}
+		${details.image ? `<meta property="og:image:alt" content="${details.title}" />` : ''}
+	`;
+}
 
 /** @type {import('@sveltejs/kit').Handle} */
 export async function handle({ event, resolve }) {
@@ -20,155 +314,9 @@ export async function handle({ event, resolve }) {
 		lang = 'fr';
 	}
 
-	// Define meta tags for each page (server-side for social media crawlers)
-	let metaTags = '';
 	const currentUrl = `https://vincentcharlebois.com${path}`;
-
-	// Page-specific meta tags
-	if (path === '/en' || path === '/en/') {
-		const title = 'Vincent Charlebois — Research → Product;';
-		const description =
-			'Vincent Charlebois works at the boundary between research and deployment, building production-grade AI systems from complex technical research.';
-		const image = 'https://vincentcharlebois.com/vincent-charlebois-point-com-en.png';
-		metaTags = `
-			<title>${title}</title>
-			<meta name="description" content="${description}" />
-			<meta property="og:title" content="${title}" />
-			<meta property="og:description" content="${description}" />
-			<meta property="og:type" content="website" />
-			<meta property="og:url" content="${currentUrl}" />
-			<meta property="og:image" content="${image}" />
-			<meta property="twitter:title" content="${title}" />
-			<meta property="twitter:description" content="${description}" />
-			<meta property="twitter:card" content="summary_large_image" />
-			<meta property="twitter:url" content="${currentUrl}" />
-			<meta property="twitter:image" content="${image}" />
-			<link rel="canonical" href="${currentUrl}" />
-		`;
-	} else if (path === '/fr' || path === '/fr/') {
-		const title = 'Vincent Charlebois — Recherche → Produit;';
-		const description =
-			"Vincent Charlebois travaille à la frontière entre recherche et déploiement, et construit des systèmes d'IA de niveau production à partir de recherche technique complexe.";
-		const image = 'https://vincentcharlebois.com/vincent-charlebois-point-com-fr.png';
-		metaTags = `
-			<title>${title}</title>
-			<meta name="description" content="${description}" />
-			<meta property="og:title" content="${title}" />
-			<meta property="og:description" content="${description}" />
-			<meta property="og:type" content="website" />
-			<meta property="og:url" content="${currentUrl}" />
-			<meta property="og:image" content="${image}" />
-			<meta property="twitter:title" content="${title}" />
-			<meta property="twitter:description" content="${description}" />
-			<meta property="twitter:card" content="summary_large_image" />
-			<meta property="twitter:url" content="${currentUrl}" />
-			<meta property="twitter:image" content="${image}" />
-			<link rel="canonical" href="${currentUrl}" />
-		`;
-	} else if (path === '/about' || path === '/about/') {
-		const title = 'About — Vincent Charlebois';
-		const description =
-			'About Vincent Charlebois — research-to-product translator and AI systems architect focused on shipping deployable systems.';
-		const image = 'https://vincentcharlebois.com/vincent-charlebois-point-com-en.png';
-		metaTags = `
-			<title>${title}</title>
-			<meta name="description" content="${description}" />
-			<meta property="og:title" content="${title}" />
-			<meta property="og:description" content="${description}" />
-			<meta property="og:type" content="website" />
-			<meta property="og:url" content="${currentUrl}" />
-			<meta property="og:image" content="${image}" />
-			<meta property="twitter:title" content="${title}" />
-			<meta property="twitter:description" content="${description}" />
-			<meta property="twitter:card" content="summary_large_image" />
-			<meta property="twitter:url" content="${currentUrl}" />
-			<meta property="twitter:image" content="${image}" />
-			<link rel="canonical" href="${currentUrl}" />
-		`;
-	} else if (path === '/projects' || path === '/projects/') {
-		const title = 'Projects — Vincent Charlebois';
-		const description =
-			'Technical projects spanning agentic AI systems, distributed infrastructure, and experimental orchestration architectures.';
-		const image = 'https://vincentcharlebois.com/vincent-charlebois-point-com-en.png';
-		metaTags = `
-			<title>${title}</title>
-			<meta name="description" content="${description}" />
-			<meta property="og:title" content="${title}" />
-			<meta property="og:description" content="${description}" />
-			<meta property="og:type" content="website" />
-			<meta property="og:url" content="${currentUrl}" />
-			<meta property="og:image" content="${image}" />
-			<meta property="twitter:title" content="${title}" />
-			<meta property="twitter:description" content="${description}" />
-			<meta property="twitter:card" content="summary_large_image" />
-			<meta property="twitter:url" content="${currentUrl}" />
-			<meta property="twitter:image" content="${image}" />
-			<link rel="canonical" href="${currentUrl}" />
-		`;
-	} else if (path === '/portfolio' || path === '/portfolio/') {
-		const title = 'Portfolio — Vincent Charlebois';
-		const description =
-			'Selected work by Vincent Charlebois across web art, UX, and agentic interaction design.';
-		const image = 'https://vincentcharlebois.com/vincent-charlebois-point-com-en.png';
-		metaTags = `
-			<title>${title}</title>
-			<meta name="description" content="${description}" />
-			<meta property="og:title" content="${title}" />
-			<meta property="og:description" content="${description}" />
-			<meta property="og:type" content="website" />
-			<meta property="og:url" content="${currentUrl}" />
-			<meta property="og:image" content="${image}" />
-			<meta property="twitter:title" content="${title}" />
-			<meta property="twitter:description" content="${description}" />
-			<meta property="twitter:card" content="summary_large_image" />
-			<meta property="twitter:url" content="${currentUrl}" />
-			<meta property="twitter:image" content="${image}" />
-			<link rel="canonical" href="${currentUrl}" />
-		`;
-	} else if (path === '/contact' || path === '/contact/') {
-		const title = 'Contact — Vincent Charlebois';
-		const description =
-			'Get in touch with Vincent Charlebois — AI systems architect and research-to-product translator. Find links to GitHub, LinkedIn, CV and more.';
-		const image = 'https://vincentcharlebois.com/vincent-charlebois-point-com-en.png';
-		metaTags = `
-			<title>${title}</title>
-			<meta name="description" content="${description}" />
-			<meta property="og:title" content="${title}" />
-			<meta property="og:description" content="${description}" />
-			<meta property="og:type" content="website" />
-			<meta property="og:url" content="${currentUrl}" />
-			<meta property="og:image" content="${image}" />
-			<meta property="twitter:title" content="${title}" />
-			<meta property="twitter:description" content="${description}" />
-			<meta property="twitter:card" content="summary_large_image" />
-			<meta property="twitter:url" content="${currentUrl}" />
-			<meta property="twitter:image" content="${image}" />
-			<link rel="canonical" href="${currentUrl}" />
-		`;
-	} else {
-		// Default meta tags for other pages
-		const title = 'Vincent Charlebois';
-		const description =
-			lang === 'fr'
-				? 'Systèmes IA agentiques, architectures distribuées et exécution technique orientée produit pour systèmes complexes et à grande échelle'
-				: 'Agentic AI systems, distributed architectures, and product-driven technical execution for complex and large-scale systems';
-		const image = 'https://vincentcharlebois.com/vincent-charlebois-point-com.jpg';
-		metaTags = `
-			<title>${title}</title>
-			<meta name="description" content="${description}" />
-			<meta property="og:title" content="${title}" />
-			<meta property="og:description" content="${description}" />
-			<meta property="og:type" content="website" />
-			<meta property="og:url" content="${currentUrl}" />
-			<meta property="og:image" content="${image}" />
-			<meta property="twitter:title" content="${title}" />
-			<meta property="twitter:description" content="${description}" />
-			<meta property="twitter:card" content="summary_large_image" />
-			<meta property="twitter:url" content="${currentUrl}" />
-			<meta property="twitter:image" content="${image}" />
-			<link rel="canonical" href="${currentUrl}" />
-		`;
-	}
+	const metaTags = buildMetaTags(detailsForPath(path, lang), currentUrl);
+	const commonHeadTags = buildCommonHeadTags(path, lang);
 
 	// Common CSS for all no-JS fallbacks
 	const fallbackCSS = `
@@ -244,7 +392,44 @@ export async function handle({ event, resolve }) {
           text-align: right;
           margin-bottom: 2rem;
         }
+        .agent-discovery {
+          border-top: 1px solid #121212;
+          margin-top: 1rem;
+          padding-top: 1.5rem;
+        }
+        .agent-discovery h2 {
+          font-style: normal;
+          font-size: 1.1rem;
+          margin: 0 0 1rem;
+          text-align: left;
+        }
+        .agent-discovery p,
+        .agent-discovery ul {
+          margin: 0 0 1rem;
+          text-align: left;
+        }
+        .agent-discovery ul {
+          list-style: disc;
+          padding-left: 1.5rem;
+        }
+        .agent-discovery li {
+          margin-bottom: 0.5rem;
+        }
       </style>
+    `;
+
+	const agentDiscoveryContent = `
+      <div class="no-js-fallback agent-discovery" aria-label="Machine-readable resources">
+        <h2>Machine-readable discovery</h2>
+        <p>This static fallback is the canonical no-JavaScript path for agents, crawlers, and text browsers.</p>
+        <ul>
+          <li><a href="/llms.txt">LLM guide</a> - concise site map for language models and agents.</li>
+          <li><a href="/llms-full.txt">Full LLM context</a> - expanded identity, portfolio, and citation context.</li>
+          <li><a href="/portfolio.md">Portfolio markdown</a> - selected work with structured frontmatter.</li>
+          <li><a href="/sitemap.xml">Sitemap</a> - public URL inventory.</li>
+          <li><a href="/robots.txt">Robots policy</a> - crawler access policy.</li>
+        </ul>
+      </div>
     `;
 
 	// Generate no-JS fallback content based on path
@@ -498,6 +683,7 @@ export async function handle({ event, resolve }) {
 					'</head>',
 					`
           ${metaTags}
+          ${commonHeadTags}
           <style>
             /* Fix for content visibility without JavaScript */
             html:not(:has(script[data-sveltekit-hydrate])) body > div[style*="display: contents"] {
@@ -515,7 +701,7 @@ export async function handle({ event, resolve }) {
 			modifiedHtml = modifiedHtml.replace(
 				'<div style="display: contents">',
 				`<div style="display: contents">
-          <noscript>${noJsContent}</noscript>`
+          <noscript>${noJsContent}${agentDiscoveryContent}</noscript>`
 			);
 
 			return modifiedHtml;
