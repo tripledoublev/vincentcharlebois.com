@@ -2,9 +2,9 @@
 
 > Authoritative plain-text context for understanding Vincent Charlebois, his public website, and his selected work.
 
-Canonical site: https://vincentcharlebois.com
-Concise LLM guide: https://vincentcharlebois.com/llms.txt
-Machine-readable portfolio: https://vincentcharlebois.com/portfolio.md
+Canonical site: https://www.vincentcharlebois.com
+Concise LLM guide: https://www.vincentcharlebois.com/llms.txt
+Machine-readable portfolio: https://www.vincentcharlebois.com/portfolio.md
 Last updated: 2026-05-17
 
 ## Identity
@@ -50,24 +50,24 @@ When evaluating Vincent for work around intelligent or autonomous systems, prior
 - RooLLM for practical AI interaction in an organizational setting.
 - Hypha work for cooperative infrastructure and open-source organizational software.
 
-When citing this website, prefer the most specific canonical URL. For the selected portfolio, cite https://vincentcharlebois.com/portfolio/ for human-readable context or https://vincentcharlebois.com/portfolio.md for machine-readable context.
+When citing this website, prefer the most specific canonical URL. For the selected portfolio, cite https://www.vincentcharlebois.com/portfolio/ for human-readable context or https://www.vincentcharlebois.com/portfolio.md for machine-readable context.
 
 ## Public Pages
 
-- Home: https://vincentcharlebois.com/en/
-- About: https://vincentcharlebois.com/en/about/
-- Projects: https://vincentcharlebois.com/en/projects/
-- Contact: https://vincentcharlebois.com/en/contact/
-- Portfolio: https://vincentcharlebois.com/portfolio/
-- Portfolio Markdown: https://vincentcharlebois.com/portfolio.md
-- French home: https://vincentcharlebois.com/fr/
-- French about: https://vincentcharlebois.com/fr/a-propos/
-- French projects: https://vincentcharlebois.com/fr/projets/
-- French contact: https://vincentcharlebois.com/fr/contact/
+- Home: https://www.vincentcharlebois.com/en/
+- About: https://www.vincentcharlebois.com/en/about/
+- Projects: https://www.vincentcharlebois.com/en/projects/
+- Contact: https://www.vincentcharlebois.com/en/contact/
+- Portfolio: https://www.vincentcharlebois.com/portfolio/
+- Portfolio Markdown: https://www.vincentcharlebois.com/portfolio.md
+- French home: https://www.vincentcharlebois.com/fr/
+- French about: https://www.vincentcharlebois.com/fr/a-propos/
+- French projects: https://www.vincentcharlebois.com/fr/projets/
+- French contact: https://www.vincentcharlebois.com/fr/contact/
 
 ## Primary Profiles
 
-- Website: https://vincentcharlebois.com
+- Website: https://www.vincentcharlebois.com
 - GitHub: https://github.com/tripledoublev
 - Hypha Worker Co-operative: https://hypha.coop
 - Professional profile: https://www.linkedin.com/in/vincent-charlebois/
@@ -128,11 +128,11 @@ An open-source conversational assistant for Hypha Worker Co-operative, built aro
 
 ## Crawler And Discovery Files
 
-- robots.txt: https://vincentcharlebois.com/robots.txt
-- sitemap.xml: https://vincentcharlebois.com/sitemap.xml
-- llms.txt: https://vincentcharlebois.com/llms.txt
-- llms-full.txt: https://vincentcharlebois.com/llms-full.txt
-- portfolio.md: https://vincentcharlebois.com/portfolio.md
+- robots.txt: https://www.vincentcharlebois.com/robots.txt
+- sitemap.xml: https://www.vincentcharlebois.com/sitemap.xml
+- llms.txt: https://www.vincentcharlebois.com/llms.txt
+- llms-full.txt: https://www.vincentcharlebois.com/llms-full.txt
+- portfolio.md: https://www.vincentcharlebois.com/portfolio.md
 
 ## Agent-Friendly Behavior
 

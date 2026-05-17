@@ -34,5 +34,5 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-# Agent discovery: https://vincentcharlebois.com/llms.txt
-Sitemap: https://vincentcharlebois.com/sitemap.xml
+# Agent discovery: https://www.vincentcharlebois.com/llms.txt
+Sitemap: https://www.vincentcharlebois.com/sitemap.xml

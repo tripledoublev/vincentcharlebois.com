@@ -37,7 +37,7 @@ export function initializePortal() {
 		{ url: 'https://michaelreale.format.com/', https: true },
 		{ url: 'https://www.carsonteal.com/', https: true },
 		{ url: 'https://boringmommyblogblog.wordpress.com/', https: true },
-		{ url: 'https://vincentcharlebois.com/', https: true },
+		{ url: 'https://www.vincentcharlebois.com/', https: true },
 		{ url: 'https://vincentcharlebois.net/', https: true },
 		{ url: 'https://vincent.charlebois.info/', https: true },
 		{ url: 'https://verns.world', https: true },
