@@ -3,13 +3,19 @@
 @tailwind utilities;
 /* Global CSS */
 html[data-theme='dark'] {
-	--background-color: #121212;
-	--text-color: #ffffff;
+	--background-color: #0d0d0b;
+	--text-color: #eeede7;
+	--muted: rgba(238, 237, 231, 0.58);
+	--line: rgba(238, 237, 231, 0.12);
+	--surface: rgba(238, 237, 231, 0.04);
 }
 
 html[data-theme='light'] {
-	--background-color: #ffffff;
-	--text-color: #000000;
+	--background-color: #f4f3ef;
+	--text-color: #111110;
+	--muted: rgba(17, 17, 16, 0.58);
+	--line: rgba(17, 17, 16, 0.12);
+	--surface: rgba(17, 17, 16, 0.04);
 }
 
 body {
@@ -31,9 +37,10 @@ body {
 		'Droid Sans',
 		'Helvetica Neue',
 		sans-serif;
+	--mono-font: 'IBM Plex Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
 	font-size: 1.15rem;
 	line-height: 1.6;
-	letter-spacing: -0.011em;
+	letter-spacing: 0;
 	overflow-x: clip;
 }
 html {

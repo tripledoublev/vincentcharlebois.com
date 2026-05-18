@@ -98,7 +98,7 @@
 		padding-bottom: 0.45rem;
 		font-weight: 700;
 		font-size: 1.15rem;
-		letter-spacing: -0.02em;
+		letter-spacing: 0;
 	}
 
 	.fade-out {
