@@ -84,6 +84,10 @@
 		text-decoration-skip-ink: none;
 	}
 
+	.home-link.active .site-title {
+		text-transform: uppercase;
+	}
+
 	.home-link.active:hover {
 		text-decoration-thickness: 2px;
 	}
@@ -100,7 +104,7 @@
 		font-size: var(--fs-sm);
 		font-weight: 500;
 		letter-spacing: var(--tracking-mono);
-		text-transform: uppercase;
+		text-transform: lowercase;
 	}
 
 	.fade-out {
