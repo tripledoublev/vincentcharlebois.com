@@ -119,12 +119,62 @@
 </main>
 
 <style>
-	li:not(:first-child) {
-		margin-left: 1rem;
+	main {
+		padding-block: clamp(3rem, 8vh, 6rem);
 	}
+
+	div {
+		width: min(100%, 42rem);
+	}
+
+	p {
+		font-family: var(--mono-font);
+		color: var(--muted);
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+	}
+
+	ul {
+		align-items: center;
+		justify-content: flex-start;
+		gap: 0.7rem;
+		padding: 0;
+		margin: 0;
+	}
+
+	a {
+		display: block;
+		color: inherit;
+		text-decoration: none;
+	}
+
+	a:focus-visible {
+		outline: 2px dotted var(--text-color);
+		outline-offset: 0.25rem;
+	}
+
+	li:not(:first-child) {
+		margin-left: 0;
+	}
+
 	li {
-		border: 2px solid var(--text-color);
-		padding: 0.75rem 1rem;
-		margin: 0.35rem;
+		border: 1px solid var(--line);
+		border-radius: 2px;
+		margin: 0;
+		padding: 0.7rem 0.95rem;
+		background: var(--surface);
+		font-family: var(--mono-font);
+		letter-spacing: 0;
+		transition:
+			background-color 0.2s ease,
+			border-color 0.2s ease,
+			color 0.2s ease;
+	}
+
+	a:hover li,
+	a:focus-visible li {
+		background-color: var(--text-color);
+		border-color: var(--text-color);
+		color: var(--background-color);
 	}
 </style>
