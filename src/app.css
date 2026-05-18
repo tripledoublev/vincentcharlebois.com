@@ -19,6 +19,8 @@
 	--leading-display: 1.06;
 	--leading-tight: 1.25;
 	--leading-body: 1.6;
+	--theme-transition-duration: 0.45s;
+	--theme-transition-easing: ease;
 }
 
 @media (min-width: 48rem) {
@@ -50,8 +52,8 @@ body {
 	background-color: var(--background-color);
 	color: var(--text-color);
 	transition:
-		background-color 0.5s,
-		color 0.25s;
+		background-color var(--theme-transition-duration) var(--theme-transition-easing),
+		color var(--theme-transition-duration) var(--theme-transition-easing);
 	font-family: var(--font-sans);
 	font-size: var(--fs-base);
 	font-feature-settings:

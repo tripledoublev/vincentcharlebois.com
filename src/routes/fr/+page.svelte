@@ -416,7 +416,9 @@ Au sein de cette structure, Charlebois détient le titre d'« artiste-chercheur 
 		background: none;
 		border: none;
 		cursor: pointer;
-		transition: transform 0.3s ease;
+		transition:
+			color var(--theme-transition-duration) var(--theme-transition-easing),
+			transform 0.3s ease;
 		color: var(--text-color);
 		opacity: 0.5;
 	}
@@ -442,6 +444,7 @@ Au sein de cette structure, Charlebois détient le titre d'« artiste-chercheur 
 	.homepage-context {
 		color: color-mix(in srgb, var(--text-color) 88%, transparent);
 		padding-top: 4rem;
+		transition: color var(--theme-transition-duration) var(--theme-transition-easing);
 	}
 
 	.hero h1:hover {
@@ -464,6 +467,7 @@ Au sein de cette structure, Charlebois détient le titre d'« artiste-chercheur 
 		text-transform: uppercase;
 		color: var(--muted);
 		margin-bottom: 1.5rem;
+		transition: color var(--theme-transition-duration) var(--theme-transition-easing);
 	}
 
 	.intro-text {
@@ -480,6 +484,7 @@ Au sein de cette structure, Charlebois détient le titre d'« artiste-chercheur 
 		color: var(--muted);
 		margin: 4rem 0 1.25rem;
 		text-transform: uppercase;
+		transition: color var(--theme-transition-duration) var(--theme-transition-easing);
 	}
 
 	.context-inner p {
@@ -491,6 +496,7 @@ Au sein de cette structure, Charlebois détient le titre d'« artiste-chercheur 
 	details {
 		border-top: 1px solid var(--line);
 		padding: 1.25rem 0;
+		transition: border-color var(--theme-transition-duration) var(--theme-transition-easing);
 	}
 
 	details:last-of-type {
@@ -523,6 +529,7 @@ Au sein de cette structure, Charlebois détient le titre d'« artiste-chercheur 
 
 	details p {
 		color: color-mix(in srgb, var(--text-color) 76%, transparent);
+		transition: color var(--theme-transition-duration) var(--theme-transition-easing);
 	}
 
 	summary::-webkit-details-marker {

@@ -61,6 +61,9 @@
 		font: inherit;
 		font-size: var(--fs-md);
 		line-height: 1;
+		transition:
+			background-color var(--theme-transition-duration) var(--theme-transition-easing),
+			color var(--theme-transition-duration) var(--theme-transition-easing);
 	}
 
 	.color-switcher:hover {
