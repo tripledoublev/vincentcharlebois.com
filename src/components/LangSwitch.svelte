@@ -78,11 +78,18 @@
 	}
 </script>
 
-<button class="text-lg lg:text-2xl font-bold" type="button" on:click={switchLanguage}>
+<button type="button" on:click={switchLanguage}>
 	{currentPathLang === 'fr' ? 'en' : 'fr'}
 </button>
 
 <style>
+	button {
+		font-family: var(--font-mono);
+		font-size: var(--fs-sm);
+		font-weight: 500;
+		letter-spacing: var(--tracking-mono);
+	}
+
 	button:hover {
 		text-decoration: underline;
 	}

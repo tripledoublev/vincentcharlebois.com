@@ -58,8 +58,9 @@
 
 <style>
 	:global(.markdown) {
-		line-height: 1.75;
-		font-size: 1.1rem;
+		font-size: var(--fs-base);
+		line-height: var(--leading-body);
+		text-wrap: pretty;
 	}
 	:global(.markdown a) {
 		text-decoration-line: underline;
@@ -87,10 +88,11 @@
 		opacity: 0.9;
 	}
 	:global(.markdown strong) {
-		font-weight: 700;
+		font-weight: 600;
 	}
 	:global(.markdown p) {
 		margin-bottom: 1.5rem;
+		max-width: 38rem;
 	}
 	:global(.markdown a:focus-visible) {
 		outline: 2px dotted var(--text-color);

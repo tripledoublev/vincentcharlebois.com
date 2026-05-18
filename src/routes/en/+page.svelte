@@ -350,18 +350,20 @@
 		word-wrap: break-word;
 		overflow-wrap: break-word;
 		hyphens: none;
-		font-weight: 700;
+		font-weight: 500;
 	}
 
 	.hero-text {
-		font-size: clamp(1.6rem, 4.5vw, 3rem);
-		line-height: 1.12;
-		letter-spacing: 0;
-		text-wrap: pretty;
+		font-size: var(--fs-xl);
+		font-weight: 500;
+		font-variation-settings: 'opsz' 32;
+		line-height: var(--leading-display);
+		letter-spacing: var(--tracking-display);
+		text-wrap: balance;
 	}
 
 	.role-text {
-		font-weight: 700;
+		font-weight: 500;
 	}
 
 	.cursor {
@@ -420,36 +422,39 @@
 	.context-inner {
 		max-width: 44rem;
 		margin: 0 auto;
-		font-size: 1.05rem;
-		line-height: 1.75;
+		font-size: var(--fs-base);
+		line-height: var(--leading-body);
 	}
 
 	.eyebrow {
-		font-family: var(--mono-font);
+		font-family: var(--font-mono);
+		font-size: var(--fs-xs);
+		font-weight: 500;
+		letter-spacing: var(--tracking-mono);
 		text-transform: uppercase;
-		letter-spacing: 0.12em;
-		font-size: 0.75rem;
-		margin-bottom: 1.5rem;
-		font-weight: 600;
 		color: var(--muted);
+		margin-bottom: 1.5rem;
 	}
 
 	.intro-text {
-		font-size: 1.15rem;
+		font-size: var(--fs-md);
+		line-height: 1.55;
 		margin-bottom: 3rem;
 	}
 
 	.context-inner h2 {
-		font-family: var(--mono-font);
-		font-size: 0.85rem;
+		font-family: var(--font-mono);
+		font-size: var(--fs-xs);
+		font-weight: 500;
+		letter-spacing: var(--tracking-mono);
+		color: var(--muted);
 		margin: 4rem 0 1.25rem;
 		text-transform: uppercase;
-		letter-spacing: 0.1em;
-		font-weight: 600;
-		color: var(--muted);
 	}
 
 	.context-inner p {
+		font-size: var(--fs-base);
+		line-height: var(--leading-body);
 		margin: 1.25rem 0;
 	}
 
@@ -475,7 +480,7 @@
 	summary::after {
 		content: '+';
 		flex: 0 0 auto;
-		font-family: var(--mono-font);
+		font-family: var(--font-mono);
 		font-size: 1.2rem;
 		font-weight: 400;
 		line-height: 1;

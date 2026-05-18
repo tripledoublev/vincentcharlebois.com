@@ -59,7 +59,7 @@
 		color: var(--text-color);
 		cursor: pointer;
 		font: inherit;
-		font-size: 1.15rem;
+		font-size: var(--fs-md);
 		line-height: 1;
 	}
 

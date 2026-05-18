@@ -53,7 +53,7 @@
 		<div class="order-3 flex items-center justify-center z-10" style="gap: 1.5rem;">
 			<!-- Mobile V button - always visible, underlined on homepage -->
 			<button
-				class="mobile-home-link my-1 text-lg lg:text-2xl font-bold"
+				class="mobile-home-link my-1"
 				class:active={isHomepage}
 				on:click={handleHomeClick}
 				aria-label="Go to homepage"
@@ -96,9 +96,11 @@
 		display: block;
 		padding: 0.35rem 0.5rem;
 		padding-bottom: 0.45rem;
-		font-weight: 700;
-		font-size: 1.15rem;
-		letter-spacing: 0;
+		font-family: var(--font-mono);
+		font-size: var(--fs-sm);
+		font-weight: 500;
+		letter-spacing: var(--tracking-mono);
+		text-transform: uppercase;
 	}
 
 	.fade-out {
@@ -126,6 +128,13 @@
 	.mobile-home-link.active,
 	.mobile-home-link:hover {
 		text-decoration: underline;
+	}
+
+	.mobile-home-link {
+		font-family: var(--font-mono);
+		font-size: var(--fs-sm);
+		font-weight: 500;
+		letter-spacing: var(--tracking-mono);
 	}
 
 	.mobile-home-link:focus-visible {
