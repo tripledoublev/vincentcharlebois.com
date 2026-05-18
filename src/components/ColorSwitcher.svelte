@@ -1,7 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
 	import { writable } from 'svelte/store';
-	import DarkModeSwitch from 'svelte-dark-mode-toggle';
 
 	const colorTheme = writable('dark');
 	const darkSide = writable(false);
@@ -32,18 +31,44 @@
 		theme.set(isDark ? 'dark' : 'light');
 		darkMode.set(isDark);
 	}
+
+	$: themeToggleLabel = $darkMode ? 'Switch to light theme' : 'Switch to dark theme';
 </script>
 
-<DarkModeSwitch
-	bind:checked={$darkMode}
-	on:click={toggleDarkMode}
-	size={22}
-	darkMode={$darkMode}
+<button
+	type="button"
 	class="color-switcher"
-/>
+	aria-label={themeToggleLabel}
+	aria-pressed={$darkMode}
+	title={themeToggleLabel}
+	on:click={toggleDarkMode}
+>
+	{$darkMode ? '●' : '○'}
+</button>
 
 <style>
-	:global(.color-switcher:focus-visible) {
+	.color-switcher {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 1.5rem;
+		height: 1.5rem;
+		padding: 0;
+		border: 0;
+		background: transparent;
+		color: var(--text-color);
+		cursor: pointer;
+		font: inherit;
+		font-size: 1.15rem;
+		line-height: 1;
+	}
+
+	.color-switcher:hover {
+		background-color: var(--text-color);
+		color: var(--background-color);
+	}
+
+	.color-switcher:focus-visible {
 		outline: 2px dotted var(--text-color);
 		outline-offset: 2px;
 	}
