@@ -39,7 +39,7 @@
 		left: -9999px;
 		z-index: 9999;
 		padding: 0.5em 1em;
-		background-color: var(--bg-color);
+		background-color: var(--background-color);
 		color: var(--text-color);
 		text-decoration: none;
 		font-weight: bold;
@@ -55,7 +55,13 @@
 	}
 
 	.nav-wrapper {
+		position: sticky;
+		top: 0;
+		z-index: 100;
 		margin-top: 0;
+		background-color: color-mix(in srgb, var(--background-color) 88%, transparent);
+		border-bottom: 1px solid var(--line);
+		backdrop-filter: blur(10px);
 		transition: margin-top 0.3s ease-in-out;
 	}
 
