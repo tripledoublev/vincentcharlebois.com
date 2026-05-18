@@ -44,7 +44,11 @@
 		text-decoration: none;
 		font-weight: bold;
 		border: 2px solid var(--text-color);
-		transition: left 0.3s ease-in-out;
+		transition:
+			left 0.3s ease-in-out,
+			background-color var(--theme-transition-duration) var(--theme-transition-easing),
+			border-color var(--theme-transition-duration) var(--theme-transition-easing),
+			color var(--theme-transition-duration) var(--theme-transition-easing);
 	}
 
 	.skip-to-main:focus {
@@ -62,7 +66,10 @@
 		background-color: color-mix(in srgb, var(--background-color) 88%, transparent);
 		border-bottom: 1px solid var(--line);
 		backdrop-filter: blur(10px);
-		transition: margin-top 0.3s ease-in-out;
+		transition:
+			margin-top 0.3s ease-in-out,
+			background-color var(--theme-transition-duration) var(--theme-transition-easing),
+			border-color var(--theme-transition-duration) var(--theme-transition-easing);
 	}
 
 	.skip-to-main:focus ~ .nav-wrapper {
