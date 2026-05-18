@@ -23,7 +23,7 @@
 		'un bâtisseur qui livre',
 		'un concepteur de systèmes distribués',
 		'un développeur orienté produit',
-		'un penseur de systèmes à grande échelle',
+		'un penseur systémique',
 		'un collaborateur en formation de ventures',
 		'un cofondateur technique'
 	];
@@ -235,11 +235,11 @@ Au sein de cette structure, Charlebois détient le titre d'« artiste-chercheur 
 	>
 		<div class="typewriter-container text-left px-6 w-full">
 			{#if isExpanded || isExpanding}
-				<h1 class="text-2xl md:text-5xl leading-tight tracking-tight">
+				<h1 class="hero-text">
 					<span class="role-text">{nameText}</span><span class="role-text">{expandedText}</span>
 				</h1>
 			{:else}
-				<h1 class="text-2xl md:text-5xl leading-tight tracking-tight">
+				<h1 class="hero-text">
 					<span class="role-text">{nameText}</span><span class="role-text">{currentRole}</span><span
 						class="cursor">|</span
 					>
@@ -357,9 +357,15 @@ Au sein de cette structure, Charlebois détient le titre d'« artiste-chercheur 
 
 <style>
 	.hero {
-		height: 80vh;
+		min-height: 78vh;
+		height: auto;
 		max-width: 1000px;
 		margin: 0 auto;
+		padding-top: clamp(6rem, 22vh, 12rem);
+		justify-content: flex-start;
+		align-items: flex-start;
+		overflow: visible;
+		text-align: left;
 	}
 
 	.typewriter-container {
@@ -367,6 +373,7 @@ Au sein de cette structure, Charlebois détient le titre d'« artiste-chercheur 
 		align-items: flex-start;
 		justify-content: flex-start;
 		width: 100%;
+		text-align: left;
 	}
 
 	h1 {
@@ -374,6 +381,13 @@ Au sein de cette structure, Charlebois détient le titre d'« artiste-chercheur 
 		overflow-wrap: break-word;
 		hyphens: none;
 		font-weight: 700;
+	}
+
+	.hero-text {
+		font-size: clamp(1.6rem, 4.5vw, 3rem);
+		line-height: 1.12;
+		letter-spacing: 0;
+		text-wrap: pretty;
 	}
 
 	.role-text {
@@ -405,6 +419,11 @@ Au sein de cette structure, Charlebois détient le titre d'« artiste-chercheur 
 		opacity: 0.5;
 	}
 
+	.expand-toggle:focus-visible {
+		outline: 2px dotted var(--text-color);
+		outline-offset: 0.35rem;
+	}
+
 	.expand-toggle:hover {
 		transform: scale(1.1);
 		opacity: 1;
@@ -419,7 +438,7 @@ Au sein de cette structure, Charlebois détient le titre d'« artiste-chercheur 
 	}
 
 	.homepage-context {
-		color: color-mix(in srgb, var(--text-color) 85%, transparent);
+		color: color-mix(in srgb, var(--text-color) 88%, transparent);
 		padding-top: 4rem;
 	}
 
@@ -436,12 +455,13 @@ Au sein de cette structure, Charlebois détient le titre d'« artiste-chercheur 
 	}
 
 	.eyebrow {
+		font-family: var(--mono-font);
 		text-transform: uppercase;
-		letter-spacing: 0.15em;
+		letter-spacing: 0.12em;
 		font-size: 0.75rem;
 		margin-bottom: 1.5rem;
-		font-weight: 700;
-		opacity: 0.6;
+		font-weight: 600;
+		color: var(--muted);
 	}
 
 	.intro-text {
@@ -450,12 +470,13 @@ Au sein de cette structure, Charlebois détient le titre d'« artiste-chercheur 
 	}
 
 	.context-inner h2 {
+		font-family: var(--mono-font);
 		font-size: 0.85rem;
 		margin: 4rem 0 1.25rem;
 		text-transform: uppercase;
-		letter-spacing: 0.12em;
-		font-weight: 800;
-		opacity: 0.8;
+		letter-spacing: 0.1em;
+		font-weight: 600;
+		color: var(--muted);
 	}
 
 	.context-inner p {
@@ -463,18 +484,40 @@ Au sein de cette structure, Charlebois détient le titre d'« artiste-chercheur 
 	}
 
 	details {
-		border-top: 1px solid color-mix(in srgb, var(--text-color) 10%, transparent);
+		border-top: 1px solid var(--line);
 		padding: 1.25rem 0;
 	}
 
 	details:last-of-type {
-		border-bottom: 1px solid color-mix(in srgb, var(--text-color) 10%, transparent);
+		border-bottom: 1px solid var(--line);
 	}
 
 	summary {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1rem;
 		cursor: pointer;
 		list-style: none;
 		font-weight: 600;
+	}
+
+	summary::after {
+		content: '+';
+		flex: 0 0 auto;
+		font-family: var(--mono-font);
+		font-size: 1.2rem;
+		font-weight: 400;
+		line-height: 1;
+		transition: transform 0.2s ease;
+	}
+
+	details[open] summary::after {
+		transform: rotate(45deg);
+	}
+
+	details p {
+		color: color-mix(in srgb, var(--text-color) 76%, transparent);
 	}
 
 	summary::-webkit-details-marker {
