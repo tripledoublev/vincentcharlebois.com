@@ -21,31 +21,31 @@
 		<ul class="flex md:flex-row list-none gap-2 md:gap-6">
 			<a
 				href={aboutPath}
-				class="link-first flex items-center text-lg md:text-xl lowercase font-bold leading-snug"
+				class="nav-link link-first flex items-center lowercase leading-snug"
 				class:active={$page.url.pathname.includes(aboutSlug)}
 			>
 				<li class="nav-item flex-auto">
-					{$t('linkabout')}
+					<span class="nav-item-label">{$t('linkabout')}</span>
 				</li>
 			</a>
 
 			<a
 				href={projectsPath}
-				class="link-middle flex items-center text-lg md:text-xl lowercase font-bold leading-snug"
+				class="nav-link link-middle flex items-center lowercase leading-snug"
 				class:active={$page.url.pathname.includes(projectsSlug)}
 			>
 				<li class="nav-item flex-auto">
-					{$t('linkprojects')}
+					<span class="nav-item-label">{$t('linkprojects')}</span>
 				</li>
 			</a>
 
 			<a
 				href={contactPath}
-				class="link-last flex items-center text-lg md:text-xl lowercase font-bold leading-snug"
+				class="nav-link link-last flex items-center lowercase leading-snug"
 				class:active={$page.url.pathname.includes(contactSlug)}
 			>
 				<li class="nav-item flex-auto">
-					{$t('linkcontact')}
+					<span class="nav-item-label">{$t('linkcontact')}</span>
 				</li>
 			</a>
 		</ul>
@@ -57,6 +57,15 @@
 		padding: 0.35rem 0.8rem;
 		padding-bottom: 0.45rem;
 		transition: all 0.2s ease;
+	}
+
+	.nav-link {
+		font-size: var(--fs-sm);
+	}
+
+	.nav-item-label {
+		font-weight: 500;
+		letter-spacing: var(--tracking-tight);
 	}
 
 	/* Equal width for mobile alignment */

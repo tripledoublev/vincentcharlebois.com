@@ -198,9 +198,11 @@
 	}
 
 	p {
-		font-family: var(--mono-font);
+		font-family: var(--font-mono);
+		font-size: var(--fs-xs);
+		font-weight: 500;
 		color: var(--muted);
-		letter-spacing: 0.08em;
+		letter-spacing: var(--tracking-mono);
 		text-transform: uppercase;
 	}
 
@@ -233,8 +235,11 @@
 		margin: 0;
 		padding: 0.7rem 0.95rem;
 		background: var(--surface);
-		font-family: var(--mono-font);
-		letter-spacing: 0;
+		font-family: var(--font-mono);
+		font-size: var(--fs-sm);
+		font-weight: 400;
+		letter-spacing: 0.04em;
+		text-transform: lowercase;
 		transition:
 			background-color 0.2s ease,
 			border-color 0.2s ease,
