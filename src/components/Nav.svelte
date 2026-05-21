@@ -84,10 +84,6 @@
 		text-decoration-skip-ink: none;
 	}
 
-	.home-link.active .site-title {
-		text-transform: uppercase;
-	}
-
 	.home-link.active:hover {
 		text-decoration-thickness: 2px;
 	}

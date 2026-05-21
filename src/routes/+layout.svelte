@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
 	import Nav from '$components/Nav.svelte';
+	import LiquidEdge from '$components/LiquidEdge.svelte';
 	import { locale } from 'svelte-i18n';
 	import '../app.css';
 	import { initializeI18n, loadTranslations } from '$lib/i18n.js';
@@ -28,6 +29,7 @@
 		<a href="#main-content" class="skip-to-main">Skip to main content</a>
 		<div class="nav-wrapper">
 			<Nav />
+			<LiquidEdge />
 		</div>
 		<slot />
 	</div>
@@ -64,8 +66,8 @@
 		z-index: 100;
 		margin-top: 0;
 		background-color: color-mix(in srgb, var(--background-color) 88%, transparent);
-		border-bottom: 1px solid var(--line);
 		backdrop-filter: blur(10px);
+		overflow: visible;
 		transition:
 			margin-top 0.3s ease-in-out,
 			background-color var(--theme-transition-duration) var(--theme-transition-easing),
