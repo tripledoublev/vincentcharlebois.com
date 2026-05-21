@@ -25,8 +25,17 @@
 		'un développeur orienté produit',
 		'un penseur systémique',
 		'un collaborateur en formation de ventures',
-		'un cofondateur technique'
+		'un cofondateur technique',
+		'un artiste-chercheur',
+		'un membre-travailleur chez Hypha.coop'
 	];
+
+	function linkifyRole(text) {
+		return text.replace(
+			/Hypha\.coop/g,
+			'<a href="https://hypha.coop" target="_blank" rel="noopener noreferrer" class="role-link">Hypha.coop</a>'
+		);
+	}
 
 	function shuffleArray(array) {
 		const shuffled = [...array];
@@ -236,11 +245,11 @@ Au sein de cette structure, Charlebois détient le titre d'« artiste-chercheur 
 		<div class="typewriter-container text-left px-6 w-full">
 			{#if isExpanded || isExpanding}
 				<h1 class="hero-text">
-					<span class="role-text">{nameText}</span><span class="role-text">{expandedText}</span>
+					<span class="role-text">{nameText}</span><span class="role-text">{@html linkifyRole(expandedText)}</span>
 				</h1>
 			{:else}
 				<h1 class="hero-text">
-					<span class="role-text">{nameText}</span><span class="role-text">{currentRole}</span><span
+					<span class="role-text">{nameText}</span><span class="role-text">{@html linkifyRole(currentRole)}</span><span
 						class="cursor">|</span
 					>
 				</h1>
@@ -396,6 +405,27 @@ Au sein de cette structure, Charlebois détient le titre d'« artiste-chercheur 
 		font-weight: 500;
 	}
 
+	.role-text :global(.role-link) {
+		color: inherit;
+		font-weight: 600;
+		text-decoration-line: underline;
+		text-decoration-style: solid;
+		text-decoration-thickness: 3px;
+		text-decoration-color: #9900fc;
+		text-decoration-skip-ink: none;
+		text-underline-offset: 0.25rem;
+		transition: text-decoration-thickness 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+	}
+
+	.role-text :global(.role-link:hover) {
+		text-decoration-thickness: 5px;
+	}
+
+	.role-text :global(.role-link:focus-visible) {
+		outline: 2px dotted var(--text-color);
+		outline-offset: 2px;
+	}
+
 	.cursor {
 		animation: blink 1s infinite;
 		font-weight: 300;
@@ -545,7 +575,7 @@ Au sein de cette structure, Charlebois détient le titre d'« artiste-chercheur 
 		text-decoration: underline;
 		text-underline-offset: 0.3em;
 		text-decoration-thickness: 1px;
-		transition: text-decoration-thickness 0.2s ease;
+		transition: text-decoration-thickness 0.35s cubic-bezier(0.22, 1, 0.36, 1);
 	}
 
 	.context-links a:hover {

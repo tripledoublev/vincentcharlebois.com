@@ -66,20 +66,23 @@
 			}
 		}
 
-		// pulses
+		// pulses — expand outward across the full width
 		const now = performance.now();
-		pulses = pulses.filter((pulse) => now - pulse.start < 1200);
+		const pulseLifetime = 2200;
+		pulses = pulses.filter((pulse) => now - pulse.start < pulseLifetime);
+		const maxReach = width; // ensure the ring can sweep across to either edge
 		for (const pulse of pulses) {
 			const age = (now - pulse.start) / 1000;
-			const radius = age * 900;
-			const ringWidth = 80;
+			const speed = Math.max(1600, maxReach / (pulseLifetime / 1000) * 1.2);
+			const radius = age * speed;
+			const ringWidth = 180;
 			for (const p of points) {
 				const dx = Math.abs(p.x - pulse.x);
 				const distFromRing = Math.abs(dx - radius);
 				if (distFromRing < ringWidth) {
 					const falloff = 1 - distFromRing / ringWidth;
-					const decay = Math.max(0, 1 - age / 1.2);
-					p.vy += 1.4 * falloff * decay;
+					const decay = Math.max(0, 1 - age / (pulseLifetime / 1000));
+					p.vy += 2.4 * falloff * decay;
 				}
 			}
 		}
