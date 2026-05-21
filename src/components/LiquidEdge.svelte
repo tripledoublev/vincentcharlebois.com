@@ -1,10 +1,10 @@
 <script>
 	import { onMount, onDestroy } from 'svelte';
 
-	export let tension = 0.025;
-	export let damping = 0.92;
+	export let tension = 0.018;
+	export let damping = 0.78;
 	export let influenceRadius = 180;
-	export let influenceStrength = 0.45;
+	export let influenceStrength = 0.3;
 	export let strokeWidth = 1;
 	export let segments = 64;
 
