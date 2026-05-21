@@ -398,7 +398,6 @@ Au sein de cette structure, Charlebois détient le titre d'« artiste-chercheur 
 		font-variation-settings: 'opsz' 32;
 		line-height: var(--leading-display);
 		letter-spacing: var(--tracking-display);
-		text-wrap: balance;
 	}
 
 	.role-text {

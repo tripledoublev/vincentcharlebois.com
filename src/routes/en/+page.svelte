@@ -368,7 +368,6 @@
 		font-variation-settings: 'opsz' 32;
 		line-height: var(--leading-display);
 		letter-spacing: var(--tracking-display);
-		text-wrap: balance;
 	}
 
 	.role-text {
