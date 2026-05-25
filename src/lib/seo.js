@@ -1,4 +1,5 @@
 export const siteUrl = 'https://www.vincentcharlebois.com';
+export const portraitImageUrl = `${siteUrl}/vincent-charlebois-portrait.jpg`;
 
 export const personSchema = {
 	'@context': 'https://schema.org',
@@ -6,7 +7,14 @@ export const personSchema = {
 	'@id': `${siteUrl}/#vincent-charlebois`,
 	name: 'Vincent Charlebois',
 	url: siteUrl,
-	image: `${siteUrl}/vincent-charlebois-point-com.jpg`,
+	image: {
+		'@type': 'ImageObject',
+		'@id': `${portraitImageUrl}#image`,
+		url: portraitImageUrl,
+		contentUrl: portraitImageUrl,
+		name: 'Vincent Charlebois official portrait',
+		caption: 'Portrait of Vincent Charlebois'
+	},
 	email: 'mailto:vincent@charlebois.info',
 	jobTitle: ['AI Systems Engineer', 'Software Engineer', 'Artist', 'Agentic Interaction Designer'],
 	description:
@@ -129,6 +137,13 @@ export function buildWebPageSchema({ title, description, path, lang = 'en', type
 		author: {
 			'@id': `${siteUrl}/#vincent-charlebois`
 		},
+		...(type === 'ProfilePage'
+			? {
+					mainEntity: {
+						'@id': `${siteUrl}/#vincent-charlebois`
+					}
+				}
+			: {}),
 		dateModified: '2026-05-17'
 	};
 }

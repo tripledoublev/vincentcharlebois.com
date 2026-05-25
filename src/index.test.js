@@ -5,6 +5,10 @@ describe('structured data', () => {
 	it('anchors the website schema to the canonical person entity', () => {
 		expect(personSchema['@id']).toBe('https://www.vincentcharlebois.com/#vincent-charlebois');
 		expect(websiteSchema.author['@id']).toBe(personSchema['@id']);
+		expect(personSchema.image['@type']).toBe('ImageObject');
+		expect(personSchema.image.url).toBe(
+			'https://www.vincentcharlebois.com/vincent-charlebois-portrait.jpg'
+		);
 	});
 
 	it('builds canonical web page schema for public routes', () => {
@@ -19,5 +23,17 @@ describe('structured data', () => {
 		expect(schema['@type']).toBe('CollectionPage');
 		expect(schema.url).toBe('https://www.vincentcharlebois.com/portfolio/');
 		expect(schema.about['@id']).toBe(personSchema['@id']);
+	});
+
+	it('marks profile pages as being about the canonical person entity', () => {
+		const schema = buildWebPageSchema({
+			title: 'Vincent Charlebois',
+			description: 'Personal profile',
+			path: '/',
+			lang: 'en',
+			type: 'ProfilePage'
+		});
+
+		expect(schema.mainEntity['@id']).toBe(personSchema['@id']);
 	});
 });
