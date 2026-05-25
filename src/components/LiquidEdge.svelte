@@ -53,7 +53,9 @@
 			const cursorYInSvg = pointer.y - (rect.bottom - 20);
 			const verticalDelta = cursorYInSvg - restY; // negative = above rest, positive = below
 			const verticalReach = 80; // px (svg-space) of effective vertical pull range
-			const verticalFalloff = Math.exp(-(verticalDelta * verticalDelta) / (verticalReach * verticalReach));
+			const verticalFalloff = Math.exp(
+				-(verticalDelta * verticalDelta) / (verticalReach * verticalReach)
+			);
 			const radiusInView = influenceRadius * scaleX;
 			for (const p of points) {
 				const dx = p.x - px;
@@ -73,7 +75,7 @@
 		const maxReach = width; // ensure the ring can sweep across to either edge
 		for (const pulse of pulses) {
 			const age = (now - pulse.start) / 1000;
-			const speed = Math.max(1600, maxReach / (pulseLifetime / 1000) * 1.2);
+			const speed = Math.max(1600, (maxReach / (pulseLifetime / 1000)) * 1.2);
 			const radius = age * speed;
 			const ringWidth = 180;
 			for (const p of points) {
@@ -168,7 +170,13 @@
 	{#if reducedMotion}
 		<line x1="0" y1={restY} x2="1000" y2={restY} stroke="currentColor" stroke-width={strokeWidth} />
 	{:else}
-		<path bind:this={pathEl} fill="none" stroke="currentColor" stroke-width={strokeWidth} stroke-linecap="round" />
+		<path
+			bind:this={pathEl}
+			fill="none"
+			stroke="currentColor"
+			stroke-width={strokeWidth}
+			stroke-linecap="round"
+		/>
 	{/if}
 </svg>
 

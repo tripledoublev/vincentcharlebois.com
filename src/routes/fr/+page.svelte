@@ -30,10 +30,15 @@
 		'un membre-travailleur chez Hypha.coop'
 	];
 
-	function linkifyRole(text) {
-		return text.replace(
-			/Hypha\.coop/g,
-			'<a href="https://hypha.coop" target="_blank" rel="noopener noreferrer" class="role-link">Hypha.coop</a>'
+	function roleParts(text) {
+		const [first, ...rest] = text.split('Hypha.coop');
+		return rest.reduce(
+			(parts, part) => [
+				...parts,
+				{ text: 'Hypha.coop', href: 'https://hypha.coop' },
+				{ text: part }
+			],
+			[{ text: first }]
 		);
 	}
 
@@ -245,13 +250,31 @@ Au sein de cette structure, Charlebois détient le titre d'« artiste-chercheur 
 		<div class="typewriter-container text-left px-6 w-full">
 			{#if isExpanded || isExpanding}
 				<h1 class="hero-text">
-					<span class="role-text">{nameText}</span><span class="role-text">{@html linkifyRole(expandedText)}</span>
+					<span class="role-text">{nameText}</span><span class="role-text">
+						{#each roleParts(expandedText) as part}
+							{#if part.href}
+								<a href={part.href} target="_blank" rel="noopener noreferrer" class="role-link"
+									>{part.text}</a
+								>
+							{:else}
+								{part.text}
+							{/if}
+						{/each}
+					</span>
 				</h1>
 			{:else}
 				<h1 class="hero-text">
-					<span class="role-text">{nameText}</span><span class="role-text">{@html linkifyRole(currentRole)}</span><span
-						class="cursor">|</span
-					>
+					<span class="role-text">{nameText}</span><span class="role-text">
+						{#each roleParts(currentRole) as part}
+							{#if part.href}
+								<a href={part.href} target="_blank" rel="noopener noreferrer" class="role-link"
+									>{part.text}</a
+								>
+							{:else}
+								{part.text}
+							{/if}
+						{/each}
+					</span><span class="cursor">|</span>
 				</h1>
 			{/if}
 		</div>
