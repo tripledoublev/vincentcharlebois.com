@@ -36,6 +36,7 @@
 			<a
 				class=" text-sm font-medium contact-links"
 				target="_blank"
+				rel="me"
 				href="https://github.com/tripledoublev"
 			>
 				<li class="py-2">github</li>
@@ -50,6 +51,7 @@
 			<a
 				class=" text-sm font-medium contact-links"
 				target="_blank"
+				rel="me"
 				href="https://chateau.social/@v"
 			>
 				<li class="py-2">mastodon</li>
@@ -57,6 +59,7 @@
 			<a
 				class=" text-sm font-medium contact-links"
 				target="_blank"
+				rel="me"
 				href="https://bsky.app/profile/charlebois.info"
 			>
 				<li class="py-2">bluesky</li>
@@ -64,6 +67,7 @@
 			<a
 				class=" text-sm font-medium contact-links"
 				target="_blank"
+				rel="me"
 				href="https://www.are.na/vincent-charlebois"
 			>
 				<li class="py-2">are.na</li>
@@ -92,6 +96,7 @@
 			<a
 				class=" text-sm font-medium contact-links"
 				target="_blank"
+				rel="me"
 				href="https://www.vincentcharlebois.net/"
 			>
 				<li class="py-2">portfolio</li>
@@ -106,7 +111,8 @@
 			<a
 				class=" text-sm font-medium contact-links"
 				target="_blank"
-				href="https://vincent.charlebois.info"
+				rel="me"
+				href="https://www.charlebois.info/"
 			>
 				<li class="py-2">.info</li>
 			</a>

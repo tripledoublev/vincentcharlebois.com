@@ -556,11 +556,11 @@ export async function handle({ event, resolve }) {
           <a href="https://hypha.coop/" target="_blank">hypha</a>
           <a href="mailto:vincent@charlebois.info">email</a>
           <a href="/publickey">pgp</a>
-          <a href="https://github.com/tripledoublev" target="_blank">github</a>
+          <a href="https://github.com/tripledoublev" target="_blank" rel="me">github</a>
           <a href="https://www.linkedin.com/in/vincent-charlebois/" target="_blank">linkedin</a>
-          <a href="https://chateau.social/@v" target="_blank">mastodon</a>
-          <a href="https://bsky.app/profile/charlebois.info" target="_blank">bluesky</a>
-          <a href="https://www.are.na/vincent-charlebois" target="_blank">are.na</a>
+          <a href="https://chateau.social/@v" target="_blank" rel="me">mastodon</a>
+          <a href="https://bsky.app/profile/charlebois.info" target="_blank" rel="me">bluesky</a>
+          <a href="https://www.are.na/vincent-charlebois" target="_blank" rel="me">are.na</a>
         </div>
         <div class="back-link">
           <a href="/en">Back to home</a>
@@ -580,11 +580,11 @@ export async function handle({ event, resolve }) {
           <a href="https://hypha.coop/" target="_blank">hypha</a>
           <a href="mailto:vincent@charlebois.info">email</a>
           <a href="/publickey">pgp</a>
-          <a href="https://github.com/tripledoublev" target="_blank">github</a>
+          <a href="https://github.com/tripledoublev" target="_blank" rel="me">github</a>
           <a href="https://www.linkedin.com/in/vincent-charlebois/" target="_blank">linkedin</a>
-          <a href="https://chateau.social/@v" target="_blank">mastodon</a>
-          <a href="https://bsky.app/profile/charlebois.info" target="_blank">bluesky</a>
-          <a href="https://www.are.na/vincent-charlebois" target="_blank">are.na</a>
+          <a href="https://chateau.social/@v" target="_blank" rel="me">mastodon</a>
+          <a href="https://bsky.app/profile/charlebois.info" target="_blank" rel="me">bluesky</a>
+          <a href="https://www.are.na/vincent-charlebois" target="_blank" rel="me">are.na</a>
         </div>
         <div class="back-link">
           <a href="/fr">Retour à l'accueil</a>
@@ -642,9 +642,11 @@ export async function handle({ event, resolve }) {
         <div class="contact-links">
           <a href="https://hypha.coop/" target="_blank">hypha</a>
           <a href="mailto:vincent@charlebois.info">email</a>
-          <a href="https://github.com/tripledoublev" target="_blank">github</a>
+          <a href="https://github.com/tripledoublev" target="_blank" rel="me">github</a>
           <a href="https://www.linkedin.com/in/vincent-charlebois/" target="_blank">linkedin</a>
-          <a href="https://bsky.app/profile/charlebois.info" target="_blank">bluesky</a>
+          <a href="https://www.charlebois.info/" target="_blank" rel="me">.info</a>
+          <a href="https://www.vincentcharlebois.net/" target="_blank" rel="me">.net</a>
+          <a href="https://bsky.app/profile/charlebois.info" target="_blank" rel="me">bluesky</a>
         </div>
         <div class="back-link">
           <a href="/en/contact">Full page</a>

@@ -78,6 +78,7 @@
 			<a
 				class="text-sm font-medium contact-links"
 				target="_blank"
+				rel="me"
 				href="https://github.com/tripledoublev"
 			>
 				<li class="py-2">github</li>
@@ -110,6 +111,7 @@
 			<a
 				class="text-sm font-medium contact-links"
 				target="_blank"
+				rel="me"
 				href="https://bsky.app/profile/charlebois.info"
 			>
 				<li class="py-2">bluesky</li>
