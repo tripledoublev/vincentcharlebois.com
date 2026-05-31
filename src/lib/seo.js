@@ -25,9 +25,24 @@ export const personSchema = {
 		'https://x.com/vincencharleboi',
 		'https://chateau.social/@v',
 		'https://bsky.app/profile/charlebois.info',
+		'https://www.are.na/vincent-charlebois',
 		'https://www.instagram.com/ffforests/',
+		'https://www.charlebois.info/',
 		'https://vincent.charlebois.info',
-		'https://vincentcharlebois.net'
+		'https://www.vincentcharlebois.net/'
+	],
+	identifier: [
+		{
+			'@type': 'PropertyValue',
+			propertyID: 'AT Protocol DID',
+			value: 'did:plc:y3lae7hmqiwyq7w2v3bcb2c2'
+		},
+		{
+			'@type': 'PropertyValue',
+			propertyID: 'AT Protocol handle',
+			value: 'charlebois.info',
+			url: 'https://bsky.app/profile/charlebois.info'
+		}
 	],
 	worksFor: {
 		'@type': 'Organization',
@@ -53,8 +68,13 @@ export const personSchema = {
 	],
 	knowsLanguage: ['English', 'French'],
 	knowsAbout: [
+		'Agentic AI',
 		'Agentic AI Systems',
 		'Agentic Interaction Design',
+		'LLM orchestration',
+		'Transactional Aesthetics',
+		'AT Protocol',
+		'Decentralized Identity',
 		'Distributed Architectures',
 		'Software Engineering',
 		'Product Development',

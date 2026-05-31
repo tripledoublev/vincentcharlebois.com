@@ -297,6 +297,8 @@ function buildCommonHeadTags(path, lang) {
 		<link rel="alternate" type="text/markdown" href="${siteUrl}/portfolio.md" title="Machine-readable portfolio" />
 		<link rel="me" href="https://github.com/tripledoublev" />
 		<link rel="me" href="https://bsky.app/profile/charlebois.info" />
+		<link rel="me" href="https://www.charlebois.info/" />
+		<link rel="me" href="https://www.are.na/vincent-charlebois" />
 		<link rel="me" href="https://chateau.social/@v" />
 		${schemas.map(jsonLd).join('\n')}
 		${details.image ? `<meta property="og:image:alt" content="${details.title}" />` : ''}
