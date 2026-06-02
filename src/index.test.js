@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { buildWebPageSchema, personSchema, websiteSchema } from '$lib/seo.js';
+import { buildWebPageSchema, personSchema, schemaDateModified, websiteSchema } from '$lib/seo.js';
 
 describe('structured data', () => {
 	it('anchors the website schema to the canonical person entity', () => {
@@ -23,9 +23,12 @@ describe('structured data', () => {
 		expect(schema['@type']).toBe('CollectionPage');
 		expect(schema.url).toBe('https://www.vincentcharlebois.com/portfolio/');
 		expect(schema.about['@id']).toBe(personSchema['@id']);
+		expect(schema.author['@id']).toBe(personSchema['@id']);
+		expect(schema.dateModified).toBe(schemaDateModified);
+		expect(schema.dateModified).toMatch(/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(Z|[+-]\d{2}:\d{2})$/);
 	});
 
-	it('marks profile pages as being about the canonical person entity', () => {
+	it('marks profile pages as being about the canonical person entity without unsupported author', () => {
 		const schema = buildWebPageSchema({
 			title: 'Vincent Charlebois',
 			description: 'Personal profile',
@@ -35,5 +38,8 @@ describe('structured data', () => {
 		});
 
 		expect(schema.mainEntity['@id']).toBe(personSchema['@id']);
+		expect(schema.author).toBeUndefined();
+		expect(schema.dateModified).toBe(schemaDateModified);
+		expect(schema.dateModified).toMatch(/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(Z|[+-]\d{2}:\d{2})$/);
 	});
 });
