@@ -1,5 +1,6 @@
 export const siteUrl = 'https://www.vincentcharlebois.com';
 export const portraitImageUrl = `${siteUrl}/vincent-charlebois-portrait.jpg`;
+export const schemaDateModified = '2026-06-02T00:00:00-04:00';
 
 export const personSchema = {
 	'@context': 'https://schema.org',
@@ -138,6 +139,7 @@ export function buildBreadcrumbSchema(items = []) {
 export function buildWebPageSchema({ title, description, path, lang = 'en', type = 'WebPage' }) {
 	const normalizedPath = path === '/' ? '/' : `/${path.replace(/^\/+/, '').replace(/\/+$/, '')}/`;
 	const url = `${siteUrl}${normalizedPath === '/' ? '/' : normalizedPath}`;
+	const isProfilePage = type === 'ProfilePage';
 
 	return {
 		'@context': 'https://schema.org',
@@ -154,16 +156,17 @@ export function buildWebPageSchema({ title, description, path, lang = 'en', type
 		about: {
 			'@id': `${siteUrl}/#vincent-charlebois`
 		},
-		author: {
-			'@id': `${siteUrl}/#vincent-charlebois`
-		},
-		...(type === 'ProfilePage'
+		...(isProfilePage
 			? {
 					mainEntity: {
 						'@id': `${siteUrl}/#vincent-charlebois`
 					}
 				}
-			: {}),
-		dateModified: '2026-05-17'
+			: {
+					author: {
+						'@id': `${siteUrl}/#vincent-charlebois`
+					}
+				}),
+		dateModified: schemaDateModified
 	};
 }
