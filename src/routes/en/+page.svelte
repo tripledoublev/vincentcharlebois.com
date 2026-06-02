@@ -17,7 +17,9 @@
 	let nameText = '';
 	let nameIndex = 0;
 
+	const firstRole = 'a member of Hypha.coop';
 	const roles = [
+		firstRole,
 		'a research-to-product translator',
 		'an AI systems architect',
 		'a builder who ships',
@@ -26,8 +28,7 @@
 		'a systems thinker',
 		'a venture formation collaborator',
 		'a technical co-founder',
-		'an artist-researcher',
-		'a member-worker at Hypha.coop'
+		'an artist-researcher'
 	];
 
 	function roleParts(text) {
@@ -51,8 +52,12 @@
 		return shuffled;
 	}
 
+	function rolesStartingWithFirstRole() {
+		return [firstRole, ...shuffleArray(roles.filter((role) => role !== firstRole))];
+	}
+
 	onMount(() => {
-		remainingRoles = shuffleArray(roles);
+		remainingRoles = rolesStartingWithFirstRole();
 		roleIndex = 0;
 		typeName();
 
@@ -143,7 +148,7 @@
 
 			// Reshuffle when we've seen all roles
 			if (roleIndex >= remainingRoles.length) {
-				remainingRoles = shuffleArray(roles);
+				remainingRoles = rolesStartingWithFirstRole();
 				roleIndex = 0;
 			}
 
