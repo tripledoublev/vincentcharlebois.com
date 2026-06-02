@@ -17,7 +17,9 @@
 	let nameText = '';
 	let nameIndex = 0;
 
+	const firstRole = 'un membre de Hypha.coop';
 	const roles = [
+		firstRole,
 		'un traducteur recherche-produit',
 		'un architecte de systèmes IA',
 		'un bâtisseur qui livre',
@@ -26,8 +28,7 @@
 		'un penseur systémique',
 		'un collaborateur en formation de ventures',
 		'un cofondateur technique',
-		'un artiste-chercheur',
-		'un membre-travailleur chez Hypha.coop'
+		'un artiste-chercheur'
 	];
 
 	function roleParts(text) {
@@ -51,8 +52,12 @@
 		return shuffled;
 	}
 
+	function rolesStartingWithFirstRole() {
+		return [firstRole, ...shuffleArray(roles.filter((role) => role !== firstRole))];
+	}
+
 	onMount(() => {
-		remainingRoles = shuffleArray(roles);
+		remainingRoles = rolesStartingWithFirstRole();
 		roleIndex = 0;
 		typeName();
 
@@ -170,7 +175,7 @@ Au sein de cette structure, Charlebois détient le titre d'« artiste-chercheur 
 
 			// Reshuffle when we've seen all roles
 			if (roleIndex >= remainingRoles.length) {
-				remainingRoles = shuffleArray(roles);
+				remainingRoles = rolesStartingWithFirstRole();
 				roleIndex = 0;
 			}
 
