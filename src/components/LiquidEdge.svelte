@@ -1,10 +1,10 @@
 <script>
 	import { onMount, onDestroy } from 'svelte';
 
-	export let tension = 0.018;
-	export let damping = 0.78;
-	export let influenceRadius = 180;
-	export let influenceStrength = 0.3;
+	export let tension = 0.02;
+	export let damping = 0.82;
+	export let influenceRadius = 130;
+	export let influenceStrength = 0.12;
 	export let strokeWidth = 1;
 	export let segments = 64;
 
@@ -18,7 +18,6 @@
 
 	let points = [];
 	let pointer = { x: -9999, y: -9999, active: false };
-	let pulses = [];
 	let reducedMotion = false;
 
 	function initPoints() {
@@ -52,7 +51,7 @@
 			// cursor y in svg-space (svg sits at bottom: -20px, height 40px)
 			const cursorYInSvg = pointer.y - (rect.bottom - 20);
 			const verticalDelta = cursorYInSvg - restY; // negative = above rest, positive = below
-			const verticalReach = 80; // px (svg-space) of effective vertical pull range
+			const verticalReach = 55; // px (svg-space) of effective vertical pull range
 			const verticalFalloff = Math.exp(
 				-(verticalDelta * verticalDelta) / (verticalReach * verticalReach)
 			);
@@ -64,27 +63,6 @@
 					const falloff = Math.exp(-(dx * dx) / (radiusInView * radiusInView * 0.5));
 					const target = restY + verticalDelta * verticalFalloff * falloff;
 					p.vy += (target - p.y) * influenceStrength;
-				}
-			}
-		}
-
-		// pulses — expand outward across the full width
-		const now = performance.now();
-		const pulseLifetime = 2200;
-		pulses = pulses.filter((pulse) => now - pulse.start < pulseLifetime);
-		const maxReach = width; // ensure the ring can sweep across to either edge
-		for (const pulse of pulses) {
-			const age = (now - pulse.start) / 1000;
-			const speed = Math.max(1600, (maxReach / (pulseLifetime / 1000)) * 1.2);
-			const radius = age * speed;
-			const ringWidth = 180;
-			for (const p of points) {
-				const dx = Math.abs(p.x - pulse.x);
-				const distFromRing = Math.abs(dx - radius);
-				if (distFromRing < ringWidth) {
-					const falloff = 1 - distFromRing / ringWidth;
-					const decay = Math.max(0, 1 - age / (pulseLifetime / 1000));
-					p.vy += 2.4 * falloff * decay;
 				}
 			}
 		}
@@ -108,7 +86,7 @@
 		raf = requestAnimationFrame(tick);
 	}
 
-	const activationBand = 120; // px above/below the rest line that counts as "active"
+	const activationBand = 90; // px above/below the rest line that counts as "active"
 
 	function onPointerMove(e) {
 		pointer.x = e.clientX;
@@ -117,13 +95,6 @@
 		const rect = wrapper.getBoundingClientRect();
 		const restLineY = rect.bottom; // svg rest line aligns with nav bottom edge
 		pointer.active = Math.abs(e.clientY - restLineY) < activationBand;
-	}
-	function onPointerDown(e) {
-		if (!wrapper) return;
-		const rect = wrapper.getBoundingClientRect();
-		if (Math.abs(e.clientY - rect.bottom) > activationBand) return;
-		const scaleX = width / rect.width;
-		pulses.push({ x: (e.clientX - rect.left) * scaleX, start: performance.now() });
 	}
 
 	function onResize() {
@@ -145,7 +116,6 @@
 
 		window.addEventListener('resize', onResize);
 		window.addEventListener('pointermove', onPointerMove);
-		window.addEventListener('pointerdown', onPointerDown);
 
 		raf = requestAnimationFrame(tick);
 	});
@@ -155,7 +125,6 @@
 		if (typeof window === 'undefined') return;
 		window.removeEventListener('resize', onResize);
 		window.removeEventListener('pointermove', onPointerMove);
-		window.removeEventListener('pointerdown', onPointerDown);
 	});
 </script>
 
