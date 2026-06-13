@@ -19,8 +19,8 @@
 	--leading-display: 1.06;
 	--leading-tight: 1.25;
 	--leading-body: 1.6;
-	--theme-transition-duration: 0.45s;
-	--theme-transition-easing: ease;
+	--theme-transition-duration: 0.32s;
+	--theme-transition-easing: cubic-bezier(0.33, 1, 0.68, 1);
 }
 
 @media (min-width: 48rem) {
@@ -90,4 +90,10 @@ li:hover:not(.active),
 h1:hover {
 	background-color: var(--text-color);
 	color: var(--background-color);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	:root {
+		--theme-transition-duration: 1ms;
+	}
 }

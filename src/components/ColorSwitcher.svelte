@@ -1,49 +1,47 @@
 <script>
 	import { onMount } from 'svelte';
-	import { writable } from 'svelte/store';
 
-	const colorTheme = writable('dark');
-	const darkSide = writable(false);
+	let darkMode = false;
 
-	function useDarkSide() {
-		onMount(() => {
-			if (typeof window !== 'undefined') {
-				const currentTheme = localStorage.getItem('theme') || 'light';
-				colorTheme.set(currentTheme);
-				darkSide.set(currentTheme === 'dark');
-			}
-		});
+	function setTheme(isDark, persist = true) {
+		const value = isDark ? 'dark' : 'light';
 
-		colorTheme.subscribe((value) => {
-			if (typeof window !== 'undefined') {
-				localStorage.setItem('theme', value);
-				document.documentElement.setAttribute('data-theme', value);
-			}
-		});
+		darkMode = isDark;
+		document.documentElement.setAttribute('data-theme', value);
 
-		return [colorTheme, darkSide];
+		if (persist) {
+			localStorage.setItem('theme', value);
+		}
 	}
 
-	const [theme, darkMode] = useDarkSide();
+	onMount(() => {
+		const currentTheme =
+			localStorage.getItem('theme') ||
+			document.documentElement.getAttribute('data-theme') ||
+			'light';
+
+		setTheme(currentTheme === 'dark', false);
+	});
 
 	function toggleDarkMode() {
-		const isDark = !$darkMode;
-		theme.set(isDark ? 'dark' : 'light');
-		darkMode.set(isDark);
+		setTheme(!darkMode);
 	}
 
-	$: themeToggleLabel = $darkMode ? 'Switch to light theme' : 'Switch to dark theme';
+	$: themeToggleLabel = darkMode ? 'Switch to light theme' : 'Switch to dark theme';
 </script>
 
 <button
 	type="button"
 	class="color-switcher"
 	aria-label={themeToggleLabel}
-	aria-pressed={$darkMode}
+	aria-pressed={darkMode}
 	title={themeToggleLabel}
 	on:click={toggleDarkMode}
 >
-	{$darkMode ? '●' : '○'}
+	<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+		<circle class="ring" cx="12" cy="12" r="6.5" />
+		<circle class="dot" class:visible={darkMode} cx="12" cy="12" r="2.5" />
+	</svg>
 </button>
 
 <style>
@@ -58,21 +56,40 @@
 		background: transparent;
 		color: var(--text-color);
 		cursor: pointer;
-		font: inherit;
-		font-size: var(--fs-md);
-		line-height: 1;
+		opacity: 0.62;
 		transition:
-			background-color var(--theme-transition-duration) var(--theme-transition-easing),
+			opacity 0.18s ease,
 			color var(--theme-transition-duration) var(--theme-transition-easing);
 	}
 
 	.color-switcher:hover {
-		background-color: var(--text-color);
-		color: var(--background-color);
+		opacity: 1;
 	}
 
 	.color-switcher:focus-visible {
 		outline: 2px dotted var(--text-color);
-		outline-offset: 2px;
+		outline-offset: 0.3rem;
+	}
+
+	.ring {
+		fill: none;
+		stroke: currentColor;
+		stroke-width: 1.35;
+	}
+
+	.dot {
+		fill: currentColor;
+		opacity: 0;
+		transform: scale(0.7);
+		transform-origin: center;
+		transform-box: fill-box;
+		transition:
+			opacity 0.22s var(--theme-transition-easing),
+			transform 0.22s var(--theme-transition-easing);
+	}
+
+	.dot.visible {
+		opacity: 1;
+		transform: scale(1);
 	}
 </style>
