@@ -150,7 +150,7 @@
 	function typeExpanded() {
 		const allRoles = [];
 
-		// Build the list starting from current role
+		// Build the list starting from the current role
 		for (let i = 0; i < remainingRoles.length; i++) {
 			const idx = (roleIndex + i) % remainingRoles.length;
 			allRoles.push(remainingRoles[idx]);
