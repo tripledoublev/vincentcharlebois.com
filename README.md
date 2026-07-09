@@ -19,7 +19,7 @@ A bilingual personal website showcasing distributed infrastructures, protocol in
 - **Testing**: [Vitest](https://vitest.dev/) + [Playwright](https://playwright.dev/)
 - **Code Quality**: ESLint + Prettier
 - **Deployment**: Static site generation with SvelteKit adapter
-- **Github action**: builds + deploys
+- **GitHub Action**: builds + deploys
 
 ## Development
 
