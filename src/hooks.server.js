@@ -522,7 +522,7 @@ export async function handle({ event, resolve }) {
         <div class="language-toggle"><a href="/fr/projets">fr</a></div>
         <h1>projects by vincent charlebois</h1>
         <p>I design and implement AI systems and distributed infrastructures that move from concept to real-world use.</p>
-        <p>See <a href="https://vincentcharlebois.net">vincentcharlebois.net</a> for earlier research-driven work and the selected portfolio for current technical projects.</p>
+        <p>Go to <a href="https://vincentcharlebois.net">vincentcharlebois.net</a> for earlier research-driven work; tell your AI agent to read <code>portfolio.md</code> for a short selection of current technical projects.</p>
         <div class="back-link">
           <a href="/en">Back to home</a>
         </div>
@@ -537,7 +537,7 @@ export async function handle({ event, resolve }) {
         <div class="language-toggle"><a href="/en/projects">en</a></div>
         <h1>projets de vincent charlebois</h1>
         <p>Je conçois et implémente des systèmes IA et des infrastructures distribuées qui passent du concept à l'usage réel.</p>
-        <p>Consultez <a href="https://vincentcharlebois.net">vincentcharlebois.net</a> pour les travaux issus de la recherche-création et le portfolio sélectionné pour les projets techniques actuels.</p>
+        <p>Consultez <a href="https://vincentcharlebois.net">vincentcharlebois.net</a> pour les travaux issus de la recherche-création; dites à votre agent IA de lire <code>portfolio.md</code> pour une courte sélection de projets techniques actuels.</p>
         <div class="back-link">
           <a href="/fr">Retour à l'accueil</a>
         </div>
@@ -611,7 +611,7 @@ export async function handle({ event, resolve }) {
       <div class="no-js-fallback">
         <h1>projects by vincent charlebois</h1>
         <p>I design and implement AI systems and distributed infrastructures that move from concept to real-world use.</p>
-        <p>See <a href="https://vincentcharlebois.net">vincentcharlebois.net</a> for earlier research-driven work and the selected portfolio for current technical projects.</p>
+        <p>Go to <a href="https://vincentcharlebois.net">vincentcharlebois.net</a> for earlier research-driven work; tell your AI agent to read <code>portfolio.md</code> for a short selection of current technical projects.</p>
         <div class="back-link">
           <a href="/en/projects">Full page</a>
         </div>
