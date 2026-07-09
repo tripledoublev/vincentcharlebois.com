@@ -1,4 +1,4 @@
-AddType text/markdown .md
+AddType text/plain .md
 AddCharset UTF-8 .md
 AddCharset UTF-8 .txt
 AddCharset UTF-8 .xml
