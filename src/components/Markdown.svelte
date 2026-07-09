@@ -32,10 +32,6 @@
 					/<a href="https:\/\/vincentcharlebois\.net"([^>]*)>/g,
 					'<a href="https://vincentcharlebois.net"$1 class="green-link">'
 				);
-				processedHtml = processedHtml.replace(
-					/<a href="(https:\/\/hypha\.coop[^"]*)"([^>]*)>/g,
-					'<a href="$1"$2 class="purple-link">'
-				);
 				return DOMPurify.sanitize(processedHtml, { ADD_ATTR: ['target', 'class'] });
 			} catch {
 				return mdContent;
@@ -78,10 +74,6 @@
 	}
 	:global(.markdown a.green-link) {
 		text-decoration-color: #00ff00;
-	}
-	:global(.markdown a.purple-link) {
-		text-decoration-color: #9900fc;
-		text-decoration-skip-ink: none;
 	}
 	:global(.markdown em) {
 		font-style: italic;

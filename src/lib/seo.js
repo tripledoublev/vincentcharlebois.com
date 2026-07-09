@@ -1,6 +1,6 @@
 export const siteUrl = 'https://www.vincentcharlebois.com';
 export const portraitImageUrl = `${siteUrl}/vincent-charlebois-portrait.jpg`;
-export const schemaDateModified = '2026-06-02T00:00:00-04:00';
+export const schemaDateModified = '2026-07-09T00:00:00-04:00';
 
 export const personSchema = {
 	'@context': 'https://schema.org',
@@ -19,7 +19,7 @@ export const personSchema = {
 	email: 'mailto:vincent@charlebois.info',
 	jobTitle: ['AI Systems Engineer', 'Software Engineer', 'Artist', 'Agentic Interaction Designer'],
 	description:
-		'Montreal-based software engineer, artist, and agentic interaction designer building deployable AI systems, distributed architectures, cooperative digital infrastructure, and browser-native artworks.',
+		'Montreal-based software engineer, artist, and agentic interaction designer building deployable AI systems, distributed architectures, product-minded infrastructure, and browser-native artworks.',
 	sameAs: [
 		'https://github.com/tripledoublev',
 		'https://www.linkedin.com/in/vincent-charlebois/',
@@ -45,16 +45,6 @@ export const personSchema = {
 			url: 'https://bsky.app/profile/charlebois.info'
 		}
 	],
-	worksFor: {
-		'@type': 'Organization',
-		name: 'Hypha Worker Co-operative',
-		url: 'https://hypha.coop'
-	},
-	memberOf: {
-		'@type': 'Organization',
-		name: 'Hypha Worker Co-operative',
-		url: 'https://hypha.coop'
-	},
 	alumniOf: [
 		{
 			'@type': 'CollegeOrUniversity',
@@ -101,7 +91,7 @@ export const websiteSchema = {
 	url: siteUrl,
 	inLanguage: ['en', 'fr'],
 	description:
-		'Personal website and portfolio for Vincent Charlebois, covering agentic AI systems, software engineering, distributed infrastructure, cooperative technology, and web art.',
+		'Personal website and portfolio for Vincent Charlebois, covering agentic AI systems, software engineering, distributed infrastructure, product-minded technology, and web art.',
 	author: {
 		'@id': `${siteUrl}/#vincent-charlebois`
 	},

@@ -4,7 +4,6 @@ role: Software Engineer, Artist, Agentic Interaction Designer
 location: Montreal, QC, Canada
 timezone: America/Montreal
 languages: [English, French]
-affiliation: Hypha Worker Co-operative
 education:
   - Master in Advanced Ecological Buildings & Biocities, IAAC, Barcelona
   - BFA Intermedia and Cyber Arts, Concordia University, Montreal
@@ -91,7 +90,7 @@ An experimental harness for long-horizon coding agents with terminal UI work, tr
 - **Type:** organizational AI assistant
 - **Tags:** conversational UX, AI products, organizational knowledge, tool-using agents
 
-An open-source conversational assistant for Hypha Worker Co-operative, built around organizational knowledge and tool-using workflows. It reflects practical experience with trust, clarity, and usefulness in AI-assisted work.
+A past open-source conversational assistant project built around organizational knowledge and tool-using workflows. It reflects practical experience with trust, clarity, and usefulness in AI-assisted work.
 
 ## Explore further
 

@@ -58,4 +58,4 @@ The interactive portal feature showcases curated websites from the digital art c
 
 ## About
 
-Vincent Charlebois is a software developer and artist-researcher based in Montreal. As a member of [HYPHA Worker Co-operative](https://hypha.coop), he builds distributed infrastructures, protocol interfaces, and governance systems through collaborative practice.
+Vincent Charlebois is a software developer and artist-researcher based in Montreal. He builds distributed infrastructures, protocol interfaces, and governance systems through collaborative practice.

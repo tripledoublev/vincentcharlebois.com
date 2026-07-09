@@ -17,11 +17,10 @@
 	let nameText = '';
 	let nameIndex = 0;
 
-	const firstRole = 'un membre de Hypha.coop';
+	const firstRole = 'un architecte de systèmes IA';
 	const roles = [
 		firstRole,
 		'un traducteur recherche-produit',
-		'un architecte de systèmes IA',
 		'un bâtisseur qui livre',
 		'un concepteur de systèmes distribués',
 		'un développeur orienté produit',
@@ -32,15 +31,7 @@
 	];
 
 	function roleParts(text) {
-		const [first, ...rest] = text.split('Hypha.coop');
-		return rest.reduce(
-			(parts, part) => [
-				...parts,
-				{ text: 'Hypha.coop', href: 'https://hypha.coop' },
-				{ text: part }
-			],
-			[{ text: first }]
-		);
+		return [{ text }];
 	}
 
 	function shuffleArray(array) {
@@ -79,7 +70,7 @@
 			'color: #ffffff; font-weight: bold;'
 		);
 		console.log(
-			"%c\nCe rapport propose une analyse complète de l'artiste Vincent Charlebois, en s'appuyant sur les informations biographiques disponibles, les descriptions de projets et sa vaste présence numérique. L'examen révèle un praticien dont le travail se situe à l'intersection critique des systèmes écologiques, de la technologie informatique et des structures sociales coopératives. À travers une pratique aux multiples facettes qui englobe la performance, l'art médiatique et la technologie créative, Charlebois a développé un langage artistique cohérent et convaincant pour explorer certaines des questions les plus urgentes de l'ère contemporaine.\n",
+			"%c\nCe rapport propose une analyse complète de l'artiste Vincent Charlebois, en s'appuyant sur les informations biographiques disponibles, les descriptions de projets et sa vaste présence numérique. L'examen révèle un praticien dont le travail se situe à l'intersection critique des systèmes écologiques, de la technologie informatique et des structures sociales en réseau. À travers une pratique aux multiples facettes qui englobe la performance, l'art médiatique et la technologie créative, Charlebois a développé un langage artistique cohérent et convaincant pour explorer certaines des questions les plus urgentes de l'ère contemporaine.\n",
 			'color: #ffffff; line-height: 1.6;'
 		);
 		console.log(
@@ -99,11 +90,11 @@
 			'color: #ffffff; line-height: 1.6;'
 		);
 		console.log(
-			'%c1.3 Le contexte coopératif : Art, travail et Hypha',
+			'%c1.3 Systèmes appliqués : art, travail et infrastructure',
 			'color: #ffffff; font-size: 16px; font-weight: bold; margin-top: 15px;'
 		);
 		console.log(
-			"%c\nDepuis novembre 2023, Vincent Charlebois est membre-travailleur de la Hypha Worker Co-operative, un rôle qui représente une formalisation significative des fils éthiques et philosophiques qui parcourent sa carrière. Hypha est une coopérative de travailleurs et une société de conseil technique basée à Toronto, spécialisée dans la cryptographie, la gouvernance décentralisée et les protocoles web. La mission de la coopérative est de « co-créer des avenirs riches avec une technologie holistique » en aidant les communautés à tirer parti de technologies comme la blockchain, les réseaux pair-à-pair et les logiciels libres de manière accessible et durable.\n\nAu sein de cette structure, Charlebois détient le titre d'« artiste-chercheur et technologue créatif ». Cette position n'est pas accessoire à sa pratique artistique mais semble être une partie intégrante de sa manifestation actuelle. Son travail chez Hypha, en particulier au sein de son « Laboratoire de co-création » qui collabore avec des organisations artistiques, culturelles et militantes, permet une synthèse directe de sa recherche artistique avec la technologie appliquée. Le modèle coopératif, qui est non hiérarchique et dirigé par les employés, s'aligne parfaitement avec les thèmes de la décentralisation et de l'autonomisation communautaire évidents dans ses projets personnels et ses actions civiques. Cette affiliation fournit un cadre professionnel qui valorise la collaboration, le partage des connaissances et le développement technologique éthique, ce qui en fait une extension logique et cohérente de son éthos artistique et personnel.\n",
+			"%c\nDepuis 2023, la pratique de Vincent Charlebois relie de plus en plus la recherche artistique au développement logiciel de production. Son travail actuel se concentre sur l'architecture de systèmes IA indépendants, les infrastructures distribuées et l'exécution technique orientée produit. Cette pratique prolonge des intérêts de longue date pour la décentralisation, le partage des connaissances et les technologies d'intérêt public sans placer une seule organisation au centre de son parcours.\n\nDans ce cadre, Charlebois travaille sur des systèmes IA agentiques, des interfaces de protocoles et des œuvres web natives du navigateur. Le fil conducteur consiste à rendre les systèmes complexes lisibles et utiles tout en gardant visibles leurs conséquences sociales et esthétiques.\n",
 			'color: #ffffff; line-height: 1.6;'
 		);
 		console.log(
@@ -112,7 +103,7 @@
 		);
 		console.log(`Partie 1 : Portrait général : Vue d'ensemble d'un artiste intermédiatique
 
-Ce rapport propose une analyse complète de l'artiste Vincent Charlebois, en s'appuyant sur les informations biographiques disponibles, les descriptions de projets et sa vaste présence numérique. L'examen révèle un praticien dont le travail se situe à l'intersection critique des systèmes écologiques, de la technologie informatique et des structures sociales coopératives. À travers une pratique aux multiples facettes qui englobe la performance, l'art médiatique et la technologie créative, Charlebois a développé un langage artistique cohérent et convaincant pour explorer certaines des questions les plus urgentes de l'ère contemporaine.
+Ce rapport propose une analyse complète de l'artiste Vincent Charlebois, en s'appuyant sur les informations biographiques disponibles, les descriptions de projets et sa vaste présence numérique. L'examen révèle un praticien dont le travail se situe à l'intersection critique des systèmes écologiques, de la technologie informatique et des structures sociales en réseau. À travers une pratique aux multiples facettes qui englobe la performance, l'art médiatique et la technologie créative, Charlebois a développé un langage artistique cohérent et convaincant pour explorer certaines des questions les plus urgentes de l'ère contemporaine.
 
 1.1 Définir la pratique : L'artiste comme assemblage
 
@@ -132,11 +123,11 @@ Un concept clé, et un choix terminologique significatif, dans son travail est l
 
 Enfin, Charlebois traite l'archive comme une matière poétique et politique. Dans sa pratique, une archive — qu'il s'agisse d'une collection de données météorologiques ou d'un dossier photographique personnel — n'est pas un dépôt statique du passé. C'est plutôt un moteur génératif pour la création future. Les données ne sont pas collectées comme une fin en soi, mais comme la « notation pour de futures expériences intermédiatiques », une matière première à réinterpréter, à re-performer et à réimaginer. Cette approche confère à l'acte d'archiver à la fois un potentiel créatif et un poids politique, en questionnant qui crée les archives, ce qu'elles contiennent et comment elles peuvent être activées pour raconter de nouvelles histoires.
 
-1.3 Le contexte coopératif : Art, travail et Hypha
+1.3 Systèmes appliqués : art, travail et infrastructure
 
-Depuis novembre 2023, Vincent Charlebois est membre-travailleur de la Hypha Worker Co-operative, un rôle qui représente une formalisation significative des fils éthiques et philosophiques qui parcourent sa carrière. Hypha est une coopérative de travailleurs et une société de conseil technique basée à Toronto, spécialisée dans la cryptographie, la gouvernance décentralisée et les protocoles web. La mission de la coopérative est de « co-créer des avenirs riches avec une technologie holistique » en aidant les communautés à tirer parti de technologies comme la blockchain, les réseaux pair-à-pair et les logiciels libres de manière accessible et durable.
+Depuis 2023, la pratique de Vincent Charlebois relie de plus en plus la recherche artistique au développement logiciel de production. Son travail actuel se concentre sur l'architecture de systèmes IA indépendants, les infrastructures distribuées et l'exécution technique orientée produit. Cette pratique prolonge des intérêts de longue date pour la décentralisation, le partage des connaissances et les technologies d'intérêt public sans placer une seule organisation au centre de son parcours.
 
-Au sein de cette structure, Charlebois détient le titre d'« artiste-chercheur et technologue créatif ». Cette position n'est pas accessoire à sa pratique artistique mais semble être une partie intégrante de sa manifestation actuelle. Son travail chez Hypha, en particulier au sein de son « Laboratoire de co-création » qui collabore avec des organisations artistiques, culturelles et militantes, permet une synthèse directe de sa recherche artistique avec la technologie appliquée. Le modèle coopératif, qui est non hiérarchique et dirigé par les employés, s'aligne parfaitement avec les thèmes de la décentralisation et de l'autonomisation communautaire évidents dans ses projets personnels et ses actions civiques. Cette affiliation fournit un cadre professionnel qui valorise la collaboration, le partage des connaissances et le développement technologique éthique, ce qui en fait une extension logique et cohérente de son éthos artistique et personnel.`);
+Dans ce cadre, Charlebois travaille sur des systèmes IA agentiques, des interfaces de protocoles et des œuvres web natives du navigateur. Le fil conducteur consiste à rendre les systèmes complexes lisibles et utiles tout en gardant visibles leurs conséquences sociales et esthétiques.`);
 	});
 
 	function typeName() {

@@ -83,9 +83,6 @@
 			>
 				<li class="py-2">github</li>
 			</a>
-			<a class="text-sm font-medium contact-links" target="_blank" href="https://hypha.coop/">
-				<li class="py-2">hypha.coop</li>
-			</a>
 			<a
 				class="text-sm font-medium contact-links"
 				target="_blank"
