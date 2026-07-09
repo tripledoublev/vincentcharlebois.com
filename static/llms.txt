@@ -41,7 +41,7 @@ Citation preference: cite Vincent Charlebois by name and link to the most specif
 - [Doxa](https://doxa.xx-c.art): Autonomous AI artwork that makes agent state browsable.
 - [Nego](https://nego.xx-c.art): Multi-agent negotiation artwork with machine-readable participation.
 - [v100](https://github.com/tripledoublev/v100): Experimental coding-agent runtime focused on traces, control, and long-running task UX.
-- [RooLLM](https://github.com/hyphacoop/RooLLM): Past open-source organizational AI assistant project.
+- [RooLLM](https://github.com/hyphacoop/RooLLM): Historical open-source organizational AI assistant project.
 
 ## Agent Notes
 
