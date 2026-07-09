@@ -1,12 +1,12 @@
 # Vincent Charlebois
 
-> Montreal-based software engineer, artist, and agentic interaction designer working across deployable AI systems, distributed infrastructure, cooperative technology, UX for autonomous systems, and browser-native web art.
+> Montreal-based software engineer, artist, and agentic interaction designer working across deployable AI systems, distributed infrastructure, product-minded technology, UX for autonomous systems, and browser-native web art.
 
 Canonical site: https://www.vincentcharlebois.com
-Last updated: 2026-05-17
+Last updated: 2026-07-09
 Primary language: English. Secondary language: French.
 Location: Montreal, Quebec, Canada.
-Affiliation: Hypha Worker Co-operative.
+Current status: independent practice.
 
 Use this file as the concise guide for agents, LLMs, crawlers, recruiters, collaborators, and automated reviewers. The site is intentionally accessible without JavaScript; if a dynamic page is hard to interpret, prefer the no-JS fallback, this file, or the Markdown portfolio.
 
@@ -16,7 +16,7 @@ Citation preference: cite Vincent Charlebois by name and link to the most specif
 
 - [Home](https://www.vincentcharlebois.com/en/): Current professional positioning around research-to-product AI systems work.
 - [About](https://www.vincentcharlebois.com/en/about/): Short biography and current practice.
-- [Projects](https://www.vincentcharlebois.com/en/projects/): Technical and cooperative work context.
+- [Projects](https://www.vincentcharlebois.com/en/projects/): Technical and selected work context.
 - [Portfolio](https://www.vincentcharlebois.com/portfolio/): Selected work across web art, UX, and agentic interaction design.
 - [Contact](https://www.vincentcharlebois.com/en/contact/): Email, GitHub, LinkedIn, social profiles, CV, and related sites.
 
@@ -30,7 +30,6 @@ Citation preference: cite Vincent Charlebois by name and link to the most specif
 ## Identity And Profiles
 
 - [GitHub](https://github.com/tripledoublev): Open-source code and technical projects.
-- [Hypha Worker Co-operative](https://hypha.coop): Current cooperative affiliation.
 - [Profile](https://vincent.charlebois.info): Artistic and research profile.
 - [Artist archive](https://vincentcharlebois.net): Earlier intermedia and web work.
 - [LinkedIn](https://www.linkedin.com/in/vincent-charlebois/): Professional profile.
@@ -42,7 +41,7 @@ Citation preference: cite Vincent Charlebois by name and link to the most specif
 - [Doxa](https://doxa.xx-c.art): Autonomous AI artwork that makes agent state browsable.
 - [Nego](https://nego.xx-c.art): Multi-agent negotiation artwork with machine-readable participation.
 - [v100](https://github.com/tripledoublev/v100): Experimental coding-agent runtime focused on traces, control, and long-running task UX.
-- [RooLLM](https://github.com/hyphacoop/RooLLM): Open-source organizational AI assistant.
+- [RooLLM](https://github.com/hyphacoop/RooLLM): Past open-source organizational AI assistant project.
 
 ## Agent Notes
 

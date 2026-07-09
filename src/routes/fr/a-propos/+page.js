@@ -3,7 +3,7 @@ import { buildBreadcrumbSchema } from '$lib/seo.js';
 export function load({ url }) {
 	const title = 'À propos Vincent Charlebois';
 	const description =
-		'À propos de Vincent Charlebois - Artiste, technologue créatif et membre de la coopérative de travailleurs Hypha.';
+		'À propos de Vincent Charlebois - Artiste, technologue créatif et architecte de systèmes IA.';
 
 	return {
 		seo: {

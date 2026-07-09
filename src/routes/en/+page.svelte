@@ -17,11 +17,10 @@
 	let nameText = '';
 	let nameIndex = 0;
 
-	const firstRole = 'a member of Hypha.coop';
+	const firstRole = 'software developer';
 	const roles = [
 		firstRole,
 		'a research-to-product translator',
-		'an AI systems architect',
 		'a builder who ships',
 		'a distributed systems designer',
 		'a product-minded technologist',
@@ -32,15 +31,7 @@
 	];
 
 	function roleParts(text) {
-		const [first, ...rest] = text.split('Hypha.coop');
-		return rest.reduce(
-			(parts, part) => [
-				...parts,
-				{ text: 'Hypha.coop', href: 'https://hypha.coop' },
-				{ text: part }
-			],
-			[{ text: first }]
-		);
+		return [{ text }];
 	}
 
 	function shuffleArray(array) {
@@ -79,7 +70,7 @@
 			'color: #ffffff; font-weight: bold;'
 		);
 		console.log(
-			'%c\nThis report provides a comprehensive analysis of the artist Vincent Charlebois, drawing upon available biographical information, project descriptions, and his extensive digital presence. The examination reveals a practitioner whose work is situated at the critical intersection of ecological systems, computational technology, and cooperative social structures. Through a multifaceted practice that spans performance, media art, and creative technology, Charlebois has developed a coherent and compelling artistic language to investigate some of the most pressing issues of the contemporary era.\n',
+			'%c\nThis report provides a comprehensive analysis of the artist Vincent Charlebois, drawing upon available biographical information, project descriptions, and his extensive digital presence. The examination reveals a practitioner whose work is situated at the critical intersection of ecological systems, computational technology, and networked social structures. Through a multifaceted practice that spans performance, media art, and creative technology, Charlebois has developed a coherent and compelling artistic language to investigate some of the most pressing issues of the contemporary era.\n',
 			'color: #ffffff; line-height: 1.6;'
 		);
 		console.log(
@@ -99,11 +90,11 @@
 			'color: #ffffff; line-height: 1.6;'
 		);
 		console.log(
-			'%c1.3 The Cooperative Context: Art, Labor, and Hypha',
+			'%c1.3 Applied Systems: Art, Labor, and Infrastructure',
 			'color: #ffffff; font-size: 16px; font-weight: bold; margin-top: 15px;'
 		);
 		console.log(
-			'%c\nSince November 2023, Vincent Charlebois has been a member-worker at Hypha Worker Co-operative, a role that represents a significant formalization of the ethical and philosophical threads running through his career. Hypha is a worker-owned cooperative based in Toronto, focused on decentralized governance, open protocols, and community-owned technology. Its work spans technical consulting, open-source development, and collaborative research at the intersection of art, publishing, and decentralized infrastructures.\n\nWithin this structure, Charlebois holds the title of "artist-researcher and developer". This position is not ancillary to his artistic practice but appears to be an integral part of its current manifestation. He contributes to projects like spores.garden — an AT Protocol-powered personal website builder — and maple, a civic engagement platform, as well as to the core repositories of the Bluesky ecosystem. The cooperative model, which is non-hierarchical and worker-led, aligns perfectly with the themes of decentralization and community empowerment evident in his personal projects and civic actions. This affiliation provides a professional framework that values collaboration, shared knowledge, and ethical technological development, making it a logical and coherent extension of his artistic and personal ethos.\n',
+			"%c\nSince 2023, Vincent Charlebois's practice has increasingly connected artistic research with production software work. His current focus is independent AI systems architecture, distributed infrastructure, and product-minded technical execution. This work carries forward long-running interests in decentralization, shared knowledge, and public-interest technology without treating any single organization as the center of the practice.\n\nWithin this frame, Charlebois works across agentic AI systems, protocol interfaces, and browser-native artworks. The throughline is making complex systems legible and useful while keeping their social and aesthetic consequences visible.\n",
 			'color: #ffffff; line-height: 1.6;'
 		);
 		console.log(

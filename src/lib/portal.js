@@ -69,8 +69,6 @@ export function initializePortal() {
 		{ url: 'https://www.vincentcharlebois.net/', https: true },
 		{ url: 'https://ffforests.xyz/', https: true },
 		{ url: 'https://ffforests.xyz/v', https: true },
-		{ url: 'https://hypha.coop/', https: true },
-		{ url: 'https://handbook.hypha.coop/', https: true },
 		{ url: 'https://vincent.charlebois.info/consecutive-days/', https: true },
 		{ url: 'https://vincent.charlebois.info/consecutive-days/29_Oct16-Oct19.html', https: true },
 		{ url: 'https://vincent.charlebois.info/consecutive-days/30_Oct24-Oct25.html', https: true },

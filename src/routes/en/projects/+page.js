@@ -3,7 +3,7 @@ import { buildBreadcrumbSchema } from '$lib/seo.js';
 export function load({ url }) {
 	const title = 'Projects Vincent Charlebois';
 	const description =
-		"Explore Vincent Charlebois's projects and his work at Hypha Worker Co-operative.";
+		"Explore Vincent Charlebois's projects across agentic AI systems, distributed infrastructure, and web art.";
 
 	return {
 		seo: {
