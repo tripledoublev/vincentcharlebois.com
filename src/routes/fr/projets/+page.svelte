@@ -100,6 +100,7 @@
 			className="markdown"
 			copyPortfolioLabel={$t('portfolio.copy_url')}
 			copiedPortfolioLabel={$t('portfolio.copied_url')}
+			copyPortfolioUrl="https://www.vincentcharlebois.com/portfolio-fr.md"
 		/>
 	</div>
 </main>

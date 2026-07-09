@@ -292,10 +292,11 @@ function buildCommonHeadTags(path, lang) {
 		<meta name="robots" content="index, follow" />
 		<meta property="profile:first_name" content="Vincent" />
 		<meta property="profile:last_name" content="Charlebois" />
-		<link rel="alternate" type="text/plain" href="${siteUrl}/llms.txt" title="LLM-readable site guide" />
-		<link rel="alternate" type="text/plain" href="${siteUrl}/llms-full.txt" title="Full LLM context" />
-		<link rel="alternate" type="text/markdown" href="${siteUrl}/portfolio.md" title="Machine-readable portfolio" />
-		<link rel="me" href="https://github.com/tripledoublev" />
+			<link rel="alternate" type="text/plain" href="${siteUrl}/llms.txt" title="LLM-readable site guide" />
+			<link rel="alternate" type="text/plain" href="${siteUrl}/llms-full.txt" title="Full LLM context" />
+			<link rel="alternate" type="text/markdown" href="${siteUrl}/portfolio.md" title="Machine-readable portfolio" />
+			<link rel="alternate" type="text/markdown" hreflang="fr" href="${siteUrl}/portfolio-fr.md" title="Portfolio lisible par machine" />
+			<link rel="me" href="https://github.com/tripledoublev" />
 		<link rel="me" href="https://bsky.app/profile/charlebois.info" />
 		<link rel="me" href="https://www.charlebois.info/" />
 		<link rel="me" href="https://www.are.na/vincent-charlebois" />
@@ -427,7 +428,8 @@ export async function handle({ event, resolve }) {
         <ul>
           <li><a href="/llms.txt">LLM guide</a> - concise site map for language models and agents.</li>
           <li><a href="/llms-full.txt">Full LLM context</a> - expanded identity, portfolio, and citation context.</li>
-          <li><a href="/portfolio.md">Portfolio markdown</a> - selected work with structured frontmatter.</li>
+	          <li><a href="/portfolio.md">Portfolio markdown</a> - selected work with structured frontmatter.</li>
+	          <li><a href="/portfolio-fr.md">Portfolio markdown FR</a> - version française structurée pour agents.</li>
           <li><a href="/sitemap.xml">Sitemap</a> - public URL inventory.</li>
           <li><a href="/robots.txt">Robots policy</a> - crawler access policy.</li>
         </ul>

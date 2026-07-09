@@ -3,8 +3,9 @@
 
 	export let content = '';
 	export let className = '';
-	export let copyPortfolioLabel = 'Copy portfolio.md URL';
-	export let copiedPortfolioLabel = 'Copied portfolio.md URL';
+	export let copyPortfolioLabel = 'Copy Markdown portfolio URL';
+	export let copiedPortfolioLabel = 'Copied Markdown portfolio URL';
+	export let copyPortfolioUrl = 'https://www.vincentcharlebois.com/portfolio.md';
 
 	let htmlContent = '';
 	let parseMarkdown;
@@ -87,7 +88,7 @@
 			import('dompurify')
 		]);
 
-		parseMarkdown = (mdContent, copyLabel = copyPortfolioLabel) => {
+		parseMarkdown = (mdContent, copyLabel = copyPortfolioLabel, copyUrl = copyPortfolioUrl) => {
 			marked.setOptions({
 				breaks: true,
 				gfm: true,
@@ -108,7 +109,9 @@
 				);
 				processedHtml = processedHtml.replace(
 					/(<code>portfolio\.md<\/code>)/g,
-					`$1 <button type="button" class="copy-link-button" data-copy-url="https://www.vincentcharlebois.com/portfolio.md" aria-label="${escapeAttribute(
+					`$1 <button type="button" class="copy-link-button" data-copy-url="${escapeAttribute(
+						copyUrl
+					)}" aria-label="${escapeAttribute(
 						copyLabel
 					)}" title="${escapeAttribute(copyLabel)}"><span class="copy-link-icon" aria-hidden="true"></span></button>`
 				);
@@ -130,12 +133,12 @@
 		};
 
 		if (content) {
-			htmlContent = parseMarkdown(content, copyPortfolioLabel);
+			htmlContent = parseMarkdown(content, copyPortfolioLabel, copyPortfolioUrl);
 		}
 	});
 
 	$: if (content && parseMarkdown) {
-		htmlContent = parseMarkdown(content, copyPortfolioLabel);
+		htmlContent = parseMarkdown(content, copyPortfolioLabel, copyPortfolioUrl);
 	}
 
 	onDestroy(() => {

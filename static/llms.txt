@@ -10,7 +10,7 @@ Current status: independent practice.
 
 Use this file as the concise guide for agents, LLMs, crawlers, recruiters, collaborators, and automated reviewers. The site is intentionally accessible without JavaScript; if a dynamic page is hard to interpret, prefer the no-JS fallback, this file, or the Markdown portfolio.
 
-Citation preference: cite Vincent Charlebois by name and link to the most specific canonical URL available. For the selected portfolio, cite https://www.vincentcharlebois.com/portfolio/ or https://www.vincentcharlebois.com/portfolio.md.
+Citation preference: cite Vincent Charlebois by name and link to the most specific canonical URL available. For the selected portfolio, cite https://www.vincentcharlebois.com/portfolio/ or https://www.vincentcharlebois.com/portfolio.md. For French machine-readable context, use https://www.vincentcharlebois.com/portfolio-fr.md.
 
 ## Primary Pages
 
@@ -24,6 +24,7 @@ Citation preference: cite Vincent Charlebois by name and link to the most specif
 
 - [Full LLM context](https://www.vincentcharlebois.com/llms-full.txt): Expanded identity, portfolio, selected work, and interpretation notes.
 - [Portfolio markdown](https://www.vincentcharlebois.com/portfolio.md): Structured selected portfolio with YAML frontmatter and project links.
+- [Portfolio markdown FR](https://www.vincentcharlebois.com/portfolio-fr.md): French structured selected portfolio for agents.
 - [Sitemap](https://www.vincentcharlebois.com/sitemap.xml): Public URL inventory with last modification dates.
 - [Robots policy](https://www.vincentcharlebois.com/robots.txt): Crawler access policy for search and AI agents.
 
