@@ -537,7 +537,7 @@ export async function handle({ event, resolve }) {
         <div class="language-toggle"><a href="/en/projects">en</a></div>
         <h1>projets de vincent charlebois</h1>
         <p>Je conçois et implémente des systèmes IA et des infrastructures distribuées qui passent du concept à l'usage réel.</p>
-        <p>Voir <a href="https://vincentcharlebois.net">vincentcharlebois.net</a> pour les travaux issus de la recherche-création et le portfolio sélectionné pour les projets techniques actuels.</p>
+        <p>Consultez <a href="https://vincentcharlebois.net">vincentcharlebois.net</a> pour les travaux issus de la recherche-création et le portfolio sélectionné pour les projets techniques actuels.</p>
         <div class="back-link">
           <a href="/fr">Retour à l'accueil</a>
         </div>
