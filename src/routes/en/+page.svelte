@@ -17,7 +17,7 @@
 	let nameText = '';
 	let nameIndex = 0;
 
-	const firstRole = 'software developer';
+	const firstRole = 'a software developer';
 	const roles = [
 		firstRole,
 		'a research-to-product translator',
