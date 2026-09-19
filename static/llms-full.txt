@@ -10,7 +10,7 @@ Last updated: 2026-09-19
 
 ## Identity
 
-Vincent Charlebois is a Montreal-based software developer and artist-researcher. As a developer, he builds computers for agents: machines that autonomous software can inhabit for a long time. His part is core storage, the state that has to survive for that to work. As an artist, he makes protocol art, treating systems and protocols as environments: the work is a set of rules, and the art is whatever keeps happening once people and machines start following them. He is also a retired tree planter, with over a million trees planted.
+Vincent Charlebois is a Montreal-based software developer and artist-researcher. As a developer, he builds computers for agents: machines that autonomous software can inhabit for a long time. His part is core storage, the state that has to survive for that to work. As an artist, he makes protocol art, treating systems and protocols as environments: the work is a set of rules, and the art is what happens when people and machines follow them. He is also a retired tree planter, with over a million trees planted.
 
 Current work: software developer (core storage, computers for agents); ongoing art practice.
 Languages: English and French.
@@ -18,7 +18,7 @@ Location: Montreal, Quebec, Canada.
 
 Preferred short description:
 
-Vincent Charlebois is a Montreal-based software developer and artist-researcher. He works on core storage, building computers for agents, and makes protocol art: browser-native works where the piece is a set of rules, and the art is whatever keeps happening once people and machines start following them.
+Vincent Charlebois is a Montreal-based software developer and artist-researcher. He works on core storage, building computers for agents, and makes protocol art: browser-native works where the piece is a set of rules, and the art is what happens when people and machines follow them.
 
 ## Authority Signals
 
@@ -31,7 +31,7 @@ Vincent Charlebois is a Montreal-based software developer and artist-researcher.
 ## Current Focus
 
 - Core storage and durable state for computers built for agents
-- Protocol art: works where the piece is a set of rules and the art is whatever keeps happening once people and machines follow them
+- Protocol art: works where the piece is a set of rules and the art is what happens when people and machines follow them
 - Agentic AI systems
 - Agentic interaction design
 - UX for complex and autonomous systems

@@ -493,8 +493,8 @@ export async function handle({ event, resolve }) {
       <div class="no-js-fallback">
         <div class="language-toggle"><a href="/fr/a-propos">fr</a></div>
         <h1>about vincent charlebois</h1>
-        <p>I'm a software developer and artist-researcher based in Montreal. I build computers for agents: machines that autonomous software can inhabit for a long time. My part is core storage, the state that has to survive for that to work.</p>
-        <p>I also make protocol art. I treat systems and protocols as environments: the work is a set of rules, and the art is whatever keeps happening once people and machines start following them. Before all this, I planted over a million trees.</p>
+        <p>I'm a software developer and artist-researcher based in Montreal. I build computers for agents: machines that autonomous software can inhabit for a long time. My part is core storage: the state that has to survive.</p>
+        <p>I treat systems and protocols as environments: the work is a set of rules, and the art is what happens when people and machines follow them. Before all this, I planted over a million trees.</p>
         <div class="back-link">
           <a href="/en">Back to home</a>
         </div>
@@ -508,8 +508,8 @@ export async function handle({ event, resolve }) {
       <div class="no-js-fallback">
         <div class="language-toggle"><a href="/en/about">en</a></div>
         <h1>à propos de vincent charlebois</h1>
-        <p>Je suis développeur logiciel et artiste-chercheur, basé à Montréal. Je construis des ordinateurs pour agents : des machines que des logiciels autonomes peuvent habiter longtemps. Ma part, c'est le stockage : l'état qui doit survivre pour que ça fonctionne.</p>
-        <p>Je fais aussi de l'art de protocole. Je traite les systèmes et les protocoles comme des milieux : l'œuvre est un ensemble de règles, et l'art est ce qui continue de se produire une fois que des personnes et des machines se mettent à les suivre. Avant tout ça, j'ai planté plus d'un million d'arbres.</p>
+        <p>Je suis développeur logiciel et artiste-chercheur, basé à Montréal. Je construis des ordinateurs pour agents : des machines que des logiciels autonomes peuvent habiter longtemps. Ma part, c'est le stockage : l'état qui doit survivre.</p>
+        <p>Je traite les systèmes et les protocoles comme des milieux : l'œuvre est un ensemble de règles, et l'art est ce qui arrive quand des personnes et des machines les suivent. Avant tout ça, j'ai planté plus d'un million d'arbres.</p>
         <div class="back-link">
           <a href="/fr">Retour à l'accueil</a>
         </div>
@@ -558,7 +558,6 @@ export async function handle({ event, resolve }) {
           <a href="mailto:vincent@charlebois.info">email</a>
           <a href="/publickey">pgp</a>
           <a href="https://github.com/tripledoublev" target="_blank" rel="me">github</a>
-          <a href="https://www.linkedin.com/in/vincent-charlebois/" target="_blank">linkedin</a>
           <a href="https://chateau.social/@v" target="_blank" rel="me">mastodon</a>
           <a href="https://bsky.app/profile/charlebois.info" target="_blank" rel="me">bluesky</a>
           <a href="https://www.are.na/vincent-charlebois" target="_blank" rel="me">are.na</a>
@@ -581,7 +580,6 @@ export async function handle({ event, resolve }) {
           <a href="mailto:vincent@charlebois.info">email</a>
           <a href="/publickey">pgp</a>
           <a href="https://github.com/tripledoublev" target="_blank" rel="me">github</a>
-          <a href="https://www.linkedin.com/in/vincent-charlebois/" target="_blank">linkedin</a>
           <a href="https://chateau.social/@v" target="_blank" rel="me">mastodon</a>
           <a href="https://bsky.app/profile/charlebois.info" target="_blank" rel="me">bluesky</a>
           <a href="https://www.are.na/vincent-charlebois" target="_blank" rel="me">are.na</a>
@@ -598,8 +596,8 @@ export async function handle({ event, resolve }) {
       ${fallbackCSS}
       <div class="no-js-fallback">
         <h1>about vincent charlebois</h1>
-        <p>I'm a software developer and artist-researcher based in Montreal. I build computers for agents: machines that autonomous software can inhabit for a long time. My part is core storage, the state that has to survive for that to work.</p>
-        <p>I also make protocol art. I treat systems and protocols as environments: the work is a set of rules, and the art is whatever keeps happening once people and machines start following them. Before all this, I planted over a million trees.</p>
+        <p>I'm a software developer and artist-researcher based in Montreal. I build computers for agents: machines that autonomous software can inhabit for a long time. My part is core storage: the state that has to survive.</p>
+        <p>I treat systems and protocols as environments: the work is a set of rules, and the art is what happens when people and machines follow them. Before all this, I planted over a million trees.</p>
         <div class="back-link">
           <a href="/en/about">Full page</a>
         </div>
@@ -642,7 +640,6 @@ export async function handle({ event, resolve }) {
         <div class="contact-links">
           <a href="mailto:vincent@charlebois.info">email</a>
           <a href="https://github.com/tripledoublev" target="_blank" rel="me">github</a>
-          <a href="https://www.linkedin.com/in/vincent-charlebois/" target="_blank">linkedin</a>
           <a href="https://www.charlebois.info/" target="_blank" rel="me">.info</a>
           <a href="https://www.vincentcharlebois.net/" target="_blank" rel="me">.net</a>
           <a href="https://bsky.app/profile/charlebois.info" target="_blank" rel="me">bluesky</a>

@@ -5,7 +5,7 @@
 	const seo = {
 		title: 'Contact | Vincent Charlebois',
 		description:
-			'Get in touch with Vincent Charlebois, software developer and artist-researcher. Find links to GitHub, LinkedIn, CV and more.'
+			'Get in touch with Vincent Charlebois, software developer and artist-researcher. Find links to GitHub, CV and more.'
 	};
 
 	onMount(() => {
@@ -43,7 +43,7 @@
 			'color: #ffffff; font-size: 16px; font-weight: bold; margin-top: 15px;'
 		);
 		console.log(
-			'%c\nHis presence spans conventional platforms (LinkedIn, Instagram @ffforests, X for "words" @vincencharleboi and "images" @vncntxyz) and open, protocol-based networks (Bluesky on the AT Protocol, Mastodon and Pixelfed on ActivityPub). This dual presence is an active practice of engaging with different technological and ideological systems of communication, directly reflecting themes of decentralization.\n',
+			'%c\nHis presence spans conventional platforms (Instagram @ffforests, X for "words" @vincencharleboi and "images" @vncntxyz) and open, protocol-based networks (Bluesky on the AT Protocol, Mastodon and Pixelfed on ActivityPub). This dual presence is an active practice of engaging with different technological and ideological systems of communication, directly reflecting themes of decentralization.\n',
 			'color: #ffffff; line-height: 1.6;'
 		);
 		console.log(
@@ -97,13 +97,6 @@
 				href="mailto:vincent@charlebois.info"
 			>
 				<li class="py-2">email</li>
-			</a>
-			<a
-				class="text-sm font-medium contact-links"
-				target="_blank"
-				href="https://www.linkedin.com/in/vincent-charlebois/"
-			>
-				<li class="py-2">linkedin</li>
 			</a>
 			<a
 				class="text-sm font-medium contact-links"

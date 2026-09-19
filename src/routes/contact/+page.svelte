@@ -41,13 +41,6 @@
 			<a
 				class=" text-sm font-medium contact-links"
 				target="_blank"
-				href="https://www.linkedin.com/in/vincent-charlebois/"
-			>
-				<li class="py-2">linkedin</li>
-			</a>
-			<a
-				class=" text-sm font-medium contact-links"
-				target="_blank"
 				rel="me"
 				href="https://chateau.social/@v"
 			>
@@ -97,13 +90,6 @@
 				href="https://www.vincentcharlebois.net/"
 			>
 				<li class="py-2">portfolio</li>
-			</a>
-			<a
-				class=" text-sm font-medium contact-links"
-				target="_blank"
-				href="https://www.farcaster.xyz/xxc"
-			>
-				<li class="py-2">farcaster</li>
 			</a>
 			<a
 				class=" text-sm font-medium contact-links"
