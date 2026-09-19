@@ -20,14 +20,13 @@
 	const firstRole = 'a software developer';
 	const roles = [
 		firstRole,
-		'a research-to-product translator',
-		'a builder who ships',
-		'a distributed systems designer',
-		'a product-minded technologist',
-		'a systems thinker',
-		'a venture formation collaborator',
-		'a technical co-founder',
-		'an artist-researcher'
+		'an artist-researcher',
+		'a builder of computers for agents',
+		'a core storage developer',
+		'a protocol artist',
+		'a retired tree planter',
+		'an internet explorateur',
+		'a systems thinker'
 	];
 
 	function roleParts(text) {
@@ -62,7 +61,7 @@
 			'color: #ffffff; font-size: 18px; font-weight: bold; text-transform: uppercase; letter-spacing: 2px;'
 		);
 		console.log(
-			'%cTechnical Overview: Research → Product & AI Systems Architecture',
+			'%cOverview: Ecologies, Technologies & Computers for Agents',
 			'color: #ffffff; font-size: 14px; font-style: italic; margin-bottom: 10px;'
 		);
 		console.log(
@@ -94,7 +93,7 @@
 			'color: #ffffff; font-size: 16px; font-weight: bold; margin-top: 15px;'
 		);
 		console.log(
-			"%c\nSince 2023, Vincent Charlebois's practice has increasingly connected artistic research with production software work. His current focus is independent AI systems architecture, distributed infrastructure, and product-minded technical execution. This work carries forward long-running interests in decentralization, shared knowledge, and public-interest technology without treating any single organization as the center of the practice.\n\nWithin this frame, Charlebois works across agentic AI systems, protocol interfaces, and browser-native artworks. The throughline is making complex systems legible and useful while keeping their social and aesthetic consequences visible.\n",
+			"%c\nSince 2023, Vincent Charlebois's practice has increasingly connected artistic research with production software work. His current focus is core storage for computers built for agents: the state that lets long-running autonomous software stop, resume, and remember. This work carries forward long-running interests in decentralization, shared knowledge, and public-interest technology without treating any single organization as the center of the practice.\n\nWithin this frame, Charlebois works across agentic AI systems, core storage, and protocol art made for the browser. The throughline is making complex systems legible and useful while keeping their social and aesthetic consequences visible.\n",
 			'color: #ffffff; line-height: 1.6;'
 		);
 		console.log(

@@ -1,9 +1,9 @@
 import { buildBreadcrumbSchema } from '$lib/seo.js';
 
 export function load({ url }) {
-	const title = 'À propos Vincent Charlebois';
+	const title = 'À propos de Vincent Charlebois';
 	const description =
-		'À propos de Vincent Charlebois - Artiste, technologue créatif et architecte de systèmes IA.';
+		"À propos de Vincent Charlebois : développeur logiciel qui construit des ordinateurs pour agents, artiste de protocoles, planteur d'arbres à la retraite.";
 
 	return {
 		seo: {

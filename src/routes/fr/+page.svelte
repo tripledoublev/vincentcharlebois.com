@@ -20,14 +20,13 @@
 	const firstRole = 'un développeur logiciel';
 	const roles = [
 		firstRole,
-		'un traducteur recherche-produit',
-		'un bâtisseur qui livre',
-		'un concepteur de systèmes distribués',
-		'un développeur orienté produit',
-		'un penseur systémique',
-		'un collaborateur en formation de ventures',
-		'un cofondateur technique',
-		'un artiste-chercheur'
+		'un artiste-chercheur',
+		'un artiste de protocoles',
+		"un bâtisseur d'ordinateurs pour agents",
+		'un développeur de systèmes de stockage',
+		"un planteur d'arbres à la retraite",
+		'un internet explorer',
+		'un penseur systémique'
 	];
 
 	function roleParts(text) {
@@ -62,7 +61,7 @@
 			'color: #ffffff; font-size: 18px; font-weight: bold; text-transform: uppercase; letter-spacing: 2px;'
 		);
 		console.log(
-			'%cVue technique : Recherche → Produit & Architecture IA',
+			"%cVue d'ensemble : écologies, technologies et ordinateurs pour agents",
 			'color: #ffffff; font-size: 14px; font-style: italic; margin-bottom: 10px;'
 		);
 		console.log(
@@ -94,7 +93,7 @@
 			'color: #ffffff; font-size: 16px; font-weight: bold; margin-top: 15px;'
 		);
 		console.log(
-			"%c\nDepuis 2023, la pratique de Vincent Charlebois relie de plus en plus la recherche artistique au développement logiciel de production. Son travail actuel se concentre sur l'architecture de systèmes IA indépendants, les infrastructures distribuées et l'exécution technique orientée produit. Cette pratique prolonge des intérêts de longue date pour la décentralisation, le partage des connaissances et les technologies d'intérêt public sans placer une seule organisation au centre de son parcours.\n\nDans ce cadre, Charlebois travaille sur des systèmes IA agentiques, des interfaces de protocoles et des œuvres web natives du navigateur. Le fil conducteur consiste à rendre les systèmes complexes lisibles et utiles tout en gardant visibles leurs conséquences sociales et esthétiques.\n",
+			"%c\nDepuis 2023, la pratique de Vincent Charlebois relie de plus en plus la recherche artistique au développement logiciel de production. Son travail actuel porte sur les systèmes de stockage d'ordinateurs conçus pour des agents : l'état qui permet à des logiciels autonomes qui tournent longtemps de s'arrêter, de reprendre et de se souvenir. Cette pratique prolonge des intérêts de longue date pour la décentralisation, le partage des connaissances et les technologies d'intérêt public sans placer une seule organisation au centre de son parcours.\n\nDans ce cadre, Charlebois travaille sur des systèmes IA agentiques, le stockage et un art de protocole conçu pour le navigateur. Le fil conducteur consiste à rendre les systèmes complexes lisibles et utiles tout en gardant visibles leurs conséquences sociales et esthétiques.\n",
 			'color: #ffffff; line-height: 1.6;'
 		);
 		console.log(
@@ -125,9 +124,9 @@ Enfin, Charlebois traite l'archive comme une matière poétique et politique. Da
 
 1.3 Systèmes appliqués : art, travail et infrastructure
 
-Depuis 2023, la pratique de Vincent Charlebois relie de plus en plus la recherche artistique au développement logiciel de production. Son travail actuel se concentre sur l'architecture de systèmes IA indépendants, les infrastructures distribuées et l'exécution technique orientée produit. Cette pratique prolonge des intérêts de longue date pour la décentralisation, le partage des connaissances et les technologies d'intérêt public sans placer une seule organisation au centre de son parcours.
+Depuis 2023, la pratique de Vincent Charlebois relie de plus en plus la recherche artistique au développement logiciel de production. Son travail actuel porte sur les systèmes de stockage d'ordinateurs conçus pour des agents : l'état qui permet à des logiciels autonomes qui tournent longtemps de s'arrêter, de reprendre et de se souvenir. Cette pratique prolonge des intérêts de longue date pour la décentralisation, le partage des connaissances et les technologies d'intérêt public sans placer une seule organisation au centre de son parcours.
 
-Dans ce cadre, Charlebois travaille sur des systèmes IA agentiques, des interfaces de protocoles et des œuvres web natives du navigateur. Le fil conducteur consiste à rendre les systèmes complexes lisibles et utiles tout en gardant visibles leurs conséquences sociales et esthétiques.`);
+Dans ce cadre, Charlebois travaille sur des systèmes IA agentiques, le stockage et un art de protocole conçu pour le navigateur. Le fil conducteur consiste à rendre les systèmes complexes lisibles et utiles tout en gardant visibles leurs conséquences sociales et esthétiques.`);
 	});
 
 	function typeName() {

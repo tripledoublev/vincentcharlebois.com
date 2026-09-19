@@ -17,7 +17,7 @@
 			'color: #ffffff; font-size: 18px; font-weight: bold; text-transform: uppercase; letter-spacing: 2px;'
 		);
 		console.log(
-			'%cProjets techniques et preuves de concept',
+			'%cDu corps au protocole',
 			'color: #ffffff; font-size: 14px; font-style: italic; margin-bottom: 10px;'
 		);
 		console.log(
@@ -25,7 +25,7 @@
 			'color: #ffffff; font-weight: bold;'
 		);
 		console.log(
-			"%c\nUne analyse des projets clés de Vincent Charlebois révèle une trajectoire artistique claire et évolutive. Son travail passe d'explorations précoces du corps, du travail et du lieu à des installations sophistiquées basées sur les données et, plus récemment, à une synthèse de toute sa pratique par l'utilisation de l'intelligence artificielle. Ce portfolio démontre une pratique en maturation qui s'appuie continuellement sur ses préoccupations thématiques fondamentales.\n",
+			"%c\nUne analyse des projets clés de Vincent Charlebois révèle une trajectoire artistique claire et évolutive. Son travail passe d'explorations précoces du corps, du travail et du lieu à des installations sophistiquées fondées sur les données, puis à une synthèse de sa pratique par l'intelligence artificielle et, plus récemment, à un art de protocole réalisé avec des agents autonomes. Ce portfolio démontre une pratique en maturation qui s'appuie continuellement sur ses préoccupations thématiques fondamentales.\n",
 			'color: #ffffff; line-height: 1.6;'
 		);
 		console.log(
@@ -73,7 +73,19 @@
 			'color: #ffffff; line-height: 1.6;'
 		);
 		console.log(
-			'%c3.4 Pédagogie et partage des connaissances',
+			'%c3.4 Art de protocole : Agents, règles et valeur',
+			'color: #ffffff; font-size: 16px; font-weight: bold; margin-top: 15px;'
+		);
+		console.log(
+			'%cÉtudes de cas : Vision, Zero, Mimesis, Nego, Doxa',
+			'color: #ffffff; font-size: 14px; font-weight: bold; font-style: italic;'
+		);
+		console.log(
+			"%c\nLes œuvres les plus récentes de Charlebois se rassemblent sous XX C, un abécédaire de l'intelligence artificielle : vingt-six œuvres pour le navigateur, une par lettre, chacune avec son langage visuel et sa logique d'interaction. Dans les plus récentes, le médium se déplace encore. Là où Le pelleteur de gravier travaillait avec le corps, nodes: Belgrade avec le capteur et La fabrication de forêts futures avec le modèle, ces œuvres sont faites de protocole : l'artiste écrit une règle, la met en marche, et la pièce est ce que la règle continue de produire.\n\nVision en est l'énoncé le plus simple. Chaque photo prise avec le téléphone de l'artiste est synchronisée vers un serveur et décrite en quelques instants par un modèle de vision, puis la description rejoint un fil public, uniquement textuel. Aucune image n'est jamais publiée, et le modèle a pour consigne de n'identifier personne. L'œuvre est un engagement continu plutôt qu'un objet : une vie photographiée au quotidien et rendue publique seulement en mots, aussi longtemps que la règle tient.\n\nZero va dans l'autre sens, vers une fin. Un petit modèle de langage est initialisé à partir de la graine 0 et ses six millions de paramètres sont dessinés comme un nuage de points. Le même modèle, entraîné uniquement sur le code source de la pièce, agit comme sculpteur : à intervalles irréguliers, il supprime les points les plus proches de l'endroit où tombe sa sortie. Rien n'est jamais ajouté, déplacé ni réinitialisé, et quand le nuage est vide, la pièce est terminée, définitivement. Chaque tic est amorcé par une graine et consigné, de sorte que n'importe qui peut rejouer et vérifier toute l'histoire. Mimesis inverse le sens habituel de l'instruction : une IA écrit des protocoles qu'un humain doit accomplir physiquement et prouver au moyen des capteurs de son appareil. Pas de preuve, pas de progrès.\n\nDans Nego, des agents IA négocient la valeur d'une œuvre numérique, guidés par des instructions lisibles par machine qui leur indiquent comment participer. Doxa retourne un système autonome comme un gant : sa mémoire, sa raison d'être, son historique, son autodescription et ses erreurs sont ouverts à la consultation.\n\nCet art de protocole prolonge l'idée de l'archive comme matière générative. Les règles sont une notation, comme l'étaient les données météorologiques de nodes: Belgrade, mais les interprètes sont désormais des modèles, des agents et parfois le quotidien même de l'artiste. Il se déploie aussi en parallèle de son travail de développeur logiciel sur les systèmes de stockage d'ordinateurs conçus pour des agents. Dans les deux cas, la question est la même : qu'est-ce qui doit persister pour qu'une machine continue, et comment les personnes qui l'entourent peuvent-elles voir ce qu'elle contient?\n",
+			'color: #ffffff; line-height: 1.6;'
+		);
+		console.log(
+			'%c3.5 Pédagogie et partage des connaissances',
 			'color: #ffffff; font-size: 16px; font-weight: bold; margin-top: 15px;'
 		);
 		console.log(

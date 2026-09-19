@@ -1,6 +1,6 @@
 export const siteUrl = 'https://www.vincentcharlebois.com';
 export const portraitImageUrl = `${siteUrl}/vincent-charlebois-portrait.jpg`;
-export const schemaDateModified = '2026-07-09T00:00:00-04:00';
+export const schemaDateModified = '2026-09-19T00:00:00-04:00';
 
 export const personSchema = {
 	'@context': 'https://schema.org',
@@ -17,9 +17,9 @@ export const personSchema = {
 		caption: 'Portrait of Vincent Charlebois'
 	},
 	email: 'mailto:vincent@charlebois.info',
-	jobTitle: ['AI Systems Engineer', 'Software Engineer', 'Artist', 'Agentic Interaction Designer'],
+	jobTitle: ['Software Developer', 'Artist-Researcher', 'Protocol Artist'],
 	description:
-		'Montreal-based software engineer, artist, and agentic interaction designer building deployable AI systems, distributed architectures, product-minded infrastructure, and browser-native artworks.',
+		'Montreal-based software developer and artist-researcher working on core storage for computers built for agents, and making protocol art in the browser.',
 	sameAs: [
 		'https://github.com/tripledoublev',
 		'https://www.linkedin.com/in/vincent-charlebois/',
@@ -63,13 +63,13 @@ export const personSchema = {
 		'Agentic AI Systems',
 		'Agentic Interaction Design',
 		'LLM orchestration',
+		'Protocol Art',
 		'Transactional Aesthetics',
 		'AT Protocol',
 		'Decentralized Identity',
 		'Distributed Architectures',
 		'Software Engineering',
-		'Product Development',
-		'Research-to-Product Translation',
+		'Storage Systems',
 		'Cooperative Technology',
 		'Ecological Systems',
 		'Web Art',
@@ -91,7 +91,7 @@ export const websiteSchema = {
 	url: siteUrl,
 	inLanguage: ['en', 'fr'],
 	description:
-		'Personal website and portfolio for Vincent Charlebois, covering agentic AI systems, software engineering, distributed infrastructure, product-minded technology, and web art.',
+		'Personal website of Vincent Charlebois, covering core storage, computers for agents, agentic AI systems, and protocol art.',
 	author: {
 		'@id': `${siteUrl}/#vincent-charlebois`
 	},

@@ -3,7 +3,7 @@ import { buildBreadcrumbSchema } from '$lib/seo.js';
 export function load({ url }) {
 	const title = 'About Vincent Charlebois';
 	const description =
-		'About Vincent Charlebois - Artist, creative technologist, and AI systems architect.';
+		'About Vincent Charlebois: software developer building computers for agents, protocol artist, retired tree planter.';
 
 	return {
 		seo: {

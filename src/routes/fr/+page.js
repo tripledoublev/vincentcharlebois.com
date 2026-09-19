@@ -3,7 +3,7 @@ import { personSchema } from '$lib/seo.js';
 export function load({ url }) {
 	const title = 'Vincent Charlebois — Écologies, technologies;';
 	const description =
-		'Infrastructures distribuées, interfaces de protocole et systèmes de gouvernance à travers une pratique collaborative';
+		'Développeur logiciel et artiste-chercheur à Montréal. Systèmes de stockage, ordinateurs pour agents et art de protocole dans le navigateur.';
 
 	return {
 		seo: {

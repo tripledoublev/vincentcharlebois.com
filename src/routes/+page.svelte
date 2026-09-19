@@ -19,7 +19,7 @@
 
 <SEO
 	title="Vincent Charlebois"
-	description="Vincent Charlebois; intermedia artist, software developer, and AI systems architect."
+	description="Vincent Charlebois; software developer, artist-researcher, protocol artist."
 	currentUrl="https://www.vincentcharlebois.com/"
 	schema={personSchema}
 />

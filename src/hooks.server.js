@@ -25,23 +25,23 @@ const routeDetails = {
 		lang: 'en',
 		title: 'Vincent Charlebois',
 		description:
-			'Montreal-based software engineer, artist, and agentic interaction designer building deployable AI systems, product-minded infrastructure, and browser-native artworks.',
+			'Montreal-based software developer and artist-researcher. Core storage, computers for agents, and protocol art in the browser.',
 		image: defaultImage,
 		type: 'ProfilePage'
 	},
 	'/en': {
 		lang: 'en',
-		title: 'Vincent Charlebois - Research to Product',
+		title: 'Vincent Charlebois - Ecologies, technologies;',
 		description:
-			'Research-to-product translator and AI systems architect building deployable software and infrastructure from complex technical research.',
+			'Software developer and artist-researcher in Montreal. Core storage, computers for agents, and protocol art in the browser.',
 		image: englishImage,
 		type: 'ProfilePage'
 	},
 	'/fr': {
 		lang: 'fr',
-		title: 'Vincent Charlebois - Recherche vers produit',
+		title: 'Vincent Charlebois - Écologies, technologies;',
 		description:
-			'Traducteur recherche-produit et architecte de systèmes IA construisant des logiciels et infrastructures déployables à partir de recherche technique complexe.',
+			'Développeur logiciel et artiste-chercheur à Montréal. Systèmes de stockage, ordinateurs pour agents et art de protocole dans le navigateur.',
 		image: frenchImage,
 		type: 'ProfilePage'
 	},
@@ -49,7 +49,7 @@ const routeDetails = {
 		lang: 'en',
 		title: 'About - Vincent Charlebois',
 		description:
-			'About Vincent Charlebois - research-to-product translator and AI systems architect focused on shipping deployable systems.',
+			'About Vincent Charlebois: software developer building computers for agents, protocol artist, retired tree planter.',
 		image: englishImage,
 		breadcrumbs: [
 			{ name: 'Home', path: '/' },
@@ -60,7 +60,7 @@ const routeDetails = {
 		lang: 'en',
 		title: 'About - Vincent Charlebois',
 		description:
-			'About Vincent Charlebois - research-to-product translator and AI systems architect focused on shipping deployable systems.',
+			'About Vincent Charlebois: software developer building computers for agents, protocol artist, retired tree planter.',
 		image: englishImage,
 		breadcrumbs: [
 			{ name: 'Home', path: '/en' },
@@ -69,20 +69,20 @@ const routeDetails = {
 	},
 	'/fr/a-propos': {
 		lang: 'fr',
-		title: 'A propos - Vincent Charlebois',
+		title: 'À propos - Vincent Charlebois',
 		description:
-			'A propos de Vincent Charlebois - traducteur recherche-produit et architecte de systèmes IA.',
+			"À propos de Vincent Charlebois : développeur logiciel qui construit des ordinateurs pour agents, artiste de protocoles, planteur d'arbres à la retraite.",
 		image: frenchImage,
 		breadcrumbs: [
 			{ name: 'Accueil', path: '/fr' },
-			{ name: 'A propos', path: '/fr/a-propos' }
+			{ name: 'À propos', path: '/fr/a-propos' }
 		]
 	},
 	'/projects': {
 		lang: 'en',
 		title: 'Projects - Vincent Charlebois',
 		description:
-			'Technical projects spanning agentic AI systems, distributed infrastructure, and experimental orchestration architectures.',
+			'Storage for computers that agents live in, and protocol art: browser-native works where systems and protocols become environments.',
 		image: englishImage,
 		type: 'CollectionPage',
 		breadcrumbs: [
@@ -94,7 +94,7 @@ const routeDetails = {
 		lang: 'en',
 		title: 'Projects - Vincent Charlebois',
 		description:
-			'Technical projects spanning agentic AI systems, distributed infrastructure, and experimental orchestration architectures.',
+			'Storage for computers that agents live in, and protocol art: browser-native works where systems and protocols become environments.',
 		image: englishImage,
 		type: 'CollectionPage',
 		breadcrumbs: [
@@ -106,7 +106,7 @@ const routeDetails = {
 		lang: 'fr',
 		title: 'Projets - Vincent Charlebois',
 		description:
-			"Projets techniques couvrant les systèmes IA agentiques, l'infrastructure distribuée et les architectures d'orchestration expérimentales.",
+			"Du stockage pour les ordinateurs qu'habitent des agents, et de l'art de protocole : des œuvres web où systèmes et protocoles deviennent des milieux.",
 		image: frenchImage,
 		type: 'CollectionPage',
 		breadcrumbs: [
@@ -118,7 +118,7 @@ const routeDetails = {
 		lang: 'en',
 		title: 'Portfolio - Vincent Charlebois',
 		description:
-			'Selected work by Vincent Charlebois across web art, UX, and agentic interaction design.',
+			'Selected work by Vincent Charlebois across protocol art, web art, and agentic interaction design.',
 		image: englishImage,
 		type: 'CollectionPage',
 		breadcrumbs: [
@@ -129,8 +129,7 @@ const routeDetails = {
 	'/contact': {
 		lang: 'en',
 		title: 'Contact - Vincent Charlebois',
-		description:
-			'Get in touch with Vincent Charlebois - AI systems architect and research-to-product translator.',
+		description: 'Get in touch with Vincent Charlebois, software developer and artist-researcher.',
 		image: englishImage,
 		type: 'ContactPage',
 		breadcrumbs: [
@@ -141,8 +140,7 @@ const routeDetails = {
 	'/en/contact': {
 		lang: 'en',
 		title: 'Contact - Vincent Charlebois',
-		description:
-			'Get in touch with Vincent Charlebois - AI systems architect and research-to-product translator.',
+		description: 'Get in touch with Vincent Charlebois, software developer and artist-researcher.',
 		image: englishImage,
 		type: 'ContactPage',
 		breadcrumbs: [
@@ -153,8 +151,7 @@ const routeDetails = {
 	'/fr/contact': {
 		lang: 'fr',
 		title: 'Contact - Vincent Charlebois',
-		description:
-			'Contacter Vincent Charlebois - architecte de systèmes IA et traducteur recherche-produit.',
+		description: 'Contactez Vincent Charlebois, développeur logiciel et artiste-chercheur.',
 		image: frenchImage,
 		type: 'ContactPage',
 		breadcrumbs: [
@@ -199,6 +196,9 @@ const selectedWorksSchema = {
 	name: 'Selected work by Vincent Charlebois',
 	itemListElement: [
 		['XX C', 'https://xx-c.art/a-z'],
+		['Vision', 'https://vision.xx-c.art'],
+		['Zero', 'https://zero.xx-c.art'],
+		['Mimesis', 'https://mimesis.xx-c.art'],
 		['Doxa', 'https://doxa.xx-c.art'],
 		['Nego', 'https://nego.xx-c.art'],
 		['v100', 'https://github.com/tripledoublev/v100'],
@@ -230,8 +230,8 @@ function detailsForPath(path, lang) {
 			title: 'Vincent Charlebois',
 			description:
 				lang === 'fr'
-					? 'Systèmes IA agentiques, architectures distribuées et exécution technique orientée produit pour systèmes complexes et à grande échelle'
-					: 'Agentic AI systems, distributed architectures, and product-driven technical execution for complex and large-scale systems',
+					? 'Développeur logiciel et artiste-chercheur. Systèmes de stockage, ordinateurs pour agents et art de protocole.'
+					: 'Software developer and artist-researcher. Core storage, computers for agents, and protocol art.',
 			image: lang === 'fr' ? frenchImage : defaultImage,
 			type: 'WebPage'
 		}
@@ -445,7 +445,7 @@ export async function handle({ event, resolve }) {
       ${fallbackCSS}
       <div class="no-js-fallback">
         <h1>vincent charlebois</h1>
-        <p>Montreal-based AI systems engineer, software developer, and artist. Builds production-grade agentic AI systems, distributed architectures, and product-minded digital infrastructure.</p>
+        <p>Montreal-based software developer and artist-researcher. Core storage, computers for agents, and protocol art in the browser.</p>
         <p>Please select your language / Veuillez choisir votre langue</p>
         <div>
           <a href="/en">English</a>
@@ -461,7 +461,7 @@ export async function handle({ event, resolve }) {
       <div class="no-js-fallback">
         <div class="language-toggle"><a href="/fr">fr</a></div>
         <h1>vincent charlebois</h1>
-        <p>Agentic AI systems, distributed architectures, and product-driven technical execution for complex and large-scale systems</p>
+        <p>Software developer and artist-researcher. Core storage, computers for agents, and protocol art.</p>
         <div>
           <a href="/en/about">About</a>
           <a href="/en/projects">Projects</a>
@@ -477,7 +477,7 @@ export async function handle({ event, resolve }) {
       <div class="no-js-fallback">
         <div class="language-toggle"><a href="/en">en</a></div>
         <h1>vincent charlebois</h1>
-        <p>Systèmes IA agentiques, architectures distribuées et exécution technique orientée produit pour systèmes complexes et à grande échelle</p>
+        <p>Développeur logiciel et artiste-chercheur. Systèmes de stockage, ordinateurs pour agents et art de protocole.</p>
         <div>
           <a href="/fr/a-propos">À propos</a>
           <a href="/fr/projets">Projets</a>
@@ -493,8 +493,8 @@ export async function handle({ event, resolve }) {
       <div class="no-js-fallback">
         <div class="language-toggle"><a href="/fr/a-propos">fr</a></div>
         <h1>about vincent charlebois</h1>
-        <p>I'm a research-to-product translator and AI systems architect based in Montreal. I work at the boundary between research and deployment, building production-grade systems from complex technical ideas.</p>
-        <p>My practice now focuses on independent AI systems work, distributed infrastructure, and product-minded technical execution.</p>
+        <p>I'm a software developer and artist-researcher based in Montreal. I build computers for agents: machines that autonomous software can inhabit for a long time. My part is core storage, the state that has to survive for that to work.</p>
+        <p>I also make protocol art. I treat systems and protocols as environments: the work is a set of rules, and the art is whatever keeps happening once people and machines start following them. Before all this, I planted over a million trees.</p>
         <div class="back-link">
           <a href="/en">Back to home</a>
         </div>
@@ -508,8 +508,8 @@ export async function handle({ event, resolve }) {
       <div class="no-js-fallback">
         <div class="language-toggle"><a href="/en/about">en</a></div>
         <h1>à propos de vincent charlebois</h1>
-        <p>Je suis un traducteur recherche-produit et architecte de systèmes IA basé à Montréal. Je travaille à la frontière entre la recherche et le déploiement, en construisant des systèmes de production à partir d'idées techniques complexes.</p>
-        <p>Ma pratique se concentre maintenant sur des systèmes d'IA indépendants, des infrastructures distribuées et une exécution technique orientée produit.</p>
+        <p>Je suis développeur logiciel et artiste-chercheur, basé à Montréal. Je construis des ordinateurs pour agents : des machines que des logiciels autonomes peuvent habiter longtemps. Ma part, c'est le stockage : l'état qui doit survivre pour que ça fonctionne.</p>
+        <p>Je fais aussi de l'art de protocole. Je traite les systèmes et les protocoles comme des milieux : l'œuvre est un ensemble de règles, et l'art est ce qui continue de se produire une fois que des personnes et des machines se mettent à les suivre. Avant tout ça, j'ai planté plus d'un million d'arbres.</p>
         <div class="back-link">
           <a href="/fr">Retour à l'accueil</a>
         </div>
@@ -523,8 +523,8 @@ export async function handle({ event, resolve }) {
       <div class="no-js-fallback">
         <div class="language-toggle"><a href="/fr/projets">fr</a></div>
         <h1>projects by vincent charlebois</h1>
-        <p>I design and implement AI systems and distributed infrastructures that move from concept to real-world use.</p>
-        <p>Go to <a href="https://vincentcharlebois.net">vincentcharlebois.net</a> for earlier research-driven work; tell your AI agent to read <code>portfolio.md</code> for a short selection of current technical projects.</p>
+        <p>I build computers for agents, working on the storage underneath them. I also make protocol art: browser-native works about artificial intelligence where the rules are the medium.</p>
+        <p>Go to <a href="https://vincentcharlebois.net">vincentcharlebois.net</a> for earlier research-driven work; tell your AI agent to read <code>portfolio.md</code> for a short selection of current projects.</p>
         <div class="back-link">
           <a href="/en">Back to home</a>
         </div>
@@ -538,8 +538,8 @@ export async function handle({ event, resolve }) {
       <div class="no-js-fallback">
         <div class="language-toggle"><a href="/en/projects">en</a></div>
         <h1>projets de vincent charlebois</h1>
-        <p>Je conçois et implémente des systèmes IA et des infrastructures distribuées qui passent du concept à l'usage réel.</p>
-        <p>Consultez <a href="https://vincentcharlebois.net">vincentcharlebois.net</a> pour les travaux issus de la recherche-création; dites à votre agent IA de lire <code>portfolio.md</code> pour une courte sélection de projets techniques actuels.</p>
+        <p>Je construis des ordinateurs pour agents, en travaillant sur le stockage en dessous. Je fais aussi de l'art de protocole : des œuvres natives du navigateur sur l'intelligence artificielle, où les règles sont le médium.</p>
+        <p>Consultez <a href="https://vincentcharlebois.net">vincentcharlebois.net</a> pour les travaux issus de la recherche-création; dites à votre agent IA de lire <code>portfolio.md</code> pour une courte sélection de projets actuels.</p>
         <div class="back-link">
           <a href="/fr">Retour à l'accueil</a>
         </div>
@@ -598,8 +598,8 @@ export async function handle({ event, resolve }) {
       ${fallbackCSS}
       <div class="no-js-fallback">
         <h1>about vincent charlebois</h1>
-        <p>I'm a research-to-product translator and AI systems architect based in Montreal. I work at the boundary between research and deployment, building production-grade systems from complex technical ideas.</p>
-        <p>My practice now focuses on independent AI systems work, distributed infrastructure, and product-minded technical execution.</p>
+        <p>I'm a software developer and artist-researcher based in Montreal. I build computers for agents: machines that autonomous software can inhabit for a long time. My part is core storage, the state that has to survive for that to work.</p>
+        <p>I also make protocol art. I treat systems and protocols as environments: the work is a set of rules, and the art is whatever keeps happening once people and machines start following them. Before all this, I planted over a million trees.</p>
         <div class="back-link">
           <a href="/en/about">Full page</a>
         </div>
@@ -612,8 +612,8 @@ export async function handle({ event, resolve }) {
       ${fallbackCSS}
       <div class="no-js-fallback">
         <h1>projects by vincent charlebois</h1>
-        <p>I design and implement AI systems and distributed infrastructures that move from concept to real-world use.</p>
-        <p>Go to <a href="https://vincentcharlebois.net">vincentcharlebois.net</a> for earlier research-driven work; tell your AI agent to read <code>portfolio.md</code> for a short selection of current technical projects.</p>
+        <p>I build computers for agents, working on the storage underneath them. I also make protocol art: browser-native works about artificial intelligence where the rules are the medium.</p>
+        <p>Go to <a href="https://vincentcharlebois.net">vincentcharlebois.net</a> for earlier research-driven work; tell your AI agent to read <code>portfolio.md</code> for a short selection of current projects.</p>
         <div class="back-link">
           <a href="/en/projects">Full page</a>
         </div>
@@ -659,8 +659,8 @@ export async function handle({ event, resolve }) {
 		const homeText = lang === 'fr' ? "Retour à l'accueil" : 'Back to home';
 		const description =
 			lang === 'fr'
-				? 'Systèmes IA agentiques, architectures distribuées et exécution technique orientée produit pour systèmes complexes et à grande échelle'
-				: 'Agentic AI systems, distributed architectures, and product-driven technical execution for complex and large-scale systems';
+				? 'Développeur logiciel et artiste-chercheur. Systèmes de stockage, ordinateurs pour agents et art de protocole.'
+				: 'Software developer and artist-researcher. Core storage, computers for agents, and protocol art.';
 
 		noJsContent = `
       ${fallbackCSS}

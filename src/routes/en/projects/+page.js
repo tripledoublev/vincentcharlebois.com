@@ -3,7 +3,7 @@ import { buildBreadcrumbSchema } from '$lib/seo.js';
 export function load({ url }) {
 	const title = 'Projects Vincent Charlebois';
 	const description =
-		"Explore Vincent Charlebois's projects across agentic AI systems, distributed infrastructure, and web art.";
+		'Storage for computers that agents live in, and protocol art: browser-native works where systems and protocols become environments.';
 
 	return {
 		seo: {

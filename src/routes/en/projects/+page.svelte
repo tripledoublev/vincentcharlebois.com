@@ -17,7 +17,7 @@
 			'color: #ffffff; font-size: 18px; font-weight: bold; text-transform: uppercase; letter-spacing: 2px;'
 		);
 		console.log(
-			'%cTechnical Projects & Proofs of Concept',
+			'%cFrom the Body to the Protocol',
 			'color: #ffffff; font-size: 14px; font-style: italic; margin-bottom: 10px;'
 		);
 		console.log(
@@ -25,7 +25,7 @@
 			'color: #ffffff; font-weight: bold;'
 		);
 		console.log(
-			"%c\nAn analysis of Vincent Charlebois's key projects reveals a clear and evolving artistic trajectory. His work moves from early explorations of the body, labor, and place into sophisticated data-driven installations and, most recently, to a synthesis of his entire practice through the use of artificial intelligence. This portfolio demonstrates a maturing practice that continually builds upon its core thematic concerns.\n",
+			"%c\nAn analysis of Vincent Charlebois's key projects reveals a clear and evolving artistic trajectory. His work moves from early explorations of the body, labor, and place through sophisticated data-driven installations and a synthesis of his practice through artificial intelligence, to, most recently, protocol art made with autonomous agents. This portfolio demonstrates a maturing practice that continually builds upon its core thematic concerns.\n",
 			'color: #ffffff; line-height: 1.6;'
 		);
 		console.log(
@@ -73,7 +73,19 @@
 			'color: #ffffff; line-height: 1.6;'
 		);
 		console.log(
-			'%c3.4 Pedagogy and Knowledge Sharing',
+			'%c3.4 Protocol Art: Agents, Rules, and Value',
+			'color: #ffffff; font-size: 16px; font-weight: bold; margin-top: 15px;'
+		);
+		console.log(
+			'%cCase Studies: Vision, Zero, Mimesis, Nego, Doxa',
+			'color: #ffffff; font-size: 14px; font-weight: bold; font-style: italic;'
+		);
+		console.log(
+			"%c\nCharlebois's most recent works gather under XX C, an abecedary of artificial intelligence: twenty-six browser works, one for each letter, each with its own visual language and interaction logic. In the most recent of them the medium shifts again. Where Le pelleteur de gravier worked with the body, nodes: Belgrade with the sensor, and La fabrication de forêts futures with the model, these works are made of protocol: the artist writes a rule, sets it running, and the piece is whatever the rule goes on producing.\n\nVision is the plainest statement of the idea. Every photograph taken on the artist's phone is synced to a server and described by a vision model within moments, and the description joins a public, text-only feed. No image is ever published, and the model is instructed never to identify anyone. The work is a standing commitment rather than an object: a life photographed daily and made public only as words, for as long as the rule holds.\n\nZero runs the other way, toward an ending. A small language model is initialized from seed 0 and its six million parameters are drawn as a cloud of points. The same model, trained only on the piece's own source code, acts as sculptor: at irregular intervals it deletes the points nearest to wherever its output lands. Nothing is ever added, moved, or reset, and when the cloud is empty the piece is over, permanently. Every tick is seeded and logged, so anyone can replay and verify the whole history. Mimesis reverses the usual direction of instruction: an AI writes protocols that a human must physically perform and prove through the sensors of their device. No proof, no progress.\n\nIn Nego, AI agents negotiate the value of a digital artwork, guided by machine-readable instructions that tell an agent how to take part. Doxa turns an autonomous system inside out: its memory, purpose, history, self-description, and errors are laid open to be browsed.\n\nThis protocol art extends the idea of the archive as generative material. The rules are a notation, as the weather data of nodes: Belgrade was, but the performers are now models, agents, and sometimes the artist's own daily life. It also runs parallel to his work as a software developer on core storage for computers built for agents. In both settings the question is the same: what must persist for a machine to go on, and how can the people around it see what it holds?\n",
+			'color: #ffffff; line-height: 1.6;'
+		);
+		console.log(
+			'%c3.5 Pedagogy and Knowledge Sharing',
 			'color: #ffffff; font-size: 16px; font-weight: bold; margin-top: 15px;'
 		);
 		console.log(

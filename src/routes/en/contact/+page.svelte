@@ -5,7 +5,7 @@
 	const seo = {
 		title: 'Contact | Vincent Charlebois',
 		description:
-			'Get in touch with Vincent Charlebois — AI systems architect and research-to-product translator. Find links to GitHub, LinkedIn, CV and more.'
+			'Get in touch with Vincent Charlebois, software developer and artist-researcher. Find links to GitHub, LinkedIn, CV and more.'
 	};
 
 	onMount(() => {
@@ -39,11 +39,11 @@
 			'color: #ffffff; line-height: 1.6;'
 		);
 		console.log(
-			'%c4.2 Social and Professional Networks: A Web2/Web3 Bridge',
+			'%c4.2 Social and Professional Networks: Platforms and Protocols',
 			'color: #ffffff; font-size: 16px; font-weight: bold; margin-top: 15px;'
 		);
 		console.log(
-			'%c\nHis presence spans conventional platforms (LinkedIn, Instagram @ffforests, X for "words" @vincencharleboi and "images" @vncntxyz) and decentralized Web3 networks (Bluesky, Mastodon, Pixelfed, Farcaster). This dual presence is an active practice of engaging with different technological and ideological systems of communication, directly reflecting themes of decentralization.\n',
+			'%c\nHis presence spans conventional platforms (LinkedIn, Instagram @ffforests, X for "words" @vincencharleboi and "images" @vncntxyz) and open, protocol-based networks (Bluesky on the AT Protocol, Mastodon and Pixelfed on ActivityPub). This dual presence is an active practice of engaging with different technological and ideological systems of communication, directly reflecting themes of decentralization.\n',
 			'color: #ffffff; line-height: 1.6;'
 		);
 		console.log(

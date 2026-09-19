@@ -6,7 +6,7 @@
 
 	const title = 'Portfolio — Vincent Charlebois';
 	const description =
-		'Selected work by Vincent Charlebois across web art, UX, and agentic interaction design.';
+		'Selected work by Vincent Charlebois across protocol art, web art, and agentic interaction design.';
 	const portfolioBody = portfolio.replace(/^---[\s\S]*?---\s*/, '');
 	const portfolioHtml = marked.parse(portfolioBody, {
 		breaks: true,

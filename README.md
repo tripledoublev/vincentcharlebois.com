@@ -1,6 +1,6 @@
 # vincent charlebois dot com
 
-A bilingual personal website showcasing distributed infrastructures, protocol interfaces, and governance systems through collaborative practice.
+A bilingual personal website about core storage, computers for agents, and protocol art.
 
 ## Features
 
@@ -58,4 +58,4 @@ The interactive portal feature showcases curated websites from the digital art c
 
 ## About
 
-Vincent Charlebois is a software developer and artist-researcher based in Montreal. He builds distributed infrastructures, protocol interfaces, and governance systems through collaborative practice.
+Vincent Charlebois is a software developer and artist-researcher based in Montreal. He builds computers for agents, working on core storage, and makes protocol art in the browser.
