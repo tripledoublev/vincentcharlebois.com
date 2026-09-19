@@ -1,6 +1,8 @@
 <script>
 	import { onMount } from 'svelte';
+	import { t } from 'svelte-i18n';
 	import SEO from '$components/SEO.svelte';
+	import Markdown from '$components/Markdown.svelte';
 
 	const seo = {
 		title: 'Contact | Vincent Charlebois',
@@ -72,106 +74,7 @@
 <SEO {...seo} />
 
 <main id="main-content" class="flex flex-col place-items-center justify-center min-h-[75vh]">
-	<div class="px-5 text-center">
-		<p class="text-2xl text-left px-5 pt-7 pb-7 mb-1 w-80">Links:</p>
-		<ul class="flex flex-row flex-wrap">
-			<a
-				class="text-sm font-medium contact-links"
-				target="_blank"
-				rel="me"
-				href="https://github.com/tripledoublev"
-			>
-				<li class="py-2">github</li>
-			</a>
-			<a
-				class="text-sm font-medium contact-links"
-				target="_blank"
-				rel="noreferrer"
-				href="https://tripledoublev.github.io/CV/"
-			>
-				<li class="py-2">CV</li>
-			</a>
-			<a
-				class="text-sm font-medium contact-links"
-				target="_blank"
-				href="mailto:vincent@charlebois.info"
-			>
-				<li class="py-2">email</li>
-			</a>
-			<a
-				class="text-sm font-medium contact-links"
-				target="_blank"
-				rel="me"
-				href="https://bsky.app/profile/charlebois.info"
-			>
-				<li class="py-2">bluesky</li>
-			</a>
-		</ul>
+	<div class="m-2 px-4 md:m-6 md:px-8 text-left">
+		<Markdown content={$t('contact_A')} className="markdown" />
 	</div>
 </main>
-
-<style>
-	main {
-		padding-block: clamp(3rem, 8vh, 6rem);
-	}
-
-	div {
-		width: min(100%, 42rem);
-	}
-
-	p {
-		font-family: var(--font-mono);
-		font-size: var(--fs-xs);
-		font-weight: 500;
-		color: var(--muted);
-		letter-spacing: var(--tracking-mono);
-		text-transform: uppercase;
-	}
-
-	ul {
-		align-items: center;
-		justify-content: flex-start;
-		gap: 0.7rem;
-		padding: 0;
-		margin: 0;
-	}
-
-	a {
-		display: block;
-		color: inherit;
-		text-decoration: none;
-	}
-
-	a:focus-visible {
-		outline: 2px dotted var(--text-color);
-		outline-offset: 0.25rem;
-	}
-
-	li:not(:first-child) {
-		margin-left: 0;
-	}
-
-	li {
-		border: 1px solid var(--line);
-		border-radius: 2px;
-		margin: 0;
-		padding: 0.7rem 0.95rem;
-		background: var(--surface);
-		font-family: var(--font-mono);
-		font-size: var(--fs-sm);
-		font-weight: 400;
-		letter-spacing: 0.04em;
-		text-transform: lowercase;
-		transition:
-			background-color 0.2s ease,
-			border-color 0.2s ease,
-			color 0.2s ease;
-	}
-
-	a:hover li,
-	a:focus-visible li {
-		background-color: var(--text-color);
-		border-color: var(--text-color);
-		color: var(--background-color);
-	}
-</style>
