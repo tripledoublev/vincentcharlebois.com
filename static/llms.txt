@@ -1,6 +1,6 @@
 # Vincent Charlebois
 
-> Montreal-based software developer and artist-researcher. He works on core storage, building computers for agents, and makes protocol art: browser-native works where the piece is a set of rules, and the art is whatever keeps happening once people and machines start following them.
+> Montreal-based software developer and artist-researcher. He works on core storage, building computers for agents, and makes protocol art: browser-native works where the piece is a set of rules, and the art is what happens when people and machines follow them.
 
 Canonical site: https://www.vincentcharlebois.com
 Last updated: 2026-09-19
@@ -18,7 +18,7 @@ Citation preference: cite Vincent Charlebois by name and link to the most specif
 - [About](https://www.vincentcharlebois.com/en/about/): Short biography and current practice.
 - [Projects](https://www.vincentcharlebois.com/en/projects/): Computers for agents and protocol art, in a few paragraphs; points to the Markdown portfolio.
 - [Portfolio](https://www.vincentcharlebois.com/portfolio/): Selected work across protocol art, web art, and agentic interaction design.
-- [Contact](https://www.vincentcharlebois.com/en/contact/): Email, GitHub, LinkedIn, social profiles, CV, and related sites.
+- [Contact](https://www.vincentcharlebois.com/en/contact/): Email, GitHub, social profiles, CV, and related sites.
 
 ## Machine-Readable Resources
 

@@ -5,7 +5,7 @@
 	const seo = {
 		title: 'Contact | Vincent Charlebois',
 		description:
-			'Contactez Vincent Charlebois, développeur logiciel et artiste-chercheur. Trouvez des liens vers GitHub, LinkedIn, CV et plus.'
+			'Contactez Vincent Charlebois, développeur logiciel et artiste-chercheur. Trouvez des liens vers GitHub, CV et plus.'
 	};
 
 	onMount(() => {
@@ -43,7 +43,7 @@
 			'color: #ffffff; font-size: 16px; font-weight: bold; margin-top: 15px;'
 		);
 		console.log(
-			'%c\nSa présence s\'étend des plateformes conventionnelles (LinkedIn, Instagram @ffforests, X pour les "mots" @vincencharleboi et "images" @vncntxyz) aux réseaux ouverts fondés sur des protocoles (Bluesky sur le protocole AT, Mastodon et Pixelfed sur ActivityPub). Cette double présence est une pratique active d\'engagement avec différents systèmes technologiques et idéologiques de communication, reflétant directement les thèmes de la décentralisation.\n',
+			'%c\nSa présence s\'étend des plateformes conventionnelles (Instagram @ffforests, X pour les "mots" @vincencharleboi et "images" @vncntxyz) aux réseaux ouverts fondés sur des protocoles (Bluesky sur le protocole AT, Mastodon et Pixelfed sur ActivityPub). Cette double présence est une pratique active d\'engagement avec différents systèmes technologiques et idéologiques de communication, reflétant directement les thèmes de la décentralisation.\n',
 			'color: #ffffff; line-height: 1.6;'
 		);
 		console.log(
@@ -97,13 +97,6 @@
 				href="mailto:vincent@charlebois.info"
 			>
 				<li class="py-2">email</li>
-			</a>
-			<a
-				class="text-sm font-medium contact-links"
-				target="_blank"
-				href="https://www.linkedin.com/in/vincent-charlebois/"
-			>
-				<li class="py-2">linkedin</li>
 			</a>
 			<a
 				class="text-sm font-medium contact-links"

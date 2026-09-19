@@ -39,7 +39,7 @@ skills:
 
 # Vincent Charlebois portfolio
 
-I build computers for agents, working on core storage, and I make protocol art: works where I write a rule, set it running, and the piece is whatever the rule goes on producing.
+I build computers for agents, working on core storage, and I make protocol art: works where I write a rule, set it running, and the piece is what the rule goes on producing.
 
 My work combines:
 
