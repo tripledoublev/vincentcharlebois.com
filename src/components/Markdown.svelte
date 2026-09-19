@@ -108,6 +108,10 @@
 					'<a href="https://vincentcharlebois.net"$1 class="green-link">'
 				);
 				processedHtml = processedHtml.replace(
+					/<a href="(https:\/\/vincent\.charlebois\.info[^"]*)"([^>]*)>/g,
+					'<a href="$1"$2 class="magenta-link">'
+				);
+				processedHtml = processedHtml.replace(
 					/(<code>portfolio\.md<\/code>)/g,
 					`$1 <button type="button" class="copy-link-button" data-copy-url="${escapeAttribute(
 						copyUrl
@@ -164,7 +168,9 @@
 		text-underline-offset: 0.25rem;
 		color: inherit;
 		font-weight: 600;
-		transition: text-decoration-color 0.2s ease;
+		transition:
+			text-decoration-color 0.2s ease,
+			text-decoration-thickness 0.2s ease;
 	}
 	:global(.markdown a:hover) {
 		text-decoration-color: var(--text-color);
@@ -172,6 +178,9 @@
 	}
 	:global(.markdown a.green-link) {
 		text-decoration-color: #00ff00;
+	}
+	:global(.markdown a.magenta-link) {
+		text-decoration-color: #ff00ff;
 	}
 	:global(.markdown em) {
 		font-style: italic;
@@ -187,6 +196,27 @@
 	:global(.markdown p) {
 		margin-bottom: 1.5rem;
 		max-width: 38rem;
+	}
+	:global(.markdown ul) {
+		margin-bottom: 1.5rem;
+		max-width: 38rem;
+		list-style: none;
+		padding: 0;
+	}
+	:global(.markdown li) {
+		position: relative;
+		padding-left: 1.5rem;
+		margin-bottom: 0.75rem;
+	}
+	/* app.css inverts every li on hover for the nav; a text list should not react. */
+	:global(.markdown li:hover) {
+		background-color: transparent;
+		color: inherit;
+	}
+	:global(.markdown li::before) {
+		content: '–';
+		position: absolute;
+		left: 0;
 	}
 	:global(.markdown a:focus-visible) {
 		outline: 2px dotted var(--text-color);

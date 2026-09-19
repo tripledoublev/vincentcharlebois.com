@@ -71,7 +71,7 @@ const routeDetails = {
 		lang: 'fr',
 		title: 'À propos - Vincent Charlebois',
 		description:
-			"À propos de Vincent Charlebois : développeur logiciel qui construit des ordinateurs pour agents, artiste de protocoles, planteur d'arbres à la retraite.",
+			"Vincent Charlebois, développeur logiciel et artiste-chercheur : des ordinateurs pour des agents, de l'art de protocole, et plus d'un million d'arbres plantés.",
 		image: frenchImage,
 		breadcrumbs: [
 			{ name: 'Accueil', path: '/fr' },
@@ -106,7 +106,7 @@ const routeDetails = {
 		lang: 'fr',
 		title: 'Projets - Vincent Charlebois',
 		description:
-			"Du stockage pour les ordinateurs qu'habitent des agents, et de l'art de protocole : des œuvres web où systèmes et protocoles deviennent des milieux.",
+			"Le stockage sous les ordinateurs qu'habitent des agents, et un art de protocole : des œuvres pour le navigateur où systèmes et protocoles deviennent des milieux.",
 		image: frenchImage,
 		type: 'CollectionPage',
 		breadcrumbs: [
@@ -508,8 +508,8 @@ export async function handle({ event, resolve }) {
       <div class="no-js-fallback">
         <div class="language-toggle"><a href="/en/about">en</a></div>
         <h1>à propos de vincent charlebois</h1>
-        <p>Je suis développeur logiciel et artiste-chercheur, basé à Montréal. Je construis des ordinateurs pour agents : des machines que des logiciels autonomes peuvent habiter longtemps. Ma part, c'est le stockage : l'état qui doit survivre.</p>
-        <p>Je traite les systèmes et les protocoles comme des milieux : l'œuvre est un ensemble de règles, et l'art est ce qui arrive quand des personnes et des machines les suivent. Avant tout ça, j'ai planté plus d'un million d'arbres.</p>
+        <p>Je suis développeur logiciel et artiste-chercheur. Je vis à Montréal. Je construis des ordinateurs pour des agents : des machines où un logiciel autonome peut s'installer et travailler longtemps. Je m'occupe du stockage, de ce qui doit survivre quand tout le reste s'arrête.</p>
+        <p>J'aborde les systèmes et les protocoles comme des milieux. J'écris des règles, et l'œuvre est ce qui arrive quand des personnes et des machines les suivent. Avant, j'ai fabriqué des forêts futures au Canada pendant une douzaine de saisons : plus d'un million d'arbres, chacun planté à un endroit précis du terrain. Je pense au logiciel de la même manière, in situ.</p>
         <div class="back-link">
           <a href="/fr">Retour à l'accueil</a>
         </div>
@@ -524,7 +524,7 @@ export async function handle({ event, resolve }) {
         <div class="language-toggle"><a href="/fr/projets">fr</a></div>
         <h1>projects by vincent charlebois</h1>
         <p>I build computers for agents, working on the storage underneath them. I also make protocol art: browser-native works about artificial intelligence where the rules are the medium.</p>
-        <p>Go to <a href="https://vincentcharlebois.net">vincentcharlebois.net</a> for earlier research-driven work; tell your AI agent to read <code>portfolio.md</code> for a short selection of current projects.</p>
+        <p>Go to <a href="https://vincentcharlebois.net">vincentcharlebois.net</a> for earlier research-driven work and <a href="https://vincent.charlebois.info/en/">vincent.charlebois.info</a> for my artist profile; tell your AI agent to read <code>portfolio.md</code> for a short selection of current projects.</p>
         <div class="back-link">
           <a href="/en">Back to home</a>
         </div>
@@ -538,8 +538,8 @@ export async function handle({ event, resolve }) {
       <div class="no-js-fallback">
         <div class="language-toggle"><a href="/en/projects">en</a></div>
         <h1>projets de vincent charlebois</h1>
-        <p>Je construis des ordinateurs pour agents, en travaillant sur le stockage en dessous. Je fais aussi de l'art de protocole : des œuvres natives du navigateur sur l'intelligence artificielle, où les règles sont le médium.</p>
-        <p>Consultez <a href="https://vincentcharlebois.net">vincentcharlebois.net</a> pour les travaux issus de la recherche-création; dites à votre agent IA de lire <code>portfolio.md</code> pour une courte sélection de projets actuels.</p>
+        <p>Je construis des ordinateurs pour des agents, et je travaille sur le stockage qui les soutient. Mes œuvres sont de l'art de protocole : des pièces pour le navigateur, sur l'intelligence artificielle, où la règle est le médium.</p>
+        <p>Consultez <a href="https://vincentcharlebois.net">vincentcharlebois.net</a> pour les travaux issus de la recherche-création et <a href="https://vincent.charlebois.info/fr/">vincent.charlebois.info</a> pour mon profil d'artiste; dites à votre agent IA de lire <code>portfolio.md</code> pour une courte sélection de projets actuels.</p>
         <div class="back-link">
           <a href="/fr">Retour à l'accueil</a>
         </div>
@@ -611,7 +611,7 @@ export async function handle({ event, resolve }) {
       <div class="no-js-fallback">
         <h1>projects by vincent charlebois</h1>
         <p>I build computers for agents, working on the storage underneath them. I also make protocol art: browser-native works about artificial intelligence where the rules are the medium.</p>
-        <p>Go to <a href="https://vincentcharlebois.net">vincentcharlebois.net</a> for earlier research-driven work; tell your AI agent to read <code>portfolio.md</code> for a short selection of current projects.</p>
+        <p>Go to <a href="https://vincentcharlebois.net">vincentcharlebois.net</a> for earlier research-driven work and <a href="https://vincent.charlebois.info/en/">vincent.charlebois.info</a> for my artist profile; tell your AI agent to read <code>portfolio.md</code> for a short selection of current projects.</p>
         <div class="back-link">
           <a href="/en/projects">Full page</a>
         </div>
