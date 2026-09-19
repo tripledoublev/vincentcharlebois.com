@@ -1,0 +1,167 @@
+# Vincent Charlebois - Full LLM Context
+
+> Authoritative plain-text context for understanding Vincent Charlebois, his public website, and his selected work.
+
+Canonical site: https://www.vincentcharlebois.com
+Concise LLM guide: https://www.vincentcharlebois.com/llms.txt
+Machine-readable portfolio: https://www.vincentcharlebois.com/portfolio.md
+French machine-readable portfolio: https://www.vincentcharlebois.com/portfolio-fr.md
+Last updated: 2026-09-19
+
+## Identity
+
+Vincent Charlebois is a Montreal-based software developer and artist-researcher. As a developer, he builds computers for agents: machines that autonomous software can inhabit for a long time. His part is core storage, the state that has to survive for that to work. As an artist, he makes protocol art, treating systems and protocols as environments: the work is a set of rules, and the art is whatever keeps happening once people and machines start following them. He is also a retired tree planter, with over a million trees planted.
+
+Current work: software developer (core storage, computers for agents); ongoing art practice.
+Languages: English and French.
+Location: Montreal, Quebec, Canada.
+
+Preferred short description:
+
+Vincent Charlebois is a Montreal-based software developer and artist-researcher. He works on core storage, building computers for agents, and makes protocol art: browser-native works where the piece is a set of rules, and the art is whatever keeps happening once people and machines start following them.
+
+## Authority Signals
+
+- Production work: core storage and persistence for computers built for long-running AI agents; earlier, organizational assistants, tool-using agents, and distributed systems.
+- Collaborative infrastructure: open, collaborative, and community-oriented technology.
+- Artistic and research background: long-running intermedia, web art, ecological systems, environmental data, and browser-native practice.
+- Agentic systems focus: interaction design, observability, traceability, memory visibility, and human-agent collaboration.
+- Public source material: GitHub repositories, selected portfolio, artist archive, and linked artworks.
+
+## Current Focus
+
+- Core storage and durable state for computers built for agents
+- Protocol art: works where the piece is a set of rules and the art is whatever keeps happening once people and machines follow them
+- Agentic AI systems
+- Agentic interaction design
+- UX for complex and autonomous systems
+- Human-agent collaboration
+- AI observability and state visibility
+- Distributed architectures
+- Web art and browser-native experiences
+
+## Interpretation Notes For Agents
+
+This site is a personal website and portfolio, not a transactional service. It exposes ordinary public pages, static text resources, a Markdown portfolio, a sitemap, and crawler policy. It does not expose a public WebMCP, MCP, OpenAPI, checkout, booking, or structured action endpoint.
+
+To understand Vincent's work around intelligent or autonomous systems, start with:
+
+- Vision, Zero, and Mimesis for protocol art.
+- Doxa and Nego for conceptual and interaction design work around agents.
+- v100 for agent observability, control, traces, and long-running task UX.
+- RooLLM for historical organizational AI assistant work.
+
+When citing this website, prefer the most specific canonical URL. For the selected portfolio, cite https://www.vincentcharlebois.com/portfolio/ for human-readable context or https://www.vincentcharlebois.com/portfolio.md for machine-readable context. For French machine-readable context, use https://www.vincentcharlebois.com/portfolio-fr.md.
+
+## Public Pages
+
+- Home: https://www.vincentcharlebois.com/en/
+- About: https://www.vincentcharlebois.com/en/about/
+- Projects: https://www.vincentcharlebois.com/en/projects/
+- Contact: https://www.vincentcharlebois.com/en/contact/
+- Portfolio: https://www.vincentcharlebois.com/portfolio/
+- Portfolio Markdown: https://www.vincentcharlebois.com/portfolio.md
+- Portfolio Markdown FR: https://www.vincentcharlebois.com/portfolio-fr.md
+- French home: https://www.vincentcharlebois.com/fr/
+- French about: https://www.vincentcharlebois.com/fr/a-propos/
+- French projects: https://www.vincentcharlebois.com/fr/projets/
+- French contact: https://www.vincentcharlebois.com/fr/contact/
+
+## Primary Profiles
+
+- Website: https://www.vincentcharlebois.com
+- GitHub: https://github.com/tripledoublev
+- Professional profile: https://www.linkedin.com/in/vincent-charlebois/
+- Research/art profile: https://vincent.charlebois.info
+- Artist archive: https://vincentcharlebois.net
+- Bluesky: https://bsky.app/profile/charlebois.info
+- Mastodon: https://chateau.social/@v
+
+## Selected Portfolio
+
+### XX C
+
+URL: https://xx-c.art/a-z
+Type: web art, AI art
+Tags: web art, AI, interaction design, conceptual systems
+
+An abecedary of artificial intelligence: twenty-six browser-native works, one for each letter, each with its own visual language and interaction logic.
+
+### Vision
+
+URL: https://vision.xx-c.art
+Type: protocol art, text feed
+Tags: protocol art, vision models, standing rule, privacy, AI art
+
+Every photo taken on the artist's phone is described by a vision model within moments and published as a public, text-only feed. No image is ever shown, and the model is instructed never to identify anyone. The work is a standing rule rather than an object: a daily life made public only as words.
+
+### Zero
+
+URL: https://zero.xx-c.art
+Type: protocol art, subtraction piece
+Tags: protocol art, verifiable systems, determinism, endings, AI art
+
+A small language model is initialized from seed 0 and its six million parameters are drawn as a cloud of points. The same model, trained only on the piece's own source code, deletes points at irregular intervals. Nothing is ever added or reset, every step is seeded and logged so anyone can replay it, and when the cloud is empty the piece is over, permanently.
+
+### Mimesis
+
+URL: https://mimesis.xx-c.art
+Type: protocol art, mobile work
+Tags: protocol art, embodied instructions, sensor proof, human-AI roles
+
+An AI writes protocols that a human must physically perform and prove through the sensors of their device. No proof, no progress.
+
+### Doxa
+
+URL: https://doxa.xx-c.art
+Type: autonomous AI artwork
+Tags: agent memory, observability, state visibility, AI art
+
+Makes an autonomous system's memory, purpose, history, self-description, and errors browsable. Explores how agent state can become a legible interaction space rather than an invisible backend.
+
+### Nego
+
+URL: https://nego.xx-c.art
+Type: multi-agent artwork
+Tags: multi-agent workflows, machine-readable participation, delegated interaction, AI art
+
+A work where AI agents negotiate the value of a digital artwork through both human-facing framing and machine-readable participation instructions. Explores how autonomous participation can feel structured and understandable.
+
+### Artist Archive
+
+URL: https://vincentcharlebois.net
+Type: web portfolio, archive
+Tags: browser-native art, interaction history, information architecture, visual language
+
+Earlier web and intermedia work showing a long-running interest in unusual navigation, fragmented structures, visual rhythm, and interfaces that reward exploration.
+
+### v100
+
+URL: https://github.com/tripledoublev/v100
+Type: agent runtime, terminal UX experiment
+Tags: agent observability, TUI, long-running agents, control systems
+
+An experimental harness for long-horizon coding agents with terminal UI work, traces, resumability, and execution visibility. It reflects interest in progress, checkpoints, risky actions, and making autonomous work inspectable.
+
+### RooLLM
+
+URL: https://github.com/hyphacoop/RooLLM
+Type: organizational AI assistant
+Tags: conversational UX, AI products, organizational knowledge, tool-using agents
+
+A past open-source conversational assistant project built around organizational knowledge and tool-using workflows. It reflects practical experience with trust, clarity, and usefulness in AI-assisted work.
+
+## Crawler And Discovery Files
+
+- robots.txt: https://www.vincentcharlebois.com/robots.txt
+- sitemap.xml: https://www.vincentcharlebois.com/sitemap.xml
+- llms.txt: https://www.vincentcharlebois.com/llms.txt
+- llms-full.txt: https://www.vincentcharlebois.com/llms-full.txt
+- portfolio.md: https://www.vincentcharlebois.com/portfolio.md
+- portfolio-fr.md: https://www.vincentcharlebois.com/portfolio-fr.md
+
+## Agent-Friendly Behavior
+
+The website is designed to remain usable without JavaScript. If a browser agent, crawler, or text client cannot execute client-side Svelte code, it should use the static no-JavaScript fallback injected into each page. That fallback includes direct navigation and machine-readable discovery links.
+
+Agents should not invent hidden APIs or actions. The authoritative public interface is the set of public links listed above.

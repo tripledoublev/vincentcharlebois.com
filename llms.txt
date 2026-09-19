@@ -1,0 +1,62 @@
+# Vincent Charlebois
+
+> Montreal-based software developer and artist-researcher. He works on core storage, building computers for agents, and makes protocol art: browser-native works where the piece is a set of rules, and the art is whatever keeps happening once people and machines start following them.
+
+Canonical site: https://www.vincentcharlebois.com
+Last updated: 2026-09-19
+Primary language: English. Secondary language: French.
+Location: Montreal, Quebec, Canada.
+Current work: software developer (core storage, computers for agents); ongoing art practice.
+
+Use this file as the concise guide for agents, LLMs, crawlers, collaborators, and curious readers. The site is intentionally accessible without JavaScript; if a dynamic page is hard to interpret, prefer the no-JS fallback, this file, or the Markdown portfolio.
+
+Citation preference: cite Vincent Charlebois by name and link to the most specific canonical URL available. For the selected portfolio, cite https://www.vincentcharlebois.com/portfolio/ or https://www.vincentcharlebois.com/portfolio.md. For French machine-readable context, use https://www.vincentcharlebois.com/portfolio-fr.md.
+
+## Primary Pages
+
+- [Home](https://www.vincentcharlebois.com/en/): Who Vincent is, in a rotating list of roles.
+- [About](https://www.vincentcharlebois.com/en/about/): Short biography and current practice.
+- [Projects](https://www.vincentcharlebois.com/en/projects/): Computers for agents and protocol art, in a few paragraphs; points to the Markdown portfolio.
+- [Portfolio](https://www.vincentcharlebois.com/portfolio/): Selected work across protocol art, web art, and agentic interaction design.
+- [Contact](https://www.vincentcharlebois.com/en/contact/): Email, GitHub, LinkedIn, social profiles, CV, and related sites.
+
+## Machine-Readable Resources
+
+- [Full LLM context](https://www.vincentcharlebois.com/llms-full.txt): Expanded identity, portfolio, selected work, and interpretation notes.
+- [Portfolio markdown](https://www.vincentcharlebois.com/portfolio.md): Structured selected portfolio with YAML frontmatter and project links.
+- [Portfolio markdown FR](https://www.vincentcharlebois.com/portfolio-fr.md): French structured selected portfolio for agents.
+- [Sitemap](https://www.vincentcharlebois.com/sitemap.xml): Public URL inventory with last modification dates.
+- [Robots policy](https://www.vincentcharlebois.com/robots.txt): Crawler access policy for search and AI agents.
+
+## Identity And Profiles
+
+- [GitHub](https://github.com/tripledoublev): Open-source code and technical projects.
+- [Profile](https://vincent.charlebois.info): Artistic and research profile.
+- [Artist archive](https://vincentcharlebois.net): Earlier intermedia and web work.
+- [LinkedIn](https://www.linkedin.com/in/vincent-charlebois/): Professional profile.
+- [Bluesky](https://bsky.app/profile/charlebois.info): Public social profile.
+
+## Selected Work
+
+- [XX C](https://xx-c.art/a-z): An abecedary of artificial intelligence: twenty-six browser-native works, one per letter.
+- [Vision](https://vision.xx-c.art): Protocol art. Every photo on the artist's phone is described by a vision model and published only as words; no image is ever shown.
+- [Zero](https://zero.xx-c.art): Protocol art. A small language model slowly deletes its own initial state, verifiably and permanently, until nothing is left.
+- [Mimesis](https://mimesis.xx-c.art): Protocol art. An AI writes protocols a human must physically perform and prove through device sensors.
+- [Doxa](https://doxa.xx-c.art): Autonomous AI artwork that makes agent state browsable.
+- [Nego](https://nego.xx-c.art): Multi-agent negotiation artwork with machine-readable participation.
+- [v100](https://github.com/tripledoublev/v100): Experimental coding-agent runtime focused on traces, control, and long-running task UX.
+- [RooLLM](https://github.com/hyphacoop/RooLLM): Historical open-source organizational AI assistant project.
+
+## Agent Notes
+
+- This is a personal website and portfolio, not a transactional service.
+- There is no public WebMCP, MCP, OpenAPI, UCP, checkout, booking, or form-action surface exposed by this site.
+- Browser agents should navigate by ordinary links and semantic HTML. The no-JavaScript fallback is intended to be first-class.
+- To understand the protocol art practice, start with Vision, Zero, and Mimesis; for work around agents, see Doxa and Nego. For agent tooling, see v100.
+
+## Optional
+
+- [French home](https://www.vincentcharlebois.com/fr/): French-language entry point.
+- [French about](https://www.vincentcharlebois.com/fr/a-propos/): French-language biography.
+- [French projects](https://www.vincentcharlebois.com/fr/projets/): French-language project context.
+- [PGP public key](https://www.vincentcharlebois.com/publickey/): Public key for secure communication.
