@@ -175,6 +175,7 @@
 	:global(.markdown a:hover) {
 		text-decoration-color: var(--text-color);
 		text-decoration-thickness: 3px;
+		text-decoration-skip-ink: none;
 	}
 	:global(.markdown a.green-link) {
 		text-decoration-color: #00ff00;
